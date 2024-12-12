@@ -1,0 +1,129 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Introduction
+    chapters:
+      - file: how-to-run-these-tutorials
+        title: How to run these 
+  - caption: Tutorials
+    chapters:
+      - file: cds-tutorial/intro
+        title: CDS 
+        sections:
+          - file: cds-tutorial/cds-tutorial
+            title: CDS 
+      - file: submodules/c3s-training-submodule-reanalysis/intro
+        title: Reanalysis 
+        sections:
+          - file: submodules/c3s-training-submodule-reanalysis/reanalysis-climatology
+            title: Climatology
+          - file: submodules/c3s-training-submodule-reanalysis/reanalysis-heatwave
+            title: Heatwave Analysis
+      - file: submodules/c3s-training-submodule-projections/intro
+        title: Climate Projections 
+        sections:
+          - file: submodules/c3s-training-submodule-projections/projections-cmip6
+            title: Climate Projections (CMIP6)
+          - file: submodules/c3s-training-submodule-projections/projections-cordex
+            title: Climate Projections (CORDEX)
+      - file: submodules/c3s-training-submodule-seasonal-forecast/intro
+        title: Seasonal Forecasts 
+        sections:
+          - file: submodules/c3s-training-submodule-seasonal-forecast/sf-anomalies
+            title: Seasonal Forecast Anomalies
+          - file: submodules/c3s-training-submodule-seasonal-forecast/sf-verification
+            title: Seasonal Forecast Verification
+      - file: submodules/c3s-training-submodule-climate-indices/intro
+        title: Climate Indices 
+        sections:
+          - file: submodules/c3s-training-submodule-climate-indices/ci-windchill
+            title: Windchill
+      - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/intro
+        title: Satellite Observations - Atmospheric Physic  
+        sections:
+          # ERB
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation
+            title: Outgoing Longwave Radiation
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology
+            title: Analysis of the CLARA Earth radiation budget product
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology
+            title: Analysis of the CERES Earth radiation budget product
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance
+            title: Total Solar Irradiance
+          # SRB
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly
+            title: Surface radiation budget climatologies and anomalies
+          # Atmos Humidity and Cloud
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi
+            title: Total column water vapour
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation
+            title: Tropospheric humidity estimates from satellite-based radio occultation measurements
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology
+            title: Cloud fractional cover climatology
+      - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/intro
+        title: Satellite Observations - Atmospheric Composition  
+        sections:
+          # GHG
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products
+            title: Greenhouse Gas Level 2 Products
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products
+            title: Greenhouse Gas Level 3 Products
+          # Aerosol
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator
+            title: Aerosol Single Sensor Demonstrator
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record
+            title: Aerosol Multi-Sensor Record
+          # Ozone
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns
+            title: Total Ozone Columns
+      - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/intro
+        title: Satellite Observations - Hydrology and Cryosphere
+        sections:
+          #Surface Water      
+          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies
+            title: Soil Moisture Anomaly Analysis
+          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-water-level
+            title: Lake Water Level Timeseries
+          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature
+            title: Lake Surface Water Temperature Analysis
+          #Ice Sheets
+          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-surface-elevation
+            title: Ice Sheet Surface Elevation
+          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-velocity
+            title: Ice Sheet Velocity
+          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance
+            title: Ice Sheet Mass Balance
+          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/glacier-mass-change
+            title: Glacier Mass Change
+      - file: submodules/c3s-training-submodule-sat-obs-ocean/intro
+        title: Satellite Observations - Ocean
+      - file: submodules/c3s-training-submodule-sat-obs-Land/intro
+        title: Satellite Observations - Land
+      - file: submodules/copernicus-emergency-service-tutorial/intro
+        title: Tutorials using Copernicus Emergency Management Service data
+        sections:
+          - file: submodules/visualising-fwi-for-esotc/visualising-fwi-for-esotc
+            title: Visualising fire weather index (FWI)
+          - file: submodules/glofas-bangladesh-floods/glofas-bangladesh-floods
+            title: Observing major flood events
+  - caption: Explore other books📚
+    chapters:
+      - url: https://Randbee.github.io/CAMSBook
+        title: Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials
+      - url: https://ecmwfcode4earth.github.io/sketchbook-earth
+        title: Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences
+  - caption: ECMWF
+    chapters:
+      - file: support
+        title: Help&Support
+  - caption:
+    chapters:
+      - url: https://climate.copernicus.eu/
+        title: Copernicus Climate Change Service (C3S)
+      - url: https://cds.climate.copernicus.eu/
+        title: Copernicus Climate Data Store (CDS)
+      - url: https://climate.copernicus.eu/user-learning-services/
+        title: C3S Training Services

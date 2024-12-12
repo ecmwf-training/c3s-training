@@ -1,0 +1,34 @@
+# This file lists the datasets used in Jupyter notebooks for C3S training. 
+# Links to Jupyter notebook tutorials will be included in the CDS documentation tab of the dataset(s) featured in them.
+
+reanalysis-climatology:
+  title: Jupyter notebook on climatologies using ERA5 monthly mean data
+  description: Tutorial on using ERA5 to analyse climatologies and trends in near-surface air temperature.
+  datasets:
+  - reanalysis-era5-single-levels-monthly-means
+reanalysis-heatwave:
+  title: Jupyter notebook on European heatwave analysis using ERA5 hourly data
+  description: Tutorial on using ERA5 to perform an analysis on the European heatwave in September 2020.
+  datasets:
+  - reanalysis-era5-single-levels
+projections-cmip6:
+  title: Jupyter notebook on how to plot an ensemble of CMIP6 simulations
+  description: Tutorial on accessing and processing CMIP6 global climate projections data available in the Climate Data Store. The notebook demonstrates how to compute and visualize the annual global average temperature between 1850 to 2100 for an ensemble of models.
+  datasets:
+  - projections-cmip6
+projections-cordex:
+  title: Jupyter notebook on how to perform an analysis of projected versus historical climatology using CORDEX data
+  description: Tutorial introducing CORDEX regional climate model data on single levels. This notebook demonstrates how to compute the difference in the air temperature climatology for 2071-2100 (according to a projected scenario) relative to the reference period 1971-2000 in Africa.
+  datasets:
+  - projections-cordex-domains-single-levels
+sf-anomalies:
+  title: Jupyter notebook on seasonal forecast anomalies
+  description: Tutorial on calculating seasonal forecast anomalies using data available on the Climate Data Store.
+  datasets:
+  - seasonal-monthly-single-levels
+ci-windchill:
+  title: Jupyter notebook on climate index calculation
+  description: Tutorial on how to calculate an index for wind chill using UERRA data.
+  datasets:
+  - reanalysis-uerra-europe-single-levels
+

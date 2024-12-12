@@ -1,0 +1,8 @@
+numpy == 1.26.4
+cdsapi == 0.6.1
+pandas == 2.1.4
+netCDF4 == 1.6.2
+dask == 2023.11.0
+xarray == 2023.6.0  
+matplotlib == 3.8.0 
+cartopy == 0.22.0
