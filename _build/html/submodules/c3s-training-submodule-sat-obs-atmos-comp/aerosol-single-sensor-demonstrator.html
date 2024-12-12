@@ -1,0 +1,1667 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Exploring gridded data on Aerosol properties available on C3S &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Visualising a full Climate Data Record of multi-sensor Aerosol data" href="aerosol-multi-sensor-record.html" />
+    <link rel="prev" title="How to access, read and use satellite XCO2 and XCH4 Level 3 data products" href="greenhouse-gases-level3-products.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Copernicus Climate Change Service (C3S) Data Tutorials
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../how-to-run-these-tutorials.html">How to run these tutorials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cds-tutorial/intro.html">CDS</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cds-tutorial/cds-tutorial.html">CDS</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite Observations - Atmospheric Physic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total Solar Irradiance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Satellite Observations - Atmospheric Composition</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="greenhouse-gases-level2-products.html">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exploring gridded data on Aerosol properties available on C3S</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="total-ozone-columns.html">Total Ozone Columns</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-ocean/intro.html">Satellite Observations - Ocean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exploring gridded data on Aerosol properties available on C3S</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exploring gridded data on Aerosol properties available on C3S</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction"><a id="intro"></a> Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description"><a id="data_description"></a> Data description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api"><a id="cdsapi"></a> Download data using CDS API</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cds-api-credentials">CDS API credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unpack-the-data">Unpack the data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-plot-map"><a id="map_plot"></a> Use case 1: Plot map</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-regional-time-series"><a id="timeseries"></a> Use case 2: Regional time series</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-3-climatology-multi-annual-mean-and-anomaly-maps-and-time-series"><a id="climatology"></a> Use case 3: “Climatology” (multi-annual mean) and anomaly - maps and time series</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-netcdf4-file-and-plot-climatology-map-for-selected-calendar-month">Open NetCDF4 File and plot climatology map for selected calendar month</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regional-climatology-calculate-and-plot-as-time-series">Regional climatology: calculate and plot as time series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-timeseries-with-climatology">Plot timeseries with climatology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-time-series">Anomaly time series</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-4-visualize-vertical-profile-data"><a id="vertical"></a> Use Case 4: Visualize Vertical Profile data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-aerosol-properties-and-the-climate-data-store">Get more information about Aerosol properties and the Climate Data Store</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><a id="references"></a> References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="exploring-gridded-data-on-aerosol-properties-available-on-c3s">
+<h1>Exploring gridded data on Aerosol properties available on C3S<a class="headerlink" href="#exploring-gridded-data-on-aerosol-properties-available-on-c3s" title="Permalink to this heading">#</a></h1>
+<p>This first notebook provides a practical introduction to the
+<a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-aerosol-properties?tab=overview">C3S Aerosol properties gridded data from 1995 to present derived from satellite observations</a>
+dataset.</p>
+<p>We give a short introduction to the ECV Aerosol Properties, which contains 4 total column variables: Aerosol Optical Depth (AOD), AOD of components (Fine Mode, Dust), and aerosol single scattering albedo (SSA) as a measure of aerosol absorption; and 2 vertically resolved variables:  (dust) aerosol layer height and stratospheric aerosol extinction coefficient (vertical profiles). The algorithms and best practices for these aerosol properties have been developed within the ESA Climate Change Initiative (CCI) and then were transferred for further extension and regular reprocessing + user support to the C3S. We start by downloading the data from the Climate Data Store (CDS) and then demonstrate three use cases for monthly mean single sensor datasets: plot a global mean map, calculate and plot a regional time series and calculate and plot a regional multi-annual mean (“climatology”) and anomaly maps and time series.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Binder</p></th>
+<th class="head text-center"><p>Kaggle</p></th>
+<th class="head text-center"><p>Colab</p></th>
+<th class="head text-center"><p>NBViewer</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><a class="reference external" href="https://mybinder.org/v2/gh/ecmwf-projects/copernicus-training/HEAD?urlpath=lab/tree/C3S_climate-data-store.ipynb"><img alt="Binder" src="https://mybinder.org/badge.svg" /></a></p></td>
+<td class="text-center"><p><a class="reference external" href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-projects/copernicus-training/blob/master/C3S_climate-data-store.ipynb"><img alt="Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p></td>
+<td class="text-center"><p><a class="reference external" href="https://colab.research.google.com/github/ecmwf-projects/copernicus-training/blob/master/C3S_climate-data-store"><img alt="Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p></td>
+<td class="text-center"><p><a class="reference external" href="https://nbviewer.jupyter.org/github/ecmwf-projects/copernicus-training/blob/master/C3S_climate-data-store.ipynb"><img alt="NBViewer" src="https://raw.githubusercontent.com/ecmwf-projects/copernicus-training/master/img/nbviewer_badge.svg" /></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>(Binder may take some time to load, so please be patient!)</p></td>
+<td class="text-center"><p>(will need to login/register, and switch on the internet via <em>settings</em>)</p></td>
+<td class="text-center"><p>(will need to run the command <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">cartopy</span></code> before importing the libraries)</p></td>
+<td class="text-center"><p>(this will not run the notebook, only render it)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If you would like to run this notebook in your own environment, we suggest you install <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda</a>, which contains most of the libraries you will need. You will also need to install the CDS API (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code>) for downloading data in batch mode from the CDS.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1><a id='intro'></a> Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<br>
+<div style="text-align: justify"> Aerosols are minor constituents of the atmosphere by mass, but critical components in terms of impact on climate. Aerosols influence the global radiation balance directly by scattering and absorbing radiation, and indirectly through influencing cloud reflectivity, cloud cover and cloud lifetime. Aerosols have a lifetime in the atmosphere of a few days up to a week so that they can be transported over thousands of kilometers. They are emitted from several different sources (e.g. natural and anthropogenic combustion processes, biogenic secondary organics, sea spray uplifting over oceans, mineral dust erosion from deserts, volcanic eruptions). Due to the inhomogenous distribution and episodic or seasonal / diurnal patterns of the various sources they exhibit large spatial and temporal variability. The different sources emmit a large range of different aerosol particles with sizes from few nanometers to many micrometers and different chemical composition. On global average aerosol have not changed over the last decades, but regionally there are significant trends and major episodes could be observed (e.g. Australian wildfires, Sahara outbreaks). </div><section id="data-description">
+<h2><a id='data_description'></a> Data description<a class="headerlink" href="#data-description" title="Permalink to this heading">#</a></h2>
+<div style="text-align: justify"> The main variables provided by this dataset are meant to cover all relevant information on the global atmospheric aerosol distribution: aerosol optical depth (total abundance), fine mode aerosol optical depth (particles with diameter smaller than 1 micron), dust aerosol optical depth (mineral dust), single scattering albedo (ranging from 0 = fully absorbing to 1 = non-absorbing), (dust) aerosol layer height and stratospheric aerosol extinction coefficient (vertical profiles). These variables are derived from observations from several satellite sensors using a set of different processing techniques. This provides the possibility to derive a large set of complementary aerosol properties needed to describe the complex nature of atmospheric aerosols. Furthermore, different algorithms have their specific strengths and weaknesses, meaning that datasets originating from the same sensor but processed by different algorithms provide a way to evaluate uncertainties (e.g. areas of good or bad agreement between them). Altogether, the aerosol properties dataset is very extensive and offers a choice of complementary options – which is appropriate depends on the intended application. </div>
+<p>The data are provided in netCDF format.</p>
+<p>Please find further information about the dataset as well as the data in the Climate Data Store catalogue entry Aerosol properties, sections “Overview”, “Download data” and “Documentation”:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-aerosol-properties?tab=overview">C3S Aerosol properties gridded data from 1995 to present derived from satellite observations</a></p></li>
+</ul>
+<p>There in the “Documentation” part, one can find the Product User Guide and Specifications (PUGS) and the Algorithm Theoretical Baseline (ATBD) for further information on the different algorithms.</p>
+</section>
+<section id="import-libraries">
+<h2>Import libraries<a class="headerlink" href="#import-libraries" title="Permalink to this heading">#</a></h2>
+<p>We will be working with data in NetCDF format. To best handle this data we will use the netCDF4 python library. We will also need libraries for plotting and viewing data, in this case we will use Matplotlib and Cartopy.</p>
+<p>We are using <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> to download the data. This package is not yet included by default on most cloud platforms. You can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install it: <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!pip install cdsapi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries needed for the Jupyter notebook</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># CDS API library</span>
+<span class="kn">import</span> <span class="nn">cdsapi</span>
+
+<span class="c1"># Libraries for working with multidimensional arrays</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
+<span class="kn">import</span> <span class="nn">netCDF4</span> <span class="k">as</span> <span class="nn">nc</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Library to work with zip-archives, OS-functions and pattern expansion</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Libraries for plotting and visualising data</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mplt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+
+<span class="c1"># Libraries for style parameters</span>
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">import</span> <span class="nn">seaborn</span>
+
+<span class="c1"># Disable warnings for data download via API</span>
+<span class="kn">import</span> <span class="nn">urllib3</span> 
+<span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The following style parameters will be used for all plots in this notebook.</span>
+<span class="c1"># mplt.style.use(&#39;seaborn&#39;)</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">350</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="s1">&#39;serif&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.serif&#39;</span><span class="p">]</span>  <span class="o">=</span>  <span class="n">mplt</span><span class="o">.</span><span class="n">rcParamsDefault</span><span class="p">[</span><span class="s1">&#39;font.serif&#39;</span><span class="p">]</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;regular&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.rm&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif:light&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.it&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif:italic&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.bf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif:bold&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the x and y labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;legend&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>    <span class="c1"># legend fontsize</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>   <span class="c1"># fontsize of the figure title</span>
+
+<span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span> 
+<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="download-data-using-cds-api">
+<h1><a id='cdsapi'></a> Download data using CDS API<a class="headerlink" href="#download-data-using-cds-api" title="Permalink to this heading">#</a></h1>
+<section id="cds-api-credentials">
+<h2>CDS API credentials<a class="headerlink" href="#cds-api-credentials" title="Permalink to this heading">#</a></h2>
+<div style="text-align: justify"> We will request data from the Climate Data Store (CDS): https://cds.climate.copernicus.eu/cdsapp#!/home. In case you don't have an account yet, please click on "Login/register" at the right top and select "Create new account". With the process finished you are able to login to the CDS and can search for your preferred data.</div>
+<p>We will request data from the CDS in batch mode with the help of the CDS API.
+First, we need to manually set the CDS API credentials.
+To do so, we need to define two variables: URL and KEY.
+To obtain these, first login to the CDS, then visit <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to">https://cds.climate.copernicus.eu/api-how-to</a> and copy the string of characters listed after “key:”. Replace the <code class="docutils literal notranslate"><span class="pre">#########</span></code> below with this string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify the CDS path for data access and your personal access key</span>
+
+<span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;https://cds.climate.copernicus.eu/api&#39;</span>
+<span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we specify a data directory in which we will download our data and all output files that we will generate:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify local data directories for the downloads and the plot files</span>
+
+<span class="n">DATADIR</span><span class="o">=</span><span class="s1">&#39;./&#39;</span>
+<span class="n">PLOTDIR</span><span class="o">=</span><span class="n">DATADIR</span> <span class="o">+</span> <span class="s1">&#39;plots/&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">PLOTDIR</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">PLOTDIR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we can search for data.</p>
+<p>To search for data, visit the CDS website: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/home">https://cds.climate.copernicus.eu/cdsapp#!/home</a>.
+Here you can search for aerosol data using the search bar. The data we need for this use case is the <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-aerosol-properties?tab=overview">C3S Aerosol properties gridded data from 1995 to present derived from satellite observations</a>.
+The Aerosol properties comprise several total column aerosol variables: (total) AOD, Fine-Mode AOD, Dust AOD, Single Scattering Albedo and further vertically resolved aerosol variables: stratospheric extinction profiles, aerosol layer height. Most catalogue entries comprise data from a number of sensors and algorithms.</p>
+<p>Having selected the correct catalogue entry, we now need to specify the time aggregation, variable, sensor, algorithm, and temporal coverage we are interested in; the datasets are all global.
+These can all be selected in the <strong>“Download data”</strong> tab. In this tab a form appears  which guides the user to select existing combinations of the following parameters to download:</p>
+<ul class="simple">
+<li><p>Time aggregation: <code class="docutils literal notranslate"><span class="pre">Monthly</span></code></p></li>
+<li><p>Variable: <code class="docutils literal notranslate"><span class="pre">Dust</span> <span class="pre">Aerosol</span> <span class="pre">Optical</span> <span class="pre">Depth</span></code></p></li>
+<li><p>Sensor on satellite: <code class="docutils literal notranslate"><span class="pre">IASI</span> <span class="pre">on</span> <span class="pre">METOP-C</span></code></p></li>
+<li><p>Algorithm: <code class="docutils literal notranslate"><span class="pre">ULB</span></code></p></li>
+<li><p>Year: (use “Select all” button)</p></li>
+<li><p>Month: (use “Select all” button)</p></li>
+<li><p>Version: (choose the latest version / highest number for this sensor / algorithm)</p></li>
+<li><p>Format: <code class="docutils literal notranslate"><span class="pre">Compressed</span> <span class="pre">zip</span> <span class="pre">file</span> <span class="pre">(.zip)</span></code></p></li>
+<li><p>Orbit: <code class="docutils literal notranslate"><span class="pre">Descending</span></code> (for IASI only)</p></li>
+</ul>
+<p>If you have not already done so, you will need to accept the <strong>terms &amp; conditions</strong> of the data before you can download it.</p>
+<p>At the end of the download form, select <strong><code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">API</span> <span class="pre">request</span></code></strong>. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below) …</p>
+<p>Depending on the length of the record chosen and the internet traffic the download may take one to several minutes.</p>
+<p>To illustrate the variability we include 4 examples below (2 as comment lines only).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the API for the CDS access</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+
+<span class="c1"># Define the dataset which shall be downloaded: time aggregation, sensor name, algorithm name, years, version number, orbit type (IASI only)</span>
+<span class="c1"># uncomment one block of definitions (all lines with heading &quot;#N&quot;) according to your choice of dataset </span>
+<span class="c1"># (or copy similar definitions from the CDS for all other datasets available)</span>
+
+<span class="c1"># Retrieve the datasets from the CDS</span>
+<span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+    <span class="s1">&#39;satellite-aerosol-properties&#39;</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">%02d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mnth</span><span class="p">)</span> <span class="k">for</span> <span class="n">mnth</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)],</span>
+
+        <span class="c1"># First example: SLSTR Dual-view Radiometer data record (Fine Mode AOD)</span>
+        <span class="c1"># SLSTR on Sentinel-3A: Swansea algorithm, Fine Mode AOD</span>
+        <span class="c1">#1 &#39;time_aggregation&#39;: &#39;monthly_average&#39;,</span>
+        <span class="c1">#1 &#39;variable&#39;: &#39;fine_mode_aerosol_optical_depth&#39;,</span>
+        <span class="c1">#1 &#39;sensor_on_satellite&#39;: &#39;slstr_on_sentinel_3a&#39;,</span>
+        <span class="c1">#1 &#39;algorithm&#39;: &#39;swansea&#39;,</span>
+        <span class="c1">#1 &#39;year&#39;: [&#39;2017&#39;, &#39;2018&#39;, &#39;2019&#39;,&#39;2020&#39;, &#39;2021&#39;, &#39;2022&#39;,&#39;2023&#39;],</span>
+        <span class="c1">#1 &#39;version&#39;: &#39;v1.12&#39;,</span>
+    
+        <span class="c1"># Second example: IASI Thermal Infrared Spectrometer data record (Dust AOD)</span>
+        <span class="c1"># IASI on METOP-C: ULB algorithm, Dust AOD</span>
+        <span class="s1">&#39;time_aggregation&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly_average&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="s1">&#39;dust_aerosol_optical_depth&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sensor_on_satellite&#39;</span><span class="p">:</span> <span class="s1">&#39;iasi_on_metopc&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;algorithm&#39;</span><span class="p">:</span> <span class="s1">&#39;ulb&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;2019&#39;</span><span class="p">,</span> <span class="s1">&#39;2020&#39;</span><span class="p">,</span> <span class="s1">&#39;2021&#39;</span><span class="p">,</span><span class="s1">&#39;2022&#39;</span><span class="p">,],</span>
+        <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;v9&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;orbit&#39;</span><span class="p">:</span> <span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+
+        <span class="c1"># Third example: POLDER Polarimeter data record (Single Scattering Albedo)</span>
+        <span class="c1"># POLDER on PARASOL: GRASP algorithm, single scattering albedo</span>
+        <span class="c1">#3 &#39;time_aggregation&#39;: &#39;monthly_average&#39;,</span>
+        <span class="c1">#3 &#39;variable&#39;: &#39;single_scattering_albedo&#39;,</span>
+        <span class="c1">#3 &#39;sensor_on_satellite&#39;: &#39;polder_on_parasol&#39;,</span>
+        <span class="c1">#3 &#39;algorithm&#39;: &#39;grasp&#39;,</span>
+        <span class="c1">#3 &#39;year&#39;: [&#39;2005&#39;, &#39;2006&#39;, &#39;2007&#39;,&#39;2008&#39;, &#39;2009&#39;, &#39;2010&#39;,&#39;2011&#39;, &#39;2012&#39;, &#39;2013&#39;,],</span>
+        <span class="c1">#3 &#39;version&#39;: &#39;v2.10&#39;,</span>
+
+        <span class="c1"># Fourth example: IASI Thermal Infrared Spectrometer data record (Dust Aerosol Layer Height)</span>
+        <span class="c1"># IASI on METOP-C: LMD algorithm, dust layer height</span>
+        <span class="c1">#4 &#39;time_aggregation&#39;: &#39;monthly_average&#39;,</span>
+        <span class="c1">#4 &#39;variable&#39;: &#39;dust_aerosol_layer_height&#39;,</span>
+        <span class="c1">#4 &#39;sensor_on_satellite&#39;: &#39;iasi_on_metopc&#39;,</span>
+        <span class="c1">#4 &#39;algorithm&#39;: &#39;lmd&#39;,</span>
+        <span class="c1">#4 &#39;year&#39;: [&#39;2019&#39;, &#39;2020&#39;, &#39;2021&#39;,&#39;2022&#39;,],</span>
+        <span class="c1">#4 &#39;version&#39;: &#39;v2.2&#39;,</span>
+        <span class="c1">#4 &#39;orbit&#39;: &#39;descending&#39;,</span>
+        
+    <span class="p">},</span>
+    <span class="s1">&#39;download.zip&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-06 15:00:50,576 INFO [2024-09-28T00:00:00] **Welcome to the New Climate Data Store (CDS)!** This new system is in its early days of full operations and still undergoing enhancements and fine tuning. Some disruptions are to be expected. Your 
+[feedback](https://jira.ecmwf.int/plugins/servlet/desk/portal/1/create/202) is key to improve the user experience on the new CDS for the benefit of everyone. Thank you.
+2024-11-06 15:00:50,576 WARNING [2024-09-26T00:00:00] Should you have not yet migrated from the old CDS system to the new CDS, please check our [informative page](https://confluence.ecmwf.int/x/uINmFw) for guidance.
+2024-11-06 15:00:50,577 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2024-11-06 15:00:50,577 INFO [2024-09-16T00:00:00] Remember that you need to have an ECMWF account to use the new CDS. **Your old CDS credentials will not work in new CDS!**
+2024-11-06 15:00:50,578 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the &quot;Show API request code&quot; tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2024-11-06 15:00:50,968 INFO [2022-04-01T00:00:00] GOMOS on ENVISAT version 5.00 data have been deprecated. Consult Known Issues in the Documentation tab.
+2024-11-06 15:00:50,969 INFO Request ID is 4f7af248-5418-4cfa-abef-7b9f1fa2278b
+2024-11-06 15:00:51,255 INFO status has been updated to accepted
+2024-11-06 15:00:56,847 INFO status has been updated to running
+2024-11-06 15:01:00,673 INFO status has been updated to successful
+                                                                                          
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;download.zip&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Please define your dataset characteristics (copy from above as used in the CDS Download page).</p>
+<p>IMPORTANT NOTE: If you have once downloaded a specific dataset and want to re-use it, you can re-start from here using this dataset. Then you need to skip the code block “Unpack the data”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the specifications of your dataset: algorithm name, sensor name, variable, years</span>
+<span class="c1"># uncomment one block below (all lines with heading &quot;#N&quot;) matching your downloaded dataset above, i.e. all lines with the same &quot;#N&quot; in front  </span>
+<span class="c1"># (or copy from the code block above for any other dataset)</span>
+
+<span class="c1"># select all months of each year</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">%02d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mnth</span><span class="p">)</span> <span class="k">for</span> <span class="n">mnth</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)]</span>
+
+<span class="c1"># First example: SLSTR Dual-view Radiometer data record (Fine Mode AOD)</span>
+<span class="c1"># SLSTR on Sentinel-3A: Swansea algorithm, Fine Mode AOD</span>
+<span class="c1">#1 algorithm = &quot;swansea&quot;</span>
+<span class="c1">#1 sensor_on_satellite = &quot;slstr_on_sentinel_3a&quot;</span>
+<span class="c1">#1 variable = &#39;fine_mode_aerosol_optical_depth&#39;</span>
+<span class="c1">#1 years = [&#39;%04d&#39;%(yea) for yea in range(2017, 2023)]</span>
+
+<span class="c1"># Second example: IASI Thermal Infrared Spectrometer data record (Dust AOD)</span>
+<span class="c1"># IASI on METOP-C: ULB algorithm, Dust AOD</span>
+<span class="n">algorithm</span> <span class="o">=</span> <span class="s2">&quot;ulb&quot;</span>
+<span class="n">sensor_on_satellite</span> <span class="o">=</span> <span class="s2">&quot;iasi_on_metopc&quot;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;dust_aerosol_optical_depth&#39;</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">%04d</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">yea</span><span class="p">)</span> <span class="k">for</span> <span class="n">yea</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)]</span>
+
+<span class="c1"># Third example: POLDER Polarimeter data record (Single Scattering Albedo)</span>
+<span class="c1"># POLDER on PARASOL: GRASP algorithm, single scattering albedo</span>
+<span class="c1">#3 algorithm = &quot;grasp&quot;</span>
+<span class="c1">#3 sensor_on_satellite = &quot;polder_on_parasol&quot;</span>
+<span class="c1">#3 variable = &#39;single_scattering_albedo&#39;</span>
+<span class="c1">#3 years = [&#39;%04d&#39;%(yea) for yea in range(2005, 2013)]</span>
+
+<span class="c1"># Fourth example: IASI Thermal Infrared Spectrometer data record (Dust Aerosol Layer Height)</span>
+<span class="c1"># IASI on METOP-C: ULB algorithm, Dust ALH</span>
+<span class="c1">#4 algorithm = &quot;lmd&quot;</span>
+<span class="c1">#4 sensor_on_satellite = &quot;iasi_on_metopc&quot;</span>
+<span class="c1">#4 variable = &#39;dust_aerosol_layer_height&#39;</span>
+<span class="c1">#4 years = [&#39;%04d&#39;%(yea) for yea in range(2019, 2023)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Correction of variable names: There are a few variable naming inconsistencies which we automatically adjust by the following code block.</p>
+<p>Those inconsistencies are remaining despite of strong format harmonization efforts from the fact that the algorithms / datasets come from different providers who have somewhat different coding practices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the following code lines to automatically replace all variable names which are inconsistent, so that you need not care any further</span>
+
+<span class="k">if</span> <span class="n">variable</span> <span class="o">==</span> <span class="s1">&#39;aerosol_optical_depth&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;ens&#39;</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;AOD550&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;AOD550_mean&#39;</span>
+<span class="k">elif</span> <span class="n">variable</span> <span class="o">==</span> <span class="s1">&#39;fine_mode_aerosol_optical_depth&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;ens&#39;</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;FM_AOD550&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;FM_AOD550_mean&#39;</span>
+<span class="k">elif</span> <span class="n">variable</span> <span class="o">==</span> <span class="s1">&#39;dust_aerosol_optical_depth&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;ens&#39;</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;DAOD550&#39;</span>
+    <span class="k">elif</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;lmd&#39;</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Daod550&#39;</span>
+    <span class="k">elif</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;imars&#39;</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;D_AOD550&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;D_AOD550_mean&#39;</span>
+<span class="k">elif</span> <span class="n">variable</span> <span class="o">==</span> <span class="s1">&#39;single_scattering_albedo&#39;</span><span class="p">:</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;SSA443&#39;</span>
+<span class="k">elif</span> <span class="n">variable</span> <span class="o">==</span> <span class="s1">&#39;dust_aerosol_layer_height&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;lmd&#39;</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Mean_dust_layer_altitude&#39;</span>
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;mapir&#39;</span><span class="p">:</span>
+        <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;D_ALT_mean&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unpack-the-data">
+<h2>Unpack the data<a class="headerlink" href="#unpack-the-data" title="Permalink to this heading">#</a></h2>
+<p>The zip-files have now been requested and downloaded to the data directory that we have specified earlier.
+For the purposes of our use cases, we will unzip the archive and store all netCDF files in a specific directory for this algorithm.
+There you can also search and open individual files with any tool suitable for reading netCDF format, e.g. Panoply.
+The files contain gridded data with 1 degree spatial resolution.</p>
+<p>IMPORTANT NOTE: If you had already downloaded and unzipped the record you intend to visualize now, then you need to skip this block. (To check you need to confirm that the directory time series_<algorithm>1 exists and contains all the monthly data you intend to use).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unpack the downloaded data to a predefined sub directory for the selected dataset </span>
+<span class="c1"># (which can be used for future applications of the Jupyter notebook without repeating the download)</span>
+
+<span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">download.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s1">&#39;timeseries_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;timeseries_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;1/&#39;</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="use-case-1-plot-map">
+<h1><a id='map_plot'></a> Use case 1: Plot map<a class="headerlink" href="#use-case-1-plot-map" title="Permalink to this heading">#</a></h1>
+<p>Firstly, we should get an overview of the parameter by plotting the time averaged monthly global distribution.
+The data are stored in NetCDF format, and we will use NetCDF4 Python library to work with the data.
+We will then use Matplotlib and Cartopy to visualise the data.</p>
+<p>Select the dataset by copying one filename from the specific directory for this algorithm (which is automatically transferred from the unpacking code block above).
+The dataset is then read into the Jupyter notebook and the map plot is created, displayed and stored into your main directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose a dataset for plotting</span>
+
+<span class="c1"># Define the sub directory for the dataset</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;timeseries_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;1/&#39;</span>
+ 
+<span class="c1"># Select one example monthly mean file (matching the download choice above, i.e. the line with the same &quot;#N&quot; in front)</span>
+<span class="c1"># you can select another year and month since the full data record for this dataset has been downloaded</span>
+<span class="c1">#1 filename = &#39;202106-C3S-L3_AEROSOL-AER_PRODUCTS-SLSTR-SENTINEL3A-SWANSEA-MONTHLY-v1.12.nc&#39;</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;202106-C3S-L3_AEROSOL-AER_PRODUCTS-IASI-METOPC-ULB-MONTHLY-v9DN.nc&#39;</span>
+<span class="c1">#3 filename = &#39;201106-C3S-L3_AEROSOL-AER_PRODUCTS-POLDER-PARASOL-GRASP-MONTHLY-v2.10.nc&#39;</span>
+<span class="c1">#4 filename = &#39;202106-C3S-L3_AEROSOL-AER_PRODUCTS-IASI-METOPC-LMD-MONTHLY-v2.2DN.nc&#39;</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="nb">dir</span> <span class="o">+</span> <span class="n">filename</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1"># open selected dataset with xarray</span>
+<span class="c1"># if you want to list all variables, just uncomment the following line</span>
+<span class="c1"># file # show xarray dataset (here you can see also other variables of the dataset, which can be also used in this script)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract and plot the data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span> <span class="c1"># extracts the data of the choosen variable from the dataset</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span> <span class="c1"># selects projection</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma_r&#39;</span><span class="p">)</span> <span class="c1"># plot the data with the selected colormap</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span> <span class="c1"># plot the coastlines</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="c1"># write title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./plots/&#39;</span><span class="o">+</span><span class="n">title</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span> <span class="c1"># save the plot file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/979aba72b09085e947aeb1ebf9003237fedc625bf2a4888e7f28ca1ad57488bf.png" src="../../_images/979aba72b09085e947aeb1ebf9003237fedc625bf2a4888e7f28ca1ad57488bf.png" />
+</div>
+</div>
+<p><strong>FIGURE 1:</strong> You can see here a typical global aerosol map with well-known features (depending on season and variable) such as the spring Sahara dust outflow over the Atlantic (Dust AOD), the autumn biomass burning in Southern Africa and the Amazonas (Fine Mode AOD), and several more.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="use-case-2-regional-time-series">
+<h1><a id='timeseries'></a> Use case 2: Regional time series<a class="headerlink" href="#use-case-2-regional-time-series" title="Permalink to this heading">#</a></h1>
+<p>After looking at one example of a monthly time averaged global distribution, in the next step we further investigate the dataset. The single sensor aerosol datasets are up to 15 years long, so that another useful way of visualizing is a time series. We will calculate a regional time series, plot it, and discuss its features.</p>
+<p>Here is a common definition for a set of areas with rather homogeneous aerosol properties and meaningful aerosol behaviour. Own regions can be easily defined the same way.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition of different regions to choose from</span>
+
+<span class="n">extent</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># &#39;Region&#39; : [lon_min, lon_max, lat_min, lat_max],</span>
+            <span class="s1">&#39;Europe&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span>
+            <span class="s1">&#39;Boreal&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">85</span><span class="p">],</span>
+            <span class="s1">&#39;Asia_North&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span>
+            <span class="s1">&#39;Asia_East&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">41</span><span class="p">],</span>
+            <span class="s1">&#39;Asia_West&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">41</span><span class="p">],</span>
+            <span class="s1">&#39;China_South-East&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">103</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">41</span><span class="p">],</span>
+            <span class="s1">&#39;Australia&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">],</span>
+            <span class="s1">&#39;Africa_North&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">17</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">36</span><span class="p">],</span> 
+            <span class="s1">&#39;Africa_South&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">17</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">35</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">],</span>
+            <span class="s1">&#39;South_America&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">82</span><span class="p">,</span> <span class="o">-</span><span class="mi">35</span><span class="p">,</span> <span class="o">-</span><span class="mi">55</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="s1">&#39;North_America_West&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">135</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span>
+            <span class="s1">&#39;North_America_East&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">55</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span>
+            <span class="s1">&#39;Indonesia&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="s1">&#39;Atlanti_Ocean_dust&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">47</span><span class="p">,</span> <span class="o">-</span><span class="mi">17</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+            <span class="s1">&#39;Atlantic_Ocean_biomass_burnig&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">17</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+            <span class="s1">&#39;Asia&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span>
+            <span class="s1">&#39;North_America&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">135</span><span class="p">,</span> <span class="o">-</span><span class="mi">55</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span> 
+            <span class="s1">&#39;dust_belt&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> 
+            <span class="s1">&#39;India&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">32</span><span class="p">],</span> 
+            <span class="s1">&#39;Northern_Hemisphere&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span> 
+            <span class="s1">&#39;Southern_Hemisphere&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+            <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We now choose one region and set the minimum required coverage (fraction of years with valid data in a month) for the time series.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select a region for the analysis</span>
+
+<span class="c1"># for the example datasets downloaded, we suggest the folloiwng regions</span>
+<span class="c1">#1 region = &#39;Europe&#39;</span>
+<span class="n">region</span> <span class="o">=</span> <span class="s1">&#39;dust_belt&#39;</span>
+<span class="c1">#3 region = &#39;Africa_South&#39;</span>
+<span class="c1">#4 region = &#39;Southern_Hemisphere&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select a minimal required coverage </span>
+<span class="n">min_coverage</span> <span class="o">=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we combine the datasets in one xarray dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combine the datasets in one xarray dataset</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+<span class="n">file_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="nb">dir</span> <span class="o">+</span> <span class="n">file</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="n">time_element</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">file</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;-15&#39;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time_element</span><span class="p">)</span>
+        <span class="n">file_coll</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">file_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_coll</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">file_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">))</span>
+
+<span class="c1"># if you want to list all variables, just uncomment the following line</span>
+<span class="c1"># dataset # show xarray dataset </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we can plot the timeseries.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the time series</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">3</span><span class="p">]),</span>   <span class="c1"># select latitude </span>
+    <span class="n">longitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># select longitude </span>
+    <span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">])</span>                   <span class="c1"># calculate the mean along the latitude and longitude axis</span>
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%Y-%m&#39;</span><span class="p">))</span> <span class="c1"># change the shown dateformat on the x-axis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; Timeseries &#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39; in &#39;</span> <span class="o">+</span> <span class="n">region</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">PLOTDIR</span> <span class="o">+</span> <span class="s1">&#39;timeseries_&#39;</span> <span class="o">+</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">region</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/8729d778dcefbe47980ba6a16ab2056f95cac537b2e01d53cc4f2ef3882c486b.png" src="../../_images/8729d778dcefbe47980ba6a16ab2056f95cac537b2e01d53cc4f2ef3882c486b.png" />
+</div>
+</div>
+<p><strong>FIGURE 2:</strong> Such an aerosol time series typically shows a more or less obvious annual cycle related to the annual cycle of the relevant sources and meteorological conditions. In some years and regions exceptional peaks may be seen.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="use-case-3-climatology-multi-annual-mean-and-anomaly-maps-and-time-series">
+<h1><a id='climatology'></a> Use case 3: “Climatology” (multi-annual mean) and anomaly - maps and time series<a class="headerlink" href="#use-case-3-climatology-multi-annual-mean-and-anomaly-maps-and-time-series" title="Permalink to this heading">#</a></h1>
+<p>In the next step we further investigate the dataset by comparing the data of individual months to a longer-term mean state (multi-annual mean or “climatology” if of sufficient length).</p>
+<p>We define the sub directory in which the climatology data will be stored.</p>
+<p>Note that the following code blocks are not yet prepared for the stratospheric aerosol extinction profiles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a sub directory for the climatology</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">dir</span> <span class="o">+</span> <span class="s1">&#39;/climatology&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="nb">dir</span> <span class="o">+</span> <span class="s1">&#39;/climatology&#39;</span><span class="p">)</span>
+<span class="n">dir_clima</span> <span class="o">=</span> <span class="nb">dir</span> <span class="o">+</span> <span class="s1">&#39;/climatology/&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We set the minimum required number of years with valid data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the minimum number of years with valid data required by the fraction defined above for minimum temporal coverage.</span>
+<span class="n">min_years</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">years</span><span class="p">)</span> <span class="o">*</span> <span class="n">min_coverage</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">min_years</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, we calculate the mean of all years per calendar month and the standard deviation for each lat-lon cell, where the required minimum of years has valid data and store them in one NetCDF4 file per calendar month.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the climatology (mean and standard deviation of all years included into the dataset)</span>
+
+<span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">months</span><span class="p">:</span>
+    <span class="n">data_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+                <span class="n">titel</span> <span class="o">=</span> <span class="n">file</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="nb">dir</span> <span class="o">+</span> <span class="n">titel</span>
+                <span class="n">file</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1"># open each file with xarray</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+                <span class="n">data_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="c1"># calculate mean and stdv per month</span>
+    <span class="n">data_month</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">data_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span> <span class="c1"># combine the datasets into one xarray dataset</span>
+    <span class="n">data_mean_month</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">data_month</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">min_years</span><span class="p">,</span> <span class="n">data_month</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">skipna</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="n">data_std_month</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">data_month</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">min_years</span><span class="p">,</span> <span class="n">data_month</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">skipna</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="c1">#Create a NetCDF4 File with the climatology data and their standard deviation</span>
+
+    <span class="n">fpath</span><span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">dir_clima</span><span class="si">}</span><span class="s1">/climatology_&#39;</span> <span class="o">+</span> <span class="n">month</span> <span class="o">+</span> <span class="s1">&#39;.nc&#39;</span> <span class="c1"># definition of new filename</span>
+    <span class="n">climatology_dataset</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">variable</span><span class="p">:</span><span class="n">data_mean_month</span><span class="p">,</span> <span class="n">variable</span><span class="o">+</span><span class="s1">&#39;_std&#39;</span><span class="p">:</span><span class="n">data_std_month</span><span class="p">})</span>
+    <span class="n">climatology_dataset</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">fpath</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;NETCDF4&#39;</span><span class="p">)</span>    
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/scheiner1/hpopp/C3S_jupyter_notebook/new21102024/.venv/lib/python3.11/site-packages/numpy/lib/_nanfunctions_impl.py:2053: RuntimeWarning: Degrees of freedom &lt;= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+</pre></div>
+</div>
+</div>
+</div>
+<section id="open-netcdf4-file-and-plot-climatology-map-for-selected-calendar-month">
+<h2>Open NetCDF4 File and plot climatology map for selected calendar month<a class="headerlink" href="#open-netcdf4-file-and-plot-climatology-map-for-selected-calendar-month" title="Permalink to this heading">#</a></h2>
+<p>We select one calendar month, read its netCDF file and prepare the monthly multi-annual mean map.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select one calendar month for a plot</span>
+<span class="n">month</span> <span class="o">=</span> <span class="s1">&#39;01&#39;</span>
+
+<span class="c1"># Read the netCDF file</span>
+<span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">dir_clima</span><span class="si">}</span><span class="s1">climatology_&#39;</span> <span class="o">+</span> <span class="n">month</span> <span class="o">+</span> <span class="s1">&#39;.nc&#39;</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+
+<span class="c1"># Plot the climatology map for the selected month</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma_r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; climatology &#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">month</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">PLOTDIR</span> <span class="o">+</span> <span class="s1">&#39;map_climatology_&#39;</span> <span class="o">+</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">month</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/e5c0e3d301cf80d63ffbc81b85d25bf94ce6eb1ba1fa6e192d671d151cc2e473.png" src="../../_images/e5c0e3d301cf80d63ffbc81b85d25bf94ce6eb1ba1fa6e192d671d151cc2e473.png" />
+</div>
+</div>
+<p><strong>FIGURE 3:</strong> This figure shows (similar to the example monthly mean map above) those typical aerosol features which occur in the selected calendar month, but now averaged over several years and thus showing a multi-annual mean state of the atmosphere in that calendar month.</p>
+</section>
+<section id="regional-climatology-calculate-and-plot-as-time-series">
+<h2>Regional climatology: calculate and plot as time series<a class="headerlink" href="#regional-climatology-calculate-and-plot-as-time-series" title="Permalink to this heading">#</a></h2>
+<p>For the region and variable as selected above and the full timerange used for the multi-annual mean, we calculate now regional averages of the climatology in each calendar month and of each invidual month in the time series. We also calculate the standard deviation for each calendar month as measure of the multi-annual variability.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the monthly climatology of regional values (mean, standard deviation) from all downloaded years</span>
+
+<span class="n">files_clima</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dir_clima</span><span class="p">)</span>
+<span class="n">year</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">climatology</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">sdev</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">months</span><span class="p">:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files_clima</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">dir_clima</span> <span class="o">+</span> <span class="n">file</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+                <span class="n">latitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">3</span><span class="p">]),</span> 
+                <span class="n">longitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">var_data</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">skipna</span> <span class="o">=</span> <span class="kc">True</span><span class="p">))</span>
+            <span class="n">data_std</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="o">+</span><span class="s1">&#39;_std&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+                <span class="n">latitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">3</span><span class="p">]),</span> 
+                <span class="n">longitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">var_data_std</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_std</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">skipna</span> <span class="o">=</span> <span class="kc">True</span><span class="p">))</span>
+            <span class="n">climatology</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var_data</span><span class="p">)</span>
+            <span class="n">sdev</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var_data_std</span><span class="p">)</span>
+            <span class="n">year</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">month</span><span class="p">))</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plot “climatology” and its standard deviation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the variability range (+/- half a standard deviation) or each month in the regional climatology</span>
+<span class="n">sdev_p</span> <span class="o">=</span> <span class="p">[</span><span class="n">climatology</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">sdev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">climatology</span><span class="p">))]</span> 
+<span class="n">sdev_m</span> <span class="o">=</span> <span class="p">[</span><span class="n">climatology</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">sdev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">climatology</span><span class="p">))]</span>
+
+<span class="c1"># Plot the annual climatology and its variabiloity range (shaded)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">sdev_p</span><span class="p">,</span> <span class="n">sdev_m</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">climatology</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">variable</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Select the label (for all possible variable names)</span>
+<span class="k">if</span> <span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AOD&#39;</span><span class="p">:</span> <span class="c1"># Total AOD</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;AOD&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;DA&#39;</span> <span class="ow">or</span> <span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Da&#39;</span> <span class="ow">or</span> <span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D_AOD&#39;</span><span class="p">:</span> <span class="c1"># Dust AOD</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;DAOD&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;FM&#39;</span><span class="p">:</span> <span class="c1"># Fine Mode AOD</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;FM_AOD&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="c1"># single scattering albedo</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;SSA&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">variable</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;dust&#39;</span> <span class="ow">or</span> <span class="n">variable</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ALT&#39;</span><span class="p">:</span> <span class="c1"># Dust Altitude</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;DALH&quot;</span><span class="p">)</span>
+                
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; Climatology &#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39; in &#39;</span> <span class="o">+</span> <span class="n">region</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">PLOTDIR</span> <span class="o">+</span> <span class="s1">&#39;annual_climatology_&#39;</span> <span class="o">+</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">region</span> <span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/0ea92cd5e9628738f87480da83942f51eb35a7142a21d6e4dbb6639dd7e246e9.png" src="../../_images/0ea92cd5e9628738f87480da83942f51eb35a7142a21d6e4dbb6639dd7e246e9.png" />
+</div>
+</div>
+<p><strong>FIGURE 4:</strong> The figure shows now the average annual cycle in the selected region extracted from the multi-annual dataset.</p>
+</section>
+<section id="plot-timeseries-with-climatology">
+<h2>Plot timeseries with climatology<a class="headerlink" href="#plot-timeseries-with-climatology" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now, we overplot the multi-annual regional time series with the averaged climatolog of those years</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">3</span><span class="p">]),</span>   <span class="c1"># select latitude </span>
+    <span class="n">longitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># select longitude </span>
+    <span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">])</span>                   <span class="c1"># calculate the mean along the latitude and longitude axis</span>
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">variable</span><span class="p">)</span>
+<span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime_as_string</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+
+<span class="n">files_clima</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dir_clima</span><span class="p">)</span>
+
+<span class="n">climatology</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">sdev</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+    
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="s1">&#39;-15&#39;</span><span class="p">))</span>
+    
+    <span class="n">path</span> <span class="o">=</span> <span class="n">dir_clima</span> <span class="o">+</span> <span class="s1">&#39;climatology_&#39;</span> <span class="o">+</span>  <span class="n">t</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span><span class="o">+</span> <span class="s1">&#39;.nc&#39;</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">data_mean</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+        <span class="n">latitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">3</span><span class="p">]),</span> 
+        <span class="n">longitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">var_data</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_mean</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">skipna</span> <span class="o">=</span> <span class="kc">True</span><span class="p">))</span>
+    <span class="n">data_std</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="o">+</span><span class="s1">&#39;_std&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+        <span class="n">latitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">3</span><span class="p">]),</span> 
+        <span class="n">longitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="n">region</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">var_data_std</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_std</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">skipna</span> <span class="o">=</span> <span class="kc">True</span><span class="p">))</span>
+    <span class="n">climatology</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var_data</span><span class="p">)</span>
+    <span class="n">sdev</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var_data_std</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            
+<span class="n">sdev_p</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">climatology</span><span class="p">)</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sdev</span><span class="p">))</span>
+<span class="n">sdev_m</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">climatology</span><span class="p">)</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sdev</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%Y-%m&#39;</span><span class="p">))</span> <span class="c1"># change the shown dateformat on the x-axis</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">sdev_p</span><span class="p">,</span> <span class="n">sdev_m</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">climatology</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;climatology&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+                
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; climatology &#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39; in &#39;</span> <span class="o">+</span> <span class="n">region</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">PLOTDIR</span> <span class="o">+</span> <span class="s1">&#39;timeseries_with_climatology_&#39;</span> <span class="o">+</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">region</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/52a9a350e606303dcd3f0f5dd0f739fed4802f7463405f781dd4304302a8d5e6.png" src="../../_images/52a9a350e606303dcd3f0f5dd0f739fed4802f7463405f781dd4304302a8d5e6.png" />
+</div>
+</div>
+<p><strong>FIGURE 5:</strong> The next figure shows the time series in red compared to the multiannual mean in blue and its standard deviation in light blue shading (both repeated from year to year). Exceptional episodes stand out if the red line breaks out of the blue shade.</p>
+</section>
+<section id="anomaly-time-series">
+<h2>Anomaly time series<a class="headerlink" href="#anomaly-time-series" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Finally, we overplot the anomaly (= difference from the multi-annual averaged climatology) over the variability range of the data.</span>
+
+<span class="n">anomaly</span> <span class="o">=</span> <span class="n">data</span> <span class="o">-</span> <span class="n">climatology</span>     
+<span class="n">sdev_p</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sdev</span><span class="p">))</span>
+<span class="n">sdev_m</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sdev</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%Y-%m&#39;</span><span class="p">))</span> <span class="c1"># change the shown dateformat on the x-axis</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">sdev_p</span><span class="p">,</span> <span class="n">sdev_m</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">anomaly</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;climatology&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; Anomaly &#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">region</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">PLOTDIR</span> <span class="o">+</span> <span class="s1">&#39;anomaly_timeseries__&#39;</span> <span class="o">+</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">algorithm</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">region</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/a87018d950cf8ddc981bb9135c2b3d265c7b2d839f54989889fa5d4bd7f3612b.png" src="../../_images/a87018d950cf8ddc981bb9135c2b3d265c7b2d839f54989889fa5d4bd7f3612b.png" />
+</div>
+</div>
+<p><strong>FIGURE 6:</strong> This final regional time series plot shows the data record in the form of anomalies, i.e. differences between individual monthly data points and the multi-annual monthly mean compared to the multi-annual monthly variations around the zero anomaly line.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="use-case-4-visualize-vertical-profile-data">
+<h1><a id='vertical'></a> Use Case 4: Visualize Vertical Profile data<a class="headerlink" href="#use-case-4-visualize-vertical-profile-data" title="Permalink to this heading">#</a></h1>
+<p>As a last example we present a completely different dataset: vertical profiles obtained with the GOMOS star occultation spectrometer (Aergom algorithm).
+For each observation the instrument needs to point to a star with sufficient brightness for the occultation measurement. Conceqeuntly, the observations are very sparse and not sufficient for daily mapping.
+In response to user needs to allow identifying short-term and small-scale volcanic episodes, this dataset has a special temporal and spatial resolution: Temporally, it is provided as 5-daily averages (not as monthly or daily means). Spatially, it is provided for grid boxes of 60 degrees in longitude and 5 degrees in latitude since emissions from volcanic eruptions disperse along latitude bands in the stratosphere.
+Consequently, the download sequence needs to query each calendar day to find and download the 5-daily files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download GOMOS data: AERGOM algorithm, aerosol extinction profiles</span>
+
+<span class="c1"># Define specific sub directory for the GOMOS data</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">DATADIR</span> <span class="o">+</span> <span class="s1">&#39;GOMOS&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">DATADIR</span> <span class="o">+</span> <span class="s1">&#39;GOMOS&#39;</span><span class="p">)</span>
+
+<span class="c1"># Specify the characteristics of the data for downloading: variable, year(s), month(s), all days per month</span>
+<span class="c1"># if you want to download the full data record, use the codes behind the #</span>
+<span class="c1"># However, for downloading the entire 10 years of data with daily queries, the notebook will take a long time.</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;aerosol_extinction_coefficient&#39;</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2008&#39;</span><span class="p">]</span> <span class="c1"># years = [&#39;%02d&#39;%(year) for year in range(&#39;2002&#39;, &#39;2012&#39;)]</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;07&#39;</span><span class="p">]</span> <span class="c1"># months = [&#39;%02d&#39;%(month) for month in range(1, 13)]</span>
+<span class="n">days</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">%02d</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">)]</span>
+
+<span class="c1"># download the specified GOMOS data from the CDS</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+<span class="n">product</span><span class="o">=</span><span class="s1">&#39;satellite-aerosol-properties&#39;</span>
+<span class="n">countdays</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">count_nodata</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">months</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">days</span><span class="p">:</span>
+            <span class="n">countdays</span> <span class="o">=</span> <span class="n">countdays</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">request</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s1">&#39;time_aggregation&#39;</span><span class="p">:</span> <span class="s1">&#39;5_daily_composite&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="n">variable</span><span class="p">,</span>
+                        <span class="s1">&#39;sensor_on_satellite&#39;</span><span class="p">:</span> <span class="s2">&quot;gomos_on_envisat&quot;</span><span class="p">,</span>
+                        <span class="s1">&#39;algorithm&#39;</span><span class="p">:</span> <span class="s2">&quot;aergom&quot;</span><span class="p">,</span>
+                        <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span> 
+                        <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="n">month</span><span class="p">,</span>
+                        <span class="s1">&#39;day&#39;</span><span class="p">:</span> <span class="n">day</span><span class="p">,</span>
+                        <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;v4_01s&quot;</span><span class="p">]}</span>
+                <span class="n">file_name</span> <span class="o">=</span> <span class="n">DATADIR</span> <span class="o">+</span> <span class="s1">&#39;GOMOS/aergom_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">month</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.zip&#39;</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">product</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;downloaded: &#39;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">month</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">day</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="c1"># print(&#39;no data &#39; + year + &#39;-&#39; + month + &#39;-&#39; + day)</span>
+                <span class="n">count_nodata</span> <span class="o">=</span> <span class="n">count_nodata</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;downloaded days: &#39;</span><span class="p">,</span><span class="n">countdays</span> <span class="o">-</span> <span class="n">count_nodata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-06 16:21:19,934 INFO [2024-09-28T00:00:00] **Welcome to the New Climate Data Store (CDS)!** This new system is in its early days of full operations and still undergoing enhancements and fine tuning. Some disruptions are to be expected. Your 
+[feedback](https://jira.ecmwf.int/plugins/servlet/desk/portal/1/create/202) is key to improve the user experience on the new CDS for the benefit of everyone. Thank you.
+2024-11-06 16:21:19,935 WARNING [2024-09-26T00:00:00] Should you have not yet migrated from the old CDS system to the new CDS, please check our [informative page](https://confluence.ecmwf.int/x/uINmFw) for guidance.
+2024-11-06 16:21:19,935 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2024-11-06 16:21:19,936 INFO [2024-09-16T00:00:00] Remember that you need to have an ECMWF account to use the new CDS. **Your old CDS credentials will not work in new CDS!**
+2024-11-06 16:21:19,936 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the &quot;Show API request code&quot; tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2024-11-06 16:21:23,393 INFO [2022-04-01T00:00:00] GOMOS on ENVISAT version 5.00 data have been deprecated. Consult Known Issues in the Documentation tab.
+2024-11-06 16:21:23,393 INFO Request ID is 756d796a-cd25-453e-9378-1dcf370dd623
+2024-11-06 16:21:23,804 INFO status has been updated to accepted
+2024-11-06 16:21:28,847 INFO status has been updated to running
+2024-11-06 16:21:37,783 INFO status has been updated to successful
+                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>downloaded: 2008-07-03
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-06 16:21:44,536 INFO [2022-04-01T00:00:00] GOMOS on ENVISAT version 5.00 data have been deprecated. Consult Known Issues in the Documentation tab.
+2024-11-06 16:21:44,537 INFO Request ID is 56cfe76e-37c1-421b-b92b-d4d878a8bdb1
+2024-11-06 16:21:44,643 INFO status has been updated to accepted
+2024-11-06 16:22:44,918 INFO status has been updated to successful
+                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>downloaded: 2008-07-08
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-06 16:22:58,202 INFO [2022-04-01T00:00:00] GOMOS on ENVISAT version 5.00 data have been deprecated. Consult Known Issues in the Documentation tab.
+2024-11-06 16:22:58,204 INFO Request ID is 86fd2dcd-4e84-463e-beab-c5e4cc4c3acf
+2024-11-06 16:22:58,252 INFO status has been updated to accepted
+2024-11-06 16:23:06,239 INFO status has been updated to running
+2024-11-06 16:23:11,989 INFO status has been updated to successful
+                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>downloaded: 2008-07-13
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-06 16:23:22,245 INFO [2022-04-01T00:00:00] GOMOS on ENVISAT version 5.00 data have been deprecated. Consult Known Issues in the Documentation tab.
+2024-11-06 16:23:22,246 INFO Request ID is 70f7f7be-75ed-447d-adb5-9b5c8bc21b1e
+2024-11-06 16:23:24,459 INFO status has been updated to accepted
+2024-11-06 16:23:40,272 INFO status has been updated to successful
+                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>downloaded: 2008-07-18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-06 16:23:47,648 INFO [2022-04-01T00:00:00] GOMOS on ENVISAT version 5.00 data have been deprecated. Consult Known Issues in the Documentation tab.
+2024-11-06 16:23:47,649 INFO Request ID is cfb19b4a-3d86-4707-94e1-b972af9c2622
+2024-11-06 16:23:47,834 INFO status has been updated to accepted
+2024-11-06 16:23:52,759 INFO status has been updated to running
+2024-11-06 16:23:56,203 INFO status has been updated to successful
+                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>downloaded: 2008-07-23
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-06 16:24:04,790 INFO [2022-04-01T00:00:00] GOMOS on ENVISAT version 5.00 data have been deprecated. Consult Known Issues in the Documentation tab.
+2024-11-06 16:24:04,791 INFO Request ID is b69a991e-c5a4-41a1-8e2d-989ffd9418cd
+2024-11-06 16:24:05,371 INFO status has been updated to accepted
+2024-11-06 16:24:10,674 INFO status has been updated to running
+2024-11-06 16:24:14,181 INFO status has been updated to successful
+                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>downloaded: 2008-07-28
+downloaded days:  6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Extract the GOMOS data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &quot;Define the GOMSO data directory and extract a list of downloaded files</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">DATADIR</span><span class="o">+</span><span class="s1">&#39;GOMOS/&#39;</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+<span class="c1"># dir = f&#39;{DATADIR}&#39; + &#39;GOMOS/data/&#39;</span>
+
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;.zip&#39;</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="nb">dir</span> <span class="o">+</span> <span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+            <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="nb">dir</span><span class="o">+</span><span class="s1">&#39;/data&#39;</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">DATADIR</span> <span class="o">+</span> <span class="s1">&#39;GOMOS/&#39;</span><span class="o">+</span> <span class="n">file</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>Select a dataset.
+You can choose one of the days that have been reported as downloaded above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define filename and open the netCDF file</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;20080703-C3S-L3_AEROSOL-AER_PRODUCTS-GOMOS-ENVISAT-AERGOM-5DAILY-v4.01s.nc&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="nb">dir</span> <span class="o">+</span> <span class="s1">&#39;/data/&#39;</span> <span class="o">+</span> <span class="n">filename</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="c1"># if you want to list all variables, just uncomment the following line</span>
+<span class="c1"># file</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plot a map at a choosen altitude.
+For the AERGOM GOMOS vertical extinction profiles, you can select one vertical layer number and then plot a global map of this layer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select and plot the data: variable, layer number (= altitude in km)</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;AEX550&#39;</span>
+<span class="n">layer</span> <span class="o">=</span> <span class="mi">35</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lev</span><span class="o">=</span><span class="n">layer</span><span class="p">)</span> <span class="c1"># extracts the data of the choosen variable from the dataset</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span> <span class="c1"># selects projection</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma_r&#39;</span><span class="p">)</span> <span class="c1"># plot the data the selected colormap</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span> <span class="c1"># plot the coastlines</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; aergom &#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; at &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; km&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./plots/&#39;</span><span class="o">+</span><span class="n">title</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/543b4ffa9e25369bd1dc8dc26c170a654fa4724d856b08dbe90fa40ac964986b.png" src="../../_images/543b4ffa9e25369bd1dc8dc26c170a654fa4724d856b08dbe90fa40ac964986b.png" />
+</div>
+</div>
+<p><strong>FIGURE 7:</strong> This map of aerosol extinction at the selected height layer illustrates the sparcity of the GOMOS data and the optzimized spatial grid (finer in latitudinal than in longitudinal dimension).</p>
+<p>Finally, we plot an example vertical profile out of the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select and plot the data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> <span class="c1"># extracts the data of the choosen variable from the dataset at the choosen location (lat, lon)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;lev&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="c1"># plot the profile</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; profile aergom &#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./plots/&#39;</span><span class="o">+</span><span class="n">title</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/39791db61277cffe74a90a4443bbf83ec34420e2ceebaf8022dc5a477c9f7509.png" src="../../_images/39791db61277cffe74a90a4443bbf83ec34420e2ceebaf8022dc5a477c9f7509.png" />
+</div>
+</div>
+<p><strong>FIGURE 8:</strong> This plot of aerosol extinction at the selected location shows a vertical aerosol profile of the GOMOS data with differnet layers at 20 and 23 km altitude.</p>
+<p>This closes our first Jupyter notebook on aerosol properties.</p>
+<p>A second Jupyter notebook will create a full Climate Data Record by combining subsequent data record pieces of similar sensors.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="get-more-information-about-aerosol-properties-and-the-climate-data-store">
+<h1>Get more information about Aerosol properties and the Climate Data Store<a class="headerlink" href="#get-more-information-about-aerosol-properties-and-the-climate-data-store" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-aerosol-properties?tab=overview">C3S Aerosol properties gridded data from 1995 to present derived from satellite observations</a></p></li>
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/">About the Climate Data Store</a></p></li>
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/toolbox/doc/index.html">About the Toolbox documentation</a></p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1><a id='references'></a> References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="http://wdc.dlr.de/C3S_312b_Lot2/Documentation/AER/C3S2_312a_Lot2_PUGS_AER_latest.pdf">Product User Guide for CDS Aerosol Properties</a></p>
+<p><a class="reference external" href="https://www.mdpi.com/2072-4292/8/5/421">Thomas Popp, Gerrit de Leeuw, Christine Bingen, Christoph Brühl, Virginie Capelle, Alain Chedin,
+Lieven Clarisse, Oleg Dubovik, Roy Grainger, Jan Griesfeller, Andreas Heckel, Stefan Kinne, Lars Klüser,
+Miriam Kosmale, Pekka Kolmonen, Luca Lelli, Pavel Litvinov, Linlu Mei, Peter North, Simon Pinnock,
+Adam Povey, Charles Robert, Michael Schulz, Larisa Sogacheva, Kerstin Stebel, Deborah Stein Zweers,
+Gareth Thomas, Lieuwe Gijsbert Tilstra, Sophie Vandenbussche, Pepijn Veefkind, Marco Vountas and
+Yong Xue, Development, Production and Evaluation of Aerosol Climate Data Records from European
+Satellite Observations (Aerosol_cci), Remote Sensing, 8, 421; doi:10.3390/rs8050421, 2016</a></p>
+<p><a class="reference internal" href="#title"><span class="xref myst">Back to top the Page</span></a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./submodules\c3s-training-submodule-sat-obs-atmos-comp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="greenhouse-gases-level3-products.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="aerosol-multi-sensor-record.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Visualising a full Climate Data Record of multi-sensor Aerosol data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exploring gridded data on Aerosol properties available on C3S</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction"><a id="intro"></a> Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description"><a id="data_description"></a> Data description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api"><a id="cdsapi"></a> Download data using CDS API</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cds-api-credentials">CDS API credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unpack-the-data">Unpack the data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-plot-map"><a id="map_plot"></a> Use case 1: Plot map</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-regional-time-series"><a id="timeseries"></a> Use case 2: Regional time series</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-3-climatology-multi-annual-mean-and-anomaly-maps-and-time-series"><a id="climatology"></a> Use case 3: “Climatology” (multi-annual mean) and anomaly - maps and time series</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-netcdf4-file-and-plot-climatology-map-for-selected-calendar-month">Open NetCDF4 File and plot climatology map for selected calendar month</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regional-climatology-calculate-and-plot-as-time-series">Regional climatology: calculate and plot as time series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-timeseries-with-climatology">Plot timeseries with climatology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-time-series">Anomaly time series</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-4-visualize-vertical-profile-data"><a id="vertical"></a> Use Case 4: Visualize Vertical Profile data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-aerosol-properties-and-the-climate-data-store">Get more information about Aerosol properties and the Climate Data Store</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><a id="references"></a> References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Centre for Medium-Range Weather Forecasts)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

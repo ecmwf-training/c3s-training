@@ -33,7 +33,7 @@ We have a set of new tutorials waiting and ready to be explored.
 {bdg-info}`C3S`
 ^^^
 
-<img src=./img/C3S_POS-LINE.png>
+![Image]
 
 +++
 2024
@@ -53,7 +53,7 @@ We have a set of new tutorials waiting and ready to be explored.
 {bdg-info}`C3S`
 ^^^
 
-<img src=./img/C3S_POS-LINE.png>
+![Image]
 
 +++
 2024
@@ -73,7 +73,7 @@ We have a set of new tutorials waiting and ready to be explored.
 {bdg-info}`C3S`
 ^^^
 
-<img src=./img/C3S_POS-LINE.png>
+![Image]
 
 +++
 2024

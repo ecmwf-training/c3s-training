@@ -7,7 +7,7 @@ parts:
   - caption: Introduction
     chapters:
       - file: how-to-run-these-tutorials
-        title: How to run these 
+        title: How to run these tutorials
   - caption: Tutorials
     chapters:
       - file: cds-tutorial/intro
@@ -22,13 +22,15 @@ parts:
             title: Climatology
           - file: submodules/c3s-training-submodule-reanalysis/reanalysis-heatwave
             title: Heatwave Analysis
+          - file: submodules/c3s-training-submodule-reanalysis/reanalysis-temp-record
+            title: Temperature Record
       - file: submodules/c3s-training-submodule-projections/intro
         title: Climate Projections 
         sections:
           - file: submodules/c3s-training-submodule-projections/projections-cmip6
-            title: Climate Projections (CMIP6)
+            title: Global Climate Projections (CMIP6)
           - file: submodules/c3s-training-submodule-projections/projections-cordex
-            title: Climate Projections (CORDEX)
+            title: Regional Climate Projections (CORDEX)
       - file: submodules/c3s-training-submodule-seasonal-forecast/intro
         title: Seasonal Forecasts 
         sections:
@@ -63,6 +65,9 @@ parts:
             title: Tropospheric humidity estimates from satellite-based radio occultation measurements
           - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology
             title: Cloud fractional cover climatology
+          # Precipitation
+          - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe
+            title: Exploring Precipitation information in the GIRAFFE dataset
       - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/intro
         title: Satellite Observations - Atmospheric Composition  
         sections:
@@ -100,7 +105,7 @@ parts:
             title: Glacier Mass Change
       - file: submodules/c3s-training-submodule-sat-obs-ocean/intro
         title: Satellite Observations - Ocean
-      - file: submodules/c3s-training-submodule-sat-obs-Land/intro
+      - file: submodules/c3s-training-submodule-sat-obs-land/intro
         title: Satellite Observations - Land
       - file: submodules/copernicus-emergency-service-tutorial/intro
         title: Tutorials using Copernicus Emergency Management Service data
