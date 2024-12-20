@@ -8,3 +8,5 @@ dependencies:
   - xarray
   - matplotlib
   - cartopy
+  - myst-parser
+  - jupyterlab
