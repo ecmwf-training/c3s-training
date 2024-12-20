@@ -10,11 +10,6 @@ parts:
         title: How to run these tutorials
   - caption: Tutorials
     chapters:
-      - file: cds-tutorial/intro
-        title: CDS 
-        sections:
-          - file: cds-tutorial/cds-tutorial
-            title: CDS 
       - file: submodules/c3s-training-submodule-reanalysis/intro
         title: Reanalysis 
         sections:
