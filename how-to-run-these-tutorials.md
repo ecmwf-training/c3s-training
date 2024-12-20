@@ -93,6 +93,8 @@ If you prefer a lightweight interface and want to consum less resources, you may
    - After installing JupyterLab, open your terminal or command prompt.
    - Type `jupyter lab` and press Enter to launch JupyterLab. This will start a local server and open JupyterLab in your default web browser.
 
+   Check the [JupyterLab documentation](https://jupyterlab.readthedocs.io/en/latest/getting_started/starting.html)!
+
 3. **Access JupyterLab Interface**:
 
    - Once JupyterLab is launched, you will see the JupyterLab interface in your web browser. It consists of a file browser on the left and a main work area on the right.
