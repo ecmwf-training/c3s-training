@@ -68,7 +68,7 @@ These cloud-based services represent only a selection of the available options f
 ## Run the notebooks locally
 
 ```{attention}
-If you would like to run this notebook in your own environment, we suggest you install [Anaconda](https://docs.anaconda.com/anaconda/install/), which contains most of the libraries you will need.<br>
+If you would like to run this notebook in your own environment, we suggest you install [Miniforge](https://conda-forge.org/download/), which contains most of the libraries you will need.<br>
 In our [github repository](https://github.com/Randbee/C3SBook) you can find every notebook in `notebooks/` folder. Also, there is a `requirements.txt` file, containing the necessary python libraries for running our notebooks.You need to run this command in the same directory as the requirements.txt file.
 
 `pip install -r requirements.txt`
