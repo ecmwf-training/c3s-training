@@ -102,7 +102,7 @@ If you prefer a lightweight interface and want to consum less resources, you may
 4. **Open a Notebook**:
 
    - You can download every notebook by clicking on the download button at the top of the webpage.
-     ![Download notebook](download-notebook.jpg)
+     ![Download notebook](download-notebook.png)
    - Navigate to the directory where your notebook is located using the file browser on the left.
    - Click on the notebook file (usually with a `.ipynb` extension) to open it in JupyterLab.
    - The notebook will open in a new tab within the main work area of JupyterLab.
