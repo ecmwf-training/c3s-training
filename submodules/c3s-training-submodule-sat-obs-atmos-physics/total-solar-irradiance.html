@@ -1,0 +1,1178 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The Total Solar Irradiance (TSI) from RMIB &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Calculation of global climatology and relative anomalies of Surface Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset" href="srb-climatology-and-anomaly.html" />
+    <link rel="prev" title="Analysis of the Earth’s Radiation Budget using the CERES product" href="erb-ceres-climatology.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Copernicus Climate Change Service (C3S) Data Tutorials
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../how-to-run-these-tutorials.html">How to run these tutorials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Satellite Observations - Atmospheric Physic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Total Solar Irradiance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite Observations - Atmospheric Composition</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total Ozone Columns</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/submodules/c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Total Solar Irradiance (TSI) from RMIB</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-data-preparations">2. Prerequisites and data preparations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-the-notebook">2.1 How to access the notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">2.2 Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api">2.3 Download data using CDS API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#unpack-the-data">Unpack the data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">3. Use Cases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-time-series-of-the-total-solar-irradiance-tsi">Use case 1: Time series of the Total Solar Irradiance (TSI)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset-subselect-and-calculate-a-temporal-mean">Load dataset, subselect and calculate a temporal mean</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#print-header-information-to-learn-about-the-dataset">Print header information to learn about the dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-side-by-side-composite-products">Use case 2: Side-by-side composite products</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-nrl-dataset-subselecting-the-time-range">Download the NRL dataset, subselecting the time range</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Load dataset, subselect and calculate a temporal mean</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Plot data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-earth-radiation-budget">Get more information about Earth Radiation Budget:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><img alt="logo" src="../../_images/LogoLine_horizon_C3S.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="the-total-solar-irradiance-tsi-from-rmib">
+<h1>The Total Solar Irradiance (TSI) from RMIB<a class="headerlink" href="#the-total-solar-irradiance-tsi-from-rmib" title="Link to this heading">#</a></h1>
+<p>This notebook provides a practical introduction to the Total Solar Irradiance (TSI) dataset available at the Copernicus Climate Change Service (C3S) <a class="reference external" href="https://cds.climate.copernicus.eu/#!/home">Climate Data Store (CDS)</a>.</p>
+<p>The notebook begins with an introduction to the TSI variable and the dataset overview. Next, it provides instructions for setting up and running the notebook. It describes the steps to set up a python environment, and access and prepare the data. Following this setup, the notebook presents two practical use cases of the dataset: plotting the TSI daily values and a 12-month rolling mean (Use Case 1), and plotting two TSI datasets side-by-sides (Use Case 2).</p>
+<p>The figure below is the result of Use Case 1, and the result of a successful run of the code.</p>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Introduction</p></li>
+<li><p>Prerequisites and data preparations</p></li>
+<li><p>Use cases</p>
+<ul class="simple">
+<li><p>Use case 1: Time series of the Total Solar Irradiance (TSI)</p></li>
+<li><p>Use case 2: Comparison of two TSI composites</p></li>
+</ul>
+</li>
+<li><p>References</p></li>
+</ol>
+</section>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>The Total Solar Irradiance (TSI) is the measure of the energy input that the Earth receives from the Sun. It is the dominant driver of the Earth’s climate, a key component of the Earth’s Radiation Budget (ERB), and is thus one of the Global Climate Observing System (GCOS) Essential Climate Variables (ECVs). Stable and accurate long-term TSI records are needed for climate studies, e.g. to understand the influence of solar variability on climate.</p>
+<p>The TSI exhibits large day-to-day variations due to the passage of dark sunspots, and bright faculae. The well-known 11-year solar cycle is also being directly observed by space-based instruments. There exist other regular and irregular factors that contribute to the short-term variations of TSI. Fortunately, the TSI is very stable in the long timescales, century to multi-century (thus the historical name “the solar constant”, now usually referred to as Total Solar Irradiance (TSI)).</p>
+<p>This TSI dataset provides daily TSI observations for over 44 years. It is a composite dataset, meaning that it is constructed from different TSI measurements obtained by an ensemble of space instruments, and carefully combined into one homogeneous dataset.</p>
+<p>This dataset is produced on behalf of C3S by the Royal Meteorological Institute of Belgium (RMIB).</p>
+<p>Please find further information about the dataset as well as the data in the Climate Data Store catalogue entry Earth’s Radiation Budget, sections “Overview”, “Download data” and “Documentation”:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview">Earth’s Radiation Budget from 1979 to present derived from satellite observations</a></p></li>
+</ul>
+<p>A <a class="reference external" href="https://datastore.copernicus-climate.eu/documents/satellite-earth-radiation-budget/C3S2_312a_Lot1.4.0.3_202306_Tutorial_ECV_EarthRadiationBudget_final.mp4">tutorial video</a> describes the “Earth Radiation Budget” Essential Climate Variable and the methods and satellite instruments used to produce the data provided in the CDS catalogue entry.</p>
+</section>
+<section id="prerequisites-and-data-preparations">
+<h2>2. Prerequisites and data preparations<a class="headerlink" href="#prerequisites-and-data-preparations" title="Link to this heading">#</a></h2>
+<p>This chapter provides information on how to: run the notebook, lists necessary python libraries, and guides you through the process of the  preparation: how to search and download the data via CDS API and get it ready to be used.</p>
+<section id="how-to-access-the-notebook">
+<h3>2.1 How to access the notebook<a class="headerlink" href="#how-to-access-the-notebook" title="Link to this heading">#</a></h3>
+<p>This tutorial is in the form of a <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>. This tutorial can also be run on a cloud environment, or on your own computer. Here are some suggestions, simply click on one of the links below to launch this notebook in the cloud environment. To run the code, press “Run - Run All Cells”. Once you feel comfortable with the python code, you are invited to adjust or extend the code according to your interests.</p>
+<style>
+td, th {
+   border: 1px solid white;
+   border-collapse: collapse;
+}
+</style>
+<table align="left">
+  <tr>
+    <th>Run the tutorial via free cloud platforms: </th>
+    <th><a href="https://mybinder.org/v2/gh/ecmwf-projects/copernicus-training-c3s/main?labpath=C3S_TSI.ipynb">
+        <img src = "https://mybinder.org/badge.svg" alt = "Binder"></th>
+    <th><a href="https://colab.research.google.com/github/ecmwf-projects/copernicus-training-c3s/blob/main/C3S_TSI.ipynb">
+        <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
+  </tr>
+</table> <p>We are using <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> to download the data. This package is not yet included by default on most cloud platforms. You can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install it:</p>
+<p><code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code></p>
+<p><strong>Run the tutorial in the local environment</strong></p>
+<p>If you would like to run this notebook in your own environment, download this notebook as an <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> file. We suggest you install <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Anaconda</a> or <a class="reference external" href="https://mamba.readthedocs.io/en/latest/">mamba</a>, which contains most of the libraries you will need.
+We will be working with data in ASCII format. <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a Python library for data manipulation and analysis. It is used to read, process, and write ASCII files such as TXT or CSV. We will also need libraries for plotting and viewing data, in this case, we will use <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code>. <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to">cdsapi</a> is a Python library for programmatically accessing the data from the CDS.</p>
+</section>
+<section id="import-libraries">
+<h3>2.2 Import libraries<a class="headerlink" href="#import-libraries" title="Link to this heading">#</a></h3>
+<p>We need to import the libraries to ensure that all necessary functions and modules are available for use throughout the script’s execution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CDS API library</span>
+<span class="kn">import</span> <span class="nn">cdsapi</span>
+
+<span class="c1"># Library for data manipulation and analysis</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Libraries to work with zip-archives, pattern expansion, operating system interfaces</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Library for plotting and visualising data</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="download-data-using-cds-api">
+<h3>2.3 Download data using CDS API<a class="headerlink" href="#download-data-using-cds-api" title="Link to this heading">#</a></h3>
+<p>This tutorial assumes that you have installed the cdsapi and configured you .cdsapirc file with your key, as described in the “Climate Data Store Tutorial”.</p>
+<p>First, we specify a data directory in which we will download our data and all output files that we will generate. Using <code class="docutils literal notranslate"><span class="pre">os</span></code> library, we create the data directory if it does not already exist.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data_dir/&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="search-for-data">
+<h4>Search for data<a class="headerlink" href="#search-for-data" title="Link to this heading">#</a></h4>
+<p>To search for data, visit the CDS website: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/home">https://cds.climate.copernicus.eu/cdsapp#!/home</a>.
+Here you can search for TSI data using the search bar. The data we need for this use case is the <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview">Earth’s Radiation Budget from 1979 to present derived from satellite observations</a>.
+The Earth Radiation Budget (ERB) comprises the quantification of the incoming radiation from the Sun and the outgoing reflected shortwave and emitted longwave radiation. This catalogue entry comprises data from a number of sources.</p>
+<p>Having selected the correct catalogue entry, we now need to specify what origin, variables, temporal and geographic coverage we are interested in.
+These can all be selected in the <strong>“Download data”</strong> tab. In this tab, a form appears in which we will select the following parameters to download:</p>
+<ul class="simple">
+<li><p>Product family: <code class="docutils literal notranslate"><span class="pre">TSI</span> <span class="pre">(Total</span> <span class="pre">Solar</span> <span class="pre">Irradiance)</span></code></p></li>
+<li><p>Origin: <code class="docutils literal notranslate"><span class="pre">RMIB</span> <span class="pre">(Royal</span> <span class="pre">Meteorological</span> <span class="pre">Institute</span> <span class="pre">of</span> <span class="pre">Belgium)</span></code></p></li>
+<li><p>Variable: <code class="docutils literal notranslate"><span class="pre">Total</span> <span class="pre">Solar</span> <span class="pre">Irradiance</span> <span class="pre">(TSI)</span></code></p></li>
+<li><p>Climate data record type: <code class="docutils literal notranslate"><span class="pre">Interim</span> <span class="pre">Climate</span> <span class="pre">Data</span> <span class="pre">Record</span> <span class="pre">(ICDR)</span></code></p></li>
+<li><p>Time aggregation: <code class="docutils literal notranslate"><span class="pre">Daily</span> <span class="pre">mean</span></code></p></li>
+<li><p>Format: <code class="docutils literal notranslate"><span class="pre">Compressed</span> <span class="pre">zip</span> <span class="pre">file</span> <span class="pre">(.zip)</span></code></p></li>
+</ul>
+<p>If you have not already done so, you will need to accept the <strong>terms &amp; conditions</strong> of the data before you can download it.</p>
+<p>At the end of the download form, select <strong><code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">API</span> <span class="pre">request</span></code></strong>. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+    <span class="s1">&#39;satellite-earth-radiation-budget&#39;</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="s1">&#39;total_solar_irradiance&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;product_family&#39;</span><span class="p">:</span> <span class="s1">&#39;tsi&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;origin&#39;</span><span class="p">:</span> <span class="s1">&#39;rmib&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;climate_data_record_type&#39;</span><span class="p">:</span> <span class="s1">&#39;interim_climate_data_record&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;time_aggregation&#39;</span><span class="p">:</span> <span class="s1">&#39;daily_mean&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">TSI_data.zip&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-08-21 15:11:34,060 INFO [2024-01-09T00:00:00] NOAA/NCEI HIRS OLR was reprocessed from 2007 till 2023. Please see the Known issues section under the Documentation tab for more details.
+2024-08-21 15:11:34,061 INFO Request ID is 4a0a9daa-dbd1-482c-82a3-8cfa53f85da8
+2024-08-21 15:11:34,136 INFO status has been updated to accepted
+2024-08-21 15:11:35,716 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "93f4fab005654fe3ad36661e710222dd", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./data_dir/TSI_data.zip&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unpack-the-data">
+<h4>Unpack the data<a class="headerlink" href="#unpack-the-data" title="Link to this heading">#</a></h4>
+<p>We use <code class="docutils literal notranslate"><span class="pre">zipfile</span></code> module to extract the content of the archive we just downloaded. The file is extracted into the specified directory path, represented by the <code class="docutils literal notranslate"><span class="pre">DATADIR</span></code> variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">TSI_data.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="use-cases">
+<h2>3. Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h2>
+<section id="use-case-1-time-series-of-the-total-solar-irradiance-tsi">
+<h3>Use case 1: Time series of the Total Solar Irradiance (TSI)<a class="headerlink" href="#use-case-1-time-series-of-the-total-solar-irradiance-tsi" title="Link to this heading">#</a></h3>
+<p>In this learning material, we visualize the time evolution of the Total Solar Irradiance (TSI) using daily values and a 12-month rolling mean. This visualization helps us understand the variations in TSI over time.</p>
+<section id="load-dataset-subselect-and-calculate-a-temporal-mean">
+<h4>Load dataset, subselect and calculate a temporal mean<a class="headerlink" href="#load-dataset-subselect-and-calculate-a-temporal-mean" title="Link to this heading">#</a></h4>
+<p>First, we need to read the file and prepare the dataset for analysis and plotting.</p>
+<p>The TSI data is stored in an ASCII file. We use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to read the file. The TSI dataset is constantly updated, which is why we need to use glob to get the latest filename.</p>
+<p>We read a dataset file specified by the filename variable using pandas <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> into the DataFrame. The file has a header with 128 lines of metadata that is skipped during the reading process. We extract columns 1 and 2 (starting from zero) from the CSV file, naming them as “TSI” and “JD” respectively, and set the “JD” column as the DataFrame’s index. The “JD” column contains special dates called Julian days, which are a way to represent time. The Julian day is the continuous integer count of days, it is used for easily calculating elapsed days between two events.</p>
+<p>As the next, we convert these Julian days to a datetime format using <code class="docutils literal notranslate"><span class="pre">pd.to_datetime()</span></code> and set units as Date.
+Finally, we use lambda-function to set the time to midnight (00:00:00) for each date, effectively discarding the time information, and leaving only the date component in the index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">C3S_RMIB_daily_TSI_composite_ICDR*.txt&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># read the file</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">filename</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span>
+    <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;TSI&quot;</span><span class="p">,</span> <span class="s2">&quot;JD&quot;</span><span class="p">],</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span> <span class="s1">&#39;unicode_escape&#39;</span>
+<span class="p">)</span>
+<span class="c1"># convert julian date values to a datetime format</span>
+<span class="n">data</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;julian&#39;</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="c1"># set time to midnight using lambda-function</span>
+<span class="n">data</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="print-header-information-to-learn-about-the-dataset">
+<h4>Print header information to learn about the dataset<a class="headerlink" href="#print-header-information-to-learn-about-the-dataset" title="Link to this heading">#</a></h4>
+<p>The header contains general information about the dataset, satellite instruments used to create a composite dataset, and columns are explained. A peer-reviewed article by (Dewitte et al, 2016) describes the dataset in detail. The Product User Guide and Specification (PUGS, Clerbaux et al, 2023) provides the information a user should need for an appropriate use of the TSI data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read the dataset metadata from the header</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">header_lines</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">)]</span>
+
+<span class="c1"># print the information</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">header_lines</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># Copernicus Climate Change Service (C3S) daily Total Solar Irradiance (TSI) timeseries
+# 
+# The TSI is the total amount of solar radiation, i.e. integrated over all the wavelengths, at the mean  
+# Earth-Sun distance (1 AU). Given its direct impact on the Earth Radiation Budget (ERB), it is one of  
+# the Essential Climate Variables (ECV) defined by the GCOS. 
+# 
+# This C3S timeseries provides an estimate of the daily TSI computed as a composite of different
+# space instruments (see list below). 
+# 
+# CDR type     : ICDR (Interim Climate Data Record)
+# CDR version  : v3.2
+# 
+# CDR provider : Royal Meteorological Institute of Belgium (RMIB)
+# Contract     : C3S2_312a_lot1                                
+# 
+# Temporal resolution   : daily mean
+# CDR (final) period    : 19790101 - 20201231
+# ICDR (interim) period : 20210101 - 20231231
+# 
+# Creation date and time (YYYYMMDD_hhmmss) : 20240320_155857
+# Software version                         : v3.0
+# 
+# Instruments and models :
+# ------------------------
+#                                        adjustement     RMS with SATIRE-S 
+#                                          factors       max  / all / min 
+# - &quot;ERB&quot;                                  0.992447      0.318 0.270 0.263 
+# - &quot;ACRIM1&quot;                               0.995568      0.270 0.184 0.128 
+# - &quot;ERBS (filtered and interpolated)&quot;     0.997149      0.270 0.184 0.128 
+# - &quot;ACRIM2&quot;                               0.997821      0.215 0.187 0.139 
+# - &quot;DIARAD/VIRGO on SOHO&quot;                 0.996449      0.121 0.103 0.064 
+# - &quot;PMO06/VIRGO on SOHO&quot;                  1.000181      0.173 0.142 0.079 
+# - &quot;ACRIM3&quot;                               1.000078      0.126 0.111 0.064 
+# - &quot;TIM on SORCE&quot;                         1.000256      0.089 0.071 0.035 
+# - &quot;PREMOS on Picard&quot;                     1.000256      0.086 0.086   -   
+# - &quot;SOVAP on Picard&quot;                      0.999345      0.145 0.145   -   
+# - &quot;TIM on TCTE&quot;                          0.999771      0.092 0.073 0.039 
+# - &quot;TIM on TSIS1&quot;                         0.999535      0.077 0.057 0.031 
+# - &quot;SATIRE (semi-empirical model)&quot;        1.000150      0.000 0.000 0.000 
+# - &quot;NRL TSI v2 (model)&quot;                   1.000000      0.152 0.123 0.074 
+# 
+# Notes (see details in the ATBD): 
+# --------------------------------
+#  - Data discarded for suspected quality issues: 
+#        - ERB data before 01.01.1981 and after 31.12.1990 have been discarded.
+#        - ACRIM1 data before 07.11.1980 have been discarded.
+#        - DIARAD and PMO06 data before 01.01.1997 have been discarded.
+#  - PMO06 data after 01.01.2016 are not used to estimate the PMO06 accuracy (but 
+#    are used in the composite)  
+#  - Until 31.12.2020 (CDR period), the V8 of the PMO06 data as available in file 
+#    &#39;VIRGO_TSI_Daily_V8_20230728.txt&#39; has been used. For 01.01.2021 onward (ICDR period) 
+#    the data is downloaded from ftp://ftp.pmodwrc.ch/pub/data/irradiance/virgo/TSI/  
+#  - In general SATIRE-S (model) data is not used in the composite, however SATIRE-S is used:
+#      - to filter and interpolate the ERBS record,
+#      - to interpolate data gaps in the input time series (for gaps up to 50 days long)
+#      - as input data at the very beginning of the composite [01.01.1979-06.11.1980].
+#  - NRLTSI2 is not used to create the C3S composite but is provided in this file (last  
+#    column) for validation purposes.
+#  - For SATIRE and NRLTSI2, the accuracies are estimated over the [01.01.1995-
+#    31.12.2020] time period. These accuracies are not used in the composite.
+#  - Each instrument has its own scaling factor and accuracy (see values above). 
+#    The scaling factors are determined to optimize the agreement over the overlaps   
+#    periods with the constraint that the average of the scaling factors for the 
+#    following list of instruments is equal to 1. See &quot;Absolute level&quot; below.
+#  - The accuracies are used to weigth the individual measurements in case several 
+#    measurements are available for a given day.
+#  - All the TSI values are expressed in Watt per square meter (W/m^2) unit.
+#  
+# User Documentation (available via https://cds.climate.copernicus.eu/):
+# ----------------------------------------------------------------------
+#  - ATBD : Algorithm Theoretical Basis Document.
+#  - PUGS : Product User Guide and Specifications.
+#  - PQAD : Product Quality Assurance Document.
+#  - PQAR : Product Quality Assessment Report.
+#  - SQAD : System Quality Assurance Document.
+#  - Clerbaux, N. and co-authors, 2024: The Copernicus Climate Change Service composite 
+#    of Spaceborn daily TSI measurements, Remote Sensing, to be submitted. 
+# 
+# Licence and intellectual property rights:
+# -----------------------------------------  
+#  - https://cds.climate.copernicus.eu/api/v2/terms/static/licence-to-use-copernicus-products.pdf
+# 
+# ICDR file incorporating the most recent data:
+# ---------------------------------------------  
+#  - https://gerb.oma.be/tsi/C3S_RMIB_daily_TSI_composite_ICDR_v3_latest.txt 
+# 
+# Absolute radiometric level :
+# ----------------------------
+#   - Mean of : PMO06 SORCE PREMOS TCTE TSIS1 
+# 
+# Data format (column):
+# ---------------------
+#  1 : Nominal date expressed as fractional year (e.g. 1987.0 is 1 Jan 1987 at 00:00 UTC). This
+#      field is useful for visualization but should not be used for data selection.
+#  2 : Total Solar Irradiance (TSI) value at 1 Astronomical Unit (AU).
+#  3 : Nominal date expressed as Julian Day number (integer)
+#  4 : Nominal date expressed ascharacter&#39;s string YYYYMMDD (YYYY=year, MM=month, DD=day)
+#  5 : Number of individual TSI values combined in the composite TSI for this day.
+#  6 : Weighted standard deviation of the TSI values (after adjustment)
+#  7 : Earth-Sun distance in Astronomical Unit (AU).
+#  8 : TSI value at the true Earth-Sun distance
+#  9 : Flags for the instruments/models used in the composite (see code below), e.g. 02030000000011 
+#           means that only instruments 2 and 4 are used for the daily mean for this particular day.
+# 10 : Original TSI values for instrument ERB
+# 11 : Original TSI values for instrument ACRIM1
+# 12 : Original TSI values for instrument ERBS
+# 13 : Original TSI values for instrument ACRIM2
+# 14 : Original TSI values for instrument DIARAD
+# 15 : Original TSI values for instrument PMO06
+# 16 : Original TSI values for instrument ACRIM3
+# 17 : Original TSI values for instrument SORCE
+# 18 : Original TSI values for instrument PREMOS
+# 19 : Original TSI values for instrument SOVAP
+# 20 : Original TSI values for instrument TCTE
+# 21 : Original TSI values for instrument TSIS1
+# 22 : Original TSI values for model SATIRE
+# 23 : Original TSI values for model NRLTSI2
+# 
+# Instrument flag code :
+# ----------------------
+#  0 : no data available. 
+#  1 : data available but not used in the composite.
+#  2 : data available and used in the composite.
+#  3 : data not available, interpolated.
+#  4 : data rejected, interpolated.
+# 
+#  year       TSI   jul.day   YYYYMMDD num  std.dev.   dist   act.TSI    instr.flag        ERB   ACRIM1     ERBS   ACRIM2   DIARAD    PMO06   ACRIM3    SORCE   PREMOS    SOVAP     TCTE    TSIS1   SATIRE  NRLTSI2 
+# 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-data">
+<h4>Plot data<a class="headerlink" href="#plot-data" title="Link to this heading">#</a></h4>
+<p>We want to save objects <code class="docutils literal notranslate"><span class="pre">figure</span></code> and <code class="docutils literal notranslate"><span class="pre">axes</span></code> to use later. We use <a class="reference external" href="https://matplotlib.org/stable/index.html">Matplotlib</a> to create a high-quality plot. Before plotting we need to prepare daily values and a 12-month rolling mean.</p>
+<p>The rolling mean is a statistical technique used to smooth out data by calculating the average of a specified window of values. In our case, the window is 365 days or 12 months.</p>
+<p>By applying the rolling mean to the TSI dataset spanning from 1979 to 2023, we can clearly observe the presence of three distinct solar cycles. These cycles represent periods of varying solar activity and are characterized by the rise and fall of sunspot numbers and other solar phenomena. Solar cycle 22, spanning from 1986 to 1996, is followed by solar cycle 23, which occurred from 1996 to 2008. Finally, solar cycle 24 took place from 2008 to 2019. These solar cycles demonstrate the cyclic nature of solar activity and its influence on the TSI measurements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save figure and axes objects to modify later</span>
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+
+<span class="c1"># Actual plotting of the data</span>
+<span class="n">data</span><span class="o">.</span><span class="n">TSI</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">data</span><span class="o">.</span><span class="n">TSI</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Adding title, x,y labels, and legend at lower right corner</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">1357</span><span class="p">,</span> <span class="mi">1365</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">bf{C3S</span><span class="se">\\</span><span class="s1"> TSI</span><span class="se">\\</span><span class="s1"> from</span><span class="se">\\</span><span class="s1"> RMIB</span><span class="se">\\</span><span class="s1"> (1979-2023)}$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;TSI [ W/m$^2$ ]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;TSI&quot;</span><span class="p">,</span> <span class="s2">&quot;TSI rolling mean 365 days&quot;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;x-large&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding vertical lines and labels to distinguish solar cycles</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1986-09-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1996-08-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2008-12-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2019-12-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1983-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 21&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1991-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 22&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2002-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 23&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2014-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 24&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 25&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># and save the figure</span>
+<span class="n">fig1</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Example_1_TSI_timeseries.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/dceddc26c04ab83d93393e176e30b7f33aa2ec84a36a0d7e00603872539e0dac.png" src="../../_images/dceddc26c04ab83d93393e176e30b7f33aa2ec84a36a0d7e00603872539e0dac.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="use-case-2-side-by-side-composite-products">
+<h3>Use case 2: Side-by-side composite products<a class="headerlink" href="#use-case-2-side-by-side-composite-products" title="Link to this heading">#</a></h3>
+<p>The existing 44+ year TSI Climate Data Record (CDR) is the result of several overlapping TSI instruments onboard different satellites. Another well-known composite TSI data are produced by the Naval Research Laboratory (NRL). Each organization collects TSI measurements from various satellite instruments and combines them to create a composite dataset that represents the overall TSI variations over time. In this usecase, we will plot these two composite datasets side-by-side.</p>
+<section id="download-the-nrl-dataset-subselecting-the-time-range">
+<h4>Download the NRL dataset, subselecting the time range<a class="headerlink" href="#download-the-nrl-dataset-subselecting-the-time-range" title="Link to this heading">#</a></h4>
+<p>The NRL TSI dataset is made available through LaTiS, which is a data-serving system. It offers multiple methods to access the dataset, providing users with different options to retrieve the data according to their needs or preferences. We then download the selected parameters using a command-line utility <code class="docutils literal notranslate"><span class="pre">wget</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nrl2_tsi_P1D.csv</span></code>: TSI daily dataset name on the LaTiS server;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">?time,irradiance</span></code>: These are the variables that are requested from the dataset: time and irradiance;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;formatTime(yyyyMMdd)</span></code>: This is a LaTiS function that formats the time variable as a date string in the format yyyyMMdd.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;time&gt;=1979-01-01T00:00</span></code>: This is another LaTiS function that specifies that you only want data points that have a time value greater than or equal to 1979-01-01T00:00</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># download the dataset using wget. -O specifies the output path and filename; -q quiet mode, to disable wget&#39;s output</span>
+<span class="o">!</span>wget<span class="w"> </span>-O<span class="w"> </span><span class="nv">$DATADIR</span>/nrl.csv<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;https://lasp.colorado.edu/lisird/latis/dap/nrl2_tsi_P1D.csv?time,irradiance&amp;formatTime(yyyyMMdd)&amp;time&gt;=1979-01-01T00:00&quot;</span><span class="w">  </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h4>Load dataset, subselect and calculate a temporal mean<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>If you run the Use case 1, C3S RMIB dataset is already saved in the memory. If not, please run the Use case 1 first.</p>
+<p>The TSI data is stored in an ASCII file.
+We read a dataset using pandas <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> into DataFrame. We skip the first line, as it is the name of the columns. We also specify the date format for the first column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename_nrl</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">nrl.csv&#39;</span>
+<span class="c1"># read the file</span>
+<span class="n">data_nrl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">filename_nrl</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span> <span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;TSI&quot;</span><span class="p">],</span> 
+    <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">date_format</span><span class="o">=</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h4>Plot data<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>We use <a class="reference external" href="https://matplotlib.org/stable/index.html">Matplotlib</a> to create a high-quality plot. We follow the same steps, as in the first use case to plot these two datasets side-by-side.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="kn">import</span> <span class="n">FontProperties</span>
+
+<span class="c1"># Save figure and axes objects to modify later</span>
+<span class="n">fig2</span><span class="p">,</span> <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+
+<span class="c1"># Actual plotting of the NRL data and the RMIB data</span>
+<span class="n">data_nrl</span><span class="o">.</span><span class="n">TSI</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#a6cee3&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">TSI</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#b2df8a&quot;</span><span class="p">)</span>
+<span class="c1"># Then 12-month rolling mean</span>
+<span class="n">data_nrl</span><span class="o">.</span><span class="n">TSI</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#1f78b4&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">TSI</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#33a02c&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Adding title, x,y labels, and legend at lower right corner</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">1357</span><span class="p">,</span><span class="mi">1365</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">bf{TSI</span><span class="se">\\</span><span class="s1"> composite</span><span class="se">\\</span><span class="s1"> datasets</span><span class="se">\\</span><span class="s1"> (1979-2023)}$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;TSI [ W/m$^2$ ]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">,)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;TSI-RMIB&quot;</span><span class="p">,</span> <span class="s2">&quot;TSI-RMIB rolling mean 365 days&quot;</span><span class="p">,</span> <span class="s2">&quot;TSI-NRL&quot;</span><span class="p">,</span> <span class="s2">&quot;TSI-NRL rolling mean 365 days&quot;</span><span class="p">],</span> 
+    <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">,</span> 
+    <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;x-large&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Adding vertical lines and labels to distinguish solar cycles</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1986-09-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1996-08-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2008-12-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2019-12-01&#39;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1983-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 21&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;1991-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 22&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2002-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 23&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2014-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 24&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">),</span> <span class="mf">1364.5</span><span class="p">,</span> <span class="s2">&quot;Cycle 25&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># and save the figure</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Example_2_TSI_SideBySide.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/21a2090829364496d545409f081a5aafa991b1d4a995b294992b06e9baf8f004.png" src="../../_images/21a2090829364496d545409f081a5aafa991b1d4a995b294992b06e9baf8f004.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="get-more-information-about-earth-radiation-budget">
+<h2>Get more information about Earth Radiation Budget:<a class="headerlink" href="#get-more-information-about-earth-radiation-budget" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview">About Earth’s radiation budget from 1979 to present derived from satellite observations</a></p></li>
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/">About the Climate Data Store</a></p></li>
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/toolbox/doc/index.html">About the Toolbox documentation</a></p></li>
+</ul>
+<section id="acknowledgments">
+<h3>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Link to this heading">#</a></h3>
+<p>The results presented in this document rely on data from the Naval Research Laboratory Total Solar Irradiance 2 (NRLTSI2) model described in Coddington et al. 2016 (<a class="reference external" href="https://doi.org/10.1175/BAMS-D-14-00265.1">https://doi.org/10.1175/BAMS-D-14-00265.1</a>). These data were accessed via the LASP Interactive Solar Irradiance Datacenter (LISIRD) (<a class="reference external" href="https://lasp.colorado.edu/lisird/">https://lasp.colorado.edu/lisird/</a>).</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p>Clerbaux N., (2023) Earth Radiation Budget TSI TOA. Copernicus Climate Change Service. <a class="reference external" href="https://confluence.ecmwf.int/x/AFMiEg">https://confluence.ecmwf.int/x/AFMiEg</a></p>
+<p>Dewitte, S., &amp; Nevens, S. (2016). The Total Solar Irradiance Climate Data Record. The Astrophysical Journal, 830(1), 25. <a class="reference external" href="https://doi.org/10.3847/0004-637X/830/1/25">https://doi.org/10.3847/0004-637X/830/1/25</a>.</p>
+<p>Clerbaux, N., Velazquez Blazquez, A. (RMIB), 2023, C3S Earth Radiation Budget TSI Service: Product User Guide and Specification. Copernicus Climate Change Service, Document ref. C3S2_D312a_Lot1.2.2.6-v1.0_202303_PUGS_ECVEarthRadiationBudget_v1.1
+<a class="reference external" href="https://confluence.ecmwf.int/x/KFMiEg">https://confluence.ecmwf.int/x/KFMiEg</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./submodules/c3s-training-submodule-sat-obs-atmos-physics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="erb-ceres-climatology.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Analysis of the Earth’s Radiation Budget using the CERES product</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="srb-climatology-and-anomaly.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Calculation of global climatology and relative anomalies of Surface Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-data-preparations">2. Prerequisites and data preparations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-the-notebook">2.1 How to access the notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">2.2 Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api">2.3 Download data using CDS API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#unpack-the-data">Unpack the data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">3. Use Cases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-time-series-of-the-total-solar-irradiance-tsi">Use case 1: Time series of the Total Solar Irradiance (TSI)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset-subselect-and-calculate-a-temporal-mean">Load dataset, subselect and calculate a temporal mean</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#print-header-information-to-learn-about-the-dataset">Print header information to learn about the dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-side-by-side-composite-products">Use case 2: Side-by-side composite products</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-nrl-dataset-subselecting-the-time-range">Download the NRL dataset, subselecting the time range</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Load dataset, subselect and calculate a temporal mean</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Plot data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-earth-radiation-budget">Get more information about Earth Radiation Budget:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Centre for Medium-Range Weather Forecasts)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

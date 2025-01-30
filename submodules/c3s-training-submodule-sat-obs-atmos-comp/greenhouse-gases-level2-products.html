@@ -1,0 +1,1318 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example? &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How to access, read and use satellite XCO2 and XCH4 Level 3 data products" href="greenhouse-gases-level3-products.html" />
+    <link rel="prev" title="C3S Satellite-Observations (ECV) - Atmospheric Composition Tutorial" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Copernicus Climate Change Service (C3S) Data Tutorials
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../how-to-run-these-tutorials.html">How to run these tutorials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite Observations - Atmospheric Physic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total Solar Irradiance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Satellite Observations - Atmospheric Composition</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="total-ozone-columns.html">Total Ozone Columns</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-needed-to-use-this-jupyter-notebook">What is needed to use this Jupyter Notebook?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-data-via-cds-api-cdsapi">How to access data via CDS API (cdsapi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cds-api-cdsapi">Data download via CDS API (cdsapi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-default-plot-style-parameters">Setting default plot style parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-preparatory-work-including-setting-the-data-directory">Other preparatory work including setting the data directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-user-input">Initial user input:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-the-two-data-files-have-already-been-downloaded">Check if the two data files have already been downloaded:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cdsapi-if-required">Data download via cdsapi (if required):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-two-downloaded-data-files">Reading the two downloaded data files:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-1-the-latitudinal-distribution-of-xco2">Application 1: The latitudinal distribution of XCO2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-latitude-bands">Definition of latitude bands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-xco2-vs-latitude-for-the-two-selected-days">Computing XCO2 vs latitude for the two selected days</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-xco2-vs-latitude-plot">Generation of XCO2 vs latitude plot:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-2-showing-daily-data-on-a-global-map">Application 2: Showing daily data on a global map</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Michael Buchwitz, 20-Nov-2024</p>
+<section class="tex2jax_ignore mathjax_ignore" id="how-to-access-and-use-a-satellite-derived-ghg-level-2-data-product-using-xco2-emma-as-an-example">
+<h1>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?<a class="headerlink" href="#how-to-access-and-use-a-satellite-derived-ghg-level-2-data-product-using-xco2-emma-as-an-example" title="Link to this heading">#</a></h1>
+<p>This is a Jupyter Notebook (JN) illustrating how to access and use a satellite-derived Greenhouse Gas (GHG) atmospheric carbon dioxide (CO2) Level 2 data product as generated via the Copernicus Climate Change Service (C3S) and made available via the Copernicus Climate Data Store (CDS, <a class="reference external" href="https://cds.climate.copernicus.eu/">https://cds.climate.copernicus.eu/</a>).</p>
+<p>Here we illustrate the use of a GHG Level 2 (L2) product using product XCO2_EMMA as an example. A CO2 L2 data product contains CO2 information for individual satellite ground pixels (also called footprints or soundings). XCO2 is the column-averaged dry-air mole fraction of atmospheric CO2 in parts per million (ppm). EMMA is the name of the multi-satellite XCO2 (and XCH4) merging algorithm developed to generate product XCO2_EMMA using as input individual Level 2 XCO2 products from different satellite sensors (here: SCIAMACHY/ENVISAT, GOSAT, GOSAT-2 and OCO-2; see, e.g., Reuter et al., <a class="reference external" href="https://amt.copernicus.org/articles/13/789/2020/">https://amt.copernicus.org/articles/13/789/2020/</a>, 2020).</p>
+<p>Within C3S also other L2 products had been generated and made available via the CDS. These products are (i) XCO2 from individual satellite sensors, (ii) XCH4 products, where XCH4 is the column-averaged dry-air mole fraction of CH4 in parts per billion (ppb), and (iii) mid tropospheric CO2 and CH4 mixing ratio products. Detailed information on all these products is available via the CDS. In addition to L2 products, also Level 3 (L3) products are available. A L3 product is based on a corresponding L2 product. A L3 product is  obtained by spatio-temporally averaging a corresponding L2 product. How to access and use a L3 GHG product is shown in a separate Jupyter Notebook (JN).</p>
+<p>For this JN we use XCO2_EMMA version 4.5, which covers the period 2003 - 2022.</p>
+<p>This JN shows how to download a data product from the CDS, explains how to access the main variables and how to use them for interesting applications. We focus on two use cases related to the spatial and temporal variation of atmospheric CO2 concentrations and their observational coverage.</p>
+<p>The first use case is related to the latitudial distribution of XCO2. We show how XCO2 averages and standard devations per latitude band can be computed and plotted. For this we use two days of observations, one in April and one in September. We explain that the observed latitudinal distributions are closely related to the seasonal cycle of CO2 due to uptake and release of CO2 by vegetation.</p>
+<p>For the second use case we show how a map of the spatial distribution of the individual ground pixel XCO2 observations can be generated. We show that the spatial coverage of the daily observations is very sparse due to strict quality filtering of the individual XCO2 retrievals. Most applications therefore require appropriate spatio-temporal averaging (see, for example, the use of C3S GHG XCO2 and XCH4 data for assessments such as Copernicus European State of the Climate (ESOTC) as shown on the GHG concentration climate indicators website <a class="reference external" href="https://climate.copernicus.eu/climate-indicators/greenhouse-gas-concentrations">https://climate.copernicus.eu/climate-indicators/greenhouse-gas-concentrations</a>).</p>
+<section id="what-is-needed-to-use-this-jupyter-notebook">
+<h2>What is needed to use this Jupyter Notebook?<a class="headerlink" href="#what-is-needed-to-use-this-jupyter-notebook" title="Link to this heading">#</a></h2>
+<p>In the following, Phython 3 code is provided to read and plot the satellite data.</p>
+<p>It is assumed that Python and Jupyter Notebook (JN) is installed on your computer, e.g., using the Anaconda distribution
+(<a class="reference external" href="https://www.anaconda.com/products/distribution">https://www.anaconda.com/products/distribution</a>).</p>
+</section>
+<section id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
+<p>We have to import several modules to run this JN.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries needed for the Jupyter notebook</span>
+<span class="c1"># Note that lines starting with &quot;#&quot; are comment lines</span>
+
+<span class="c1"># Libraries for working with data, especially multidimensional arrays</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="c1"># Library to work with zip-archives and operating system (OS) functions and pattern expansion</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Libraries for plotting and visualising data</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mplt</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+
+<span class="c1"># Libraries for style parameters</span>
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Disable warnings for data download via API</span>
+<span class="kn">import</span> <span class="nn">urllib3</span>
+<span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ... finished importing modules&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* ... finished importing modules
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-access-data-via-cds-api-cdsapi">
+<h2>How to access data via CDS API (cdsapi)<a class="headerlink" href="#how-to-access-data-via-cds-api-cdsapi" title="Link to this heading">#</a></h2>
+<p>The C3S data products can be downloaded from the Copernicus Climate Data Store (CDS) using the cdsapi, i.e.,
+the CDS Application Programming Interface (API). How to use the cdsapi is described here.</p>
+<p>First, goto the CDS website:
+<a class="reference external" href="https://cds.climate.copernicus.eu/">https://cds.climate.copernicus.eu/</a></p>
+<p>Login (if not done already, please register using “Create new account”).</p>
+<p>To use the cdsapi you need to set two variables, URL and KEY:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span><span class="o">=</span><span class="s1">&#39;https://cds.climate.copernicus.eu/api&#39;</span>
+
+<span class="c1"># Replace this KEY by your personnal KEY:</span>
+
+<span class="n">KEY</span><span class="o">=</span><span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* URL: &#39;</span><span class="p">,</span> <span class="n">URL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* KEY: &#39;</span><span class="p">,</span> <span class="n">KEY</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* URL:  https://cds.climate.copernicus.eu/api
+* KEY:  a8764fcc-d86b-4791-81c7-66c40885a25a
+</pre></div>
+</div>
+</div>
+</div>
+<p>KEY ‘XXX….XXX’ is only a placeholder and needs to be replaced by your personal KEY.</p>
+<p>To get your personnal KEY, please login to the CDS ebsite (see above) and then visit <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">https://cds.climate.copernicus.eu/how-to-api</a>.</p>
+<p>KEY will appear on the screen. Use that KEY to replace the placeholder key shown above.</p>
+<p>In the following we show how to download the two (daily) data files, which we need for this JN.</p>
+</section>
+<section id="data-download-via-cds-api-cdsapi">
+<h2>Data download via CDS API (cdsapi)<a class="headerlink" href="#data-download-via-cds-api-cdsapi" title="Link to this heading">#</a></h2>
+<p>C3S GHG data products can be obtained from the CDS via the CDS user interface.</p>
+<p>For satellite-derived atmospheric CO2 data products please visit this website:
+<a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-carbon-dioxide?tab=overview">https://cds.climate.copernicus.eu/datasets/satellite-carbon-dioxide?tab=overview</a>.</p>
+<p>Detailed information on all products is provided via the “Documentation” tab.</p>
+<p>For data download visit the “Download” tab.</p>
+<p>For this JN we want to access data product XCO2_EMMA, version 4.5, for these two days:</p>
+<ul class="simple">
+<li><p>File 1: 15-April-2020</p></li>
+<li><p>File 2: 15-September-2020</p></li>
+</ul>
+<p>In order to get these data please select the following on the “Download” tab:</p>
+<ul class="simple">
+<li><p>Processing level: Level 2</p></li>
+<li><p>Variable: Column-average dry-air mole fraction of atmospheric Carbon Dioxide (XCO2) and related variables</p></li>
+<li><p>Sensor and algorithm: MERGED and EMMA</p></li>
+<li><p>Year: 2020</p></li>
+<li><p>Month: April and September</p></li>
+<li><p>Day: 15</p></li>
+<li><p>Version: 4.5</p></li>
+</ul>
+<p>Finally, click on:</p>
+<ul class="simple">
+<li><p>Show API request code</p></li>
+</ul>
+<p>The following Python code will appear in your browser:</p>
+<p>import cdsapi</p>
+<p>dataset = “satellite-carbon-dioxide”</p>
+<p>request = {</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;processing_level&quot;: [&quot;level_2&quot;],
+
+&quot;variable&quot;: &quot;xco2&quot;,
+
+&quot;sensor_and_algorithm&quot;: &quot;merged_emma&quot;,
+
+&quot;year&quot;: [&quot;2020&quot;],
+
+&quot;month&quot;: [&quot;04&quot;, &quot;09&quot;],
+
+&quot;day&quot;: [&quot;15&quot;],
+
+&quot;version&quot;: [&quot;4_5&quot;]
+</pre></div>
+</div>
+<p>}</p>
+<p>client = cdsapi.Client()</p>
+<p>client.retrieve(dataset, request).download()</p>
+<p>We copied this code into this JN to download the data, as shown below.</p>
+</section>
+<section id="setting-default-plot-style-parameters">
+<h2>Setting default plot style parameters<a class="headerlink" href="#setting-default-plot-style-parameters" title="Link to this heading">#</a></h2>
+<p>Here we set some parameters which determine the style of the generated figures.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The following style parameters will be used for all plots in this use case.</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">350</span>
+<span class="c1">#rcParams[&#39;font.family&#39;] = &#39;serif&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Arial&#39;</span>
+<span class="c1">#rcParams[&#39;font.serif&#39;] = mplt.rcParamsDefault[&#39;font.serif&#39;]</span>
+<span class="c1">#rcParams[&#39;mathtext.rm&#39;] = &#39;serif:light&#39;</span>
+<span class="c1">#rcParams[&#39;mathtext.it&#39;] = &#39;serif:italic&#39;</span>
+<span class="c1">#rcParams[&#39;mathtext.bf&#39;] = &#39;serif:bold&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;regular&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the x and y labelsize</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;legend&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>    <span class="c1"># fontsize of the legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>   <span class="c1"># fontsize of the figure title</span>
+
+<span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ... finished setting plot style parameters&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* ... finished setting plot style parameters
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="other-preparatory-work-including-setting-the-data-directory">
+<h2>Other preparatory work including setting the data directory<a class="headerlink" href="#other-preparatory-work-including-setting-the-data-directory" title="Link to this heading">#</a></h2>
+<p>Data will be stored in sub-directory “data_dir”. If this directory does not exist, then it will be generated.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify local data directory for the downloads:</span>
+
+<span class="c1">#data_directory = &quot;./data_dir_tmp/&quot;   # Test only</span>
+<span class="n">data_directory</span> <span class="o">=</span> <span class="s2">&quot;data_dir&quot;</span>
+
+<span class="n">DATADIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">data_directory</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Generating: &#39;</span><span class="p">,</span> <span class="n">DATADIR</span><span class="p">)</span> 
+   <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* sub-directory exists: &#39;</span><span class="p">,</span> <span class="n">DATADIR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Generating:  data_dir
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="initial-user-input">
+<h2>Initial user input:<a class="headerlink" href="#initial-user-input" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">product_id</span> <span class="o">=</span> <span class="s1">&#39;XCO2_EMMA&#39;</span>  <span class="c1"># keep</span>
+
+<span class="c1"># Select one version (by commenting in/out):</span>
+<span class="c1">#product_version = &#39;v4.4&#39;; product_version_str2 = &#39;4_4&#39;</span>
+<span class="n">product_version</span> <span class="o">=</span> <span class="s1">&#39;v4.5&#39;</span><span class="p">;</span> <span class="n">product_version_str2</span> <span class="o">=</span> <span class="s1">&#39;4_5&#39;</span>
+
+<span class="c1"># We want to get 2 daily data files:</span>
+<span class="n">year_1</span> <span class="o">=</span> <span class="mi">2020</span><span class="p">;</span> <span class="n">day_1</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">month_1</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">year_2</span> <span class="o">=</span> <span class="mi">2020</span><span class="p">;</span> <span class="n">day_2</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">month_2</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="n">product_str</span> <span class="o">=</span> <span class="n">product_id</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span><span class="n">product_version</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* selected product: &#39;</span><span class="p">,</span> <span class="n">product_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* selected product:  XCO2_EMMA v4.5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-if-the-two-data-files-have-already-been-downloaded">
+<h2>Check if the two data files have already been downloaded:<a class="headerlink" href="#check-if-the-two-data-files-have-already-been-downloaded" title="Link to this heading">#</a></h2>
+<p>Here we check if files 1 and 2 are already available:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate corresponding time strings:</span>
+<span class="c1"># ... for the first day:</span>
+<span class="n">year_1_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year_1</span><span class="p">);</span> <span class="n">day_1_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">day_1</span><span class="p">);</span> <span class="n">month_1_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">month_1</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">day_1</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+   <span class="n">day_1_str</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">+</span><span class="n">day_1_str</span>
+<span class="k">if</span> <span class="n">month_1</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+   <span class="n">month_1_str</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">+</span><span class="n">month_1_str</span>
+<span class="c1"># ... for the second day:</span>
+<span class="n">year_2_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year_2</span><span class="p">);</span> <span class="n">day_2_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">day_2</span><span class="p">);</span> <span class="n">month_2_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">month_2</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">day_2</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+   <span class="n">day_2_str</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">+</span><span class="n">day_2_str</span>
+<span class="k">if</span> <span class="n">month_2</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+   <span class="n">month_2_str</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">+</span><span class="n">month_2_str</span>
+
+<span class="c1"># Combine to generate date strings:</span>
+<span class="n">date_1_str</span> <span class="o">=</span> <span class="n">year_1_str</span><span class="o">+</span><span class="n">month_1_str</span><span class="o">+</span><span class="n">day_1_str</span>
+<span class="n">date_2_str</span> <span class="o">=</span> <span class="n">year_2_str</span><span class="o">+</span><span class="n">month_2_str</span><span class="o">+</span><span class="n">day_2_str</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Selected day 1: &#39;</span><span class="p">,</span> <span class="n">date_1_str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Selected day 2: &#39;</span><span class="p">,</span> <span class="n">date_2_str</span><span class="p">)</span>
+
+<span class="c1"># Names of the two desired data files:</span>
+<span class="n">wanted_file_1</span> <span class="o">=</span> <span class="n">date_1_str</span><span class="o">+</span><span class="s1">&#39;-C3S-L2_XCO2-GHG_PRODUCTS-MERGED-MERGED-EMMA-DAILY-&#39;</span><span class="o">+</span><span class="n">product_version</span><span class="o">+</span><span class="s1">&#39;.nc&#39;</span>
+<span class="n">wanted_file_2</span> <span class="o">=</span> <span class="n">date_2_str</span><span class="o">+</span><span class="s1">&#39;-C3S-L2_XCO2-GHG_PRODUCTS-MERGED-MERGED-EMMA-DAILY-&#39;</span><span class="o">+</span><span class="n">product_version</span><span class="o">+</span><span class="s1">&#39;.nc&#39;</span>
+
+<span class="n">wanted_path_file_1</span> <span class="o">=</span> <span class="n">DATADIR</span><span class="o">/</span><span class="n">wanted_file_1</span>
+<span class="n">wanted_path_file_2</span> <span class="o">=</span> <span class="n">DATADIR</span><span class="o">/</span><span class="n">wanted_file_2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Wanted file 1: &#39;</span><span class="p">,</span> <span class="n">wanted_path_file_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Wanted file 2: &#39;</span><span class="p">,</span> <span class="n">wanted_path_file_2</span><span class="p">)</span>
+
+<span class="c1"># Check if desired data files have already been downloaded:</span>
+<span class="n">product_already_downloaded</span> <span class="o">=</span> <span class="s1">&#39;no&#39;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">wanted_path_file_1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">wanted_path_file_2</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
+      <span class="n">product_already_downloaded</span> <span class="o">=</span> <span class="s1">&#39;yes&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Product files already downloaded?: &#39;</span><span class="p">,</span> <span class="n">product_already_downloaded</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Selected day 1:  20200415
+* Selected day 2:  20200915
+* Wanted file 1:  data_dir\20200415-C3S-L2_XCO2-GHG_PRODUCTS-MERGED-MERGED-EMMA-DAILY-v4.5.nc
+* Wanted file 2:  data_dir\20200915-C3S-L2_XCO2-GHG_PRODUCTS-MERGED-MERGED-EMMA-DAILY-v4.5.nc
+* Product files already downloaded?:  no
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-download-via-cdsapi-if-required">
+<h2>Data download via cdsapi (if required):<a class="headerlink" href="#data-download-via-cdsapi-if-required" title="Link to this heading">#</a></h2>
+<p>Here we show how to access the CDS using the cdsapi code generated as explained above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">product_already_downloaded</span> <span class="o">==</span> <span class="s1">&#39;no&#39;</span><span class="p">:</span>
+
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* downloading data via cdsapi ...&#39;</span><span class="p">)</span>
+   
+   <span class="c1"># The following code has been generated (apart from minor modifications)</span>
+   <span class="c1"># via &quot;Show API request code&quot; as explained above:</span>
+    
+   <span class="kn">import</span> <span class="nn">cdsapi</span>
+    
+   <span class="n">dataset</span> <span class="o">=</span> <span class="s2">&quot;satellite-carbon-dioxide&quot;</span>
+   <span class="n">request</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="s2">&quot;processing_level&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;level_2&quot;</span><span class="p">],</span>
+         <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;xco2&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;sensor_and_algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;merged_emma&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;2020&quot;</span><span class="p">],</span>
+         <span class="s2">&quot;month&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;04&quot;</span><span class="p">,</span> <span class="s2">&quot;09&quot;</span><span class="p">],</span>
+         <span class="s2">&quot;day&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;15&quot;</span><span class="p">],</span>
+         <span class="c1">#&quot;version&quot;: [&quot;4_5&quot;]</span>
+         <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">product_version_str2</span><span class="p">]</span>
+   <span class="p">}</span>
+   <span class="n">client</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+   <span class="c1"># Generates download.zip file in current directory:</span>
+   <span class="n">client</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;download.zip&#39;</span><span class="p">)</span>
+   <span class="c1"># Unzip:</span>
+   <span class="n">path_to_zip_file</span>        <span class="o">=</span> <span class="s1">&#39;download.zip&#39;</span>
+   <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">path_to_zip_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+      <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">)</span>
+    
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ... finished downloading data via cdsapi&#39;</span><span class="p">)</span> 
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* data are stored in directory: &#39;</span><span class="p">,</span> <span class="n">DATADIR</span><span class="p">)</span>
+    
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* no data download via cdsapi as files already exist&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* downloading data via cdsapi ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-11-20 13:34:13,330 WARNING [2024-11-19T00:00:00] Issue with underlaying infrastructure is now solved. System should gradually recover. Please check updated status [here](https://status.ecmwf.int/)
+2024-11-20 13:34:13,330 INFO [2024-09-28T00:00:00] **Welcome to the New Climate Data Store (CDS)!** This new system is in its early days of full operations and still undergoing enhancements and fine tuning. Some disruptions are to be expected. Your 
+[feedback](https://jira.ecmwf.int/plugins/servlet/desk/portal/1/create/202) is key to improve the user experience on the new CDS for the benefit of everyone. Thank you.
+2024-11-20 13:34:13,330 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2024-11-20 13:34:13,330 INFO [2024-09-16T00:00:00] Remember that you need to have an ECMWF account to use the new CDS. **Your old CDS credentials will not work in new CDS!**
+2024-11-20 13:34:13,343 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the &quot;Show API request code&quot; tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2024-11-20 13:34:13,763 INFO Request ID is 30943ff9-6a9c-44d5-9268-6adfaf8977f3
+2024-11-20 13:34:13,833 INFO status has been updated to accepted
+2024-11-20 13:34:16,466 INFO status has been updated to running
+2024-11-20 13:34:18,839 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* ... finished downloading data via cdsapi
+* data are stored in directory:  data_dir
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reading-the-two-downloaded-data-files">
+<h2>Reading the two downloaded data files:<a class="headerlink" href="#reading-the-two-downloaded-data-files" title="Link to this heading">#</a></h2>
+<p>Now we are reading the two data files:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read wanted files:</span>
+<span class="n">wanted_files_OK</span> <span class="o">=</span> <span class="s1">&#39;no&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* trying to read file 1: &#39;</span><span class="p">,</span> <span class="n">wanted_path_file_1</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">wanted_path_file_1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* reading file 1 ...&#39;</span><span class="p">)</span>
+   <span class="n">ds_1</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">wanted_path_file_1</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* trying to read file 2: &#39;</span><span class="p">,</span> <span class="n">wanted_path_file_2</span><span class="p">)</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">wanted_path_file_2</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* reading file 2 ...&#39;</span><span class="p">)</span>
+      <span class="n">ds_2</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">wanted_path_file_2</span><span class="p">)</span>
+      <span class="n">wanted_files_OK</span> <span class="o">=</span> <span class="s1">&#39;yes&#39;</span>
+   <span class="k">else</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ERROR: file 2 does not exist !?&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ERROR: file 1 does not exist !?&#39;</span><span class="p">)</span>
+ 
+<span class="c1"># Read variables of interest:</span>
+<span class="k">if</span> <span class="n">wanted_files_OK</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ... reading files OK !&#39;</span><span class="p">)</span>
+   <span class="n">f1_xco2</span>    <span class="o">=</span> <span class="n">ds_1</span><span class="p">[</span><span class="s1">&#39;xco2&#39;</span><span class="p">]</span>              <span class="c1"># XCO2 in ppm</span>
+   <span class="n">f1_xco2_qf</span> <span class="o">=</span> <span class="n">ds_1</span><span class="p">[</span><span class="s1">&#39;xco2_quality_flag&#39;</span><span class="p">]</span> <span class="c1"># 0 = good</span>
+   <span class="n">f1_lat</span>     <span class="o">=</span> <span class="n">ds_1</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span>          <span class="c1"># latitude [deg]</span>
+   <span class="n">f1_lon</span>     <span class="o">=</span> <span class="n">ds_1</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span>         <span class="c1"># longitude [deg]</span>
+   <span class="n">f2_xco2</span>    <span class="o">=</span> <span class="n">ds_2</span><span class="p">[</span><span class="s1">&#39;xco2&#39;</span><span class="p">]</span>              <span class="c1"># XCO2 in ppm</span>
+   <span class="n">f2_xco2_qf</span> <span class="o">=</span> <span class="n">ds_2</span><span class="p">[</span><span class="s1">&#39;xco2_quality_flag&#39;</span><span class="p">]</span> <span class="c1"># 0 = good</span>
+   <span class="n">f2_lat</span>     <span class="o">=</span> <span class="n">ds_2</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span>          <span class="c1"># latitude [deg]</span>
+   <span class="n">f2_lon</span>     <span class="o">=</span> <span class="n">ds_2</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span>         <span class="c1"># longitude [deg]</span>
+   
+   <span class="c1"># Filter by quality flag:</span>
+   <span class="p">(</span><span class="n">idgd_1</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">f1_xco2_qf</span><span class="o">.</span><span class="n">values</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()</span> <span class="c1"># Get indices of good quality data for day 1</span>
+   <span class="p">(</span><span class="n">idgd_2</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">f2_xco2_qf</span><span class="o">.</span><span class="n">values</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()</span> <span class="c1"># Get indices of good quality data for day 2</span>
+   <span class="n">g_1_xco2</span> <span class="o">=</span> <span class="n">f1_xco2</span><span class="p">[(</span><span class="n">idgd_1</span><span class="p">)]</span>                  <span class="c1"># Select sub-set of good data for day 1</span>
+   <span class="n">g_1_lat</span>  <span class="o">=</span> <span class="n">f1_lat</span><span class="p">[(</span><span class="n">idgd_1</span><span class="p">)]</span>
+   <span class="n">g_1_lon</span>  <span class="o">=</span> <span class="n">f1_lon</span><span class="p">[(</span><span class="n">idgd_1</span><span class="p">)]</span>
+   <span class="n">g_2_xco2</span> <span class="o">=</span> <span class="n">f2_xco2</span><span class="p">[(</span><span class="n">idgd_2</span><span class="p">)]</span>                  <span class="c1"># Select sub-set of good data for day 2</span>
+   <span class="n">g_2_lat</span>  <span class="o">=</span> <span class="n">f2_lat</span><span class="p">[(</span><span class="n">idgd_2</span><span class="p">)]</span>
+   <span class="n">g_2_lon</span>  <span class="o">=</span> <span class="n">f2_lon</span><span class="p">[(</span><span class="n">idgd_2</span><span class="p">)]</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ERROR: Problem when reading input files !?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* trying to read file 1:  data_dir\20200415-C3S-L2_XCO2-GHG_PRODUCTS-MERGED-MERGED-EMMA-DAILY-v4.5.nc
+* reading file 1 ...
+* trying to read file 2:  data_dir\20200915-C3S-L2_XCO2-GHG_PRODUCTS-MERGED-MERGED-EMMA-DAILY-v4.5.nc
+* reading file 2 ...
+* ... reading files OK !
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="application-1-the-latitudinal-distribution-of-xco2">
+<h1>Application 1: The latitudinal distribution of XCO2<a class="headerlink" href="#application-1-the-latitudinal-distribution-of-xco2" title="Link to this heading">#</a></h1>
+<p>Here our intention is to plot XCO2 as a function of latitude. For this we first need to define the latitude bands.</p>
+<section id="definition-of-latitude-bands">
+<h2>Definition of latitude bands<a class="headerlink" href="#definition-of-latitude-bands" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Computing latitude band center coordinates&#39;</span><span class="p">)</span>
+<span class="n">lat_band_width</span> <span class="o">=</span> <span class="mf">10.0</span>           <span class="c1"># Width of single latitude band in deg</span>
+<span class="n">d_lat</span> <span class="o">=</span> <span class="n">lat_band_width</span><span class="o">*</span><span class="mf">0.5</span>
+<span class="n">lat_band_min</span> <span class="o">=</span> <span class="o">-</span><span class="mf">90.0</span> <span class="o">+</span> <span class="n">d_lat</span>
+<span class="n">lat_band_max</span> <span class="o">=</span> <span class="mf">90.0</span> <span class="o">-</span> <span class="n">d_lat</span>     <span class="c1"># Width of entire latitude range</span>
+<span class="n">n_lat_bands</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">lat_band_max</span> <span class="o">-</span> <span class="n">lat_band_min</span><span class="p">)</span> <span class="o">/</span> <span class="n">lat_band_width</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">lat_band_center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_lat_bands</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_lat_bands</span><span class="p">):</span>   <span class="c1"># Generate array of latitude band centers</span>
+   <span class="n">lat_band_center</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">lat_band_min</span> <span class="o">+</span> <span class="n">ii</span><span class="o">*</span><span class="n">lat_band_width</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* lat_band_center: &#39;</span><span class="p">,</span> <span class="n">lat_band_center</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Computing latitude band center coordinates
+* lat_band_center:  [-85. -75. -65. -55. -45. -35. -25. -15.  -5.   5.  15.  25.  35.  45.
+  55.  65.  75.  85.]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="computing-xco2-vs-latitude-for-the-two-selected-days">
+<h2>Computing XCO2 vs latitude for the two selected days<a class="headerlink" href="#computing-xco2-vs-latitude-for-the-two-selected-days" title="Link to this heading">#</a></h2>
+<p>Now we compute for each latitude band the mean value and the standard deviation of XCO2 for both days:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For file 1 data:</span>
+<span class="k">if</span> <span class="n">wanted_files_OK</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Computing XCO2 as a function of latitude for the data from file 1&#39;</span><span class="p">)</span>
+   <span class="c1"># Relevant input data:</span>
+   <span class="n">lat_1</span> <span class="o">=</span> <span class="n">g_1_lat</span>
+   <span class="n">ghg_1</span> <span class="o">=</span> <span class="n">g_1_xco2</span>
+   <span class="c1"># Init arrays:</span>
+   <span class="n">mean_ghg_1</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.0</span>
+   <span class="n">std_ghg_1</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.0</span> <span class="o">-</span><span class="mi">999</span> <span class="c1"># &lt; 0 for too few data</span>
+   <span class="c1"># Compute mean and standard deviation for each latitude band:</span>
+   <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_lat_bands</span><span class="p">):</span>
+      <span class="n">act_lat</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+      <span class="n">idg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">lat_1</span> <span class="o">&gt;=</span> <span class="n">act_lat</span><span class="o">-</span><span class="n">d_lat</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">lat_1</span> <span class="o">&lt;</span> <span class="n">act_lat</span><span class="o">+</span><span class="n">d_lat</span><span class="p">))</span>
+      <span class="n">sel_1</span> <span class="o">=</span> <span class="n">ghg_1</span><span class="p">[</span><span class="n">idg</span><span class="p">];</span> <span class="n">len_sel_1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_1</span><span class="p">)</span>
+      <span class="c1">#print(&#39;* len_sel_1: &#39;, len_sel_1)</span>
+      <span class="k">if</span> <span class="n">len_sel_1</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+         <span class="n">mean_ghg_1</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sel_1</span><span class="p">)</span>
+         <span class="n">std_ghg_1</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">sel_1</span><span class="p">)</span>
+   <span class="n">idg</span> <span class="o">=</span> <span class="p">(</span><span class="n">std_ghg_1</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span>
+   <span class="n">lb_1_xco2_mean</span> <span class="o">=</span> <span class="n">mean_ghg_1</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="n">lb_1_xco2_std</span> <span class="o">=</span> <span class="n">std_ghg_1</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="n">lb_1_lat</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* lb_1_xco2_mean: &#39;</span><span class="p">,</span> <span class="n">lb_1_xco2_mean</span><span class="p">)</span>
+
+<span class="c1"># For file 2 data:</span>
+<span class="k">if</span> <span class="n">wanted_files_OK</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Computing XCO2 as a function of latitude for the data from file 2&#39;</span><span class="p">)</span>
+   <span class="c1"># Relevant input data:</span>
+   <span class="n">lat_2</span> <span class="o">=</span> <span class="n">g_2_lat</span>
+   <span class="n">ghg_2</span> <span class="o">=</span> <span class="n">g_2_xco2</span>
+   <span class="c1"># Init arrays:</span>
+   <span class="n">mean_ghg_2</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.0</span>
+   <span class="n">std_ghg_2</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.0</span> <span class="o">-</span><span class="mi">999</span> <span class="c1"># &lt; 0 for too few data</span>
+   <span class="c1"># Compute mean and standard deviation for each latitude band:</span>
+   <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_lat_bands</span><span class="p">):</span>
+      <span class="n">act_lat</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+      <span class="n">idg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">lat_2</span> <span class="o">&gt;=</span> <span class="n">act_lat</span><span class="o">-</span><span class="n">d_lat</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">lat_2</span> <span class="o">&lt;</span> <span class="n">act_lat</span><span class="o">+</span><span class="n">d_lat</span><span class="p">))</span>
+      <span class="n">sel_2</span> <span class="o">=</span> <span class="n">ghg_2</span><span class="p">[</span><span class="n">idg</span><span class="p">];</span> <span class="n">len_sel_2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sel_2</span><span class="p">)</span>
+      <span class="c1">#print(&#39;* len_sel_2: &#39;, len_sel_2)</span>
+      <span class="k">if</span> <span class="n">len_sel_2</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+         <span class="n">mean_ghg_2</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sel_2</span><span class="p">)</span>
+         <span class="n">std_ghg_2</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">sel_2</span><span class="p">)</span>
+   <span class="n">idg</span> <span class="o">=</span> <span class="p">(</span><span class="n">std_ghg_2</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span>
+   <span class="n">lb_2_xco2_mean</span> <span class="o">=</span> <span class="n">mean_ghg_2</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="n">lb_2_xco2_std</span> <span class="o">=</span> <span class="n">std_ghg_2</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="n">lb_2_lat</span> <span class="o">=</span> <span class="n">lat_band_center</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* lb_2_xco2_mean: &#39;</span><span class="p">,</span> <span class="n">lb_2_xco2_mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Computing XCO2 as a function of latitude for the data from file 1
+* lb_1_xco2_mean:  [409.65548706 409.95587158 410.28616333 411.36779785 413.82171631
+ 414.80877686 415.06375122 416.38912964 414.8057251  415.49819946]
+* Computing XCO2 as a function of latitude for the data from file 2
+* lb_2_xco2_mean:  [411.78372192 411.26599121 411.59793091 411.20916748 410.97219849
+ 410.78485107 410.47503662 410.60424805 409.42404175 409.97738647]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="generation-of-xco2-vs-latitude-plot">
+<h2>Generation of XCO2 vs latitude plot:<a class="headerlink" href="#generation-of-xco2-vs-latitude-plot" title="Link to this heading">#</a></h2>
+<p>Now we generate the desired plot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generation of xy plot showing XCO2 vs latitude</span>
+
+<span class="k">if</span> <span class="n">wanted_files_OK</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+   <span class="c1"># Plot data:</span>
+   <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>                 <span class="c1"># Figure size</span>
+   <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+   <span class="n">pos</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.09</span><span class="p">,</span><span class="mf">0.11</span><span class="p">,</span><span class="mf">0.88</span><span class="p">,</span><span class="mf">0.83</span><span class="p">]</span>     <span class="c1"># position (left,bottom,width,height) in page coordinates</span>
+   <span class="n">ax</span>  <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+   <span class="n">xmin</span> <span class="o">=</span> <span class="mf">404.0</span>                    <span class="c1"># x axis range of plot</span>
+   <span class="n">xmax</span> <span class="o">=</span> <span class="mf">420.0</span>
+   <span class="n">ymin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">60.0</span>                    <span class="c1"># y axis range of plot</span>
+   <span class="n">ymax</span> <span class="o">=</span>  <span class="mf">80.0</span>
+   <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">])</span>
+   <span class="n">file_1_date2</span> <span class="o">=</span> <span class="n">date_1_str</span>
+   <span class="n">file_2_date2</span> <span class="o">=</span> <span class="n">date_2_str</span>
+   <span class="c1"># -----------------------------------</span>
+   <span class="c1"># plot day 1 data:</span>
+   <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lb_1_xco2_mean</span><span class="p">,</span> <span class="n">lb_1_lat</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">39</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Mean+/-Stddev &#39;</span><span class="o">+</span><span class="n">file_1_date2</span><span class="p">)</span>
+   <span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lb_1_xco2_mean</span><span class="o">-</span><span class="n">lb_1_xco2_std</span><span class="p">,</span> <span class="n">lb_1_lat</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">38</span><span class="p">)</span>
+      <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lb_1_xco2_mean</span><span class="o">+</span><span class="n">lb_1_xco2_std</span><span class="p">,</span> <span class="n">lb_1_lat</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">38</span><span class="p">)</span>
+   <span class="k">else</span><span class="p">:</span>
+      <span class="n">nn_1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lb_1_xco2_mean</span><span class="p">)</span>
+      <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nn_1</span><span class="p">):</span>
+         <span class="n">yy</span> <span class="o">=</span> <span class="n">lb_1_lat</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+         <span class="n">x1</span> <span class="o">=</span> <span class="n">lb_1_xco2_mean</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">-</span><span class="n">lb_1_xco2_std</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+         <span class="n">x2</span> <span class="o">=</span> <span class="n">lb_1_xco2_mean</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">+</span><span class="n">lb_1_xco2_std</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">],</span> <span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">yy</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">38</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+   <span class="c1"># -----------------------------------</span>
+   <span class="c1"># plot day 2 data:</span>
+   <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lb_2_xco2_mean</span><span class="p">,</span> <span class="n">lb_2_lat</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">49</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Mean+/-Stddev &#39;</span><span class="o">+</span><span class="n">file_2_date2</span><span class="p">)</span>
+   <span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lb_2_xco2_mean</span><span class="o">-</span><span class="n">lb_2_xco2_std</span><span class="p">,</span> <span class="n">lb_2_lat</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span>
+      <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lb_2_xco2_mean</span><span class="o">+</span><span class="n">lb_2_xco2_std</span><span class="p">,</span> <span class="n">lb_2_lat</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span>
+   <span class="k">else</span><span class="p">:</span>
+      <span class="n">nn_2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lb_2_xco2_mean</span><span class="p">)</span>
+      <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nn_2</span><span class="p">):</span>
+         <span class="n">yy</span> <span class="o">=</span> <span class="n">lb_2_lat</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+         <span class="n">x1</span> <span class="o">=</span> <span class="n">lb_2_xco2_mean</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">-</span><span class="n">lb_2_xco2_std</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+         <span class="n">x2</span> <span class="o">=</span> <span class="n">lb_2_xco2_mean</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">+</span><span class="n">lb_2_xco2_std</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
+         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">],</span> <span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">yy</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">15.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">48</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+   <span class="c1"># -----------------------------------</span>
+   <span class="n">title</span> <span class="o">=</span> <span class="n">product_str</span>
+   <span class="n">x_label</span> <span class="o">=</span> <span class="s1">&#39;XCO$_2$ [ppm]&#39;</span>
+   <span class="n">y_label</span> <span class="o">=</span> <span class="s1">&#39;Latitude [deg]&#39;</span>
+   <span class="n">plot_title</span> <span class="o">=</span> <span class="n">product_str</span><span class="o">+</span><span class="s1">&#39;: XCO$_2$ vs latitude&#39;</span>
+   <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">plot_title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+   <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">x_label</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">y_label</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+   <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+   <span class="n">plot_type</span> <span class="o">=</span> <span class="s1">&#39;png&#39;</span>
+   <span class="k">if</span> <span class="n">plot_type</span> <span class="o">==</span> <span class="s1">&#39;png&#39;</span><span class="p">:</span>
+      <span class="n">o_file_plot</span> <span class="o">=</span> <span class="n">product_id</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">product_version</span><span class="o">+</span><span class="s1">&#39;_latitude.png&#39;</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* generating: &#39;</span><span class="p">,</span> <span class="n">o_file_plot</span><span class="p">)</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">o_file_plot</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+   <span class="k">else</span><span class="p">:</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ERROR: Cannot generate XCO2 vs latitude plot!?&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* generating:  XCO2_EMMA_v4.5_latitude.png
+</pre></div>
+</div>
+<img alt="../../_images/b8be9e4d3a488fdfa0d55c47468913dbee68f19f462137dc7772f37b0e2c68a4.png" src="../../_images/b8be9e4d3a488fdfa0d55c47468913dbee68f19f462137dc7772f37b0e2c68a4.png" />
+</div>
+</div>
+<p>The figure above shows mean value of XCO2 as a function of latitude (thick lines) and the corresponding variation (computed as standard deviation of the individual XCO2 retrievals) within each latitude band (semi-transparent horizontal bars) for 15-April-2020 (red) and 15-September-2020 (black). As can be seen, during September XCO2 shows quite little variation with latitude, whereas in April XCO2 is significantly higher over the northern hemisphere (NH) compared to the southern hemisphere (SH). This is due to the seasonal cycle of CO2 primarily resulting from regular uptake and release of atmospheric CO2 by growing and decaying vegetation (photosythesis and respiration). Vegetation uptake reduces the CO2 concentration over the NH during the growing season (spring and summer) compared to the dormant season (winter). Over the SH there is less vegetation and therefore CO2 is relatively constant (apart from the general increase due to CO2 emissions by burning fossil fuels).</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="application-2-showing-daily-data-on-a-global-map">
+<h1>Application 2: Showing daily data on a global map<a class="headerlink" href="#application-2-showing-daily-data-on-a-global-map" title="Link to this heading">#</a></h1>
+<p>Here we show how to generate a plot showing the spatial distribution of the data. As can be seen, we use only three variables: XCO2, latitude and longitude. We define a small region in terms of latitude and longitude corner coordinates and select only data in this region for the plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate map:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Generating XCO2 map ...&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">wanted_files_OK</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+   <span class="c1"># Relevant input data:</span>
+   <span class="n">lat</span> <span class="o">=</span> <span class="n">g_2_lat</span><span class="o">.</span><span class="n">values</span>
+   <span class="n">lon</span> <span class="o">=</span> <span class="n">g_2_lon</span><span class="o">.</span><span class="n">values</span>
+   <span class="n">ghg</span> <span class="o">=</span> <span class="n">g_2_xco2</span><span class="o">.</span><span class="n">values</span>
+   <span class="n">file_2_date2</span> <span class="o">=</span> <span class="n">date_2_str</span>
+   <span class="n">plot_title</span> <span class="o">=</span> <span class="n">product_str</span><span class="o">+</span><span class="s1">&#39; - &#39;</span><span class="o">+</span><span class="n">file_2_date2</span>
+   <span class="c1"># Define spatial region of interest:</span>
+   <span class="n">lonmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">12.0</span>         <span class="c1"># Longitude range</span>
+   <span class="n">lonmax</span> <span class="o">=</span>  <span class="mf">35.0</span>
+   <span class="n">latmin</span> <span class="o">=</span>  <span class="mf">32.0</span>         <span class="c1"># Latitude range</span>
+   <span class="n">latmax</span> <span class="o">=</span>  <span class="mf">65.0</span>
+   <span class="c1"># Select data to be shown on map:</span>
+   <span class="n">idg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">((</span><span class="n">lat</span> <span class="o">&gt;</span> <span class="n">latmin</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">lat</span> <span class="o">&lt;</span> <span class="n">latmax</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">lon</span> <span class="o">&gt;</span> <span class="n">lonmin</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">lon</span> <span class="o">&lt;</span> <span class="n">lonmax</span><span class="p">))</span>
+   <span class="n">lat_sel</span> <span class="o">=</span> <span class="n">lat</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="n">lon_sel</span> <span class="o">=</span> <span class="n">lon</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="n">ghg_sel</span> <span class="o">=</span> <span class="n">ghg</span><span class="p">[</span><span class="n">idg</span><span class="p">]</span>
+   <span class="n">n_data</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ghg_sel</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Number of ground pixel for map: &#39;</span><span class="p">,</span> <span class="n">n_data</span><span class="p">)</span>
+   <span class="n">rmin</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">ghg_sel</span><span class="p">)</span>       <span class="c1"># Color bar / scale range</span>
+   <span class="n">rmax</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">ghg_sel</span><span class="p">)</span>
+   
+   <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+   <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+   <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+   <span class="n">pos</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.00</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">0.90</span><span class="p">]</span>     <span class="c1"># pos (l,b,w,h) in page coord</span>
+   <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">projection</span><span class="p">)</span>
+   <span class="n">ax1</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lonmin</span><span class="p">,</span> <span class="n">lonmax</span><span class="p">,</span> <span class="n">latmin</span><span class="p">,</span> <span class="n">latmax</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">projection</span><span class="p">)</span>
+   <span class="n">ax1</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;powderblue&#39;</span><span class="p">)</span>
+   <span class="n">ax1</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
+   <span class="n">ax1</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+   <span class="c1">#x_label = &#39;Latitude [deg]&#39;</span>
+   <span class="c1">#y_label = &#39;Longitude [deg]&#39;</span>
+   
+   <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">plot_title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+   <span class="n">drawmeridians_label</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="n">gl</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">projection</span><span class="p">,</span> <span class="n">draw_labels</span><span class="o">=</span><span class="n">drawmeridians_label</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+   <span class="n">gl</span><span class="o">.</span><span class="n">top_labels</span>  <span class="o">=</span> <span class="kc">False</span>
+   <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">lon_sel</span><span class="p">,</span> <span class="n">lat_sel</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">ghg_sel</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">rmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">rmax</span><span class="p">)</span>
+   <span class="c1">#anchor=(0.5, 1.0) # default</span>
+   <span class="n">anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">)</span>  <span class="c1"># shift upwards</span>
+   <span class="n">cb</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;XCO$_2$ [ppm]&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">anchor</span><span class="p">)</span>
+   <span class="c1">#cb = plt.colorbar(label=&#39;XCO$_2$ [ppm]&#39;, location=&#39;right&#39;, shrink=0.3)</span>
+   <span class="n">plot_type</span> <span class="o">=</span> <span class="s1">&#39;png&#39;</span>
+   <span class="k">if</span> <span class="n">plot_type</span> <span class="o">==</span> <span class="s1">&#39;png&#39;</span><span class="p">:</span>
+      <span class="n">o_file_plot</span> <span class="o">=</span> <span class="n">product_id</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">product_version</span><span class="o">+</span><span class="s1">&#39;_map.png&#39;</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* generating: &#39;</span><span class="p">,</span> <span class="n">o_file_plot</span><span class="p">)</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">o_file_plot</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+   <span class="k">else</span><span class="p">:</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ERROR: Cannot generate XCO2 map plot!?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Generating XCO2 map ...
+* Number of ground pixel for map:  53
+* generating:  XCO2_EMMA_v4.5_map.png
+</pre></div>
+</div>
+<img alt="../../_images/51c85bec6e52081e54e0bb3e17b0dd7678ab158f25851073a774c3eaa4dd8d2c.png" src="../../_images/51c85bec6e52081e54e0bb3e17b0dd7678ab158f25851073a774c3eaa4dd8d2c.png" />
+</div>
+</div>
+<p>The figure above shows the locations of the individual ground pixel observations and their corresponding XCO2 value using all “good” retrievals over Europe and surrounding area for 15-Sept-2020. As can be seen, the spatial coverage of the daily data is very sparse. This is because only data of the highest quality are contained in the product file. Strict quality filtering is important to meet the demanding requirements on accuracy and precision for satellite XCO2 data observations.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./submodules/c3s-training-submodule-sat-obs-atmos-comp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">C3S Satellite-Observations (ECV) - Atmospheric Composition Tutorial</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="greenhouse-gases-level3-products.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-needed-to-use-this-jupyter-notebook">What is needed to use this Jupyter Notebook?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-data-via-cds-api-cdsapi">How to access data via CDS API (cdsapi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cds-api-cdsapi">Data download via CDS API (cdsapi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-default-plot-style-parameters">Setting default plot style parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-preparatory-work-including-setting-the-data-directory">Other preparatory work including setting the data directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-user-input">Initial user input:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-the-two-data-files-have-already-been-downloaded">Check if the two data files have already been downloaded:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cdsapi-if-required">Data download via cdsapi (if required):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-two-downloaded-data-files">Reading the two downloaded data files:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-1-the-latitudinal-distribution-of-xco2">Application 1: The latitudinal distribution of XCO2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-latitude-bands">Definition of latitude bands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-xco2-vs-latitude-for-the-two-selected-days">Computing XCO2 vs latitude for the two selected days</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-xco2-vs-latitude-plot">Generation of XCO2 vs latitude plot:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-2-showing-daily-data-on-a-global-map">Application 2: Showing daily data on a global map</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Centre for Medium-Range Weather Forecasts)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
