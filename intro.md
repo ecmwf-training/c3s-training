@@ -10,6 +10,20 @@ This website contains Jupyter notebook based tutorials that demonstrate how to a
 
 ![banner02](./img/C3S_jupyterbook_banner_v01.png)
 
+<br>
+
+## Target Audience
+
+The Jupyter notebooks provided by the Copernicus Climate Change Service (C3S) are designed for a diverse audience interested in climate data analysis. This includes climate scientists, researchers and data analysts seeking to understand and interpret climate data. Additionally, educators and students aiming to enhance their knowledge of climate data processing will find these tutorials beneficial.
+
+<br>
+
+## Learning Objectives
+
+The primary objective of these Jupyter notebooks is to equip users with practical skills in accessing, processing, and analyzing climate data from the Climate Data Store (CDS). Through interactive Python programming examples, users learn to handle data pertaining to observations, reanalysis, seasonal forecasts and climate projections. The tutorials provide example workflows that can be tailored by users to suit their needs for climate data analysis. 
+
+<br>
+
 ## New Tutorials
 
 We have a set of new tutorials waiting and ready to be explored. 

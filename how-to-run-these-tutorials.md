@@ -68,7 +68,7 @@ These cloud-based services represent only a selection of the available options f
 ## Run the notebooks locally
 
 ```{attention}
-If you would like to run this notebook in your own environment, we suggest you install [Anaconda](https://docs.anaconda.com/anaconda/install/), which contains most of the libraries you will need.<br>
+If you would like to run this notebook in your own environment, we suggest you install [Miniforge](https://conda-forge.org/download/), which contains most of the libraries you will need.<br>
 In our [github repository](https://github.com/Randbee/C3SBook) you can find every notebook in `notebooks/` folder. Also, there is a `requirements.txt` file, containing the necessary python libraries for running our notebooks.You need to run this command in the same directory as the requirements.txt file.
 
 `pip install -r requirements.txt`
@@ -93,6 +93,8 @@ If you prefer a lightweight interface and want to consum less resources, you may
    - After installing JupyterLab, open your terminal or command prompt.
    - Type `jupyter lab` and press Enter to launch JupyterLab. This will start a local server and open JupyterLab in your default web browser.
 
+   Check the [JupyterLab documentation](https://jupyterlab.readthedocs.io/en/latest/getting_started/starting.html)!
+
 3. **Access JupyterLab Interface**:
 
    - Once JupyterLab is launched, you will see the JupyterLab interface in your web browser. It consists of a file browser on the left and a main work area on the right.
@@ -102,7 +104,7 @@ If you prefer a lightweight interface and want to consum less resources, you may
 4. **Open a Notebook**:
 
    - You can download every notebook by clicking on the download button at the top of the webpage.
-     ![Download notebook](download-notebook.jpg)
+     ![Download notebook](download-notebook.png)
    - Navigate to the directory where your notebook is located using the file browser on the left.
    - Click on the notebook file (usually with a `.ipynb` extension) to open it in JupyterLab.
    - The notebook will open in a new tab within the main work area of JupyterLab.
