@@ -29,7 +29,7 @@ Binder may take some time to load, so please be patient!
 1. Click on the Binder badge
 2. Wait for the Binder environment to load.
 3. Once loaded, navigate to the desired notebook and click on it to open and interact with it.
-   :::
+:::
 
 :::{dropdown} Kaggle
 
@@ -68,12 +68,103 @@ These cloud-based services represent only a selection of the available options f
 ## Run the notebooks locally
 
 ```{attention}
-If you would like to run this notebook in your own environment, we suggest you install [Miniforge](https://conda-forge.org/download/), which contains most of the libraries you will need.<br>
-In our [github repository](https://github.com/Randbee/C3SBook) you can find every notebook in `notebooks/` folder. Also, there is a `requirements.txt` file, containing the necessary python libraries for running our notebooks.You need to run this command in the same directory as the requirements.txt file.
-
-`pip install -r requirements.txt`
-
+In our [github repository](https://github.com/ecmwf-training/c3s-training) you can find every notebook in `submodules/` folder.
 ```
+
+### Key Concepts
+
+If you are considering to work with your notebooks locally, it is important that you are aware of some key concepts or information that you'll find in this tutorial or during the preparation and installation process. 
+
+- **Dependencies** are all of the software components required by your notebook in for it to work as intended and avoid runtime errors. They can be libraries, frameworks, or other programs. 
+
+- **Packages** are a way to organize and group together related dependencies. They act like toolboxes, storing and organizing tools making easier to install and manage dependencies.  
+
+- **Conflicting dependencies or dependency hell** are issues that occur when two or more packages that are sharing dependencies in a project, require different versions of the same dependency. Because only a single version of a dependency is 
+  permitted in any project's environment.     
+ 
+- **Environments** are directories that contain a specific collection of packages that you have installed. You may have several environments with different versions for the same dependecy. If you change one environment, your other environments 
+  are not affected. There is a `base environment` located at the root prefix that contains the system installation parameters. 
+  
+- **The activation** of an environment makes all its contents available to your terminal or shell.
+
+- **The deactivation** of an environment is the opposite operation of activation, removing from your shell what makes the environment content accessible.
+ 
+- **Pip** is the standard tool for installing or uninstalling Python packages and managing their dependencies. For more information visit [pip documentation](https://pip.pypa.io/en/stable/).
+
+- **Conda** is an open-source, cross-platform package manager and environment management system which can be used to create Python and R development environments on many different platforms. It is particularly beneficial for data scientists, researchers, and developers working with diverse software requirements across different projects. For more information visit [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/index.html)
+  
+- **Conda channels** are the locations where packages are stored. They serve as the base for hosting and managing packages. Remote channels like conda-forge offer a wide range of community- 
+  maintained packages, expanding the available options for software development and experimentation.
+
+- **Conda-forge** is a community channels made up of thousands of contributors, which contains repositories of conda recipes and thus provides conda packages 
+  for a wide range of software. The `conda-forge` channel is free for all to use. For more information visit [conda-forge documentation](https://conda-forge.org/docs/).
+
+
+### Conda installation
+
+If you would like to run the notebooks in your own environment, we suggest you use [Conda](https://docs.conda.io/projects/conda/en/latest/index.html). Using conda provides a streamlined approach to package management, platform compatibility, environment isolation, and access to an extensive package ecosystem. Conda is available on Windows, macOS, or Linux and can be used with any terminal application (or shell). 
+
+We suggest you use the [Miniforge](https://conda-forge.org/download/) installer, which contains most of the libraries you will need. Miniforge is an installer maintained by the conda-forge community that comes preconfigured for use with the conda-forge channel.
+
+Basic installations instructions are available below. More detailed instructions are available in this [github repository](https://github.com/conda-forge/miniforge). 
+
+**Unix-like platforms (Mac OS & Linux)**
+ 
+Download the installer  and run `bash Miniforge3-$(uname)-$(uname -m).sh`.
+
+
+**Windows**
+
+Download and execute the Windows installer from [Miniforge](https://conda-forge.org/download).
+
+
+```{note}
+There are several installers that you could use to install Conda. For more information about that visit [Installing conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+```
+
+
+### Setting a virtual environment
+
+In our notebooks we use packages that don't come as part of the standard dependencies of Python and some of these packages need specific dependency versions that could be in conflict with other applications or projects in our local environment. The solution to this problem is to create an environment where we are able to set up the versions and conditions to the relevant dependencies. You can easily activate or deactivate environments, which is how you switch between them. You can also share your environment with someone by giving them a copy of your `environment.yaml` file.
+With conda, you can create, export, list, remove, and update environments that have different versions of Python and/or packages installed in them. Switching or moving between environments is called activating the environment. You can also share an environment file. 
+
+We suggest that you create an environment with commands in the most basic way using the terminal for the following steps:
+
+1. To create an environment called `C3S-Training`.
+  `conda create -n C3S-Training`  
+
+2. When conda asks you to proceed, type `y`.
+
+   This creates the `C3S-Training` environment in a /envs/ folder. No packages will be installed in this environment.
+
+You will need to activate your environment each time you're planning to run the tutorial. To activate the `C3S-Training` environment you can use the command line with `conda activate C3S-Training`. As soon your environment is activated, conda prepends the path name `C3S-Training` onto your system command.
+
+To deactivate an environment, type in the command line: `conda deactivate`
+
+  
+### Install the required packages 
+
+In our [github repository](https://github.com/ecmwf-training/c3s-training) you can find a `requirements.txt` file, containing a list of python dependencies needed for running our notebooks.
+
+Using and maintaining a requirement.txt files is a good practice for Python development. It ensures that the necessary libraries and dependencies are well documented and easily reproducible, making it easier for others to work on the code and reducing the likelihood of conflict issues. 
+
+In the figure below you can see an example of a requirement.txt file where there is a list of dependencies with their relevant and required version in a format "dependency_name == version". You can specify the version of a dependency using `==`,`>`,`>=`,`<`, `<=`, and so on. Omitting the version specifier installs the latest version.   
+
+   ![Requirement.txt file example](requirement-file-example.png)
+
+```{note}
+Before to install the required packages with the requirements file, remember to activate the relevant environment trough the command line `conda activate C3S-Training`
+```
+
+
+To install all the dependencies included in the requirement file you need to run this command in the same directory of the file `pip install -r requirements.txt`.
+
+```{note}
+For more information please check [requirement file format documentation](https://pip.pypa.io/en/stable/reference/requirements-file-format/).
+```
+
+
+### Visualization of Notebooks
 
 To visualize and execute the notebooks, we recommend downloading [JupyterLab](https://jupyter.org/), a versatile web-based interactive development environment. You can interact with our notebooks in this environment locally.
 
@@ -115,5 +206,5 @@ If you prefer a lightweight interface and want to consum less resources, you may
    - Explore the different features of JupyterLab to customize your workflow and make the most out of your notebook experience.
 
 ```{note}
-These tutorials provide practical guides on how to work with atmospheric composition data. They can be run without need for installation, and can be fully adapted to suit your needs!
+These tutorials provide practical guides on how to work with C3S data. They can be run without need for installation, and can be fully adapted to suit your needs!
 ```
