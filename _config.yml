@@ -26,7 +26,6 @@ html:
   use_issues_button: true
   use_repository_button: true
   announcement: "⚠️This is a TEST Version, this is not an official website⚠️"
-  download: false
 
 launch_buttons:
   binderhub_url: "https://mybinder.org" # The URL for your BinderHub (e.g., https://mybinder.org)
