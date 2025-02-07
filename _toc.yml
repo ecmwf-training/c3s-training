@@ -98,10 +98,10 @@ parts:
             title: Ice Sheet Mass Balance
           - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/glacier-mass-change
             title: Glacier Mass Change
-      - file: submodules/c3s-training-submodule-sat-obs-ocean/intro
-        title: Satellite Observations - Ocean
-      - file: submodules/c3s-training-submodule-sat-obs-land/intro
-        title: Satellite Observations - Land
+      #- file: submodules/c3s-training-submodule-sat-obs-ocean/intro
+      #  title: Satellite Observations - Ocean
+      #- file: submodules/c3s-training-submodule-sat-obs-land/intro
+      #  title: Satellite Observations - Land
       - file: submodules/copernicus-emergency-service-tutorial/intro
         title: Tutorials using Copernicus Emergency Management Service data
         sections:
