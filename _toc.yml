@@ -124,4 +124,4 @@ parts:
       - url: https://cds.climate.copernicus.eu/
         title: Copernicus Climate Data Store (CDS)
       - url: https://climate.copernicus.eu/user-learning-services/
-        title: C3S Training Services
+        title: C3S Learning Services
