@@ -26,8 +26,11 @@ html:
   use_issues_button: true
   use_repository_button: true
   announcement: "⚠️This is a TEST Version, this is not an official website⚠️"
+  extra_footer: |
+    <script src="_static/custom.js"></script>
 
 launch_buttons:
   binderhub_url: "https://mybinder.org" # The URL for your BinderHub (e.g., https://mybinder.org)
 
 exclude_patterns: ["**.ipynb_checkpoints", "**README.md"]
+    
