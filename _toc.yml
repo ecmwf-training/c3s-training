@@ -117,10 +117,8 @@ parts:
         title: Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences
   - caption: ECMWF
     chapters:
-      - file: support
-        title: Help&Support
-  - caption:
-    chapters:
+      - url: https://climate.copernicus.eu/help-and-support
+        title: Help & Support
       - url: https://climate.copernicus.eu/
         title: Copernicus Climate Change Service (C3S)
       - url: https://cds.climate.copernicus.eu/
