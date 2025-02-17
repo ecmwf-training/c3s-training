@@ -17,8 +17,8 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/Randbee/C3SBook # Online location of your book
-  branch: review # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/ecmwf-training/C3S-training # Online location of your book
+  branch: develop # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -26,8 +26,11 @@ html:
   use_issues_button: true
   use_repository_button: true
   announcement: "⚠️This is a TEST Version, this is not an official website⚠️"
+  extra_footer: |
+    <script src="_static/custom.js"></script>
 
 launch_buttons:
   binderhub_url: "https://mybinder.org" # The URL for your BinderHub (e.g., https://mybinder.org)
 
 exclude_patterns: ["**.ipynb_checkpoints", "**README.md"]
+    

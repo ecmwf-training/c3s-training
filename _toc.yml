@@ -98,10 +98,10 @@ parts:
             title: Ice Sheet Mass Balance
           - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/glacier-mass-change
             title: Glacier Mass Change
-      - file: submodules/c3s-training-submodule-sat-obs-ocean/intro
-        title: Satellite Observations - Ocean
-      - file: submodules/c3s-training-submodule-sat-obs-land/intro
-        title: Satellite Observations - Land
+      #- file: submodules/c3s-training-submodule-sat-obs-ocean/intro
+      #  title: Satellite Observations - Ocean
+      #- file: submodules/c3s-training-submodule-sat-obs-land/intro
+      #  title: Satellite Observations - Land
       - file: submodules/copernicus-emergency-service-tutorial/intro
         title: Tutorials using Copernicus Emergency Management Service data
         sections:
@@ -117,13 +117,11 @@ parts:
         title: Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences
   - caption: ECMWF
     chapters:
-      - file: support
-        title: Help&Support
-  - caption:
-    chapters:
+      - url: https://climate.copernicus.eu/help-and-support
+        title: Help & Support
       - url: https://climate.copernicus.eu/
         title: Copernicus Climate Change Service (C3S)
       - url: https://cds.climate.copernicus.eu/
         title: Copernicus Climate Data Store (CDS)
       - url: https://climate.copernicus.eu/user-learning-services/
-        title: C3S Training Services
+        title: C3S Learning Services
