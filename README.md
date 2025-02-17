@@ -1,6 +1,8 @@
 # c3s-training
+
 Master repository for the notebooks to be included in the C3S JupyterBook
-# C3SBook
+
+## C3SBook
 
 This repository contains a book of notebooks generated with Jupyter Book. Below are the instructions for working with this project, including how the structure of the notebooks works and how to perform the build and deploy process of the book.
 
