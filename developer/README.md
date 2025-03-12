@@ -13,10 +13,10 @@ rm -rf _build
 jupyter-book build --all .
 ```
 
-## Copy to gh-pages
+## View local build
 
 ```
-ghp-import -n -p -f _build/html
+open _build/html/index.html
 ```
 
 
