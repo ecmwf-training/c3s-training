@@ -39,7 +39,7 @@ parts:
           - file: submodules/c3s-training-submodule-climate-indices/ci-windchill
             title: Windchill
       - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/intro
-        title: Satellite Observations - Atmospheric Physic  
+        title: Satellite Observations - Atmospheric Physics
         sections:
           # ERB
           - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation
