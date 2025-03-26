@@ -76,9 +76,9 @@ parts:
           #   title: Greenhouse Gas Level 3 Products
           # # Aerosol
           - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator
-            title: Aerosol Single Sensor Demonstrator
+            title: Exploration of the aerosol properties products
           - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record
-            title: Aerosol Multi-Sensor Record
+            title: A multi-sensor climate data record of aerosol properties
       - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/intro
         title: Satellite Observations - Hydrology and Cryosphere
         sections:
