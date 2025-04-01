@@ -38,4 +38,4 @@ Additionally, there's a `requirements.txt` file included, containing the necessa
 pip install -r requirements.txt
 ```
 
-To run the notebooks on your local machine, please refer to [C3S Book:How to run these tutorials ](https://randbee.github.io/C3SBook/how-to-run-these-tutorials.html) section for detailed instructions.
+To run the notebooks on your local machine, please refer to [C3S Book:How to run these tutorials ](https://ecmwf-training.github.io/c3s-training/how-to-run-these-tutorials.html) section for detailed instructions.
