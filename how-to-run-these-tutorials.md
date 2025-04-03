@@ -4,9 +4,13 @@ The tutorials are in the form of [Jupyter notebooks](https://jupyter.org/), a po
 
 You will not need to install any software to work with Jupyter notebooks, as there are several free cloud-based services available for creating, editing, running, and exporting notebooks. These services provide a hassle-free environment where you can focus on your analysis without worrying about software installation or compatibility issues.
 
+On this guide you find the description of a range of cloud based services available to you, and the information and guidance required to set yourself up to run the Jupyter Notebooks through your desktop or laptop in case you prefer this option. 
+
 <hr>
 
 ## Possible Cloud-based services
+
+These cloud-based services represent only a selection of the available options for running notebooks in the cloud. Users can leverage these services to execute Jupyter notebooks without the need to install any software locally. However, it's essential to note that this selection is not exhaustive, and users may explore other cloud-based platforms tailored to their specific needs and preferences.
 
 :::{dropdown} WEKEO
 
@@ -15,7 +19,7 @@ You will not need to install any software to work with Jupyter notebooks, as the
 :::
 
 ```{warning}
-These free cloud-based services are not supported by ECMWF
+Be aware that the free cloud-based services described below are not supported by ECMWF
 ```
 
 :::{dropdown} Binder
@@ -59,9 +63,7 @@ Requires Google account, and installation of some libraries, you can add our `re
 
 :::
 
-:::{note}
-These cloud-based services represent only a selection of the available options for running notebooks in the cloud. Users can leverage these services to execute Jupyter notebooks without the need to install any software locally. However, it's essential to note that this selection is not exhaustive, and users may explore other cloud-based platforms tailored to their specific needs and preferences.
-:::
+
 
 <hr>
 
@@ -69,17 +71,17 @@ These cloud-based services represent only a selection of the available options f
 
 ### Key Concepts
 
-If you are considering to work with your notebooks locally, it is important that you are aware of some key concepts or information that you'll find in this tutorial or during the preparation and installation process. 
+If you are considering to work with the Jupyter Notebooks on your own desktop or laptop, it is important that you are aware of some key concepts or information that you'll find in this tutorial or during the preparation and installation process. 
 
 - **Dependencies** are all of the software components required by your notebook in for it to work as intended and avoid runtime errors. They can be libraries, frameworks, or other programs. 
 
 - **Packages** are a way to organize and group together related dependencies. They act like toolboxes, storing and organizing tools making easier to install and manage dependencies.  
 
-- **Conflicting dependencies or dependency hell** are issues that occur when two or more packages that are sharing dependencies in a project, require different versions of the same dependency. Because only a single version 
+- **Conflicting dependencies** or **dependency hell** are issues that occur when two or more packages that are sharing dependencies in a project, require different versions of the same software component. Because only a single version 
   of a dependency is permitted in any project's environment.     
  
 - **Environments** are directories that contain a specific collection of packages that you have installed. You may have several environments with different versions for the same dependecy. If you change one environment, 
-  your other environments are not affected. There is a `base environment` located at the root prefix that contains the system installation parameters.
+  your other environments are not affected. There is a `base environment` located at the root directory that contains the system installation parameters.
 
 - **Git** is a distributed version control system that intelligently tracks changes in files. It is particularly useful when you and a group of people are all making changes to the same files at the same time.
 
@@ -151,7 +153,7 @@ cd ecmwf-training/c3s-training-submodule-reanalysis
 
 2. First click on the {bdg-success}`<> Code` button and then Download ZIP file.
 
- ![download repo example](download-repo-example.png)
+ ![download repo example](./img/download-repo-example.png)
  
 3. Unzip the file using your favourite tools
 
@@ -192,7 +194,7 @@ With conda, you can create, export, list, remove, and update environments that h
 
 In all our [github repositories](https://github.com/ecmwf-training/c3s-training) you can find a `environment.yml` file, containing the conda channels and a list of python dependencies needed for running our notebooks, as presented in the figure below. 
 
- ![environment.yml file example](environment-file-example.png)
+ ![environment.yml file example](./img/environment-file-example.png)
 
 The list of dependencies are presented with their relevant and required version in a format “dependency_name == version”. You can specify the version of a dependency using `==`,`>`,`>=`,`<`, `<=`, and so on. Omitting the version specifier installs the latest version.
 
@@ -244,7 +246,7 @@ If you prefer a lightweight interface and want to consume less resources, you ma
 
    - Once JupyterLab is launched, you will see the JupyterLab interface in your web browser. It consists of a file browser on the left and a main work area on the right.
 
-   ![Jupyter Lab Interface](jupyter-lab-interface.png)3
+   ![Jupyter Lab Interface](./img/jupyter-lab-interface.png)
 
 3. **Open a Notebook**:
    - Navigate to the directory where your notebook is located using the file browser on the left.
