@@ -34,10 +34,40 @@ ghp-import -n -p -f _build/html
 # Run our notebooks
 
 In the `notebooks` folder, you'll find all the Jupyter notebooks.
-Additionally, there's a `requirements.txt` file included, containing the necessary Python libraries for running the notebooks. You can install all the required libraries by executing the following command in your terminal:
+
+Additionally, there's a `environment.yml` file, containing the conda channels and a list of python dependencies needed for running our notebooks, as presented in the example below
+
 
 ```bash
-pip install -r requirements.txt
+name: example-environment
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy == 1.26.4
+  - cdsapi == 0.6.1
+  - pandas == 2.1.4
+  - netCDF4 == 1.6.2
+  - dask == 2023.11.0
+  - xarray == 2023.6.0 
+  - matplotlib == 3.8.0 
+  - cartopy == 0.22.0
+  - jupyterlab==4.3.4
+  - myst-parser==4.0.0
 ```
+
+The first line of the environment.yml file sets the new environment’s name and you can activate this environment by executing the following commands in your terminal:
+
+
+```bash
+conda env create -f environment.yml
+conda activate example-environment
+```
+To verify that the environment is installed correctly and check the list of environments available you can execute  
+
+```bash
+conda env list
+```
+
 
 To run the notebooks on your local machine, please refer to [C3S Book:How to run these tutorials ](https://ecmwf-training.github.io/c3s-training/how-to-run-these-tutorials.html) section for detailed instructions.
