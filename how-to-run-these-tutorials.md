@@ -4,7 +4,7 @@ The tutorials are in the form of [Jupyter notebooks](https://jupyter.org/), a po
 
 You will not need to install any software to work with Jupyter notebooks, as there are several free cloud-based services available for creating, editing, running, and exporting notebooks. These services provide a hassle-free environment where you can focus on your analysis without worrying about software installation or compatibility issues.
 
-On this guide you find the description of a range of cloud based services available to you, and the information and guidance required to set yourself up to run the Jupyter Notebooks through your desktop or laptop in case you prefer this option. 
+On this guide you find the description of a range of cloud based services for running notebooks available to you, and the information and guidance required to set yourself up to run the Jupyter Notebooks through your desktop or laptop in case you prefer this option. 
 
 <hr>
 
@@ -69,6 +69,8 @@ Requires Google account, and installation of some libraries, you can add our `re
 
 ## Run the notebooks locally
 
+On this section we are going to give you the information and the steps required to download, set up, and then run the notebooks on your own desktop and laptop. 
+
 ### Key Concepts
 
 If you are considering to work with the Jupyter Notebooks on your own desktop or laptop, it is important that you are aware of some key concepts or information that you'll find in this tutorial or during the preparation and installation process. 
@@ -92,7 +94,7 @@ If you are considering to work with the Jupyter Notebooks on your own desktop or
 
 - **Terminal** is a text input and ouput environment. It is a program that allows us to enter commands that the computer processess. 
 
-- **Shell** is a program that acts as command-line interpreter. It processes commands from the terminal and outputs the results. It interprets and processes the commands entered by the user.
+- **Shell**  is a programme that acts like a command-line interpreter. It interprets and processes the commands entered by the user into the terminal, and outputs the results.  
   
 - **The activation** of an environment makes all its contents available to your terminal or shell.
 
@@ -106,20 +108,20 @@ If you are considering to work with the Jupyter Notebooks on your own desktop or
 - **Conda channels** are the locations where packages are stored. They serve as the base for hosting and managing packages. Remote channels like conda-forge offer a wide range of community- 
   maintained packages, expanding the available options for software development and experimentation.
 
-- **Conda-forge** is a community channels made up of thousands of contributors, which contains repositories of conda recipes and thus provides conda packages 
+- **Conda-forge** is a community channel made up of thousands of contributors, which contains repositories of conda recipes and thus provides conda packages 
   for a wide range of software. The `conda-forge` channel is free for all to use. For more information visit [conda-forge documentation](https://conda-forge.org/docs/).
 
 
 ### Download a submodule repository
 
-```{attention}
+```{note}
 In our [github repository](https://github.com/ecmwf-training/c3s-training) you can find a set of repositories in the [`submodules/` folder](https://github.com/ecmwf-training/c3s-training/tree/main/submodules) where you can find all the Jupyter Notebooks grouped in several topics as structured in the left menu bar.   
 ```
 
 If you have experience using [git](https://git-scm.com/downloads), we recommend working with git on the command line to download and get access to the Jupyter Notebooks. If you have never used git, you can download the submodules via the GitHub website.
 
 
-:::{dropdown} Clone wit git
+:::{dropdown} Clone with git
 
 You will need to have [git](https://git-scm.com/downloads) installed to follow the steps below.
 
@@ -141,9 +143,9 @@ Here we show how to download the [reanalysis submodule repository](https://githu
 
 3. Move into the cloned directory
 
-```bash
-cd ecmwf-training/c3s-training-submodule-reanalysis
-```
+    ```bash
+    cd ecmwf-training/c3s-training-submodule-reanalysis
+    ```
 :::
 
 
@@ -165,7 +167,7 @@ cd ecmwf-training/c3s-training-submodule-reanalysis
 
 ### Conda installation
 
-If you would like to run the notebooks in your own environment, we suggest you use [Conda](https://docs.conda.io/projects/conda/en/latest/index.html). Using conda provides a streamlined approach to package management, platform compatibility, environment isolation, and access to an extensive package ecosystem. Conda is available on Windows, macOS, or Linux and can be used with any terminal application (or shell). 
+To run the notebooks in your own environment, we suggest you use [Conda](https://docs.conda.io/projects/conda/en/latest/index.html). Using conda provides a streamlined approach to package management, platform compatibility, environment isolation, and access to an extensive package ecosystem. Conda is available on Windows, macOS, or Linux and can be used with any terminal application (or shell). 
 
 We suggest you use the [Miniforge](https://conda-forge.org/download/) installer, that is maintained by the conda-forge community that comes preconfigured for use with the conda-forge channel.
 
@@ -200,13 +202,13 @@ The list of dependencies are presented with their relevant and required version 
 
 To create an environment with all the dependencies listed in the `environment.yml` file you will need to use the terminal following the next steps. 
 
-1. Create the environment from the environment.yml file. The first line of the `environment.yml` file sets the new environment's name. 
+1. **Create the environment from the environment.yml file**. The first line of the `environment.yml` file sets the new environment's name. 
    `conda env create -f environment.yml`  
 
-2. Activate the environment file.
+2. **Activate the environment file**.
    `conda activate example-environment`
 
-3. Verify that the environment is installed correctly and check the list of environments available.
+3. **Verify that the environment is installed correctly and check the list of environments available.**
    `conda env list`
 
 
@@ -217,23 +219,24 @@ To deactivate an environment, type in the command line: `conda deactivate
 
 ### Installing additional dependencies
 
-In addition to the dependencies installed trought the `environment.yml` file, there are some additional dependencies that may be required for some particular notebooks and that are not avaliable trought the channels defined in the `environment.yml` file. 
+In addition to the dependencies installed through the `environment.yml` file, there are some additional dependencies that may be required for some particular notebooks and that are not avaliable through the channels defined in the `environment.yml` file. 
 
 Those dependecies are installed in each particular notebook through the [conda install](https://docs.conda.io/projects/conda/en/stable/commands/install.html) command or through the [pip install](https://pip.pypa.io/en/stable/cli/pip_install/) command.
 
+
 **[conda install](https://docs.conda.io/projects/conda/en/stable/commands/install.html)** is the conda installer command that allows you to install a list of packages and softwares into a specified conda environment.
 
-**[pip install](https://pip.pypa.io/en/stable/cli/pip_install/)** is the Python installer command that allows you to install Python packages and that it is presented in some Jupyter Notebooks due to particular dependencies that are not available trough the conda installer. 
+**[pip install](https://pip.pypa.io/en/stable/cli/pip_install/)** is the Python installer command that allows you to install Python packages and that it is presented in some Jupyter Notebooks due to particular dependencies that are not available through the conda installer. 
 
 
-### Visualization of Notebooks
+### Running and visualization of Notebooks
 
 To visualize and execute the notebooks, we recommend using [JupyterLab](https://jupyter.org/), a versatile web-based interactive development environment. You can interact with our notebooks in this environment locally. JupyterLab is one of the dependencies listed in the `environment.yml` file presented in the repository and it is installed as soon as you install and activate the environment. 
 
+```{note}
+If you prefer a lightweight interface and want to consume less resources, you may consider downloading Jupyter Notebook interface instead of JupyterLab. This interface provides a basic yet efficient environment for running your notebooks without consuming as many resources. It's a great option for users who prioritize simplicity and performance in their workflow. Here's documentation of [Jupyter Notebook interface](https://docs.jupyter.org/en/latest/start/index.html)
+````
 
-:::{note}
-If you prefer a lightweight interface and want to consume less resources, you may consider downloading Jupyter Notebook instead of JupyterLab. Jupyter Notebook provides a basic yet efficient environment for running your notebooks without consuming as many resources. It's a great option for users who prioritize simplicity and performance in their workflow. Here's documentation of [Jupyter Notebook](https://docs.jupyter.org/en/latest/start/index.html)
-:::
 
 1. **Launch JupyterLab**:
 
@@ -253,7 +256,7 @@ If you prefer a lightweight interface and want to consume less resources, you ma
    - Click on the notebook file (usually with a `.ipynb` extension) to open it in JupyterLab.
    - The notebook will open in a new tab within the main work area of JupyterLab.4
 
-4. **Interact with the Notebook**:
+4. **Run the Notebook**:
    - You can now interact with the notebook by running code cells, editing text, and executing various commands.
    - To run a code cell, select it and either click the "Run" button in the toolbar or press Shift + Enter.
    - Explore the different features of JupyterLab to customize your workflow and make the most out of your notebook experience.
