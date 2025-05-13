@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Copernicus Climate Change Service (C3S) Training Book
+title: Copernicus Climate Change Service (C3S) training book
 author: the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Centre for Medium-Range Weather Forecasts)
 
 # Force re-execution of notebooks on each build.
@@ -25,7 +25,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  announcement: "⚠️This is a TEST Version, this is not an official website⚠️"
+  announcement: "⚠️This is a TEST version, this is not an official website⚠️"
   extra_footer: |
     <script src="_static/custom.js"></script>
 
