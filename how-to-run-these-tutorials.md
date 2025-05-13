@@ -8,7 +8,7 @@ On this guide you find the description of a range of cloud based services for ru
 
 <hr>
 
-## Possible Cloud-based services
+## Possible cloud-based services
 
 These cloud-based services represent only a selection of the available options for running notebooks in the cloud. Users can leverage these services to execute Jupyter notebooks without the need to install any software locally. However, it's essential to note that this selection is not exhaustive, and users may explore other cloud-based platforms tailored to their specific needs and preferences.
 
@@ -71,7 +71,7 @@ Requires Google account, and installation of some libraries, you can add our `re
 
 On this section we are going to give you the information and the steps required to download, set up, and then run the notebooks on your own desktop and laptop. 
 
-### Key Concepts
+### Key concepts
 
 If you are considering to work with the Jupyter Notebooks on your own desktop or laptop, it is important that you are aware of some key concepts or information that you'll find in this tutorial or during the preparation and installation process. 
 
@@ -229,7 +229,7 @@ Those dependecies are installed in each particular notebook through the [conda i
 **[pip install](https://pip.pypa.io/en/stable/cli/pip_install/)** is the Python installer command that allows you to install Python packages and that it is presented in some Jupyter Notebooks due to particular dependencies that are not available through the conda installer. 
 
 
-### Running and visualization of Notebooks
+### Running and visualization of notebooks
 
 To visualize and execute the notebooks, we recommend using [JupyterLab](https://jupyter.org/), a versatile web-based interactive development environment. You can interact with our notebooks in this environment locally. JupyterLab is one of the dependencies listed in the `environment.yml` file presented in the repository and it is installed as soon as you install and activate the environment. 
 
@@ -245,18 +245,18 @@ If you prefer a lightweight interface and want to consume less resources, you ma
 
    Check the [JupyterLab documentation](https://jupyterlab.readthedocs.io/en/latest/getting_started/starting.html)!
 
-2. **Access JupyterLab Interface**:
+2. **Access JupyterLab interface**:
 
    - Once JupyterLab is launched, you will see the JupyterLab interface in your web browser. It consists of a file browser on the left and a main work area on the right.
 
    ![Jupyter Lab Interface](./img/jupyter-lab-interface.png)
 
-3. **Open a Notebook**:
+3. **Open a notebook**:
    - Navigate to the directory where your notebook is located using the file browser on the left.
    - Click on the notebook file (usually with a `.ipynb` extension) to open it in JupyterLab.
    - The notebook will open in a new tab within the main work area of JupyterLab.4
 
-4. **Run the Notebook**:
+4. **Run the notebook**:
    - You can now interact with the notebook by running code cells, editing text, and executing various commands.
    - To run a code cell, select it and either click the "Run" button in the toolbar or press Shift + Enter.
    - Explore the different features of JupyterLab to customize your workflow and make the most out of your notebook experience.
