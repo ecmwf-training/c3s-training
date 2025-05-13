@@ -14,7 +14,7 @@ parts:
         title: Observations 
         sections:
           - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/intro
-            title: Satellite observations - Atmospheric physics
+            title: Satellite observations - atmospheric physics
             sections:
               # ERB
               - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation
@@ -39,7 +39,7 @@ parts:
               # - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe
               #   title: Exploring precipitation information in the GIRAFFE dataset
           - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/intro
-            title: Satellite observations - Atmospheric composition  
+            title: Satellite observations - atmospheric composition  
             sections:
               # Ozone
               - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns
@@ -55,7 +55,7 @@ parts:
               - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record
                 title: A multi-sensor climate data record of aerosol properties
           - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/intro
-            title: Satellite observations - Hydrology and cryosphere
+            title: Satellite observations - hydrology and cryosphere
             sections:
           #     #Surface Water      
           #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies
