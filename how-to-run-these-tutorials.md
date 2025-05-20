@@ -75,42 +75,95 @@ On this section we are going to give you the information and the steps required 
 
 If you are considering to work with the Jupyter Notebooks on your own desktop or laptop, it is important that you are aware of some key concepts or information that you'll find in this tutorial or during the preparation and installation process. 
 
-- **Dependencies** are all of the software components required by your notebook in for it to work as intended and avoid runtime errors. They can be libraries, frameworks, or other programs. 
+:::{dropdown} **Dependencies**
 
-- **Packages** are a way to organize and group together related dependencies. They act like toolboxes, storing and organizing tools making easier to install and manage dependencies.  
+Are all of the software components required by your notebook in for it to work as intended and avoid runtime errors. They can be libraries, frameworks, or other programs. 
 
-- **Conflicting dependencies** or **dependency hell** are issues that occur when two or more packages that are sharing dependencies in a project, require different versions of the same software component. Because only a single version 
-  of a dependency is permitted in any project's environment.     
- 
-- **Environments** are directories that contain a specific collection of packages that you have installed. You may have several environments with different versions for the same dependecy. If you change one environment, 
-  your other environments are not affected. There is a `base environment` located at the root directory that contains the system installation parameters.
+:::
 
-- **Git** is a distributed version control system that intelligently tracks changes in files. It is particularly useful when you and a group of people are all making changes to the same files at the same time.
+:::{dropdown} **Packages**
 
-- **[GitHub](https://github.com/)** is a cloud-based platform where you can store, share, and work together with others to write code.  
+Are a way to organize and group together related dependencies. They act like toolboxes, storing and organizing tools making easier to install and manage dependencies.  
 
-- **A repository** is the most basic element of GitHub. Here you can find and store the code, the files, and each file's revision history. Repositories can have multiple collaborators and can be either public, internal, or 
-  private.
+:::
 
-- **Terminal** is a text input and ouput environment. It is a program that allows us to enter commands that the computer processess. 
+:::{dropdown} **Conflicting dependencies** or **dependency hell**
 
-- **Shell**  is a programme that acts like a command-line interpreter. It interprets and processes the commands entered by the user into the terminal, and outputs the results.  
-  
-- **The activation** of an environment makes all its contents available to your terminal or shell.
+Are issues that occur when two or more packages that are sharing dependencies in a project, require different versions of the same software component. Because only a single version of a dependency is permitted in any project's environment.     
 
-- **The deactivation** of an environment is the opposite operation of activation, removing from your shell what makes the environment content accessible.
- 
-- **Pip** is the standard tool for installing or uninstalling Python packages and managing their dependencies. For more information visit [pip documentation](https://pip.pypa.io/en/stable/).
+:::
 
-- **Conda** is an open-source, cross-platform package manager and environment management system which can be used to create Python and R development environments on many different platforms. It is particularly beneficial 
-  for data scientists, researchers, and developers working with diverse software requirements across different projects. For more information visit [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/index.html)
-  
-- **Conda channels** are the locations where packages are stored. They serve as the base for hosting and managing packages. Remote channels like conda-forge offer a wide range of community- 
-  maintained packages, expanding the available options for software development and experimentation.
+:::{dropdown} **Environments**
 
-- **Conda-forge** is a community channel made up of thousands of contributors, which contains repositories of conda recipes and thus provides conda packages 
-  for a wide range of software. The `conda-forge` channel is free for all to use. For more information visit [conda-forge documentation](https://conda-forge.org/docs/).
+Are directories that contain a specific collection of packages that you have installed. You may have several environments with different versions for the same dependecy. If you change one environment, your other environments are not affected. There is a `base environment` located at the root directory that contains the system installation parameters.
 
+:::
+
+:::{dropdown} **Git**
+
+Is a distributed version control system that intelligently tracks changes in files. It is particularly useful when you and a group of people are all making changes to the same files at the same time.
+
+:::
+
+:::{dropdown} **[GitHub](https://github.com/)**
+
+Is a cloud-based platform where you can store, share, and work together with others to write code.  
+
+:::
+
+:::{dropdown} **Repository**
+
+Is the most basic element of GitHub. Here you can find and store the code, the files, and each file's revision history. Repositories can have multiple collaborators and can be either public, internal, or private.
+
+:::
+
+:::{dropdown} **Terminal**
+
+Is a text input and ouput environment. It is a program that allows us to enter commands that the computer processess. 
+
+:::
+
+:::{dropdown} **Shell**
+
+Is a programme that acts like a command-line interpreter. It interprets and processes the commands entered by the user into the terminal, and outputs the results.  
+
+:::
+
+:::{dropdown} **Activation**
+
+The activation of an environment makes all its contents available to your terminal or shell.
+
+:::
+
+:::{dropdown} **Deactivation**
+
+The deactivation of an environment is the opposite operation of activation, removing from your shell what makes the environment content accessible.
+
+:::
+
+:::{dropdown} **Pip**
+
+Is the standard tool for installing or uninstalling Python packages and managing their dependencies. For more information visit [pip documentation](https://pip.pypa.io/en/stable/).
+
+:::
+
+:::{dropdown} **Conda**
+
+Is an open-source, cross-platform package manager and environment management system which can be used to create Python and R development environments on many different platforms. It is particularly beneficial for data scientists, researchers, and developers working with diverse software requirements across different projects. For more information visit [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/index.html)
+
+:::
+
+:::{dropdown} **Conda channels**
+
+Are the locations where packages are stored. They serve as the base for hosting and managing packages. Remote channels like conda-forge offer a wide range of community-maintained packages, expanding the available options for software development and experimentation.
+
+:::
+
+:::{dropdown} **Conda-forge**
+
+Is a community channel made up of thousands of contributors, which contains repositories of conda recipes and thus provides conda packages for a wide range of software. The `conda-forge` channel is free for all to use. For more information visit [conda-forge documentation](https://conda-forge.org/docs/).
+
+:::
 
 ### Download a submodule repository
 
