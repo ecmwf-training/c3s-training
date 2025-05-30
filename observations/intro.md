@@ -2,56 +2,61 @@
 
 # C3S observation tutorial
 
-Satellite observations play a crucial role in monitoring various aspects of the Earth’s atmosphere, surface, and cryosphere. In addition they facilitate the monitoring of atmospheric composition, including greenhouse gases, aerosols, and ozone levels. This tutorial series delves into the utilization of satellite observations for various meteorological analyses and environmental monitoring.
+Earth Observation plays a crucial role in monitoring various aspects of the Earth’s atmosphere, and the surfaces of our land, oceans, and cryosphere. Observation systems can be based upon satellite-based sensors, as with the majority of datasets we explore in these tutorials. However, it is important to note they can also be based on ground-based, or airborne sensors. These are not necessarily used in isolation, and can often complement each other to provide a more holistic, and comprehensive insight into Earth’s systems. Within C3S, our collection of observations of Earth’ systems are grouped into six main domains: Atmospheric Chemistry, Atmospheric Physics, Land biosphere, Land Hydrology, Oceans, and Cryosphere. Note that occasionally, observation parameters such as Surface Temperature, can contribute to multiple domains such as oceans (Sea Surface Temperature), Land biosphere (Land Surface Temperature) and cryosphere (Sea and Ice Surface Temperature). In these tutorials, we help you explore and use some of these observation datasets, providing a collection of useful pathways into key Climate-relevant datasets available on the C3S.
 
-## C3S satellite observations (ECV) - atmospheric physics
 
-This tutorial series explores the utilization of satellite data for comprehensive meteorological analyses and environmental monitoring of Atmospheric Physic parameters. 
+## C3S satellite observations (ECV) - tutorials on atmospheric physics
 
-There are tutorials for the following variables:
+This tutorial series explores the use of satellite data for comprehensive meteorological analyses and environmental monitoring of Earth's atmospheric systems in terms of their physical characteristics. 
 
-1. Earth radiation budget:  
+Here, you can find tutorials on the following aspects of Earth's atmosphere:
+
+1. Earth radiation budget (Earth's heat balance)
    - Outgoing longwave radiation
    - Analysis of the CLARA Earth radiation budget product
    - Analysis of the CERES Earth radiation budget product
    - Total solar irradiance    
-2. Surface radiation budget
+2. Surface radiation budget (Solar energy of the Earth's surface)
    - Surface radiation budget climatologies and anomalies
-3. Atmospheric humidity and cloud cover
+3. Atmospheric humidity and cloud cover (atmospheric moisture and clouds)
    - Total column water vapour
    - Tropospheric humidity estimates from satellite-based radio occultation measurements
    - Cloud fractional cover climatology
-4. Precipitation
+4. Precipitation (rain, snow and ice in the atmosphere)
     
+Together, these tutorials enable you to better understand, analyze, and interpret key physical processes in Earth’s atmosphere, giving you key foundational insights for climate monitoring, research, and informing decision-making.
 
 
-## C3S satellite observations (ECV) - atmospheric composition tutorial
+## C3S satellite observations (ECV) - tutorials on atmospheric composition
 
-This tutorial series discusses utilizing satellite data to analyze greenhouse gas concentrations, aerosol optical properties, and total ozone columns. Understanding atmospheric composition dynamics is essential for assessing air quality, understanding climate forcings, and studying atmospheric chemistry.
+This tutorial series explores the use of observatins to monitor and examine the chemical constituents of our atmosphere that contribute to Climate stability and change. Here, you can delve into datasets on greenhouse gas concentrations, aerosol optical properties, and ozone concentrations. he constituents of our atmosphere directly affects Earth’s temperature, weather patterns and air quality. Understanding and monitoring their dynamics is therefore essential, for tracking Climate change, air quality, and responding to potential/actual human health implications.
 
-This series comprise the following tutorials:
+Here, you can find tutorials on the following topics:
 
-1. Total ozone column
-2. How to access and use a satellite-derived GHG level 2 data product using XCO2_EMMA as an example?
+1. Total Ozone Column (exploring measurements of ozone in the total atmospheric column)
+2. How to access and use a satellite-derived Greenhouse Gas level-2 data product using XCO2_EMMA as an example
 3. Exploring gridded data on aerosol properties available on C3S
 4. Visualising a full climate data record of multi-sensor aerosol data
      
+Together, these tutorials on atmospheric composition equip you with insights and skills to access and interpret key datasets on our atmospheres chemical composition, deepening your understanding of climate processes, air quality trends, and their implications for environmental and human health.
 
 
-## C3S satellite observations (ECV) - hydrology and cryosphere tutorial
-This tutorial series explores the utilization of satellite data for comprehensive meteorological analyses and environmental monitoring for Hydrology and Cryosphere domains. 
+## C3S satellite observations (ECV) - tutorials on hydrology and cryosphere
+This tutorial series explores the use of observational data to analyse and monitor key elements of Earth's hydrology and cryosphere systems. These systems are critical indicators of climate change (e. g. hydrological changes due to droughts), while also having implications for Earth's heat balance (e. g. the albeido effect of ice).
 
-There are tutorials for the following variables:
+Here you can find tutorials exploring aspects of the following systems:
 
-1. Surface water:  
+1. Earth's surface water
    - Soil moisture anomaly analysis
    - Lake water level timeseries
    - Lake surface water temperature analysis
-2. Ice sheets
+2. Earth's glaciers and ice sheets
    - Ice sheet surface elevation
    - Ice sheet velocity
    - Ice sheet mass balance
    - Glacier mass change
+  
+Together, these hydrology and cryosphere tutorials offer you insights into how water and ice respond to a changing climate, helping you better understand the impacts and dynamics of Earth’s hydrological and cryospheric systems.
 
      
 
