@@ -2,7 +2,7 @@
 
 # C3S observation tutorial
 
-Earth Observation plays a crucial role in monitoring various aspects of the Earth’s atmosphere, and the surfaces of our land, oceans, and cryosphere. Observation systems can be based upon satellite-based sensors, as with the majority of datasets we explore in these tutorials. However, it is important to note they can also be based on ground-based, or airborne sensors. These are not necessarily used in isolation, and can often complement each other to provide a more holistic, and comprehensive insight into Earth’s systems. Within C3S, our collection of observations of Earth’ systems are grouped into six main domains: Atmospheric Chemistry, Atmospheric Physics, Land biosphere, Land Hydrology, Oceans, and Cryosphere. Note that occasionally, observation parameters such as Surface Temperature, can contribute to multiple domains such as oceans (Sea Surface Temperature), Land biosphere (Land Surface Temperature) and cryosphere (Sea and Ice Surface Temperature). In these tutorials, we help you explore and use some of these observation datasets, providing a collection of useful pathways into key Climate-relevant datasets available on the C3S.
+Earth observation plays a crucial role in monitoring various aspects of the Earth’s atmosphere, and the surfaces of our land, oceans, and cryosphere. Observation systems can be based upon satellite-based sensors, as with the majority of datasets we explore in these tutorials. However, it is important to note they can also be based on ground-based, or airborne sensors. These are not necessarily used in isolation, and can often complement each other to provide a more holistic, and comprehensive insight into Earth’s systems. Within C3S, our collection of observations of Earth’ systems are grouped into six main domains: atmospheric chemistry, atmospheric physics, land biosphere, land hydrology, oceans, and cryosphere. Note that occasionally, observation parameters such as surface temperature, can contribute to multiple domains such as oceans (sea surface temperature), land biosphere (land surface temperature) and cryosphere (sea and ice surface temperature). In these tutorials, we help you explore and use some of these observation datasets, providing a collection of useful pathways into key climate-relevant datasets available on the C3S.
 
 
 ## C3S satellite observations (ECV) - tutorials on atmospheric physics
@@ -16,7 +16,7 @@ Here, you can find tutorials on the following aspects of Earth's atmosphere:
    - Analysis of the CLARA Earth radiation budget product
    - Analysis of the CERES Earth radiation budget product
    - Total solar irradiance    
-2. Surface radiation budget (Solar energy of the Earth's surface)
+2. Surface radiation budget (solar energy of the Earth's surface)
    - Surface radiation budget climatologies and anomalies
 3. Atmospheric humidity and cloud cover (atmospheric moisture and clouds)
    - Total column water vapour
@@ -29,12 +29,12 @@ Together, these tutorials enable you to better understand, analyze, and interpre
 
 ## C3S satellite observations (ECV) - tutorials on atmospheric composition
 
-This tutorial series explores the use of observatins to monitor and examine the chemical constituents of our atmosphere that contribute to Climate stability and change. Here, you can delve into datasets on greenhouse gas concentrations, aerosol optical properties, and ozone concentrations. he constituents of our atmosphere directly affects Earth’s temperature, weather patterns and air quality. Understanding and monitoring their dynamics is therefore essential, for tracking Climate change, air quality, and responding to potential/actual human health implications.
+This tutorial series explores the use of observatins to monitor and examine the chemical constituents of our atmosphere that contribute to climate stability and change. Here, you can delve into datasets on greenhouse gas concentrations, aerosol optical properties, and ozone concentrations. The constituents of our atmosphere directly affects Earth’s temperature, weather patterns and air quality. Understanding and monitoring their dynamics is therefore essential, for tracking climate change, air quality, and responding to potential/actual human health implications.
 
 Here, you can find tutorials on the following topics:
 
-1. Total Ozone Column (exploring measurements of ozone in the total atmospheric column)
-2. How to access and use a satellite-derived Greenhouse Gas level-2 data product using XCO2_EMMA as an example
+1. Total ozone column (exploring measurements of ozone in the total atmospheric column)
+2. How to access and use a satellite-derived greenhouse gas level-2 data product using XCO2_EMMA as an example
 3. Exploring gridded data on aerosol properties available on C3S
 4. Visualising a full climate data record of multi-sensor aerosol data
      
