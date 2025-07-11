@@ -58,8 +58,8 @@ parts:
             title: Satellite observations - hydrology and cryosphere
             sections:
           #     #Surface Water      
-          #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies
-          #       title: Soil moisture anomaly analysis
+              - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies
+                title: Soil moisture anomaly analysis
           #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-water-level
           #       title: Lake water level timeseries
           #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature
