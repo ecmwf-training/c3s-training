@@ -1,11 +1,11 @@
 ![logo](https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png)
 
-# C3S observation tutorial
+# Tutorials on C3S climate observations datasets
 
 Earth observation plays a crucial role in monitoring various aspects of the Earth’s atmosphere, and the surfaces of our land, oceans, and cryosphere. Observation systems can be based upon satellite-based sensors, as with the majority of datasets we explore in these tutorials. However, it is important to note they can also be based on ground-based, or airborne sensors. These are not necessarily used in isolation, and can often complement each other to provide a more holistic, and comprehensive insight into Earth’s systems. Within C3S, our collection of observations of Earth’ systems are grouped into six main domains: atmospheric chemistry, atmospheric physics, land biosphere, land hydrology, oceans, and cryosphere. Note that occasionally, observation parameters such as surface temperature, can contribute to multiple domains such as oceans (sea surface temperature), land biosphere (land surface temperature) and cryosphere (sea and ice surface temperature). In these tutorials, we help you explore and use some of these observation datasets, providing a collection of useful pathways into key climate-relevant datasets available on the C3S.
 
 
-## C3S satellite observations (ECV) - tutorials on atmospheric physics
+## Satellite observations of atmospheric physics ECVs
 
 This tutorial series explores the use of satellite data for comprehensive meteorological analyses and environmental monitoring of Earth's atmospheric systems in terms of their physical characteristics. 
 
@@ -27,7 +27,7 @@ Here, you can find tutorials on the following aspects of Earth's atmosphere:
 Together, these tutorials enable you to better understand, analyze, and interpret key physical processes in Earth’s atmosphere, giving you key foundational insights for climate monitoring, research, and informing decision-making.
 
 
-## C3S satellite observations (ECV) - tutorials on atmospheric composition
+## Satellite observations of atmospheric composition ECVs
 
 This tutorial series explores the use of observatins to monitor and examine the chemical constituents of our atmosphere that contribute to climate stability and change. Here, you can delve into datasets on greenhouse gas concentrations, aerosol optical properties, and ozone concentrations. The constituents of our atmosphere directly affects Earth’s temperature, weather patterns and air quality. Understanding and monitoring their dynamics is therefore essential, for tracking climate change, air quality, and responding to potential/actual human health implications.
 
@@ -41,7 +41,7 @@ Here, you can find tutorials on the following topics:
 Together, these tutorials on atmospheric composition equip you with insights and skills to access and interpret key datasets on our atmospheres chemical composition, deepening your understanding of climate processes, air quality trends, and their implications for environmental and human health.
 
 
-## C3S satellite observations (ECV) - tutorials on hydrology and cryosphere
+## Satellite observations of hydrology and cryosphere ECVs
 This tutorial series explores the use of observational data to analyse and monitor key elements of Earth's hydrology and cryosphere systems. These systems are critical indicators of climate change (e. g. hydrological changes due to droughts), while also having implications for Earth's heat balance (e. g. the albeido effect of ice).
 
 Here you can find tutorials exploring aspects of the following systems:
