@@ -101,7 +101,7 @@ parts:
           - file: submodules/c3s-training-submodule-projections/projections-cordex
             title: Regional climate projections (CORDEX)
       - file: submodules/c3s-training-submodule-climate-indices/intro
-        title: Climate indices
+        title: Climate indicators
         sections:
           - file: submodules/c3s-training-submodule-climate-indices/ci-windchill
             title: Windchill
