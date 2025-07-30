@@ -118,8 +118,6 @@ parts:
         title: Quality assessments of C3S data
       - url: https://Randbee.github.io/CAMSBook
         title: Copernicus Atmosphere Monitoring Service (CAMS) data tutorials
-      - url: https://ecmwfcode4earth.github.io/sketchbook-earth
-        title: Sketchbook Earth - A collection of Jupyter notebooks for Earth sciences
       - url: https://ibicus.readthedocs.io/en/latest/getting_started/overview.html
         title: Python library (ibicus) and tutorials on bias correction
   - caption: ECMWF
