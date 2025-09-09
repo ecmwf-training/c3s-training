@@ -114,12 +114,7 @@ parts:
             title: Observing major flood events
   - caption: Other learning resources 📚
     chapters:
-      - url: https://ecmwf-projects.github.io/c3s2-eqc-quality-assessment/intro.html
-        title: Quality assessments of C3S data
-      - url: https://Randbee.github.io/CAMSBook
-        title: Copernicus Atmosphere Monitoring Service (CAMS) data tutorials
-      - url: https://ibicus.readthedocs.io/en/latest/getting_started/overview.html
-        title: Python library (ibicus) and tutorials on bias correction
+      - file: other_learning_resources
   - caption: ECMWF
     chapters:
       - url: https://climate.copernicus.eu/help-and-support
