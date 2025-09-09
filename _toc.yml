@@ -111,12 +111,7 @@ parts:
             title: Observing major flood events
   - caption: Other learning resources 📚
     chapters:
-      - url: https://Randbee.github.io/CAMSBook
-        title: Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials
-      - url: https://ecmwfcode4earth.github.io/sketchbook-earth
-        title: Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences
-      - url: https://ibicus.readthedocs.io/en/latest/getting_started/overview.html
-        title: Python library (ibicus) and tutorials on bias correction
+      - file: other_learning_resources
   - caption: ECMWF
     chapters:
       - url: https://climate.copernicus.eu/help-and-support
