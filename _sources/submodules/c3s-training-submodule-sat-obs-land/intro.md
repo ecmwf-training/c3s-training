@@ -1,11 +1,8 @@
-# Welcome to your Jupyter Book
+![logo](https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png)
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+# C3S Satellite-Observations (ECV) - Land
 
-Check out the content pages bundled with this sample book to see more.
+**PLEASE NOTE THAT THIS A DEVELOPMENT INSTANCE, THESE NOTE BOOKS ARE OFFICIALLY PUBLISHED ELSEWHERE**
 
-```{tableofcontents}
-```
+This Jupyter book is a sub-module of the core C3S training material, it is published here for reviewing the
+content prior to publication.

@@ -1,67 +1,73 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial on Climatologies using Climate Data from C3S &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+    <title>Tutorial on climatologies using climate data from C3S &#8212; Copernicus Climate Change Service (C3S) training book</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-reanalysis/reanalysis-climatology';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Analysis of September 2020 European Heatwave using ERA5 Climate Reanalysis Data from C3S" href="reanalysis-heatwave.html" />
-    <link rel="prev" title="C3S Reanalysis Tutorial" href="intro.html" />
+    <link rel="next" title="Analysis of September 2020 European heatwave using ERA5 climate reanalysis data from C3S" href="reanalysis-heatwave.html" />
+    <link rel="prev" title="Tutorials on C3S reanalysis datasets" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -71,23 +77,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,22 +112,17 @@
 </form></div>
   </div>
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-<aside class="bd-header-announcement" aria-label="Announcement">
-  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
-</aside>
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️This is a TEST version, this is not an official website⚠️</div>
+  </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,9 +137,6 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -151,28 +145,16 @@
   
   
   
-  
-    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) training book</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Copernicus Climate Change Service (C3S) Data Tutorials
+                    Copernicus Climate Change Service (C3S) data tutorials
                 </a>
             </li>
         </ul>
@@ -182,88 +164,62 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Reanalysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../observations/intro.html">Observations</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite observations - atmospheric physics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing longwave radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total solar irradiance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite observations - atmospheric composition</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total ozone columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">Greenhouse gas level 2 products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploration of the aerosol properties products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">A multi-sensor climate data record of aerosol properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite observations - hydrology and cryosphere</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance.html">Ice sheet mass balance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Reanalysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reanalysis-heatwave.html">Heatwave Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reanalysis-temp-record.html">Temperature Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reanalysis-heatwave.html">Heatwave analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reanalysis-temp-record.html">Temperature record</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal forecasts</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal forecast anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal forecast verification</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate projections</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global climate projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional climate projections (CORDEX)</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate indicators</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite Observations - Atmospheric Physic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total Solar Irradiance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite Observations - Atmospheric Composition</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total Ozone Columns</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-ocean/intro.html">Satellite Observations - Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other learning resources 📚</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other_learning_resources.html">Useful links to other ECMWF learning resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
-</ul>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/help-and-support">Help &amp; support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S learning services</a></li>
 </ul>
 
     </div>
@@ -279,7 +235,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -288,14 +244,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -318,16 +274,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-reanalysis/reanalysis-climatology.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/ecmwf-training/C3S-training/main?urlpath=lab/tree/submodules/c3s-training-submodule-reanalysis/reanalysis-climatology.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+    <img src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +322,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-reanalysis/reanalysis-climatology.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-reanalysis/reanalysis-climatology.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -448,28 +404,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -480,7 +434,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial on Climatologies using Climate Data from C3S</h1>
+    <h1>Tutorial on climatologies using climate data from C3S</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -490,30 +444,33 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#search-download-and-view-data">1. Search, download and view data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cds-api">Install CDS API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-your-cds-api-key">Enter your CDS API key</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-cdsapi-and-your-credentials">Set up the CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-data">Inspect data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-longitude-to-180-180-grid">Convert longitude to [-180, 180] grid</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-temperature-units-from-kelvin-to-celsius">Change temperature units from Kelvin to Celsius</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-climate-normals">2. Calculate climate normals</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-climate-normals">Calculate climate normals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-reference-period-and-climate-normals">Standard reference period and climate normals</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-calculation">3. Anomaly calculation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-climatology-and-anomalies">4. Calculate monthly climatology and anomalies</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-calculation">Anomaly calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-climatology-and-anomalies">Calculate monthly climatology and anomalies</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-anomalies">Calculate monthly anomalies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-europen-near-surface-temperature-anomalies-for-one-specific-month">Visualise Europen near-surface temperature anomalies for one specific month</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-european-near-surface-temperature-anomalies-for-one-specific-month">Visualise European near-surface temperature anomalies for one specific month</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-analysis">5. Time series analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-analysis">Time series analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-over-geographical-lat-lon-dimensions">Aggregate over geographical lat/lon dimensions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonal-analysis-of-arctic-near-surface-air-temperature">Seasonal analysis of Arctic near-surface air temperature</a></li>
 </ul>
@@ -527,69 +484,47 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <p><img alt="logo" src="https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png" /></p>
-<br><section class="tex2jax_ignore mathjax_ignore" id="tutorial-on-climatologies-using-climate-data-from-c3s">
-<h1>Tutorial on Climatologies using Climate Data from C3S<a class="headerlink" href="#tutorial-on-climatologies-using-climate-data-from-c3s" title="Link to this heading">#</a></h1>
-<section id="about">
-<h2>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="tutorial-on-climatologies-using-climate-data-from-c3s">
+<h1>Tutorial on climatologies using climate data from C3S<a class="headerlink" href="#tutorial-on-climatologies-using-climate-data-from-c3s" title="Permalink to this heading">#</a></h1>
+<p><strong>This notebook can be run on free online platforms, such as Binder, Kaggle and Colab, or they can be accessed from GitHub. The links to run this notebook in these environments are provided here, but please note they are not supported by ECMWF.</strong></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/ecmwf-training/c3s-training-submodule-reanalysis/main?labpath=reanalysis-climatology.ipynb"><img alt="binder" src="https://mybinder.org/badge.svg" /></a>
+<a class="reference external" href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-training/c3s-training-submodule-reanalysis/blob/main/reanalysis-climatology.ipynb"><img alt="kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a>
+<a class="reference external" href="https://colab.research.google.com/github/ecmwf-training/c3s-training-submodule-reanalysis/blob/main/reanalysis-climatology.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a class="reference external" href="https://github.com/ecmwf-training/c3s-training-submodule-reanalysis/blob/main/reanalysis-climatology.ipynb"><img alt="github" src="https://img.shields.io/badge/Open%20in-GitHub-black?logo=github" /></a></p>
+<p><img alt="logo" src="../../_images/climatology_banner.png" /></p>
+<section id="learning-objectives">
+<h2>Learning objectives 🎯<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
 <p>In this tutorial we will access data from the Climate Data Store (CDS) of the Copernicus Climate Change Service (C3S), and analyse climatologies and trends in near-surface air temperature. The tutorial comprises the following steps:</p>
-<ol class="arabic simple">
-<li><p>Search, download and view data</p></li>
+<ul class="simple">
 <li><p>Calculate a climate normal</p></li>
 <li><p>Visualise anomalies with respect to the normal</p></li>
 <li><p>Calculate monthly climatology and anomalies</p></li>
 <li><p>View time series and analyse trends</p></li>
-</ol>
-<p><img alt="logo" src="../../_images/climatology_banner.png" /></p>
-<style>
-td, th {
-   border: 1px solid white;
-   border-collapse: collapse;
-}
-</style>
-<table align="left">
-  <tr>
-    <th>Run the tutorial via free cloud platforms: </th>
-    <th><a href="https://mybinder.org/v2/gh/ecmwf-projects/copernicus-training-c3s/main?labpath=reanalysis-climatology.ipynb">
-        <img src = "https://mybinder.org/badge.svg" alt = "Binder"></th>
-    <th><a href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-projects/copernicus-training-c3s/blob/main/reanalysis-climatology.ipynb">
-        <img src = "https://kaggle.com/static/images/open-in-kaggle.svg" alt = "Kaggle"></th>
-    <th><a href="https://colab.research.google.com/github/ecmwf-projects/copernicus-training-c3s/blob/main/reanalysis-climatology.ipynb">
-        <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
-  </tr>
-</table><br></section>
-<section id="search-download-and-view-data">
-<h2>1. Search, download and view data<a class="headerlink" href="#search-download-and-view-data" title="Link to this heading">#</a></h2>
-<p>Before we begin we must prepare our environment. This includes installing the Application Programming Interface (API) of the CDS, and importing the various python libraries that we will need.</p>
-<section id="install-cds-api">
-<h3>Install CDS API<a class="headerlink" href="#install-cds-api" title="Link to this heading">#</a></h3>
-<p>To install the CDS API, run the following command. We use an exclamation mark to pass the command to the shell (not to the Python interpreter).</p>
-<div class="cell docutils container">
+</ul>
+</section>
+<section id="prepare-your-environment">
+<h2>Prepare your environment<a class="headerlink" href="#prepare-your-environment" title="Permalink to this heading">#</a></h2>
+<section id="set-up-the-cdsapi-and-your-credentials">
+<h3>Set up the CDSAPI and your credentials<a class="headerlink" href="#set-up-the-cdsapi-and-your-credentials" title="Permalink to this heading">#</a></h3>
+<p>The code below will ensure that the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> package is installed. If you have not setup your <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code> file with your credenials, you can replace <code class="docutils literal notranslate"><span class="pre">None</span></code> with your credentials that can be found on the <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">how to api</a> page (you will need to log in to see your credentials).</p>
+<div class="cell tag_api docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>cdsapi
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cdsapi in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (0.6.1)
-Requirement already satisfied: tqdm in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (from cdsapi) (4.64.1)
-Requirement already satisfied: requests&gt;=2.5.0 in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (from cdsapi) (2.28.1)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (1.26.14)
-Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (2022.12.7)
-Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (2.0.4)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (3.4)
-Requirement already satisfied: colorama in c:\users\cxcs\appdata\local\anaconda3\lib\site-packages (from tqdm-&gt;cdsapi) (0.4.6)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q cdsapi
+<span class="c1"># If you have already setup your .cdsapirc file you can leave this as None</span>
+<span class="n">cdsapi_key</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">cdsapi_url</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="import-libraries">
-<h3>Import libraries<a class="headerlink" href="#import-libraries" title="Link to this heading">#</a></h3>
+<section id="install-and-import-libraries">
+<h3>(Install and) Import libraries<a class="headerlink" href="#install-and-import-libraries" title="Permalink to this heading">#</a></h3>
 <p>We will be working with data in NetCDF format. To best handle this data we will use libraries for working with multidimensional arrays, in particular Xarray. We will also need libraries for plotting and viewing data, in this case we will use Matplotlib and Cartopy.</p>
-<div class="cell docutils container">
+<div class="cell tag_import docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CDS API</span>
 <span class="kn">import</span> <span class="nn">cdsapi</span>
@@ -597,6 +532,9 @@ Requirement already satisfied: colorama in c:\users\cxcs\appdata\local\anaconda3
 <span class="c1"># Libraries for working with multidimensional arrays</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="c1"># Library for interacting with the operating system</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
 <span class="c1"># Libraries for plotting and visualising data</span>
 <span class="kn">import</span> <span class="nn">matplotlib.path</span> <span class="k">as</span> <span class="nn">mpath</span>
@@ -613,48 +551,57 @@ Requirement already satisfied: colorama in c:\users\cxcs\appdata\local\anaconda3
 </div>
 </div>
 </section>
-<section id="enter-your-cds-api-key">
-<h3>Enter your CDS API key<a class="headerlink" href="#enter-your-cds-api-key" title="Link to this heading">#</a></h3>
-<p>We will request data from the Climate Data Store (CDS) programmatically with the help of the CDS API. Let us make use of the option to manually set the CDS API credentials. First, you have to define two variables: <code class="docutils literal notranslate"><span class="pre">URL</span></code> and <code class="docutils literal notranslate"><span class="pre">KEY</span></code> which build together your CDS API key. The string of characters that make up your KEY include your personal User ID and CDS API key. To obtain these, first register or login to the CDS (<a class="reference external" href="https://cds-beta.climate.copernicus.eu">https://cds-beta.climate.copernicus.eu</a>), then visit <a class="reference external" href="https://cds-beta.climate.copernicus.eu/how-to-api">https://cds-beta.climate.copernicus.eu/how-to-api</a> and copy the string of characters listed after “key:”. Replace the <code class="docutils literal notranslate"><span class="pre">#########</span></code> below with this string.</p>
-<div class="cell docutils container">
+<section id="specify-data-directory">
+<h3>Specify data directory<a class="headerlink" href="#specify-data-directory" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;https://cds-beta.climate.copernicus.eu/api&#39;</span>
-<span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;##################################&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Here we specify a data directory in which we will download our data and all output files that we will generate:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Directory to store data</span>
+<span class="c1"># Please ensure that data_dir is a location where you have write permissions</span>
+<span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data_dir/&#39;</span>
+<span class="c1"># Create this directory if it doesn&#39;t exist</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="search-for-data">
-<h3>Search for data<a class="headerlink" href="#search-for-data" title="Link to this heading">#</a></h3>
+</section>
+<section id="explore-data">
+<h2>Explore data<a class="headerlink" href="#explore-data" title="Permalink to this heading">#</a></h2>
 <p>To search for data, visit the CDS website: <a class="reference external" href="http://cds.climate.copernicus.eu">http://cds.climate.copernicus.eu</a>.
 Here you can search for ERA5 data using the search bar. The data we need for this tutorial is the <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview">ERA5 monthly averaged data on single levels from 1979 to present</a>. ERA5 is the 5th version of the ECMWF Reanalysis dataset. Reanalysis uses a state of the art forecast model and data assimilation system to create a consistent “map without gaps” of observed and modelled climate variables over the past decades.</p>
+<section id="search-for-the-data">
+<h3>Search for the data<a class="headerlink" href="#search-for-the-data" title="Permalink to this heading">#</a></h3>
 <p>Having selected the correct dataset, we now need to specify what product type, variables, temporal and geographic coverage we are interested in. These can all be selected in the <strong>“Download data”</strong> tab. In this tab a form appears in which we will select the following parameters to download:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Parameters of data to download<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Product type: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">averaged</span> <span class="pre">reanalysis</span></code></p></li>
-<li><p>Variable: <code class="docutils literal notranslate"><span class="pre">2m</span> <span class="pre">temperature</span></code></p></li>
-<li><p>Year: <code class="docutils literal notranslate"><span class="pre">1979</span> <span class="pre">to</span> <span class="pre">year</span> <span class="pre">before</span> <span class="pre">present</span></code></p></li>
-<li><p>Month: <code class="docutils literal notranslate"><span class="pre">all</span></code></p></li>
-<li><p>Time: <code class="docutils literal notranslate"><span class="pre">00:00</span></code> (default)</p></li>
-<li><p>Geographical area: <code class="docutils literal notranslate"><span class="pre">Europe</span></code></p></li>
-<li><p>Format: <code class="docutils literal notranslate"><span class="pre">NetCDF</span></code></p></li>
+<li><p class="sd-card-text">Product type: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">averaged</span> <span class="pre">reanalysis</span></code></p></li>
+<li><p class="sd-card-text">Variable: <code class="docutils literal notranslate"><span class="pre">2m</span> <span class="pre">temperature</span></code></p></li>
+<li><p class="sd-card-text">Year: <code class="docutils literal notranslate"><span class="pre">1979</span> <span class="pre">to</span> <span class="pre">year</span> <span class="pre">before</span> <span class="pre">present</span></code></p></li>
+<li><p class="sd-card-text">Month: <code class="docutils literal notranslate"><span class="pre">all</span></code></p></li>
+<li><p class="sd-card-text">Time: <code class="docutils literal notranslate"><span class="pre">00:00</span></code> (default)</p></li>
+<li><p class="sd-card-text">Geographical area: <code class="docutils literal notranslate"><span class="pre">Europe</span></code></p></li>
+<li><p class="sd-card-text">Format: <code class="docutils literal notranslate"><span class="pre">NetCDF</span></code></p></li>
 </ul>
-<p>At the end of the download form, select <strong>“Show API request”</strong>. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below) …</p>
+</div>
+</details><p>At the end of the download forms, select “Show API request”. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below). Having copied the API request into the cell below, running this will retrieve and download the data you requested into your local directory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please remember to accept the terms and conditions of the dataset, at the bottom of the CDS download form!</p>
+</div>
 </section>
-<section id="download-data">
-<h3>Download data<a class="headerlink" href="#download-data" title="Link to this heading">#</a></h3>
-<p>… having copied the API request into the cell below, running this will retrieve and download the data you requested into your local directory. However, before you run the cell below, the <strong>terms and conditions</strong> of this particular dataset need to have been accepted in the CDS. The option to view and accept these conditions is given at the end of the download form, just above the <strong>“Show API request”</strong> option.</p>
-<div class="cell docutils container">
+<section id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this heading">#</a></h3>
+<p>With the API request copied into the cell below, running this cell will retrieve and download the data you requested into your local directory.</p>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 <span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
     <span class="s1">&#39;reanalysis-era5-single-levels-monthly-means&#39;</span><span class="p">,</span>
     <span class="p">{</span>
@@ -694,23 +641,20 @@ Here you can search for ERA5 data using the search bar. The data we need for thi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-09-13 11:42:03,440 INFO Request ID is c5fe83e2-1e25-4ac8-8375-64624e5ec7e4
-2024-09-13 11:42:03,526 INFO status has been updated to accepted
-2024-09-13 11:54:22,294 INFO status has been updated to running
-2024-09-13 11:56:22,546 INFO The &#39;netcdf_legacy&#39; format is deprecated and no longer supported. Users are encouraged to update workflows to use the updated, and CF compliant, &#39;netcdf&#39; option.
-2024-09-13 11:56:22,546 INFO Creating download object as as_source with files:
-[&#39;data.nc&#39;]
-2024-09-13 11:56:22,546 INFO status has been updated to successful
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 11:50:19,059 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-07-10 11:50:19,472 INFO Request ID is b26f4dc9-5e98-449f-bc41-8251e61710ee
+2025-07-10 11:50:19,548 INFO status has been updated to accepted
+2025-07-10 11:50:41,289 INFO status has been updated to successful
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./era5_monthly_t2m_eur.nc&#39;
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "ea223d84eb1b41fc860c937e792c109c", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./data_dir/era5_monthly_t2m_eur.nc&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="inspect-data">
-<h3>Inspect data<a class="headerlink" href="#inspect-data" title="Link to this heading">#</a></h3>
+<h3>Inspect data<a class="headerlink" href="#inspect-data" title="Permalink to this heading">#</a></h3>
 <p>Now that we have downloaded the data, we can inspect it. We have requested the data in NetCDF format. This is a commonly used format for array-oriented scientific data. To read and process this data we will make use of the <a class="reference external" href="http://xarray.pydata.org/en/stable/">Xarray</a> library. Xarray is an open source project and Python package that makes working with labelled multi-dimensional arrays simple and efficient. We will read the data from our NetCDF file into an <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html">xarray.Dataset</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -765,13 +709,14 @@ Here you can search for ERA5 data using the search bar. The data we need for thi
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -816,7 +761,7 @@ body.vscode-dark {
 .xr-sections {
   padding-left: 0 !important;
   display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
 }
 
 .xr-section-item {
@@ -824,7 +769,9 @@ body.vscode-dark {
 }
 
 .xr-section-item input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -834,6 +781,10 @@ body.vscode-dark {
 .xr-section-item input:enabled + label {
   cursor: pointer;
   color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -857,7 +808,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -868,7 +819,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -940,15 +891,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1098,17 +1049,18 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 161MB
 Dimensions:    (longitude: 261, latitude: 153, time: 504)
 Coordinates:
-  * longitude  (longitude) float32 -25.0 -24.75 -24.5 -24.25 ... 39.5 39.75 40.0
-  * latitude   (latitude) float32 72.0 71.75 71.5 71.25 ... 34.5 34.25 34.0
-  * time       (time) datetime64[ns] 1979-01-01 1979-02-01 ... 2020-12-01
+  * longitude  (longitude) float32 1kB -25.0 -24.75 -24.5 ... 39.5 39.75 40.0
+  * latitude   (latitude) float32 612B 72.0 71.75 71.5 71.25 ... 34.5 34.25 34.0
+  * time       (time) datetime64[ns] 4kB 1979-01-01 1979-02-01 ... 2020-12-01
 Data variables:
-    t2m        (time, latitude, longitude) float32 ...
+    t2m        (time, latitude, longitude) float64 161MB ...
 Attributes:
     Conventions:  CF-1.6
-    history:      2024-09-13 09:54:52 GMT by grib_to_netcdf-2.36.0: grib_to_n...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f1314f0c-6440-4b8d-b386-ce7f03d44d17' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f1314f0c-6440-4b8d-b386-ce7f03d44d17' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>longitude</span>: 261</li><li><span class='xr-has-index'>latitude</span>: 153</li><li><span class='xr-has-index'>time</span>: 504</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-761e6afc-7454-4299-8903-59801f2fb099' class='xr-section-summary-in' type='checkbox'  checked><label for='section-761e6afc-7454-4299-8903-59801f2fb099' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-25.0 -24.75 -24.5 ... 39.75 40.0</div><input id='attrs-09bb9d09-c0e2-4f29-9598-f609bf0760f3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-09bb9d09-c0e2-4f29-9598-f609bf0760f3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b897c34f-219d-411f-a7e8-5c7322d0171b' class='xr-var-data-in' type='checkbox'><label for='data-b897c34f-219d-411f-a7e8-5c7322d0171b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([-25.  , -24.75, -24.5 , ...,  39.5 ,  39.75,  40.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>72.0 71.75 71.5 ... 34.5 34.25 34.0</div><input id='attrs-f5af5134-62a3-4a1d-92ee-9ff8d3a47a14' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f5af5134-62a3-4a1d-92ee-9ff8d3a47a14' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7833bf02-683b-4cf6-a7f7-be33cb33f3fb' class='xr-var-data-in' type='checkbox'><label for='data-7833bf02-683b-4cf6-a7f7-be33cb33f3fb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([72.  , 71.75, 71.5 , 71.25, 71.  , 70.75, 70.5 , 70.25, 70.  , 69.75,
+    history:      2025-07-09 16:17:48 GMT by grib_to_netcdf-2.41.0: grib_to_n...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-9e1c048b-4ba4-4a60-a840-a2ff5ebdde13' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-9e1c048b-4ba4-4a60-a840-a2ff5ebdde13' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>longitude</span>: 261</li><li><span class='xr-has-index'>latitude</span>: 153</li><li><span class='xr-has-index'>time</span>: 504</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-99726b37-a017-4bff-9a32-909aff2807f5' class='xr-section-summary-in' type='checkbox'  checked><label for='section-99726b37-a017-4bff-9a32-909aff2807f5' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-25.0 -24.75 -24.5 ... 39.75 40.0</div><input id='attrs-e6bc8691-b964-4ba7-92be-3a6f17ba6f2b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e6bc8691-b964-4ba7-92be-3a6f17ba6f2b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-65126b82-15ae-49df-b985-eb56e323c92f' class='xr-var-data-in' type='checkbox'><label for='data-65126b82-15ae-49df-b985-eb56e323c92f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>long_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([-25.  , -24.75, -24.5 , ...,  39.5 ,  39.75,  40.  ],
+      shape=(261,), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>72.0 71.75 71.5 ... 34.5 34.25 34.0</div><input id='attrs-ac716f88-ae8e-4438-af47-8658b740dd7f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ac716f88-ae8e-4438-af47-8658b740dd7f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-10e3a7d6-bae0-4113-b435-bb3717506242' class='xr-var-data-in' type='checkbox'><label for='data-10e3a7d6-bae0-4113-b435-bb3717506242' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([72.  , 71.75, 71.5 , 71.25, 71.  , 70.75, 70.5 , 70.25, 70.  , 69.75,
        69.5 , 69.25, 69.  , 68.75, 68.5 , 68.25, 68.  , 67.75, 67.5 , 67.25,
        67.  , 66.75, 66.5 , 66.25, 66.  , 65.75, 65.5 , 65.25, 65.  , 64.75,
        64.5 , 64.25, 64.  , 63.75, 63.5 , 63.25, 63.  , 62.75, 62.5 , 62.25,
@@ -1123,32 +1075,30 @@ Attributes:
        42.  , 41.75, 41.5 , 41.25, 41.  , 40.75, 40.5 , 40.25, 40.  , 39.75,
        39.5 , 39.25, 39.  , 38.75, 38.5 , 38.25, 38.  , 37.75, 37.5 , 37.25,
        37.  , 36.75, 36.5 , 36.25, 36.  , 35.75, 35.5 , 35.25, 35.  , 34.75,
-       34.5 , 34.25, 34.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1979-01-01 ... 2020-12-01</div><input id='attrs-4211c791-e784-41f6-b605-30e2260328b1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4211c791-e784-41f6-b605-30e2260328b1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-64f95ff2-fc95-430e-a06e-4e821b4f006a' class='xr-var-data-in' type='checkbox'><label for='data-64f95ff2-fc95-430e-a06e-4e821b4f006a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1979-01-01T00:00:00.000000000&#x27;, &#x27;1979-02-01T00:00:00.000000000&#x27;,
+       34.5 , 34.25, 34.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1979-01-01 ... 2020-12-01</div><input id='attrs-4acdca2d-8c0a-4161-90b7-15c9bd4cbcbf' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4acdca2d-8c0a-4161-90b7-15c9bd4cbcbf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-19a8bcc9-13f3-4671-ae17-25effa860438' class='xr-var-data-in' type='checkbox'><label for='data-19a8bcc9-13f3-4671-ae17-25effa860438' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1979-01-01T00:00:00.000000000&#x27;, &#x27;1979-02-01T00:00:00.000000000&#x27;,
        &#x27;1979-03-01T00:00:00.000000000&#x27;, ..., &#x27;2020-10-01T00:00:00.000000000&#x27;,
        &#x27;2020-11-01T00:00:00.000000000&#x27;, &#x27;2020-12-01T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-25e00f27-7f95-4dc5-a09c-d07fe1a36426' class='xr-section-summary-in' type='checkbox'  checked><label for='section-25e00f27-7f95-4dc5-a09c-d07fe1a36426' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>t2m</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-27df7574-b4ee-4912-84c0-4c25e352dd79' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-27df7574-b4ee-4912-84c0-4c25e352dd79' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c32c510a-9cbf-42bb-a62d-4eead21085cb' class='xr-var-data-in' type='checkbox'><label for='data-c32c510a-9cbf-42bb-a62d-4eead21085cb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>2 metre temperature</dd></dl></div><div class='xr-var-data'><pre>[20126232 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-804a21cb-e70a-4390-a69a-a18b29010196' class='xr-section-summary-in' type='checkbox'  ><label for='section-804a21cb-e70a-4390-a69a-a18b29010196' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-8ab4e6b7-ed07-470b-a26c-a2608c3ef85c' class='xr-index-data-in' type='checkbox'/><label for='index-8ab4e6b7-ed07-470b-a26c-a2608c3ef85c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([ -25.0, -24.75,  -24.5, -24.25,  -24.0, -23.75,  -23.5, -23.25,
-               -23.0, -22.75,
-              ...
-               37.75,   38.0,  38.25,   38.5,  38.75,   39.0,  39.25,   39.5,
-               39.75,   40.0],
-             dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=261))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-241058c1-ef55-4d85-beb4-671d435c2798' class='xr-index-data-in' type='checkbox'/><label for='index-241058c1-ef55-4d85-beb4-671d435c2798' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([ 72.0, 71.75,  71.5, 71.25,  71.0, 70.75,  70.5, 70.25,  70.0,
-              69.75,
-              ...
-              36.25,  36.0, 35.75,  35.5, 35.25,  35.0, 34.75,  34.5, 34.25,
-               34.0],
-             dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=153))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-89014a41-4763-4360-a71a-18942cdd9b03' class='xr-index-data-in' type='checkbox'/><label for='index-89014a41-4763-4360-a71a-18942cdd9b03' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1979-01-01&#x27;, &#x27;1979-02-01&#x27;, &#x27;1979-03-01&#x27;, &#x27;1979-04-01&#x27;,
+      shape=(504,), dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-5920a754-b5b3-4cf5-a068-997f2c579d05' class='xr-section-summary-in' type='checkbox'  checked><label for='section-5920a754-b5b3-4cf5-a068-997f2c579d05' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>t2m</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-36ca8608-3f33-478e-b22d-6d0a8f0f2108' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-36ca8608-3f33-478e-b22d-6d0a8f0f2108' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-94f72c26-b6f6-4240-86a9-ab076ca53333' class='xr-var-data-in' type='checkbox'><label for='data-94f72c26-b6f6-4240-86a9-ab076ca53333' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>2 metre temperature</dd></dl></div><div class='xr-var-data'><pre>[20126232 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-1896c5d8-3b28-498d-ae91-73626c6a8c99' class='xr-section-summary-in' type='checkbox'  ><label for='section-1896c5d8-3b28-498d-ae91-73626c6a8c99' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-1ea98d5a-b072-4ba6-abd2-1110dc253475' class='xr-index-data-in' type='checkbox'/><label for='index-1ea98d5a-b072-4ba6-abd2-1110dc253475' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ -25.0, -24.75,  -24.5, -24.25,  -24.0, -23.75,  -23.5, -23.25,  -23.0,
+       -22.75,
+       ...
+        37.75,   38.0,  38.25,   38.5,  38.75,   39.0,  39.25,   39.5,  39.75,
+         40.0],
+      dtype=&#x27;float32&#x27;, name=&#x27;longitude&#x27;, length=261))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-769c88db-d1c9-4e1f-a123-cf08eb48fc85' class='xr-index-data-in' type='checkbox'/><label for='index-769c88db-d1c9-4e1f-a123-cf08eb48fc85' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 72.0, 71.75,  71.5, 71.25,  71.0, 70.75,  70.5, 70.25,  70.0, 69.75,
+       ...
+       36.25,  36.0, 35.75,  35.5, 35.25,  35.0, 34.75,  34.5, 34.25,  34.0],
+      dtype=&#x27;float32&#x27;, name=&#x27;latitude&#x27;, length=153))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-bbd86e1c-8a8e-4928-acb0-24fdd4e1bf56' class='xr-index-data-in' type='checkbox'/><label for='index-bbd86e1c-8a8e-4928-acb0-24fdd4e1bf56' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1979-01-01&#x27;, &#x27;1979-02-01&#x27;, &#x27;1979-03-01&#x27;, &#x27;1979-04-01&#x27;,
                &#x27;1979-05-01&#x27;, &#x27;1979-06-01&#x27;, &#x27;1979-07-01&#x27;, &#x27;1979-08-01&#x27;,
                &#x27;1979-09-01&#x27;, &#x27;1979-10-01&#x27;,
                ...
                &#x27;2020-03-01&#x27;, &#x27;2020-04-01&#x27;, &#x27;2020-05-01&#x27;, &#x27;2020-06-01&#x27;,
                &#x27;2020-07-01&#x27;, &#x27;2020-08-01&#x27;, &#x27;2020-09-01&#x27;, &#x27;2020-10-01&#x27;,
                &#x27;2020-11-01&#x27;, &#x27;2020-12-01&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=504, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-426bf189-a91f-4008-b9a4-9b4057891a7f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-426bf189-a91f-4008-b9a4-9b4057891a7f' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>history :</span></dt><dd>2024-09-13 09:54:52 GMT by grib_to_netcdf-2.36.0: grib_to_netcdf -S param -o data.nc data.grib</dd></dl></div></li></ul></div></div></div></div>
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=504, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-55ca883f-6279-405b-a88d-a90176fc67e8' class='xr-section-summary-in' type='checkbox'  checked><label for='section-55ca883f-6279-405b-a88d-a90176fc67e8' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>history :</span></dt><dd>2025-07-09 16:17:48 GMT by grib_to_netcdf-2.41.0: grib_to_netcdf -S param -o /tmp/tmpyithg7x5/tmpbaqdavyl/data.nc /tmp/tmpyithg7x5/tmpbaqdavyl/data.grib</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>We see that the dataset has one variable called <strong>“t2m”</strong>, which stands for “2 metre temperature”, and three coordinates of <strong>longitude</strong>, <strong>latitude</strong> and <strong>time</strong>.</p>
 </section>
 <section id="convert-longitude-to-180-180-grid">
-<h3>Convert longitude to [-180, 180] grid<a class="headerlink" href="#convert-longitude-to-180-180-grid" title="Link to this heading">#</a></h3>
+<h3>Convert longitude to [-180, 180] grid<a class="headerlink" href="#convert-longitude-to-180-180-grid" title="Permalink to this heading">#</a></h3>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">longitude</span></code> variables in the Xarray Dataset and Data Array objects are in the range of <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">359.75]</span></code>. By default, ECMWF data are on a [0, 360] grid. Should you wish to, there are two options to bring the longitude coordinates to a <code class="docutils literal notranslate"><span class="pre">[-180,</span> <span class="pre">180]</span></code> grid. The first option, in case you already have the data downloaded, is to assign values to coordinates with the xarray function <code class="docutils literal notranslate"><span class="pre">assign_coords()</span></code>. The code below shifts your longitude coordinates from <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">359.75]</span></code> to <code class="docutils literal notranslate"><span class="pre">[-180,</span> <span class="pre">179.75]</span></code>.</p>
 <p>The second option is to specify the <code class="docutils literal notranslate"><span class="pre">area</span></code> keyword argument right when you request data with the <code class="docutils literal notranslate"><span class="pre">CDS</span> <span class="pre">API</span></code>. The <code class="docutils literal notranslate"><span class="pre">area</span></code> keyword then automatically reprojects the requested data onto a [-180, 180] grid.</p>
 <div class="cell docutils container">
@@ -1205,13 +1155,14 @@ Attributes:
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -1256,7 +1207,7 @@ body.vscode-dark {
 .xr-sections {
   padding-left: 0 !important;
   display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
 }
 
 .xr-section-item {
@@ -1264,7 +1215,9 @@ body.vscode-dark {
 }
 
 .xr-section-item input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -1274,6 +1227,10 @@ body.vscode-dark {
 .xr-section-item input:enabled + label {
   cursor: pointer;
   color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -1297,7 +1254,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -1308,7 +1265,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -1380,15 +1337,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1538,15 +1495,15 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;t2m&#x27; (time: 504, latitude: 153, longitude: 261)&gt;
-[20126232 values with dtype=float32]
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;t2m&#x27; (time: 504, latitude: 153, longitude: 261)&gt; Size: 161MB
+[20126232 values with dtype=float64]
 Coordinates:
-  * longitude  (longitude) float32 -25.0 -24.75 -24.5 -24.25 ... 39.5 39.75 40.0
-  * latitude   (latitude) float32 72.0 71.75 71.5 71.25 ... 34.5 34.25 34.0
-  * time       (time) datetime64[ns] 1979-01-01 1979-02-01 ... 2020-12-01
+  * latitude   (latitude) float32 612B 72.0 71.75 71.5 71.25 ... 34.5 34.25 34.0
+  * time       (time) datetime64[ns] 4kB 1979-01-01 1979-02-01 ... 2020-12-01
+  * longitude  (longitude) float32 1kB -25.0 -24.75 -24.5 ... 39.5 39.75 40.0
 Attributes:
     units:      K
-    long_name:  2 metre temperature</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'t2m'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 504</li><li><span class='xr-has-index'>latitude</span>: 153</li><li><span class='xr-has-index'>longitude</span>: 261</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-2755dc6a-3d1f-421b-81f8-7f9e9e3a2128' class='xr-array-in' type='checkbox' checked><label for='section-2755dc6a-3d1f-421b-81f8-7f9e9e3a2128' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[20126232 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-4818255d-913d-4eb1-ad5e-56b36899ba01' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4818255d-913d-4eb1-ad5e-56b36899ba01' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-25.0 -24.75 -24.5 ... 39.75 40.0</div><input id='attrs-cbec37c3-d7be-47f3-b3de-3ec146c6cd20' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-cbec37c3-d7be-47f3-b3de-3ec146c6cd20' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e340608e-32ad-4efc-82aa-9ca040519bd7' class='xr-var-data-in' type='checkbox'><label for='data-e340608e-32ad-4efc-82aa-9ca040519bd7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-25.  , -24.75, -24.5 , ...,  39.5 ,  39.75,  40.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>72.0 71.75 71.5 ... 34.5 34.25 34.0</div><input id='attrs-f964f61a-232c-481b-b96a-eab349eb6d9b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f964f61a-232c-481b-b96a-eab349eb6d9b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4fad4acd-9d73-4d0b-a516-fb5860a28417' class='xr-var-data-in' type='checkbox'><label for='data-4fad4acd-9d73-4d0b-a516-fb5860a28417' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([72.  , 71.75, 71.5 , 71.25, 71.  , 70.75, 70.5 , 70.25, 70.  , 69.75,
+    long_name:  2 metre temperature</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'t2m'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 504</li><li><span class='xr-has-index'>latitude</span>: 153</li><li><span class='xr-has-index'>longitude</span>: 261</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-97a61a99-8fa9-4969-b5a0-03196dbd883e' class='xr-array-in' type='checkbox' checked><label for='section-97a61a99-8fa9-4969-b5a0-03196dbd883e' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[20126232 values with dtype=float64]</pre></div></div></li><li class='xr-section-item'><input id='section-f0637770-a692-44cd-a824-cb0002eb4a61' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f0637770-a692-44cd-a824-cb0002eb4a61' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>72.0 71.75 71.5 ... 34.5 34.25 34.0</div><input id='attrs-b3449f65-fb6f-41cb-8d0c-1999ffcf5aa5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b3449f65-fb6f-41cb-8d0c-1999ffcf5aa5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cca055eb-f2bf-4b9f-8fcd-4142b6bba025' class='xr-var-data-in' type='checkbox'><label for='data-cca055eb-f2bf-4b9f-8fcd-4142b6bba025' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([72.  , 71.75, 71.5 , 71.25, 71.  , 70.75, 70.5 , 70.25, 70.  , 69.75,
        69.5 , 69.25, 69.  , 68.75, 68.5 , 68.25, 68.  , 67.75, 67.5 , 67.25,
        67.  , 66.75, 66.5 , 66.25, 66.  , 65.75, 65.5 , 65.25, 65.  , 64.75,
        64.5 , 64.25, 64.  , 63.75, 63.5 , 63.25, 63.  , 62.75, 62.5 , 62.25,
@@ -1561,31 +1518,30 @@ Attributes:
        42.  , 41.75, 41.5 , 41.25, 41.  , 40.75, 40.5 , 40.25, 40.  , 39.75,
        39.5 , 39.25, 39.  , 38.75, 38.5 , 38.25, 38.  , 37.75, 37.5 , 37.25,
        37.  , 36.75, 36.5 , 36.25, 36.  , 35.75, 35.5 , 35.25, 35.  , 34.75,
-       34.5 , 34.25, 34.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1979-01-01 ... 2020-12-01</div><input id='attrs-93653d07-6598-40e4-a290-34b5d3fd27e6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-93653d07-6598-40e4-a290-34b5d3fd27e6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7589ef77-929a-4abe-a5c3-b50ed9eca3d5' class='xr-var-data-in' type='checkbox'><label for='data-7589ef77-929a-4abe-a5c3-b50ed9eca3d5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1979-01-01T00:00:00.000000000&#x27;, &#x27;1979-02-01T00:00:00.000000000&#x27;,
+       34.5 , 34.25, 34.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1979-01-01 ... 2020-12-01</div><input id='attrs-98aa9f0b-e4b9-4ad8-b650-18ba45078673' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-98aa9f0b-e4b9-4ad8-b650-18ba45078673' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ab76a2c7-2d3f-4a4b-9946-a5c3178e184f' class='xr-var-data-in' type='checkbox'><label for='data-ab76a2c7-2d3f-4a4b-9946-a5c3178e184f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1979-01-01T00:00:00.000000000&#x27;, &#x27;1979-02-01T00:00:00.000000000&#x27;,
        &#x27;1979-03-01T00:00:00.000000000&#x27;, ..., &#x27;2020-10-01T00:00:00.000000000&#x27;,
        &#x27;2020-11-01T00:00:00.000000000&#x27;, &#x27;2020-12-01T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-288f9499-76e4-40de-8c7c-6b53293d2ca0' class='xr-section-summary-in' type='checkbox'  ><label for='section-288f9499-76e4-40de-8c7c-6b53293d2ca0' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-6d3aeb28-7bfd-47df-878c-caf2b8ebeeb2' class='xr-index-data-in' type='checkbox'/><label for='index-6d3aeb28-7bfd-47df-878c-caf2b8ebeeb2' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([ -25.0, -24.75,  -24.5, -24.25,  -24.0, -23.75,  -23.5, -23.25,
-               -23.0, -22.75,
-              ...
-               37.75,   38.0,  38.25,   38.5,  38.75,   39.0,  39.25,   39.5,
-               39.75,   40.0],
-             dtype=&#x27;float64&#x27;, name=&#x27;longitude&#x27;, length=261))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b0f19907-b138-4bc5-b88e-7a0e66c94493' class='xr-index-data-in' type='checkbox'/><label for='index-b0f19907-b138-4bc5-b88e-7a0e66c94493' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([ 72.0, 71.75,  71.5, 71.25,  71.0, 70.75,  70.5, 70.25,  70.0,
-              69.75,
-              ...
-              36.25,  36.0, 35.75,  35.5, 35.25,  35.0, 34.75,  34.5, 34.25,
-               34.0],
-             dtype=&#x27;float64&#x27;, name=&#x27;latitude&#x27;, length=153))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-cda8dec1-ec24-46da-a9c4-fe7336c894ca' class='xr-index-data-in' type='checkbox'/><label for='index-cda8dec1-ec24-46da-a9c4-fe7336c894ca' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1979-01-01&#x27;, &#x27;1979-02-01&#x27;, &#x27;1979-03-01&#x27;, &#x27;1979-04-01&#x27;,
+      shape=(504,), dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-25.0 -24.75 -24.5 ... 39.75 40.0</div><input id='attrs-47afb04c-f0d9-4abe-b8cb-4ef809b9dc18' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-47afb04c-f0d9-4abe-b8cb-4ef809b9dc18' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-20aac6a5-bca8-48df-a437-f2b4c4bc9823' class='xr-var-data-in' type='checkbox'><label for='data-20aac6a5-bca8-48df-a437-f2b4c4bc9823' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-25.  , -24.75, -24.5 , ...,  39.5 ,  39.75,  40.  ],
+      shape=(261,), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-26f68499-811f-41a7-aa88-a9247cfcc82f' class='xr-section-summary-in' type='checkbox'  ><label for='section-26f68499-811f-41a7-aa88-a9247cfcc82f' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>latitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-074364c4-37b0-4d80-b8f6-6062a5dbbde3' class='xr-index-data-in' type='checkbox'/><label for='index-074364c4-37b0-4d80-b8f6-6062a5dbbde3' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 72.0, 71.75,  71.5, 71.25,  71.0, 70.75,  70.5, 70.25,  70.0, 69.75,
+       ...
+       36.25,  36.0, 35.75,  35.5, 35.25,  35.0, 34.75,  34.5, 34.25,  34.0],
+      dtype=&#x27;float32&#x27;, name=&#x27;latitude&#x27;, length=153))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-baff15ee-50d4-484f-8fbd-77bd316e6ca8' class='xr-index-data-in' type='checkbox'/><label for='index-baff15ee-50d4-484f-8fbd-77bd316e6ca8' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1979-01-01&#x27;, &#x27;1979-02-01&#x27;, &#x27;1979-03-01&#x27;, &#x27;1979-04-01&#x27;,
                &#x27;1979-05-01&#x27;, &#x27;1979-06-01&#x27;, &#x27;1979-07-01&#x27;, &#x27;1979-08-01&#x27;,
                &#x27;1979-09-01&#x27;, &#x27;1979-10-01&#x27;,
                ...
                &#x27;2020-03-01&#x27;, &#x27;2020-04-01&#x27;, &#x27;2020-05-01&#x27;, &#x27;2020-06-01&#x27;,
                &#x27;2020-07-01&#x27;, &#x27;2020-08-01&#x27;, &#x27;2020-09-01&#x27;, &#x27;2020-10-01&#x27;,
                &#x27;2020-11-01&#x27;, &#x27;2020-12-01&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=504, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-94cd6987-410f-4088-bc21-1e6ccacd95b4' class='xr-section-summary-in' type='checkbox'  checked><label for='section-94cd6987-410f-4088-bc21-1e6ccacd95b4' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>2 metre temperature</dd></dl></div></li></ul></div></div></div></div>
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=504, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>longitude</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-9ace6ba2-039a-426d-866c-96b071279342' class='xr-index-data-in' type='checkbox'/><label for='index-9ace6ba2-039a-426d-866c-96b071279342' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ -25.0, -24.75,  -24.5, -24.25,  -24.0, -23.75,  -23.5, -23.25,  -23.0,
+       -22.75,
+       ...
+        37.75,   38.0,  38.25,   38.5,  38.75,   39.0,  39.25,   39.5,  39.75,
+         40.0],
+      dtype=&#x27;float32&#x27;, name=&#x27;longitude&#x27;, length=261))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a339b9c3-5656-452a-9c74-8c2d616708b2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a339b9c3-5656-452a-9c74-8c2d616708b2' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>K</dd><dt><span>long_name :</span></dt><dd>2 metre temperature</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="change-temperature-units-from-kelvin-to-celsius">
-<h3>Change temperature units from Kelvin to Celsius<a class="headerlink" href="#change-temperature-units-from-kelvin-to-celsius" title="Link to this heading">#</a></h3>
+<h3>Change temperature units from Kelvin to Celsius<a class="headerlink" href="#change-temperature-units-from-kelvin-to-celsius" title="Permalink to this heading">#</a></h3>
 <p>Notice that the ERA-5 temperature data are in units of <code class="docutils literal notranslate"><span class="pre">Kelvin</span></code>, the base unit for temperature in the International System of Units (SI). If you want to convert the values from <code class="docutils literal notranslate"><span class="pre">Kelvin</span></code> to <code class="docutils literal notranslate"><span class="pre">degrees</span> <span class="pre">Celsius</span></code>, you have to subtract 273.15.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1605,7 +1561,7 @@ Attributes:
 </div>
 </section>
 <section id="plot-data">
-<h3>Plot data<a class="headerlink" href="#plot-data" title="Link to this heading">#</a></h3>
+<h3>Plot data<a class="headerlink" href="#plot-data" title="Permalink to this heading">#</a></h3>
 <p>Now, let us visualize one time step to get a better idea of the data. xarray offers built-in matplotlib functions that allow you to plot a <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>. With the function <code class="docutils literal notranslate"><span class="pre">plot()</span></code>, you can easily plot e.g. the first time step of the loaded array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1614,19 +1570,19 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1cc899d3790&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x12fb751c0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/2e776b328460129ec23f443eddacb3ec3c82a127caea8d1c13936dddae6b1dad.png" src="../../_images/2e776b328460129ec23f443eddacb3ec3c82a127caea8d1c13936dddae6b1dad.png" />
+<img alt="../../_images/148927261af6f13c53d90b15585078a1ca72100f89d4e0698e20bf90de0af026.png" src="../../_images/148927261af6f13c53d90b15585078a1ca72100f89d4e0698e20bf90de0af026.png" />
 </div>
 </div>
 <p>An alternative to the built-in xarray plotting functions is to make use of a combination of the plotting libraries <a class="reference external" href="https://matplotlib.org/">matplotlib</a> and <a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/">Cartopy</a>. One of Cartopy’s key features is its ability to transform array data into different geographic projections. In combination with matplotlib, it is a very powerful way to create high-quality visualisations and animations. In later plots, we will make use of these libraries to produce more customised visualisations.</p>
 </section>
 </section>
 <section id="calculate-climate-normals">
-<h2>2. Calculate climate normals<a class="headerlink" href="#calculate-climate-normals" title="Link to this heading">#</a></h2>
+<h2>Calculate climate normals<a class="headerlink" href="#calculate-climate-normals" title="Permalink to this heading">#</a></h2>
 <section id="standard-reference-period-and-climate-normals">
-<h3>Standard reference period and climate normals<a class="headerlink" href="#standard-reference-period-and-climate-normals" title="Link to this heading">#</a></h3>
+<h3>Standard reference period and climate normals<a class="headerlink" href="#standard-reference-period-and-climate-normals" title="Permalink to this heading">#</a></h3>
 <p>Anthropogenic activities and natural variations from years to decades shape the Earth’s climate. In order to evaluate anomalous conditions of a specific month or year, the World Meteorological Organization (WMO) defines <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">reference</span> <span class="pre">periods</span></code> used to create <code class="docutils literal notranslate"><span class="pre">climate</span> <span class="pre">normals</span></code>. <code class="docutils literal notranslate"><span class="pre">Climate</span> <span class="pre">normals</span></code> can be considered as the typical climate for the period the normals are based on.</p>
 <p>Until 2020, the most current and widely used standard reference period was the 30-year range of 1981-2010. With the start of 2021, the WMO recommended updating the climate normal reference period to the range 1991-2020.</p>
 <p>First, let us calculate the near-surface air temperature climate normal for the reference period 1991-2020. For this, we will create for each year the average near-surface air temperature. You can use the xarray function <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> to group the data by year (specify <code class="docutils literal notranslate"><span class="pre">time.year</span></code>) and then to create the average of each year with the function <code class="docutils literal notranslate"><span class="pre">mean()</span></code>. The resulting object contains for each year from 1979 to 2020 the average annual global mean surface air temperature.</p>
@@ -1656,7 +1612,7 @@ Attributes:
 </section>
 </section>
 <section id="anomaly-calculation">
-<h2>3. Anomaly calculation<a class="headerlink" href="#anomaly-calculation" title="Link to this heading">#</a></h2>
+<h2>Anomaly calculation<a class="headerlink" href="#anomaly-calculation" title="Permalink to this heading">#</a></h2>
 <p>The next step is now to calculate the anomaly of a specific year with respect to the climate normal. The term anomaly refers to the deviation of a value from the long-term average. Positive or negative anomalies indicate that the average temperatures of a particular year were respectively warmer or cooler than the reference value.</p>
 <p>Let us calculate the near-surface air temperature anomaly for the year 2016. In a first step, we select the average near-surface temperature values for the year 2016 from the xarray.DataArray object <code class="docutils literal notranslate"><span class="pre">yearly_mean</span></code>. With the xarray function <code class="docutils literal notranslate"><span class="pre">sel()</span></code>, you can select a data array based on coordinate labels. The coordinate label of interest is <code class="docutils literal notranslate"><span class="pre">year=2016</span></code>.</p>
 <div class="cell docutils container">
@@ -1699,13 +1655,13 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/476c4c187584cc53c45420c9d7e35295f1cb654293216db66e87012811417ec5.png" src="../../_images/476c4c187584cc53c45420c9d7e35295f1cb654293216db66e87012811417ec5.png" />
+<img alt="../../_images/c90dd0c39d4406a84d2d645332ea1f5ef335fe81d90c1989613dc6c8ef30b2ea.png" src="../../_images/c90dd0c39d4406a84d2d645332ea1f5ef335fe81d90c1989613dc6c8ef30b2ea.png" />
 </div>
 </div>
 </section>
 <section id="calculate-monthly-climatology-and-anomalies">
-<h2>4. Calculate monthly climatology and anomalies<a class="headerlink" href="#calculate-monthly-climatology-and-anomalies" title="Link to this heading">#</a></h2>
-<p>We will now calculate the monthly climatology of near-surface air temperature for the period 1991 to 2020. We will also view the anomalies with respect to the climatology for a particular month. To do this, we return to the data array created at the end of <a class="reference internal" href="#search_download"><span class="xref myst">section 1</span></a>.</p>
+<h2>Calculate monthly climatology and anomalies<a class="headerlink" href="#calculate-monthly-climatology-and-anomalies" title="Permalink to this heading">#</a></h2>
+<p>We will now calculate the monthly climatology of near-surface air temperature for the period 1991 to 2020. We will also view the anomalies with respect to the climatology for a particular month. To do this, we return to the data array created at the end of <span class="xref myst">section 1</span>.</p>
 <p>We first create again a temporal subset for the period 1991 to 2020, but this time keeping the monthly temporal resolution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1749,10 +1705,10 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1cc8aa9e560&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x13e019340&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/15d2e048324d6917ef61e0e9e8bea86bc522dd8ab85d009b4c470af195a5c2db.png" src="../../_images/15d2e048324d6917ef61e0e9e8bea86bc522dd8ab85d009b4c470af195a5c2db.png" />
+<img alt="../../_images/bb94026977e1a427b86557dc781765f39a1f2de1499376ef943bf2253ee166cc.png" src="../../_images/bb94026977e1a427b86557dc781765f39a1f2de1499376ef943bf2253ee166cc.png" />
 </div>
 </div>
 <p>One more step we can take is to repeat the process above for the standard deviation, to enable us to plot both in a single figure.</p>
@@ -1790,11 +1746,11 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/09ab593d19db89b3d8189f756048aa39357afb59299a47c2b2424da7c10a705d.png" src="../../_images/09ab593d19db89b3d8189f756048aa39357afb59299a47c2b2424da7c10a705d.png" />
+<img alt="../../_images/675f3a940b020713a010a4706e5d4515c35a8725d7b4ba158d3bff557216280c.png" src="../../_images/675f3a940b020713a010a4706e5d4515c35a8725d7b4ba158d3bff557216280c.png" />
 </div>
 </div>
 <section id="calculate-monthly-anomalies">
-<h3>Calculate monthly anomalies<a class="headerlink" href="#calculate-monthly-anomalies" title="Link to this heading">#</a></h3>
+<h3>Calculate monthly anomalies<a class="headerlink" href="#calculate-monthly-anomalies" title="Permalink to this heading">#</a></h3>
 <p>We will now inspect monthly anomalies with respect to this climatology. We will return to the data that we created prior to aggregating by latitude and longitude. We can compute the monthly anomalies for each month of our original European time series by subtracting from it the monthly climatology. Important to mention here is to first group by <code class="docutils literal notranslate"><span class="pre">time.month</span></code>. In this way, xarray understands to use the correct value of the monthly climatology to calculate the anomalies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1804,8 +1760,8 @@ Attributes:
 </div>
 </div>
 </section>
-<section id="visualise-europen-near-surface-temperature-anomalies-for-one-specific-month">
-<h3>Visualise Europen near-surface temperature anomalies for one specific month<a class="headerlink" href="#visualise-europen-near-surface-temperature-anomalies-for-one-specific-month" title="Link to this heading">#</a></h3>
+<section id="visualise-european-near-surface-temperature-anomalies-for-one-specific-month">
+<h3>Visualise European near-surface temperature anomalies for one specific month<a class="headerlink" href="#visualise-european-near-surface-temperature-anomalies-for-one-specific-month" title="Permalink to this heading">#</a></h3>
 <p>The last step is to visualize the air temperature anomaly field in Europe for one specific month. In Europe, 2020 was the hottest year on record and the northwest has expierenced a heatwave during the second half of July and first half of August. Let us select the air temperature anomalies for August for each year from 1979 to 2020. Through the grouping process, the data array <code class="docutils literal notranslate"><span class="pre">anom_month</span></code> has <code class="docutils literal notranslate"><span class="pre">month</span></code> as additional coordinate information. Based on this coordinate information, you can specify that you only want to select the data array entries for August (month = 8).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1834,13 +1790,13 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6853b5e294b0b0f0a9ddc601ef781f5aa1c7cd92991fec3a5c0fd80ab4e77bc0.png" src="../../_images/6853b5e294b0b0f0a9ddc601ef781f5aa1c7cd92991fec3a5c0fd80ab4e77bc0.png" />
+<img alt="../../_images/f20248a55623e10167906b4e5d8e8b286ce639127eb4df3194deae6927a38127.png" src="../../_images/f20248a55623e10167906b4e5d8e8b286ce639127eb4df3194deae6927a38127.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="time-series-analysis">
-<h2>5. Time series analysis<a class="headerlink" href="#time-series-analysis" title="Link to this heading">#</a></h2>
+<h2>Time series analysis<a class="headerlink" href="#time-series-analysis" title="Permalink to this heading">#</a></h2>
 <p>In this section we focus on time series analysis, where we will plot and analyse changes in near-surface air temperature over time. We focus on another subset area over the Arctic, where increasing temperatures are particularly apparent.</p>
 <p>We will download another subset of the dataset <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview">ERA5 monthly averaged data on single levels from 1979 to present</a>, this time for the Arctic.</p>
 <div class="cell docutils container">
@@ -1877,27 +1833,25 @@ Attributes:
             <span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mf">66.55</span><span class="p">,</span>
             <span class="mi">180</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s1">&#39;data_format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf_legacy&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;data_format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf&#39;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">era5_monthly_t2m_Arc.nc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-09-13 12:07:33,564 INFO Request ID is 54642af4-68b8-447d-b8af-9ee27f5815cd
-2024-09-13 12:07:33,684 INFO status has been updated to accepted
-2024-09-13 12:11:51,721 INFO The &#39;netcdf_legacy&#39; format is deprecated and no longer supported. Users are encouraged to update workflows to use the updated, and CF compliant, &#39;netcdf&#39; option.
-2024-09-13 12:11:51,721 INFO Creating download object as as_source with files:
-[&#39;data.nc&#39;]
-2024-09-13 12:11:51,721 INFO status has been updated to successful
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 11:53:04,506 INFO Request ID is 627f1126-4fa5-4235-a7e6-0717fea9c045
+2025-07-10 11:53:05,033 INFO status has been updated to accepted
+2025-07-10 11:53:18,634 INFO status has been updated to running
+2025-07-10 11:54:20,753 INFO status has been updated to successful
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./era5_monthly_t2m_Arc.nc&#39;
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "3dad52b690f64358b95204a51d96c3cc", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./data_dir/era5_monthly_t2m_Arc.nc&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>We will repeat the steps in <a class="reference internal" href="#search_download"><span class="xref myst">section 1</span></a> to read the data into an xarray data array:</p>
+<p>We will repeat the steps in <span class="xref myst">section 1</span> to read the data into an xarray data array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arc_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">era5_monthly_t2m_Arc.nc&#39;</span>
@@ -1907,7 +1861,7 @@ Attributes:
 </div>
 </div>
 </div>
-<p>We will also repeat the steps in <a class="reference internal" href="#search_download"><span class="xref myst">section 1</span></a> to convert the values from degrees Kelvin to Celsius:</p>
+<p>We will also repeat the steps in <span class="xref myst">section 1</span> to convert the values from degrees Kelvin to Celsius:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arc</span> <span class="o">=</span> <span class="n">Arc_da</span> <span class="o">-</span> <span class="mf">273.15</span>
@@ -1936,11 +1890,11 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e2fa58590019cd93d7899db86281898a871324a9bafc3c5b5118776ac11f4735.png" src="../../_images/e2fa58590019cd93d7899db86281898a871324a9bafc3c5b5118776ac11f4735.png" />
+<img alt="../../_images/22be40399190ca7a8d6e28f25fd258abd242c785469aed82ee1f27047db69d17.png" src="../../_images/22be40399190ca7a8d6e28f25fd258abd242c785469aed82ee1f27047db69d17.png" />
 </div>
 </div>
 <section id="aggregate-over-geographical-lat-lon-dimensions">
-<h3>Aggregate over geographical lat/lon dimensions<a class="headerlink" href="#aggregate-over-geographical-lat-lon-dimensions" title="Link to this heading">#</a></h3>
+<h3>Aggregate over geographical lat/lon dimensions<a class="headerlink" href="#aggregate-over-geographical-lat-lon-dimensions" title="Permalink to this heading">#</a></h3>
 <p>We would like to analyse the time series of near-surface air temperature aggregated over the Arctic. To do this we need to average over the latitude and longitude dimensions. As before, we will need to take into account the varying size of the gridded data cells as a function of latitude.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1960,17 +1914,17 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1cc8b4dd390&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x16610aa20&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/32f0f2ccd06255908063117d2284a0e4676c98df490f6407de924b5646ac892a.png" src="../../_images/32f0f2ccd06255908063117d2284a0e4676c98df490f6407de924b5646ac892a.png" />
+<img alt="../../_images/f501ba14da4eef9632b326725666137affb53d09b797b339910eef7ea97ea776.png" src="../../_images/f501ba14da4eef9632b326725666137affb53d09b797b339910eef7ea97ea776.png" />
 </div>
 </div>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> function now creates a 2 dimensional graph of temperature as a function of time.</p>
 <p>The trend in rising temperatures in the past decades is particularly noticable in the Arctic, and it is much easier to see this if we view the time series of yearly averages.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arc_yearly</span> <span class="o">=</span> <span class="n">Arc_mean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arc_yearly</span> <span class="o">=</span> <span class="n">Arc_mean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;valid_time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1982,10 +1936,10 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1cc8dc689d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1664117c0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/f60daabc1b4f04d56e62ca116b0ee1207b825693fcdfeeb264c1d02473ba0387.png" src="../../_images/f60daabc1b4f04d56e62ca116b0ee1207b825693fcdfeeb264c1d02473ba0387.png" />
+<img alt="../../_images/c3989ffec34aac6d770fdf086e28b8a1a1589d24e5a248d4825737e5c710dc19.png" src="../../_images/c3989ffec34aac6d770fdf086e28b8a1a1589d24e5a248d4825737e5c710dc19.png" />
 </div>
 </div>
 <p>Here we can see a clear warming trend.</p>
@@ -2028,6 +1982,7 @@ Attributes:
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>number</th>
       <th>t2m</th>
       <th>positive</th>
     </tr>
@@ -2035,32 +1990,38 @@ Attributes:
       <th>year</th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>1979</th>
-      <td>-1.990015</td>
+      <td>0</td>
+      <td>-1.990022</td>
       <td>False</td>
     </tr>
     <tr>
       <th>1980</th>
-      <td>-1.263200</td>
+      <td>0</td>
+      <td>-1.263204</td>
       <td>False</td>
     </tr>
     <tr>
       <th>1981</th>
+      <td>0</td>
       <td>-0.570733</td>
       <td>False</td>
     </tr>
     <tr>
       <th>1982</th>
-      <td>-1.707721</td>
+      <td>0</td>
+      <td>-1.707727</td>
       <td>False</td>
     </tr>
     <tr>
       <th>1983</th>
-      <td>-1.338903</td>
+      <td>0</td>
+      <td>-1.338907</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -2094,17 +2055,17 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d853a0074e8e7cc714d7066b5d6336adc842252dc3f44c9ab1d9b1a99fe0712e.png" src="../../_images/d853a0074e8e7cc714d7066b5d6336adc842252dc3f44c9ab1d9b1a99fe0712e.png" />
+<img alt="../../_images/c7b743eed81e0dd7a1ba298859c876333604299a1d4688a6f9e58697896ca13b.png" src="../../_images/c7b743eed81e0dd7a1ba298859c876333604299a1d4688a6f9e58697896ca13b.png" />
 </div>
 </div>
 <p>In the plot above, you see that since 2005, each year the Arctic near-surface air temperature was warmer than the reference mean for the period 1991-2020.</p>
 </section>
 <section id="seasonal-analysis-of-arctic-near-surface-air-temperature">
-<h3>Seasonal analysis of Arctic near-surface air temperature<a class="headerlink" href="#seasonal-analysis-of-arctic-near-surface-air-temperature" title="Link to this heading">#</a></h3>
+<h3>Seasonal analysis of Arctic near-surface air temperature<a class="headerlink" href="#seasonal-analysis-of-arctic-near-surface-air-temperature" title="Permalink to this heading">#</a></h3>
 <p>In the final part of this tutorial we will compare seasonal trends in Arctic near-surface air temperature. To do this we return to our monthly geographically averaged dataset, and we will downsample the monthly averages to seasonal averages using the function <code class="docutils literal notranslate"><span class="pre">resample()</span></code>. By specifying <code class="docutils literal notranslate"><span class="pre">time='QS-DEC'</span></code>, the data is split into consecutive three-month periods, anchored at December. If we add additionally the function <code class="docutils literal notranslate"><span class="pre">mean()</span></code>, we calculate the average of the three-month period.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arc_seasonal</span> <span class="o">=</span> <span class="n">Arc_mean</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;QS-DEC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arc_seasonal</span> <span class="o">=</span> <span class="n">Arc_mean</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">valid_time</span><span class="o">=</span><span class="s1">&#39;QS-DEC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2133,7 +2094,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c6cbd5540cba1635c4df5506a4ed66c32ee3f90b0fa1d0b93b557d07032d48f7.png" src="../../_images/c6cbd5540cba1635c4df5506a4ed66c32ee3f90b0fa1d0b93b557d07032d48f7.png" />
+<img alt="../../_images/f3f224e758d918a329bf47ea570b0cd4448f8b6d7149d7a06167be146f285b09.png" src="../../_images/f3f224e758d918a329bf47ea570b0cd4448f8b6d7149d7a06167be146f285b09.png" />
 </div>
 </div>
 <p>Note the difference in variability of the seasonal average of air temperature in the Arctic: mean summer temperatures seem to be more constant compared to the other seasons.</p>
@@ -2166,10 +2127,11 @@ Attributes:
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -2177,7 +2139,7 @@ Attributes:
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C3S Reanalysis Tutorial</p>
+        <p class="prev-next-title">Tutorials on C3S reanalysis datasets</p>
       </div>
     </a>
     <a class="right-next"
@@ -2185,11 +2147,14 @@ Attributes:
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analysis of September 2020 European Heatwave using ERA5 Climate Reanalysis Data from C3S</p>
+        <p class="prev-next-title">Analysis of September 2020 European heatwave using ERA5 climate reanalysis data from C3S</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -2198,37 +2163,39 @@ Attributes:
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#search-download-and-view-data">1. Search, download and view data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cds-api">Install CDS API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-your-cds-api-key">Enter your CDS API key</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-cdsapi-and-your-credentials">Set up the CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-data">Inspect data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-longitude-to-180-180-grid">Convert longitude to [-180, 180] grid</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-temperature-units-from-kelvin-to-celsius">Change temperature units from Kelvin to Celsius</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-climate-normals">2. Calculate climate normals</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-climate-normals">Calculate climate normals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-reference-period-and-climate-normals">Standard reference period and climate normals</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-calculation">3. Anomaly calculation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-climatology-and-anomalies">4. Calculate monthly climatology and anomalies</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-calculation">Anomaly calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-climatology-and-anomalies">Calculate monthly climatology and anomalies</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-monthly-anomalies">Calculate monthly anomalies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-europen-near-surface-temperature-anomalies-for-one-specific-month">Visualise Europen near-surface temperature anomalies for one specific month</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-european-near-surface-temperature-anomalies-for-one-specific-month">Visualise European near-surface temperature anomalies for one specific month</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-analysis">5. Time series analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-analysis">Time series analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-over-geographical-lat-lon-dimensions">Aggregate over geographical lat/lon dimensions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonal-analysis-of-arctic-near-surface-air-temperature">Seasonal analysis of Arctic near-surface air temperature</a></li>
 </ul>
@@ -2254,10 +2221,9 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -2270,6 +2236,10 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <script src="_static/custom.js"></script>
+
+</div>
   </div>
   
 </div>
@@ -2281,8 +2251,8 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

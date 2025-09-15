@@ -1,66 +1,72 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Calculation of global climatology and relative anomalies of Surface Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+    <title>Calculation of global climatology and relative anomalies of surface radiation budget from EUMETSAT’s CM SAF CLARA-A3 dataset &#8212; Copernicus Climate Change Service (C3S) training book</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Exploring Total Column Water Vapour information in the COMBI dataset" href="total-column-water-vapour-combi.html" />
+    <link rel="next" title="Calculation of global climatology and annual cycles of cloud fractional cover from EUMETSAT’s CM SAF CLARA-A3 dataset" href="cloud-cover-climatology.html" />
     <link rel="prev" title="The Total Solar Irradiance (TSI) from RMIB" href="total-solar-irradiance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -71,23 +77,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,22 +112,17 @@
 </form></div>
   </div>
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-<aside class="bd-header-announcement" aria-label="Announcement">
-  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
-</aside>
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️This is a TEST version, this is not an official website⚠️</div>
+  </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,9 +137,6 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -151,28 +145,16 @@
   
   
   
-  
-    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) training book</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Copernicus Climate Change Service (C3S) Data Tutorials
+                    Copernicus Climate Change Service (C3S) data tutorials
                 </a>
             </li>
         </ul>
@@ -182,88 +164,62 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../observations/intro.html">Observations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Satellite observations - atmospheric physics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="erb-outgoing-longwave-radiation.html">Outgoing longwave radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="total-solar-irradiance.html">Total solar irradiance</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite observations - atmospheric composition</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total ozone columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">Greenhouse gas level 2 products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploration of the aerosol properties products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">A multi-sensor climate data record of aerosol properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite observations - hydrology and cryosphere</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance.html">Ice sheet mass balance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature record</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal forecasts</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal forecast anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal forecast verification</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate projections</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global climate projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional climate projections (CORDEX)</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate indicators</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Satellite Observations - Atmospheric Physic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="total-solar-irradiance.html">Total Solar Irradiance</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Surface radiation budget climatologies and anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="total-column-water-vapour-combi.html">Total column water vapour</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite Observations - Atmospheric Composition</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total Ozone Columns</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-ocean/intro.html">Satellite Observations - Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other learning resources 📚</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other_learning_resources.html">Useful links to other ECMWF learning resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
-</ul>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/help-and-support">Help &amp; support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S learning services</a></li>
 </ul>
 
     </div>
@@ -279,7 +235,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -288,14 +244,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -318,16 +274,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/ecmwf-training/C3S-training/main?urlpath=lab/tree/submodules/c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+    <img src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +322,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -448,28 +404,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -480,7 +434,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Calculation of global climatology and relative anomalies of Surface Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset</h1>
+    <h1>Calculation of global climatology and relative anomalies of surface radiation budget from EUMETSAT’s CM SAF CLARA-A3 dataset</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -490,30 +444,28 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description">Dataset description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cdsapi-and-your-credentials">Set up CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-data-acquisition">Prerequisites and data acquisition</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api">Download data using CDS API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cds-api-credentials">Set up CDS API credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load dataset</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-surface-incoming-shortwave-sis-radiation-distribution">Use case 1: The mean global Surface Incoming Shortwave (SIS) radiation distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-surface-incoming-shortwave-sis-radiation-distribution">Use case 1: the mean global Surface Incoming Shortwave (SIS) radiation distribution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-temporal-average-of-sis">Calculation of the temporal average of SIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-temporal-average-of-sis">Plot of the temporal average of SIS</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-relative-anomaly-hot-summer-of-the-year-2003-in-europe">Use case 2: Relative Anomaly. Hot summer of the year 2003 in Europe</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-relative-anomaly-hot-summer-of-the-year-2003-in-europe">Use case 2: relative Anomaly. Hot summer of the year 2003 in Europe</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-relative-anomaly-in-2003-of-sis-for-europe-in-relation-to-the-temporal-average-of-sis">Plot of the relative anomaly in 2003 of SIS for Europe in relation to the temporal average of SIS</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-surface-radiation-budget">Get more information about Surface Radiation Budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-surface-radiation-budget">Get more information about surface radiation budget</a></li>
 </ul>
             </nav>
         </div>
@@ -523,103 +475,49 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
-  <p><img alt="logo" src="../../_images/LogoLine_horizon_C3S.png" /></p>
+  <p><img alt="logo" src="https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="calculation-of-global-climatology-and-relative-anomalies-of-surface-radiation-budget-from-eumetsat-s-cm-saf-clara-a3-dataset">
-<h1>Calculation of global climatology and relative anomalies of Surface Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset<a class="headerlink" href="#calculation-of-global-climatology-and-relative-anomalies-of-surface-radiation-budget-from-eumetsat-s-cm-saf-clara-a3-dataset" title="Link to this heading">#</a></h1>
-<p>This notebook provides you with an introduction on EUMETSAT’s CM SAF <strong>CLARA-A3</strong> dataset available at the <a class="reference external" href="https://cds.climate.copernicus.eu/#!/home">Climate Data Store</a> (CDS). The dataset contains data for Essential Climate Variables (ECVs) <em>Surface Radiation Budget</em>, as well as <em>Cloud Properties and Earth Radiation Budget</em>, while this notebook focuses on <strong>Surface Radiation Budget</strong> as part of the ECV <em>Surface Radiation Budget</em> available here: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview">Surface radiation budget from 1979 to present derived from satellite observations</a>.</p>
-<p>The notebook covers the full process from scratch and starts with a short introdution to the dataset and how to access the data from the Climate Data Store of the Copernicus Climate Change Service (C3S). This is followed by a step-by-step guide on how to process and visualize the data. Once you feel comfortable with the python code, you are invited to adjust or extend the code according to your interests. After a short introduction how to use a Jupyter notebook the analysis starts.<br>
-Two figures below are results of Use Case 1 and 2, and the result of a successful run of the code.</p>
+<h1>Calculation of global climatology and relative anomalies of surface radiation budget from EUMETSAT’s CM SAF CLARA-A3 dataset<a class="headerlink" href="#calculation-of-global-climatology-and-relative-anomalies-of-surface-radiation-budget-from-eumetsat-s-cm-saf-clara-a3-dataset" title="Permalink to this heading">#</a></h1>
+<p><strong>This notebook can be run on free online platforms, such as Binder, Kaggle and Colab, or they can be accessed from GitHub. The links to run this notebook in these environments are provided here, but please note they are not supported by ECMWF.</strong></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/main?labpath=srb-climatology-and-anomaly.ipynb"><img alt="binder" src="https://mybinder.org/badge.svg" /></a>
+<a class="reference external" href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/blob/main/srb-climatology-and-anomaly.ipynb"><img alt="kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a>
+<a class="reference external" href="https://colab.research.google.com/github/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/blob/main/srb-climatology-and-anomaly.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a class="reference external" href="https://github.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/blob/main/srb-climatology-and-anomaly.ipynb"><img alt="github" src="https://img.shields.io/badge/Open%20in-GitHub-black?logo=github" /></a></p>
+<section id="learning-objectives">
+<h2>Learning objectives 🎯<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>This notebook provides you with an introduction on surface radiation parameters of EUMETSAT’s CM SAF <strong>CLARA-A3</strong> dataset available at the <a class="reference external" href="https://cds.climate.copernicus.eu/#!/home">Climate Data Store</a> (CDS). The dataset contains data for Essential Climate Variables (ECVs) <em>Surface Radiation Budget</em>, as well as <em>Cloud Properties and Earth Radiation Budget</em>, while this notebook focuses on <strong>Surface Radiation Budget</strong> as part of the ECV <em>Surface Radiation Budget</em> available here: <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-surface-radiation-budget?tab=overview">Surface radiation budget from 1979 to present derived from satellite observations</a>.</p>
+<p>The notebook covers the full process from scratch and starts with a short introdution to the dataset and how to access the data from the Climate Data Store of the Copernicus Climate Change Service (C3S). This is followed by a step-by-step guide on how to process and visualize the data. Once you feel comfortable with the python code, you are invited to adjust or extend the code according to your interests.</p>
+<p>In the following, two examples are presented to illustrate some ideas on the usage, visualisation, and analysis of the CLARA-A3 surface radiation dataset. Two figures below are results of Use Case 1 and 2, and the result of a successful run of the code.</p>
 <p><img alt="logo" src="../../_images/srb-climatology-and-anomaly-banner.png" /></p>
-<p>The notebook has two main use cases with the following outline:</p>
-<section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="#introduction"><span class="xref myst">Introduction</span></a></p></li>
-<li><p><a class="reference internal" href="#data"><span class="xref myst">Prerequisites and data acquisition</span></a></p></li>
-<li><p><a class="reference internal" href="#usecases"><span class="xref myst">Use Cases</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#uc1"><span class="xref myst">Use case 1: The mean global Surface Incoming Shortwave (SIS) radiation distribution</span></a></p></li>
-<li><p><a class="reference internal" href="#uc2"><span class="xref myst">Use case 2: Relative Anomaly. Hot summer of the year 2003 in Europe</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#references"><span class="xref myst">Get more information about Surface Radiation Budget</span></a></p></li>
-</ul>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>This tutorial is about surface radiation parameters of EUMETSAT’s CM SAF CLARA-A3 dataset. It covers step by step the process from retrieving the data to the processing and finally the visualisation of the results.</p>
-<p>The CLARA-A3 dataset provides information of various Surface Radiation Budget (SRB) and Earth Radiation Budget (ERB) parameters as well as Cloud Properties parameters. Each ECV is covered by an own Jupyter Notebook (please also take a look at <a class="reference external" href="https://ecmwf-projects.github.io/copernicus-training-c3s/intro.html">CLARA-A3 ERB</a> and <a class="reference external" href="https://ecmwf-projects.github.io/copernicus-training-c3s/intro.html">CLARA-A3 Clouds</a>).</p>
-<div style="text-align: justify">In the following, we will concentrate on the surface radiation part. The CLARA-A3 dataset is the successor of CLARA-A2.1 and comprises almost 44 years (latest status: 09/2023) of continuous observations of radiation and clouds from space, thereby monitoring their spatial and temporal variability on Earth.<br> 
-CLARA-A3 comes not just with a temporal extension, but also with significant algorithm, calibration and product improvements.
-The CLARA-A3 radiation dataset contains all surface and Earth (top-of-the-atmosphere) fluxes, and thus, it enables studies of the full surface radiation budget.</div>
-<p>In the following, two examples are presented to illustrate some ideas on the usage, visualisation, and analysis of the CLARA-A3 surface radiation dataset.</p>
-<section id="dataset-description">
-<h3>Dataset description<a class="headerlink" href="#dataset-description" title="Link to this heading">#</a></h3>
-<p>Please find further information about the datasets as well as the data in the Climate Data Store sections “Overview”, “Download data” and “Documentation”:</p>
-<ul class="simple">
-<li><p>Surface Radiation Budget: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview</a></p></li>
-<li><p>Cloud Properties: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-cloud-properties?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-cloud-properties?tab=overview</a></p></li>
-<li><p>Earth Radiation: Budget <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview</a></p></li>
-</ul>
-<p>A <a class="reference external" href="https://datastore.copernicus-climate.eu/documents/satellite-surface-radiation-budget/C3S2_312a_Lot1.4.0.3_202306_Tutorial_ECV_SurfaceRadiationBudget_final.mp4">tutorial video</a> describes the ECV <em>Surface Radiation Budget</em> and its impact on the atmospheric conditions. In addition, it provides you with a small introduction of the satellite instruments and retrieval methods followed by general information about the dataset and support options provided by the CDS.</p>
-</section>
-</section>
-<section id="prerequisites-and-data-acquisition">
-<h2>Prerequisites and data acquisition<a class="headerlink" href="#prerequisites-and-data-acquisition" title="Link to this heading">#</a></h2>
-<p>This tutorial is in the form of a <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>. It can be run on a cloud environment, or on your own computer. You will not need to install any software for the training as there are a number of free cloud-based services to create, edit, run and export Jupyter notebooks such as this. Here are some suggestions (simply click on one of the links below to run the notebook):</p>
-<style>
-td, th {
-   border: 1px solid white;
-   border-collapse: collapse;
-}
-</style>
-<table align="left">
-  <tr>
-    <th>Run the tutorial via free cloud platforms: </th>
-    <th><a href="https://notebooks.gesis.org/binder/jupyter/user/ecmwf-projects--us-training-c3s-0vneba36/doc/tree/srb-claraA3.ipynb">
-        <img src = "https://mybinder.org/badge.svg" alt = "Binder"></th>
-    <th><a href="https://colab.research.google.com/github/ecmwf-projects/copernicus-training-c3s/blob/gh-pages/&#95;sources/srb-claraA3.ipynb">
-        <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
-  </tr>
-</table><p>We are using <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> to download the data. This package is not yet included by default on most cloud platforms. You can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install it. We use an exclamation mark to pass the command to the shell (not to the Python interpreter).</p>
-<div class="cell docutils container">
+<section id="prepare-your-environment">
+<h2>Prepare your environment<a class="headerlink" href="#prepare-your-environment" title="Permalink to this heading">#</a></h2>
+<section id="set-up-cdsapi-and-your-credentials">
+<h3>Set up CDSAPI and your credentials<a class="headerlink" href="#set-up-cdsapi-and-your-credentials" title="Permalink to this heading">#</a></h3>
+<p>The code below will ensure that the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> package is installed. If you have not setup your <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code> file with your credenials, you can replace <code class="docutils literal notranslate"><span class="pre">None</span></code> with your credentials that can be found on the <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">how to api</a> page (you will need to log in to see your credentials).</p>
+<div class="cell tag_api docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>cdsapi
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cdsapi in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (0.7.0)
-Requirement already satisfied: cads-api-client&gt;=0.9.2 in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from cdsapi) (1.1.0)
-Requirement already satisfied: requests&gt;=2.5.0 in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from cdsapi) (2.32.3)
-Requirement already satisfied: tqdm in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from cdsapi) (4.66.4)
-Requirement already satisfied: attrs in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from cads-api-client&gt;=0.9.2-&gt;cdsapi) (23.2.0)
-Requirement already satisfied: multiurl in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from cads-api-client&gt;=0.9.2-&gt;cdsapi) (0.3.1)
-Requirement already satisfied: typing-extensions in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from cads-api-client&gt;=0.9.2-&gt;cdsapi) (4.12.2)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (3.7)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (2.2.2)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from requests&gt;=2.5.0-&gt;cdsapi) (2024.7.4)
-Requirement already satisfied: pytz in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from multiurl-&gt;cads-api-client&gt;=0.9.2-&gt;cdsapi) (2024.1)
-Requirement already satisfied: python-dateutil in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from multiurl-&gt;cads-api-client&gt;=0.9.2-&gt;cdsapi) (2.9.0)
-Requirement already satisfied: six&gt;=1.5 in /opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages (from python-dateutil-&gt;multiurl-&gt;cads-api-client&gt;=0.9.2-&gt;cdsapi) (1.16.0)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q cdsapi
+<span class="c1"># If you have already setup your .cdsapirc file you can leave this as None</span>
+<span class="n">cdsapi_key</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">cdsapi_url</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="import-libraries">
-<h3>Import libraries<a class="headerlink" href="#import-libraries" title="Link to this heading">#</a></h3>
+</section>
+<section id="install-and-import-libraries">
+<h3>(Install and) Import libraries<a class="headerlink" href="#install-and-import-libraries" title="Permalink to this heading">#</a></h3>
 <p>The data have been stored in files written in NetCDF format. To best handle these, we will import the library <a class="reference external" href="http://xarray.pydata.org/en/stable/">Xarray</a> which is specifically designed for manipulating multidimensional arrays in the field of geosciences. The libraries Matplotlib and Cartopy will also be imported for plotting and visualising the analysed data. We will also import the libraries <a class="reference external" href="https://docs.python.org/3/library/zipfile.html">zipfile</a> to work with zip-archives, <a class="reference external" href="https://docs.python.org/3/library/os.html">OS</a> to use OS-functions and pattern expansion, and <a class="reference external" href="https://urllib3.readthedocs.io/en/stable/">urllib3</a> for disabling warnings for data download via CDS API.</p>
-<div class="cell docutils container">
+<div class="cell tag_import docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CDS API library</span>
 <span class="kn">import</span> <span class="nn">cdsapi</span>
 
 <span class="c1"># Libraries for working with multidimensional arrays</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Library to work with zip-archives and OS-functions</span>
 <span class="kn">import</span> <span class="nn">zipfile</span>
@@ -638,65 +536,71 @@ Requirement already satisfied: six&gt;=1.5 in /opt/homebrew/Caskroom/miniforge/b
 </div>
 </div>
 </section>
-<section id="download-data-using-cds-api">
-<h3>Download data using CDS API<a class="headerlink" href="#download-data-using-cds-api" title="Link to this heading">#</a></h3>
-<p>This section provides all necessary settings and input data to successfully run the use cases, and produce the figures.</p>
-</section>
-<section id="set-up-cds-api-credentials">
-<h3>Set up CDS API credentials<a class="headerlink" href="#set-up-cds-api-credentials" title="Link to this heading">#</a></h3>
-<p>We will request data from the Climate Data Store (CDS): <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/home">https://cds.climate.copernicus.eu/cdsapp#!/home</a>. In case you don’t have an account yet, please click on “Login/register” at the right top and select “Create new account”. With the process finished you are able to login to the CDS and can search for your preferred data.</p>
-<p>We will request data from the CDS programmatically with the help of the CDS API.
-First, we need to manually set the CDS API credentials.
-To do so, we need to define two variables: URL and KEY.
-To obtain these, first login to the CDS, then visit <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to">https://cds.climate.copernicus.eu/api-how-to</a> and copy the string of characters listed after “key:”. Replace the <code class="docutils literal notranslate"><span class="pre">#########</span></code> below with this string.</p>
-<div class="cell docutils container">
+<section id="specify-data-directory">
+<h3>Specify data directory<a class="headerlink" href="#specify-data-directory" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;https://cds.climate.copernicus.eu/api/v2&#39;</span>
-<span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;#########&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Next, we specify a data directory in which we will download our data and all output files that we will generate. We will also create a directory, if it doesn’t already exist.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./Data&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Directory to store data</span>
+<span class="c1"># Please ensure that datadir is a location where you have write permissions</span>
+<span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data_dir/&#39;</span>
+<span class="c1"># Create this directory if it doesn&#39;t exist</span>
 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>In advance of the following processing and visualisation part we set a directory where to save the figures. Default option is to save figures in the folder:</p>
-<div class="cell docutils container">
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FIGPATH</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FIGPATH</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="c1"># Please ensure that datadir is a location where you have write permissions</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+</section>
+<section id="explore-data">
+<h2>Explore data<a class="headerlink" href="#explore-data" title="Permalink to this heading">#</a></h2>
+<p>The CLARA-A3 dataset is the successor of CLARA-A2.1 and comprises almost 44 years (latest status: 09/2023) of continuous observations of radiation and clouds from space, thereby monitoring their spatial and temporal variability on Earth.</p>
+<p>CLARA-A3 comes not just with a temporal extension, but also with significant algorithm, calibration and product improvements. The CLARA-A3 radiation dataset contains all surface and Earth (top-of-the-atmosphere) fluxes, and thus, it enables studies of the full surface radiation budget.</p>
+<p>Please find further information about the datasets as well as the data in the Climate Data Store sections “Overview”, “Download data” and “Documentation”:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-surface-radiation-budget?tab=overview">Surface Radiation Budget</a></p></li>
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-cloud-properties?tab=overview">Cloud Properties</a></p></li>
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-earth-radiation-budget?tab=overview">Earth Radiation Budget</a></p></li>
+</ul>
 <section id="search-for-data">
-<h3>Search for data<a class="headerlink" href="#search-for-data" title="Link to this heading">#</a></h3>
-<p>To search for data, visit the CDS website: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/home">https://cds.climate.copernicus.eu/cdsapp#!/home</a>.
-Here we can search for “Surface Radiation Budget” or simply “SRB” data using the search bar. The data we need for this use case is the <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview">Surface Radiation Budget from 1979 to present derived from satellite observations</a>.
+<h3>Search for data<a class="headerlink" href="#search-for-data" title="Permalink to this heading">#</a></h3>
+<p>To search for data, visit the <a class="reference external" href="https://cds.climate.copernicus.eu/#!/home">CDS website</a>.
+Here we can search for “Surface Radiation Budget” or simply “SRB” data using the search bar. The data we need for this use case is the <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-surface-radiation-budget?tab=overview">Surface Radiation Budget from 1979 to present derived from satellite observations</a>.
 The Surface Radiation Budget (SRB) comprises the quantification of the incoming radiation from the Sun and the outgoing reflected shortwave and emitted longwave radiation, and also net fluxes. This catalogue entry comprises data from a number of sources.</p>
 <p>Once we reached the landing page, feel free to have a look at the documentation and information provided.</p>
 <p>The data can be found in the “Download data”-tab with a form to select certain variables, years etc. For our use case we select as follows:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Parameters of data to download<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Product family: <code class="docutils literal notranslate"><span class="pre">CLARA-A3</span> <span class="pre">(CM</span> <span class="pre">SAF</span> <span class="pre">cLoud,</span> <span class="pre">Albedo</span> <span class="pre">and</span> <span class="pre">surface</span> <span class="pre">RAdiation</span> <span class="pre">dataset</span> <span class="pre">from</span> <span class="pre">AVHRR</span> <span class="pre">data)</span></code></p></li>
-<li><p>Origin: <code class="docutils literal notranslate"><span class="pre">EUMETSAT</span> <span class="pre">(European</span> <span class="pre">Organisation</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">Exploitation</span> <span class="pre">of</span> <span class="pre">Meteorological</span> <span class="pre">Satellites)</span></code></p></li>
-<li><p>Variable: <code class="docutils literal notranslate"><span class="pre">Surface</span> <span class="pre">downwelling</span> <span class="pre">shortwave</span> <span class="pre">flux</span></code></p></li>
-<li><p>Climate data record type: <code class="docutils literal notranslate"><span class="pre">Thematic</span> <span class="pre">Climate</span> <span class="pre">Data</span> <span class="pre">Record</span> <span class="pre">(TCDR)</span></code></p></li>
-<li><p>Time aggregation: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">mean</span></code></p></li>
-<li><p>Year: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">year</span> <span class="pre">from</span> <span class="pre">1979-2020</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
-<li><p>Month: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">month</span> <span class="pre">from</span> <span class="pre">January</span> <span class="pre">to</span> <span class="pre">December</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
-<li><p>Geographical area: <code class="docutils literal notranslate"><span class="pre">Whole</span> <span class="pre">available</span> <span class="pre">region</span></code></p></li>
-<li><p>Format: <code class="docutils literal notranslate"><span class="pre">Zip</span> <span class="pre">file</span> <span class="pre">(.zip)</span></code></p></li>
+<li><p class="sd-card-text">Product family: <code class="docutils literal notranslate"><span class="pre">CLARA-A3</span> <span class="pre">(CM</span> <span class="pre">SAF</span> <span class="pre">cLoud,</span> <span class="pre">Albedo</span> <span class="pre">and</span> <span class="pre">surface</span> <span class="pre">RAdiation</span> <span class="pre">dataset</span> <span class="pre">from</span> <span class="pre">AVHRR</span> <span class="pre">data)</span></code></p></li>
+<li><p class="sd-card-text">Origin: <code class="docutils literal notranslate"><span class="pre">EUMETSAT</span> <span class="pre">(European</span> <span class="pre">Organisation</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">Exploitation</span> <span class="pre">of</span> <span class="pre">Meteorological</span> <span class="pre">Satellites)</span></code></p></li>
+<li><p class="sd-card-text">Variable: <code class="docutils literal notranslate"><span class="pre">Surface</span> <span class="pre">downwelling</span> <span class="pre">shortwave</span> <span class="pre">flux</span></code></p></li>
+<li><p class="sd-card-text">Climate data record type: <code class="docutils literal notranslate"><span class="pre">Thematic</span> <span class="pre">Climate</span> <span class="pre">Data</span> <span class="pre">Record</span> <span class="pre">(TCDR)</span></code></p></li>
+<li><p class="sd-card-text">Time aggregation: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">mean</span></code></p></li>
+<li><p class="sd-card-text">Year: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">year</span> <span class="pre">from</span> <span class="pre">1979-2020</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
+<li><p class="sd-card-text">Month: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">month</span> <span class="pre">from</span> <span class="pre">January</span> <span class="pre">to</span> <span class="pre">December</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
+<li><p class="sd-card-text">Geographical area: <code class="docutils literal notranslate"><span class="pre">Whole</span> <span class="pre">available</span> <span class="pre">region</span></code></p></li>
+<li><p class="sd-card-text">Format: <code class="docutils literal notranslate"><span class="pre">Zip</span> <span class="pre">file</span> <span class="pre">(.zip)</span></code></p></li>
 </ul>
-<p>Please make sure all <strong>Terms of use</strong> are accepted. This can be done at the bottom of the <strong>Download data</strong> tab.</p>
-<p>At the bottom left of the page, click on <strong>Show API request</strong> and copy &amp; paste the text into the Jupyter notebook. The first line can be skipped since it is already part of the <strong>Import libraries</strong> section. The lines for “year” and “month” are simplified to make it more readable. The name of the download (zip) file is adjusted to make it easier to identify.</p>
-<p>Note: The download may take a few minutes. Feel free to have a look at the various information on the Surface Radiation Budget page in the CDS or already get familiar with the next steps.</p>
-<div class="cell docutils container">
+</div>
+</details><p>At the end of the download form, select “Show API request”. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below). Having copied the API request into the cell below, running this will retrieve and download the data you requested into your local directory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please remember to accept the terms and conditions of the dataset, at the bottom of the CDS download form!</p>
+</div>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">downloaded_zip_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">/download_claraA3_srb.zip&#39;</span>
 
@@ -720,6 +624,15 @@ The Surface Radiation Budget (SRB) comprises the quantification of the incoming 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2024-12-09 11:58:24,603 WARNING [2024-12-09T11:58:24.615101] You are using a deprecated API endpoint. If you are using cdsapi, please upgrade to the latest version.
+2024-12-09 11:58:24,603 INFO Request ID is ab817712-6af9-42a3-b5fd-44a0f93ff2fd
+2024-12-09 11:58:25,060 INFO status has been updated to accepted
+2024-12-09 11:58:45,367 INFO status has been updated to running
+2024-12-09 12:04:44,229 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "ecda21da9a9c49d2926481bdb3bd937f", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>The zip-file should be downloaded and saved at the correct place, that we have defined earlier. The zip archive containing one variable for monthly mean needs several GB of storage space.</p>
 <p>The following lines unzip the data. <strong>DATADIR + ‘/download_claraA3_srb.zip</strong> is the path to the zip-file. The first line constructs a ZipFile() object, the second line applies the function <strong>extractall</strong> to extract the content.</p>
@@ -735,7 +648,7 @@ The Surface Radiation Budget (SRB) comprises the quantification of the incoming 
 <p>With the zip-file unziped and files at the right place we can start reading and processing the data.</p>
 </section>
 <section id="load-dataset">
-<h3>Load dataset<a class="headerlink" href="#load-dataset" title="Link to this heading">#</a></h3>
+<h3>Load dataset<a class="headerlink" href="#load-dataset" title="Permalink to this heading">#</a></h3>
 <p>The following line starting with “file” considers only files in the given directory starting the “SISmm” and ending with “.nc” and creates a list with all matching files. The “*” means “everything” and takes every file into account. This is quite useful since year and month are part of the file names.</p>
 <p>The second line reads the defined file list with the xarray function “open_mfdataset” (mf - multiple file) and concatenates them according to the time dimension.</p>
 <div class="cell docutils container">
@@ -1155,10 +1068,10 @@ Attributes: (12/44)
     license:                    The CM SAF data are owned by EUMETSAT and are...
     CMSAF_platform_and_orbits:   TIROSN=497;
     CMSAF_L3_processor:         CMSAFGACL3_V3.0; AOD-climate-corrected
-    CMSAF_L2_processor:         PPS2018-patch5, CPPv6.0; P2R, V1.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f6c8e524-d5b5-4d9a-a2f7-3ce99070455f' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f6c8e524-d5b5-4d9a-a2f7-3ce99070455f' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 504</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span>nb2</span>: 2</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-25be44aa-3aac-46c3-a780-583e843b4671' class='xr-section-summary-in' type='checkbox'  checked><label for='section-25be44aa-3aac-46c3-a780-583e843b4671' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-179.9 -179.6 ... 179.6 179.9</div><input id='attrs-83ab05a7-16bc-4267-b400-177714b1972f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-83ab05a7-16bc-4267-b400-177714b1972f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-230d4aa9-12c9-4989-a123-73f982793d6a' class='xr-var-data-in' type='checkbox'><label for='data-230d4aa9-12c9-4989-a123-73f982793d6a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bnds</dd></dl></div><div class='xr-var-data'><pre>array([-179.875, -179.625, -179.375, ...,  179.375,  179.625,  179.875])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-883539ce-7352-4be2-96b8-3642c74055ad' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-883539ce-7352-4be2-96b8-3642c74055ad' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ca8a3444-5458-479a-806b-bbbadcc3b8a8' class='xr-var-data-in' type='checkbox'><label for='data-ca8a3444-5458-479a-806b-bbbadcc3b8a8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bnds</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1979-01-01 ... 2020-12-01</div><input id='attrs-78249eef-073f-4cf2-9ee9-c7d9f6a9aa34' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-78249eef-073f-4cf2-9ee9-c7d9f6a9aa34' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1c2a9460-9227-41d1-8ba9-8355b1c8c529' class='xr-var-data-in' type='checkbox'><label for='data-1c2a9460-9227-41d1-8ba9-8355b1c8c529' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>long_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1979-01-01T00:00:00.000000000&#x27;, &#x27;1979-02-01T00:00:00.000000000&#x27;,
+    CMSAF_L2_processor:         PPS2018-patch5, CPPv6.0; P2R, V1.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-03e81540-e06b-4004-9264-878490c281bc' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-03e81540-e06b-4004-9264-878490c281bc' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 504</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span>nb2</span>: 2</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-4b5afba8-a1b3-4f66-9246-4ef0c909e790' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4b5afba8-a1b3-4f66-9246-4ef0c909e790' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-179.9 -179.6 ... 179.6 179.9</div><input id='attrs-47ac41ab-7701-4272-844c-cf95155875cb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-47ac41ab-7701-4272-844c-cf95155875cb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-816dbd99-43f5-4460-a04a-67d71ce1cc0e' class='xr-var-data-in' type='checkbox'><label for='data-816dbd99-43f5-4460-a04a-67d71ce1cc0e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bnds</dd></dl></div><div class='xr-var-data'><pre>array([-179.875, -179.625, -179.375, ...,  179.375,  179.625,  179.875])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-a9ff6234-260b-417b-9439-30f7c37ec772' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a9ff6234-260b-417b-9439-30f7c37ec772' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-689a6cf8-6c06-4291-8e12-6b83c5be2aa5' class='xr-var-data-in' type='checkbox'><label for='data-689a6cf8-6c06-4291-8e12-6b83c5be2aa5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bnds</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1979-01-01 ... 2020-12-01</div><input id='attrs-efb8d985-c74a-4fa6-a734-be3518e2b72b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-efb8d985-c74a-4fa6-a734-be3518e2b72b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c15e45c3-bbc3-4ca6-b471-831a10fd19f0' class='xr-var-data-in' type='checkbox'><label for='data-c15e45c3-bbc3-4ca6-b471-831a10fd19f0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>long_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1979-01-01T00:00:00.000000000&#x27;, &#x27;1979-02-01T00:00:00.000000000&#x27;,
        &#x27;1979-03-01T00:00:00.000000000&#x27;, ..., &#x27;2020-10-01T00:00:00.000000000&#x27;,
        &#x27;2020-11-01T00:00:00.000000000&#x27;, &#x27;2020-12-01T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8faac79b-4562-4e7a-a457-19499ebb25bb' class='xr-section-summary-in' type='checkbox'  checked><label for='section-8faac79b-4562-4e7a-a457-19499ebb25bb' class='xr-section-summary' >Data variables: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>lat_bnds</span></div><div class='xr-var-dims'>(time, lat, nb2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 2), meta=np.ndarray&gt;</div><input id='attrs-8e3e8b78-338e-4901-a33f-0d42fcb133b3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8e3e8b78-338e-4901-a33f-0d42fcb133b3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bc00a64b-5300-4f5f-b1ab-ccff0a5154c6' class='xr-var-data-in' type='checkbox'><label for='data-bc00a64b-5300-4f5f-b1ab-ccff0a5154c6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude Bounds</dd></dl></div><div class='xr-var-data'><table>
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c9ffad25-0fd8-498b-addf-66403f931923' class='xr-section-summary-in' type='checkbox'  checked><label for='section-c9ffad25-0fd8-498b-addf-66403f931923' class='xr-section-summary' >Data variables: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>lat_bnds</span></div><div class='xr-var-dims'>(time, lat, nb2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 2), meta=np.ndarray&gt;</div><input id='attrs-3dcb87aa-5811-4b4f-86af-04a2108c0323' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3dcb87aa-5811-4b4f-86af-04a2108c0323' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f3093388-9d26-43be-8662-5079de368a8c' class='xr-var-data-in' type='checkbox'><label for='data-f3093388-9d26-43be-8662-5079de368a8c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude Bounds</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1272,7 +1185,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon_bnds</span></div><div class='xr-var-dims'>(time, lon, nb2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 1440, 2), meta=np.ndarray&gt;</div><input id='attrs-5ab01e10-ecd7-4081-b219-3c4586b8954b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5ab01e10-ecd7-4081-b219-3c4586b8954b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-854a6aa3-37b1-47ce-9d4e-77c844016aea' class='xr-var-data-in' type='checkbox'><label for='data-854a6aa3-37b1-47ce-9d4e-77c844016aea' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude Bounds</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon_bnds</span></div><div class='xr-var-dims'>(time, lon, nb2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 1440, 2), meta=np.ndarray&gt;</div><input id='attrs-d8121dc5-2646-4d3a-a2af-6e1fdc99dc7f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d8121dc5-2646-4d3a-a2af-6e1fdc99dc7f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ef7fd523-ab37-422d-b73f-b05209c4744f' class='xr-var-data-in' type='checkbox'><label for='data-ef7fd523-ab37-422d-b73f-b05209c4744f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude Bounds</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1386,7 +1299,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>record_status</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>int8</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1,), meta=np.ndarray&gt;</div><input id='attrs-31e102e9-ceed-4380-8748-99bba229fcee' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-31e102e9-ceed-4380-8748-99bba229fcee' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-45da7ad6-32e4-4421-949e-14f9fdc37f55' class='xr-var-data-in' type='checkbox'><label for='data-45da7ad6-32e4-4421-949e-14f9fdc37f55' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>comment :</span></dt><dd>Overall status of each record (timestamp) in this file. If a record is flagged as not ok, it is recommended not to use it.</dd><dt><span>flag_meanings :</span></dt><dd>ok void bad_quality</dd><dt><span>flag_values :</span></dt><dd>[0 1 2]</dd><dt><span>long_name :</span></dt><dd>Record Status</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>record_status</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>int8</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1,), meta=np.ndarray&gt;</div><input id='attrs-c4374767-82fc-4b9c-ab1a-5d96aaa96505' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c4374767-82fc-4b9c-ab1a-5d96aaa96505' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-22474b7c-86ba-4154-8e9c-11eeac10a7e7' class='xr-var-data-in' type='checkbox'><label for='data-22474b7c-86ba-4154-8e9c-11eeac10a7e7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>comment :</span></dt><dd>Overall status of each record (timestamp) in this file. If a record is flagged as not ok, it is recommended not to use it.</dd><dt><span>flag_meanings :</span></dt><dd>ok void bad_quality</dd><dt><span>flag_values :</span></dt><dd>[0 1 2]</dd><dt><span>long_name :</span></dt><dd>Record Status</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1459,7 +1372,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, nb2)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 2), meta=np.ndarray&gt;</div><input id='attrs-f7f9b419-187d-4fc3-8b64-db2d1ddcd8e0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f7f9b419-187d-4fc3-8b64-db2d1ddcd8e0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-407a4b14-af47-426c-a3fe-568e8c963c32' class='xr-var-data-in' type='checkbox'><label for='data-407a4b14-af47-426c-a3fe-568e8c963c32' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time Bounds</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, nb2)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 2), meta=np.ndarray&gt;</div><input id='attrs-5410aa2c-769b-4c77-b6ce-976a068e7fe0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5410aa2c-769b-4c77-b6ce-976a068e7fe0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7c9b1a1f-91bc-41ef-8f1e-6deeb7ffe768' class='xr-var-data-in' type='checkbox'><label for='data-7c9b1a1f-91bc-41ef-8f1e-6deeb7ffe768' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time Bounds</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1532,7 +1445,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-4ff14690-1fcd-426d-bc8d-7925bae24e2a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4ff14690-1fcd-426d-bc8d-7925bae24e2a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0fd8981d-d0d5-4fc4-af65-5bd94749fa31' class='xr-var-data-in' type='checkbox'><label for='data-0fd8981d-d0d5-4fc4-af65-5bd94749fa31' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_downwelling_shortwave_flux</dd><dt><span>long_name :</span></dt><dd>Surface Downwelling Shortwave Radiation</dd><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-0516a6bc-a8e7-423b-b621-99f87d321a31' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0516a6bc-a8e7-423b-b621-99f87d321a31' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-026b3093-32c5-40ca-bcc1-7868d2c75ea7' class='xr-var-data-in' type='checkbox'><label for='data-026b3093-32c5-40ca-bcc1-7868d2c75ea7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_downwelling_shortwave_flux</dd><dt><span>long_name :</span></dt><dd>Surface Downwelling Shortwave Radiation</dd><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1646,7 +1559,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SISCLS</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-387549dd-52e5-41d1-ae0e-fcc48be940e1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-387549dd-52e5-41d1-ae0e-fcc48be940e1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-26501c6f-bd69-4250-94a8-473d904ca7db' class='xr-var-data-in' type='checkbox'><label for='data-26501c6f-bd69-4250-94a8-473d904ca7db' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_downwelling_shortwave_flux_assuming_clear_sky</dd><dt><span>long_name :</span></dt><dd>Surface Downwelling Shortwave Radiation assuming clear-sky conditions</dd><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SISCLS</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-c747a9b6-d778-48f6-9952-4ad1c94d6d31' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c747a9b6-d778-48f6-9952-4ad1c94d6d31' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1131fa3e-7256-4192-b36f-f53db487bed9' class='xr-var-data-in' type='checkbox'><label for='data-1131fa3e-7256-4192-b36f-f53db487bed9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_downwelling_shortwave_flux_assuming_clear_sky</dd><dt><span>long_name :</span></dt><dd>Surface Downwelling Shortwave Radiation assuming clear-sky conditions</dd><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1760,7 +1673,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS_dms</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-2a977dca-bc37-4be4-8917-be4568f870ed' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2a977dca-bc37-4be4-8917-be4568f870ed' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9e5b1777-03d9-4630-b51f-afe7c74077c7' class='xr-var-data-in' type='checkbox'><label for='data-9e5b1777-03d9-4630-b51f-afe7c74077c7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Number of Daily Averages used to derive the Monthly Average</dd><dt><span>units :</span></dt><dd>counts</dd><dt><span>missing_data :</span></dt><dd>-99</dd><dt><span>cell_methods :</span></dt><dd>area: time: sum</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS_dms</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-92a06e73-5fe0-4dfc-8503-90988419a1f2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-92a06e73-5fe0-4dfc-8503-90988419a1f2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6c7bfb8f-8a8c-494e-a2f4-697949c27b12' class='xr-var-data-in' type='checkbox'><label for='data-6c7bfb8f-8a8c-494e-a2f4-697949c27b12' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Number of Daily Averages used to derive the Monthly Average</dd><dt><span>units :</span></dt><dd>counts</dd><dt><span>missing_data :</span></dt><dd>-99</dd><dt><span>cell_methods :</span></dt><dd>area: time: sum</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1874,7 +1787,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS_nobs</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-0098b0c5-263d-4643-9ed4-09f56e999d95' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0098b0c5-263d-4643-9ed4-09f56e999d95' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d47b16c9-9cf6-4097-9522-a20802a87092' class='xr-var-data-in' type='checkbox'><label for='data-d47b16c9-9cf6-4097-9522-a20802a87092' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_downwelling_shortwave_flux number_of_observations</dd><dt><span>long_name :</span></dt><dd>Number of Observations of the surface_downwelling_shortwave_flux</dd><dt><span>units :</span></dt><dd>1</dd><dt><span>cell_methods :</span></dt><dd>area: time: sum</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS_nobs</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-c0341440-e18b-410c-aaa3-3b508c603aff' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c0341440-e18b-410c-aaa3-3b508c603aff' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-235187f3-ed46-4504-b1de-ae1e8e575883' class='xr-var-data-in' type='checkbox'><label for='data-235187f3-ed46-4504-b1de-ae1e8e575883' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_downwelling_shortwave_flux number_of_observations</dd><dt><span>long_name :</span></dt><dd>Number of Observations of the surface_downwelling_shortwave_flux</dd><dt><span>units :</span></dt><dd>1</dd><dt><span>cell_methods :</span></dt><dd>area: time: sum</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -1988,7 +1901,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SISCLS_dms</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-e68b0717-a56c-4b8b-adf9-cc7ea430fa1e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e68b0717-a56c-4b8b-adf9-cc7ea430fa1e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a26a2448-d610-4939-866c-e94c112bed42' class='xr-var-data-in' type='checkbox'><label for='data-a26a2448-d610-4939-866c-e94c112bed42' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Number of Daily Averages used to derive the Monthly Average</dd><dt><span>units :</span></dt><dd>1</dd><dt><span>cell_methods :</span></dt><dd>area: time: sum</dd><dt><span>missing_data :</span></dt><dd>-99</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SISCLS_dms</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-e2c1d309-3458-4488-b22f-5e3541810f92' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e2c1d309-3458-4488-b22f-5e3541810f92' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-24839094-f626-4bac-b6a8-ff30db33748a' class='xr-var-data-in' type='checkbox'><label for='data-24839094-f626-4bac-b6a8-ff30db33748a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Number of Daily Averages used to derive the Monthly Average</dd><dt><span>units :</span></dt><dd>1</dd><dt><span>cell_methods :</span></dt><dd>area: time: sum</dd><dt><span>missing_data :</span></dt><dd>-99</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -2102,7 +2015,7 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS_stdv</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-5e80145e-ef3f-4a93-91d3-54fbb4ae192e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5e80145e-ef3f-4a93-91d3-54fbb4ae192e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6c333fe8-bfdf-4fbf-ac55-45849b1f78a0' class='xr-var-data-in' type='checkbox'><label for='data-6c333fe8-bfdf-4fbf-ac55-45849b1f78a0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Standard Deviation of the surface_downwelling_shortwave_flux</dd><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>cell_methods :</span></dt><dd>area: time: standard_deviation</dd><dt><span>missing_data :</span></dt><dd>-999.0</dd></dl></div><div class='xr-var-data'><table>
+</table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>SIS_stdv</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 720, 1440), meta=np.ndarray&gt;</div><input id='attrs-6f324b5d-0f42-4e5d-bba2-b013abf3c97e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6f324b5d-0f42-4e5d-bba2-b013abf3c97e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-91bebc42-063b-45df-9968-a08b7bd975e3' class='xr-var-data-in' type='checkbox'><label for='data-91bebc42-063b-45df-9968-a08b7bd975e3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Standard Deviation of the surface_downwelling_shortwave_flux</dd><dt><span>units :</span></dt><dd>W m-2</dd><dt><span>cell_methods :</span></dt><dd>area: time: standard_deviation</dd><dt><span>missing_data :</span></dt><dd>-999.0</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -2216,55 +2129,52 @@ Attributes: (12/44)
 </svg>
         </td>
     </tr>
-</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-ff0213ca-c9ac-4624-ba07-44b40a142a47' class='xr-section-summary-in' type='checkbox'  ><label for='section-ff0213ca-c9ac-4624-ba07-44b40a142a47' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-3c657d66-e23c-4dce-aebb-8eb501accd9d' class='xr-index-data-in' type='checkbox'/><label for='index-3c657d66-e23c-4dce-aebb-8eb501accd9d' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-179.875, -179.625, -179.375, -179.125, -178.875, -178.625, -178.375,
+</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-6f2e667b-afb7-4771-8e38-348a597118cf' class='xr-section-summary-in' type='checkbox'  ><label for='section-6f2e667b-afb7-4771-8e38-348a597118cf' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-e7ff5bfa-0aa9-404f-a025-aa1d6ad72818' class='xr-index-data-in' type='checkbox'/><label for='index-e7ff5bfa-0aa9-404f-a025-aa1d6ad72818' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-179.875, -179.625, -179.375, -179.125, -178.875, -178.625, -178.375,
        -178.125, -177.875, -177.625,
        ...
         177.625,  177.875,  178.125,  178.375,  178.625,  178.875,  179.125,
         179.375,  179.625,  179.875],
-      dtype=&#x27;float64&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-34bd2e27-86d5-4b28-8fff-6854ed9b0628' class='xr-index-data-in' type='checkbox'/><label for='index-34bd2e27-86d5-4b28-8fff-6854ed9b0628' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
+      dtype=&#x27;float64&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-bec7db52-201f-443e-ae08-f0c2620f723e' class='xr-index-data-in' type='checkbox'/><label for='index-bec7db52-201f-443e-ae08-f0c2620f723e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
        -87.875, -87.625,
        ...
         87.625,  87.875,  88.125,  88.375,  88.625,  88.875,  89.125,  89.375,
         89.625,  89.875],
-      dtype=&#x27;float64&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-2300c73c-d71a-4f36-8dcb-cbcb0770c000' class='xr-index-data-in' type='checkbox'/><label for='index-2300c73c-d71a-4f36-8dcb-cbcb0770c000' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1979-01-01&#x27;, &#x27;1979-02-01&#x27;, &#x27;1979-03-01&#x27;, &#x27;1979-04-01&#x27;,
+      dtype=&#x27;float64&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-c1a96a13-b554-4e66-b4fa-aff1fd1676d6' class='xr-index-data-in' type='checkbox'/><label for='index-c1a96a13-b554-4e66-b4fa-aff1fd1676d6' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1979-01-01&#x27;, &#x27;1979-02-01&#x27;, &#x27;1979-03-01&#x27;, &#x27;1979-04-01&#x27;,
                &#x27;1979-05-01&#x27;, &#x27;1979-06-01&#x27;, &#x27;1979-07-01&#x27;, &#x27;1979-08-01&#x27;,
                &#x27;1979-09-01&#x27;, &#x27;1979-10-01&#x27;,
                ...
                &#x27;2020-03-01&#x27;, &#x27;2020-04-01&#x27;, &#x27;2020-05-01&#x27;, &#x27;2020-06-01&#x27;,
                &#x27;2020-07-01&#x27;, &#x27;2020-08-01&#x27;, &#x27;2020-09-01&#x27;, &#x27;2020-10-01&#x27;,
                &#x27;2020-11-01&#x27;, &#x27;2020-12-01&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=504, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-301e3275-819b-4dc0-82ce-5cf82e4c2cb4' class='xr-section-summary-in' type='checkbox'  ><label for='section-301e3275-819b-4dc0-82ce-5cf82e4c2cb4' class='xr-section-summary' >Attributes: <span>(44)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>CM SAF Cloud, Albedo and Radiation dataset, AVHRR-based edition 3 (CLARA-A3)</dd><dt><span>summary :</span></dt><dd>This file contains AVHRR-based Thematic Climate Data Records (TCDR) produced by the Satellite Application Facility on Climate Monitoring (CM SAF).</dd><dt><span>id :</span></dt><dd>DOI:10.5676/EUM_SAF_CM/CLARA_AVHRR/V003</dd><dt><span>product_class :</span></dt><dd>Radiation products, monthly means</dd><dt><span>Conventions :</span></dt><dd>CF-1.7,ACDD-1.3</dd><dt><span>standard_name_vocabulary :</span></dt><dd>Standard Name Table (v70, 10 December 2019)</dd><dt><span>Metadata_Conventions :</span></dt><dd>Unidata Dataset Discovery v1.0</dd><dt><span>institution :</span></dt><dd>EUMETSAT/CMSAF</dd><dt><span>project :</span></dt><dd>Satellite Application Facility on Climate Monitoring (CM SAF)</dd><dt><span>digital_object_identifier :</span></dt><dd>10.5676/EUM_SAF_CM/CLARA_AVHRR/V003</dd><dt><span>creator_name :</span></dt><dd>DE/DWD</dd><dt><span>creator_url :</span></dt><dd>https://www.cmsaf.eu/</dd><dt><span>creator_email :</span></dt><dd>contact.cmsaf@dwd.de</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5676/EUM_SAF_CM/CLARA_AVHRR/V003</dd><dt><span>source :</span></dt><dd>AVHRR global area coverage (GAC)</dd><dt><span>instrument_vocabulary :</span></dt><dd>GCMD Instruments, Version 9.1.5</dd><dt><span>cdm_data_type :</span></dt><dd>grid</dd><dt><span>filename :</span></dt><dd>SISmm19790101000000319AVPOS01GL.nc</dd><dt><span>time_coverage_start :</span></dt><dd>1979-01-01T00:00:00Z</dd><dt><span>time_coverage_end :</span></dt><dd>1979-02-01T00:00:00Z</dd><dt><span>time_coverage_duration :</span></dt><dd>P1M</dd><dt><span>time_coverage_resolution :</span></dt><dd>P1M</dd><dt><span>geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>geospatial_lat_resolution :</span></dt><dd>0.25 degree</dd><dt><span>geospatial_lat_min :</span></dt><dd>-90.0</dd><dt><span>geospatial_lat_max :</span></dt><dd>90.0</dd><dt><span>geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>geospatial_lon_resolution :</span></dt><dd>0.25 degree</dd><dt><span>geospatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geospatial_lon_max :</span></dt><dd>180.0</dd><dt><span>product_version :</span></dt><dd>3.0</dd><dt><span>variable_id :</span></dt><dd>SIS</dd><dt><span>CMSAF_gac_parameter_id :</span></dt><dd>11202</dd><dt><span>platform_vocabulary :</span></dt><dd>GCMD Platforms, Version 9.1.5</dd><dt><span>platform :</span></dt><dd>Earth Observation Satellites &gt; NOAA POES (Polar Orbiting Environmental Satellites)</dd><dt><span>instrument :</span></dt><dd>AVHRR &gt; Advanced Very High Resolution Radiometer</dd><dt><span>CMSAF_parameter_id :</span></dt><dd>CM-11202</dd><dt><span>CMSAF_parameter_code :</span></dt><dd>SIS_R3_CLARA_3_TCDR</dd><dt><span>Level1_intercalibration :</span></dt><dd>1.0</dd><dt><span>date_created :</span></dt><dd>2022-05-19T09:29:13Z</dd><dt><span>license :</span></dt><dd>The CM SAF data are owned by EUMETSAT and are available to all users free of charge and with no conditions to use. If you wish to use these products, EUMETSAT&#x27;s copyright credit must be shown by displaying the words &quot;Copyright (c) (2022) EUMETSAT&quot; under/in each of these SAF Products used in a project or shown in a publication or website.
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=504, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2b7912a4-a8e0-41c4-8b07-fd6ff7a00592' class='xr-section-summary-in' type='checkbox'  ><label for='section-2b7912a4-a8e0-41c4-8b07-fd6ff7a00592' class='xr-section-summary' >Attributes: <span>(44)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>CM SAF Cloud, Albedo and Radiation dataset, AVHRR-based edition 3 (CLARA-A3)</dd><dt><span>summary :</span></dt><dd>This file contains AVHRR-based Thematic Climate Data Records (TCDR) produced by the Satellite Application Facility on Climate Monitoring (CM SAF).</dd><dt><span>id :</span></dt><dd>DOI:10.5676/EUM_SAF_CM/CLARA_AVHRR/V003</dd><dt><span>product_class :</span></dt><dd>Radiation products, monthly means</dd><dt><span>Conventions :</span></dt><dd>CF-1.7,ACDD-1.3</dd><dt><span>standard_name_vocabulary :</span></dt><dd>Standard Name Table (v70, 10 December 2019)</dd><dt><span>Metadata_Conventions :</span></dt><dd>Unidata Dataset Discovery v1.0</dd><dt><span>institution :</span></dt><dd>EUMETSAT/CMSAF</dd><dt><span>project :</span></dt><dd>Satellite Application Facility on Climate Monitoring (CM SAF)</dd><dt><span>digital_object_identifier :</span></dt><dd>10.5676/EUM_SAF_CM/CLARA_AVHRR/V003</dd><dt><span>creator_name :</span></dt><dd>DE/DWD</dd><dt><span>creator_url :</span></dt><dd>https://www.cmsaf.eu/</dd><dt><span>creator_email :</span></dt><dd>contact.cmsaf@dwd.de</dd><dt><span>references :</span></dt><dd>https://doi.org/10.5676/EUM_SAF_CM/CLARA_AVHRR/V003</dd><dt><span>source :</span></dt><dd>AVHRR global area coverage (GAC)</dd><dt><span>instrument_vocabulary :</span></dt><dd>GCMD Instruments, Version 9.1.5</dd><dt><span>cdm_data_type :</span></dt><dd>grid</dd><dt><span>filename :</span></dt><dd>SISmm19790101000000319AVPOS01GL.nc</dd><dt><span>time_coverage_start :</span></dt><dd>1979-01-01T00:00:00Z</dd><dt><span>time_coverage_end :</span></dt><dd>1979-02-01T00:00:00Z</dd><dt><span>time_coverage_duration :</span></dt><dd>P1M</dd><dt><span>time_coverage_resolution :</span></dt><dd>P1M</dd><dt><span>geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>geospatial_lat_resolution :</span></dt><dd>0.25 degree</dd><dt><span>geospatial_lat_min :</span></dt><dd>-90.0</dd><dt><span>geospatial_lat_max :</span></dt><dd>90.0</dd><dt><span>geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>geospatial_lon_resolution :</span></dt><dd>0.25 degree</dd><dt><span>geospatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geospatial_lon_max :</span></dt><dd>180.0</dd><dt><span>product_version :</span></dt><dd>3.0</dd><dt><span>variable_id :</span></dt><dd>SIS</dd><dt><span>CMSAF_gac_parameter_id :</span></dt><dd>11202</dd><dt><span>platform_vocabulary :</span></dt><dd>GCMD Platforms, Version 9.1.5</dd><dt><span>platform :</span></dt><dd>Earth Observation Satellites &gt; NOAA POES (Polar Orbiting Environmental Satellites)</dd><dt><span>instrument :</span></dt><dd>AVHRR &gt; Advanced Very High Resolution Radiometer</dd><dt><span>CMSAF_parameter_id :</span></dt><dd>CM-11202</dd><dt><span>CMSAF_parameter_code :</span></dt><dd>SIS_R3_CLARA_3_TCDR</dd><dt><span>Level1_intercalibration :</span></dt><dd>1.0</dd><dt><span>date_created :</span></dt><dd>2022-05-19T09:29:13Z</dd><dt><span>license :</span></dt><dd>The CM SAF data are owned by EUMETSAT and are available to all users free of charge and with no conditions to use. If you wish to use these products, EUMETSAT&#x27;s copyright credit must be shown by displaying the words &quot;Copyright (c) (2022) EUMETSAT&quot; under/in each of these SAF Products used in a project or shown in a publication or website.
 
 Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_CM/CLARA_AVHRR/V003 and also register as a user at http://cm-saf.eumetsat.int/ to receive latest information on CM SAF services and to get access to the CM SAF User Help Desk.</dd><dt><span>CMSAF_platform_and_orbits :</span></dt><dd> TIROSN=497;</dd><dt><span>CMSAF_L3_processor :</span></dt><dd>CMSAFGACL3_V3.0; AOD-climate-corrected</dd><dt><span>CMSAF_L2_processor :</span></dt><dd>PPS2018-patch5, CPPv6.0; P2R, V1.0</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 </section>
-<section id="use-cases">
-<h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h2>
-</section>
 <section id="use-case-1-the-mean-global-surface-incoming-shortwave-sis-radiation-distribution">
-<h2>Use case 1: The mean global Surface Incoming Shortwave (SIS) radiation distribution<a class="headerlink" href="#use-case-1-the-mean-global-surface-incoming-shortwave-sis-radiation-distribution" title="Link to this heading">#</a></h2>
-<p>Use Case #1 aims to give an overview about the SIS radiation distribution. We do that by plotting the global mean SIS from the CLARA-A3 dataset. Please note that you need to open the dataset to be able to execute this usecase, as described in the previous section <a class="reference internal" href="#load"><span class="xref myst">“Load dataset”</span></a>.</p>
+<h2>Use case 1: the mean global Surface Incoming Shortwave (SIS) radiation distribution<a class="headerlink" href="#use-case-1-the-mean-global-surface-incoming-shortwave-sis-radiation-distribution" title="Permalink to this heading">#</a></h2>
+<p>Use Case #1 aims to give an overview about the SIS radiation distribution. We do that by plotting the global mean SIS from the CLARA-A3 dataset. Please note that you need to open the dataset to be able to execute this usecase, as described in the previous section.</p>
 <section id="calculation-of-the-temporal-average-of-sis">
-<h3>Calculation of the temporal average of SIS<a class="headerlink" href="#calculation-of-the-temporal-average-of-sis" title="Link to this heading">#</a></h3>
+<h3>Calculation of the temporal average of SIS<a class="headerlink" href="#calculation-of-the-temporal-average-of-sis" title="Permalink to this heading">#</a></h3>
 <p>We calculate the temporal average with the function np.nanmean. np is common alias for numpy and a library for mathmatical working with arrays. nanmean averages the data and ignores nan’s. This operation is applied to “dataset_sis” and the variable Surface Incoming Radiation or “SIS”. axis=0 averages over the first axis, which is “time” in this case. This leads to a two-dimensional result with an average over time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate temporal average</span>
-<span class="n">average</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">dataset_sis</span><span class="p">[</span><span class="s1">&#39;SIS&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">average</span> <span class="o">=</span> <span class="n">dataset_sis</span><span class="p">[</span><span class="s1">&#39;SIS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
 
 <span class="c1"># Get longitude and latitude coordinates. Both are variables of the dataset and available with</span>
 <span class="c1"># the &quot;.variables[&#39;lat/lon&#39;]&quot; function; [:] usually means [&quot;from&quot;:&quot;till&quot;] but</span>
 <span class="c1"># without numbers it means &quot;everything&quot;</span>
-<span class="n">lon</span> <span class="o">=</span> <span class="n">dataset_sis</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">][:]</span>
-<span class="n">lat</span> <span class="o">=</span> <span class="n">dataset_sis</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">][:]</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">dataset_sis</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">dataset_sis</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="plot-of-the-temporal-average-of-sis">
-<h3>Plot of the temporal average of SIS<a class="headerlink" href="#plot-of-the-temporal-average-of-sis" title="Link to this heading">#</a></h3>
+<h3>Plot of the temporal average of SIS<a class="headerlink" href="#plot-of-the-temporal-average-of-sis" title="Permalink to this heading">#</a></h3>
 <p>With the calculation done the data is ready for a plot. Please find the plot and settings in the next section.</p>
 <p>Some further notes:</p>
 <ul class="simple">
@@ -2310,15 +2220,15 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/817a20d6deafa2b1c5fc514bd33c778b4ad07ac6fb5c7a7fe561374034dc7494.png" src="../../_images/817a20d6deafa2b1c5fc514bd33c778b4ad07ac6fb5c7a7fe561374034dc7494.png" />
+<img alt="../../_images/a4da33a575fe9071034d924a4b53a08d1d7a8bdc5386b4313b1e9472184a8e91.png" src="../../_images/a4da33a575fe9071034d924a4b53a08d1d7a8bdc5386b4313b1e9472184a8e91.png" />
 </div>
 </div>
 <p><strong>Figure 1</strong> shows the global mean values of the Surface Incoming Shortwave radiation (SIS). The highest values of Surface Incoming Radiation (SIS) are observed in the tropical regions and gradually decreasing towards the poles. There are however some irregularities. They are mostly caused by cloud coverage. So, the maximum values of SIS occur in the tropical and subtropical deserts (Sahara, Atacama, Namib deserts) and not at the equator where cloudy days are more common. Another example of high SIS values is the eastern parts of the tropical oceans, where trade winds cause a decrease in cloudiness (eastern parts of the Pacific and Atlantic oceans near the North American and African continents respectively). Monsoons in eastern and south-eastern Asia cause a decrease in the surface radiation as well. The sun does not rise above the horizon during the winter seasons in the Polar Regions, thus the annual averaged SIS values are the lowest there.</p>
 </section>
 </section>
 <section id="use-case-2-relative-anomaly-hot-summer-of-the-year-2003-in-europe">
-<h2>Use case 2: Relative Anomaly. Hot summer of the year 2003 in Europe<a class="headerlink" href="#use-case-2-relative-anomaly-hot-summer-of-the-year-2003-in-europe" title="Link to this heading">#</a></h2>
-<p>Please note that you need to open the dataset to be able to execute this usecase, as described in the previous section <a class="reference internal" href="#load"><span class="xref myst">“Load dataset”</span></a>.</p>
+<h2>Use case 2: relative Anomaly. Hot summer of the year 2003 in Europe<a class="headerlink" href="#use-case-2-relative-anomaly-hot-summer-of-the-year-2003-in-europe" title="Permalink to this heading">#</a></h2>
+<p>Please note that you need to open the dataset to be able to execute this usecase, as described in the previous load data section.</p>
 <p>The spatial resolution of the CLARA-A3 radiation dataset is 0.25ºx0.25º that is roughly equal to 25x25 km. With this resolution, it is possible to conduct a regional analysis using the CLARA-A3 radiation datasets. Furthermore, we can use the CLARA-A3 radiation datasets to investigate recent meteorological events. This could be a research project for a student or provide complementary information on a special event, e.g., the analysis of recent heat waves. In recent years, a high number of heat waves appeared in Europe. Particularly interesting is the summer 2003.</p>
 <p>Firstly, we will select the data for year 2003 using <code class="docutils literal notranslate"><span class="pre">sel</span></code> argument.</p>
 <p>Then, we split the SRB data according to the seasons by using the <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> method, with <code class="docutils literal notranslate"><span class="pre">'time.season'</span></code> as an argument, and then averaged over the years.
@@ -2347,7 +2257,7 @@ Seasons are defined as follows:</p>
 </div>
 </div>
 <section id="plot-of-the-relative-anomaly-in-2003-of-sis-for-europe-in-relation-to-the-temporal-average-of-sis">
-<h3>Plot of the relative anomaly in 2003 of SIS for Europe in relation to the temporal average of SIS<a class="headerlink" href="#plot-of-the-relative-anomaly-in-2003-of-sis-for-europe-in-relation-to-the-temporal-average-of-sis" title="Link to this heading">#</a></h3>
+<h3>Plot of the relative anomaly in 2003 of SIS for Europe in relation to the temporal average of SIS<a class="headerlink" href="#plot-of-the-relative-anomaly-in-2003-of-sis-for-europe-in-relation-to-the-temporal-average-of-sis" title="Permalink to this heading">#</a></h3>
 <p>With the calculation done the data is ready for a plot. Please find the plot and settings in the next section.</p>
 <p>Note: A warnung can occur due to nan’s in the dataset and possible cases where a “divide by nan” happens. That can be ignored.</p>
 <div class="cell docutils container">
@@ -2400,14 +2310,6 @@ Seasons are defined as follows:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages/dask/core.py:127: RuntimeWarning: invalid value encountered in divide
-  return func(*(_execute_task(a, cache) for a in args))
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/homebrew/Caskroom/miniforge/base/envs/TM-TESTING/lib/python3.11/site-packages/cartopy/io/__init__.py:241: DownloadWarning: Downloading: https://naturalearth.s3.amazonaws.com/50m_cultural/ne_50m_admin_0_boundary_lines_land.zip
-  warnings.warn(f&#39;Downloading: {url}&#39;, DownloadWarning)
-</pre></div>
-</div>
 <img alt="../../_images/8e9564e33489b650cc3d20747668a60441e325d8cfac6b22b3e616f9780358e2.png" src="../../_images/8e9564e33489b650cc3d20747668a60441e325d8cfac6b22b3e616f9780358e2.png" />
 </div>
 </div>
@@ -2417,9 +2319,9 @@ Seasons are defined as follows:</p>
 </section>
 </section>
 <section id="get-more-information-about-surface-radiation-budget">
-<h2>Get more information about Surface Radiation Budget<a class="headerlink" href="#get-more-information-about-surface-radiation-budget" title="Link to this heading">#</a></h2>
+<h2>Get more information about surface radiation budget<a class="headerlink" href="#get-more-information-about-surface-radiation-budget" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview">About
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-surface-radiation-budget?tab=overview">About
 Surface radiation budget from 1979 to present derived from satellite observations
 </a></p></li>
 <li><p><a class="reference external" href="https://cds.climate.copernicus.eu/">About the Climate Data Store</a></p></li>
@@ -2452,10 +2354,11 @@ Surface radiation budget from 1979 to present derived from satellite observation
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="total-solar-irradiance.html"
@@ -2467,15 +2370,18 @@ Surface radiation budget from 1979 to present derived from satellite observation
       </div>
     </a>
     <a class="right-next"
-       href="total-column-water-vapour-combi.html"
+       href="cloud-cover-climatology.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exploring Total Column Water Vapour information in the COMBI dataset</p>
+        <p class="prev-next-title">Calculation of global climatology and annual cycles of cloud fractional cover from EUMETSAT’s CM SAF CLARA-A3 dataset</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -2484,37 +2390,34 @@ Surface radiation budget from 1979 to present derived from satellite observation
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description">Dataset description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cdsapi-and-your-credentials">Set up CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-data-acquisition">Prerequisites and data acquisition</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api">Download data using CDS API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cds-api-credentials">Set up CDS API credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load dataset</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-surface-incoming-shortwave-sis-radiation-distribution">Use case 1: The mean global Surface Incoming Shortwave (SIS) radiation distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-surface-incoming-shortwave-sis-radiation-distribution">Use case 1: the mean global Surface Incoming Shortwave (SIS) radiation distribution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-temporal-average-of-sis">Calculation of the temporal average of SIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-temporal-average-of-sis">Plot of the temporal average of SIS</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-relative-anomaly-hot-summer-of-the-year-2003-in-europe">Use case 2: Relative Anomaly. Hot summer of the year 2003 in Europe</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-relative-anomaly-hot-summer-of-the-year-2003-in-europe">Use case 2: relative Anomaly. Hot summer of the year 2003 in Europe</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-relative-anomaly-in-2003-of-sis-for-europe-in-relation-to-the-temporal-average-of-sis">Plot of the relative anomaly in 2003 of SIS for Europe in relation to the temporal average of SIS</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-surface-radiation-budget">Get more information about Surface Radiation Budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-surface-radiation-budget">Get more information about surface radiation budget</a></li>
 </ul>
   </nav></div>
 
@@ -2536,10 +2439,9 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -2552,6 +2454,10 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <script src="_static/custom.js"></script>
+
+</div>
   </div>
   
 </div>
@@ -2563,8 +2469,8 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,66 +1,72 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Calculation of global climatology of Earth Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+    <title>Calculation of global climatology of Earth radiation budget from EUMETSAT’s CM SAF CLARA-A3 dataset &#8212; Copernicus Climate Change Service (C3S) training book</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Analysis of the Earth’s Radiation Budget using the CERES product" href="erb-ceres-climatology.html" />
+    <link rel="next" title="Analysis of the Earth’s radiation budget using the CERES product" href="erb-ceres-climatology.html" />
     <link rel="prev" title="Calculation of global distribution and timeseries of Outgoing Longwave Radiation (OLR) using NOAA/NCEI HIRS data" href="erb-outgoing-longwave-radiation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -71,23 +77,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,22 +112,17 @@
 </form></div>
   </div>
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-<aside class="bd-header-announcement" aria-label="Announcement">
-  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
-</aside>
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️This is a TEST version, this is not an official website⚠️</div>
+  </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,9 +137,6 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -151,28 +145,16 @@
   
   
   
-  
-    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) training book</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Copernicus Climate Change Service (C3S) Data Tutorials
+                    Copernicus Climate Change Service (C3S) data tutorials
                 </a>
             </li>
         </ul>
@@ -182,88 +164,62 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../observations/intro.html">Observations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Satellite observations - atmospheric physics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="erb-outgoing-longwave-radiation.html">Outgoing longwave radiation</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="total-solar-irradiance.html">Total solar irradiance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite observations - atmospheric composition</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total ozone columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">Greenhouse gas level 2 products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploration of the aerosol properties products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">A multi-sensor climate data record of aerosol properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite observations - hydrology and cryosphere</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance.html">Ice sheet mass balance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature record</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal forecasts</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal forecast anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal forecast verification</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate projections</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global climate projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional climate projections (CORDEX)</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate indicators</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Satellite Observations - Atmospheric Physic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Analysis of the CLARA Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="total-solar-irradiance.html">Total Solar Irradiance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="total-column-water-vapour-combi.html">Total column water vapour</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite Observations - Atmospheric Composition</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total Ozone Columns</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-ocean/intro.html">Satellite Observations - Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other learning resources 📚</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other_learning_resources.html">Useful links to other ECMWF learning resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
-</ul>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/help-and-support">Help &amp; support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S learning services</a></li>
 </ul>
 
     </div>
@@ -279,7 +235,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -288,14 +244,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -318,16 +274,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/ecmwf-training/C3S-training/main?urlpath=lab/tree/submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+    <img src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +322,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -448,28 +404,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -480,7 +434,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><a id='page-top'></a> Calculation of global climatology of Earth Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset</h1>
+    <h1>Calculation of global climatology of Earth radiation budget from EUMETSAT’s CM SAF CLARA-A3 dataset</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -490,29 +444,30 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description">Dataset description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cdsapi-and-your-credentials">Set up CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-data-acquisition">Prerequisites and data acquisition</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api">Download data using CDS API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cds-api-credentials">Set up CDS API credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load dataset</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-outgoing-longwave-radiation-olr-radiation-distribution">Use case 1: The mean global Outgoing Longwave Radiation (OLR) radiation distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-outgoing-longwave-radiation-olr-radiation-distribution">Use case 1: the mean global Outgoing Longwave Radiation (OLR) radiation distribution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-temporal-average-of-olr">Calculation of the temporal average of OLR</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-temporal-average-of-olr">Plot of the temporal average of OLR</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-the-mean-global-reflected-solar-flux-rsf-distribution">Use case 2: The mean global Reflected Solar Flux (RSF) distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-the-mean-global-reflected-solar-flux-rsf-distribution">Use case 2: the mean global Reflected Solar Flux (RSF) distribution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-temporal-average-of-rsf">Calculation of the temporal average of RSF</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-temporal-average-of-rsf">Plot of the temporal average of RSF</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-earth-radiation-budget">Get more information about Earth Radiation Budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-earth-radiation-budget">Get more information about Earth radiation budget</a></li>
 </ul>
             </nav>
         </div>
@@ -522,64 +477,43 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
-  <p><img alt="logo" src="submodules/img/LogoLine_horizon_C3S.png" /></p>
+  <p><img alt="logo" src="https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="calculation-of-global-climatology-of-earth-radiation-budget-from-eumetsat-s-cm-saf-clara-a3-dataset">
-<h1><a id='page-top'></a> Calculation of global climatology of Earth Radiation Budget from EUMETSAT’s CM SAF CLARA-A3 dataset<a class="headerlink" href="#calculation-of-global-climatology-of-earth-radiation-budget-from-eumetsat-s-cm-saf-clara-a3-dataset" title="Link to this heading">#</a></h1>
-<p>This notebook provides you with an introduction on EUMETSAT’s CM SAF <strong>CLARA-A3</strong> dataset available at the <a class="reference external" href="https://cds.climate.copernicus.eu">Climate Data Store</a> (CDS). The dataset contains data for Essential Climate Variables (ECVs) <em>Earth Radiation Budget</em>, as well as <em>Cloud Properties and Surface Radiation Budget</em>, while this notebook focuses on <strong>Earth Radiation Budget</strong> as part of the ECV <em>Earth Radiation Budget</em> available here: <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-earth-radiation-budget">Earth’s radiation budget from 1979 to present derived from satellite observations</a>.</p>
-<p>The notebook covers the full process from scratch and starts with a short introdution to the dataset and how to access the data from the Climate Data Store of the Copernicus Climate Change Service (C3S). This is followed by a step-by-step guide on how to process and visualize the data. Once you feel comfortable with the python code, you are invited to adjust or extend the code according to your interests. After a short introduction how to use a Jupyter notebook the analysis starts.<br>
-Two figures below are results of Use Case 1 and 2, and the result of a successful run of the code.</p>
-<p><img alt="img" src="submodules/c3s-training-submodule-sat-obs-atmos-physics/img/erb-claraA3-banner.png" /></p>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>This tutorial is about Earth radiation (top of atmosphere) parameters of EUMETSAT’s CM SAF CLARA-A3 dataset. It covers step by step the process from retrieving the data to the processing and finally the visualisation of the results.</p>
-<p>In the following, we will concentrate on the earth radiation part. The CLARA-A3 dataset is the successor of CLARA-A2.1 and comprises almost 44 years (latest status: 09/2023) of continuous observations of radiation and clouds from space, thereby monitoring their spatial and temporal variability on Earth. Earth Radiation Budget parameters were not included in CLARA-A2.1</p>
-<p>The CLARA-A3 radiation dataset contains all surface and Earth (top-of-the-atmosphere) fluxes, and thus, it enables studies of the full earth radiation budget.</p>
-<p>In the following, two examples are presented to illustrate some ideas on the usage, visualisation, and analysis of the CLARA-A3 earth radiation dataset.</p>
-<section id="dataset-description">
-<h3>Dataset description<a class="headerlink" href="#dataset-description" title="Link to this heading">#</a></h3>
-<p>Please find further information about the datasets as well as the data in the Climate Data Store sections “Overview”, “Download data” and “Documentation”:</p>
-<ul class="simple">
-<li><p>Earth Radiation: Budget <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview</a></p></li>
-<li><p>Surface Radiation Budget: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview</a></p></li>
-<li><p>Cloud Properties: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-cloud-properties?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-cloud-properties?tab=overview</a></p></li>
-</ul>
+<h1>Calculation of global climatology of Earth radiation budget from EUMETSAT’s CM SAF CLARA-A3 dataset<a class="headerlink" href="#calculation-of-global-climatology-of-earth-radiation-budget-from-eumetsat-s-cm-saf-clara-a3-dataset" title="Permalink to this heading">#</a></h1>
+<p><strong>This notebook can be run on free online platforms, such as Binder, Kaggle and Colab, or they can be accessed from GitHub. The links to run this notebook in these environments are provided here, but please note they are not supported by ECMWF.</strong></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/main?labpath=erb-clara-climatology.ipynb"><img alt="binder" src="https://mybinder.org/badge.svg" /></a>
+<a class="reference external" href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/blob/main/erb-clara-climatology.ipynb"><img alt="kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a>
+<a class="reference external" href="https://colab.research.google.com/github/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/blob/main/erb-clara-climatology.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a class="reference external" href="https://github.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/blob/main/erb-clara-climatology.ipynb"><img alt="github" src="https://img.shields.io/badge/Open%20in-GitHub-black?logo=github" /></a></p>
+<section id="learning-objectives">
+<h2>Learning objectives 🎯<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>This notebook provides you with an introduction on Earth radiation (top of atmosphere) parameters of EUMETSAT’s CM SAF <strong>CLARA-A3</strong> dataset available at the <a class="reference external" href="https://cds.climate.copernicus.eu">Climate Data Store</a> (CDS). The dataset contains data for Essential Climate Variables (ECVs) <em>Earth Radiation Budget</em>, as well as <em>Cloud Properties and Surface Radiation Budget</em>, while this notebook focuses on <strong>Earth Radiation Budget</strong> as part of the ECV <em>Earth Radiation Budget</em> available here: <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-earth-radiation-budget">Earth’s radiation budget from 1979 to present derived from satellite observations</a>.</p>
+<p>The notebook covers the full process from scratch and starts with a short introdution to the dataset and how to access the data from the Climate Data Store of the Copernicus Climate Change Service (C3S). This is followed by a step-by-step guide on how to process and visualize the data. Once you feel comfortable with the python code, you are invited to adjust or extend the code according to your interests.</p>
+<p>In the following, two examples are presented to illustrate some ideas on the usage, visualisation, and analysis of the CLARA-A3 earth radiation dataset. Two figures below are results of Use Case 1 and 2, and the result of a successful run of the code.</p>
+<p><img alt="img" src="../../_images/erb-clara-climatologies.png" /></p>
 </section>
-</section>
-<section id="prerequisites-and-data-acquisition">
-<h2>Prerequisites and data acquisition<a class="headerlink" href="#prerequisites-and-data-acquisition" title="Link to this heading">#</a></h2>
-<p>This tutorial is in the form of a Jupyter notebook. It can be run on a cloud environment, or on your own computer. You will not need to install any software for the training as there are a number of free cloud-based services to create, edit, run and export Jupyter notebooks such as this. Here are some suggestions (simply click on one of the links below to run the notebook):</p>
-<style>
-td, th {
-   border: 1px solid white;
-   border-collapse: collapse;
-}
-</style>
-<table align="left">
-  <tr>
-    <th>Run the tutorial via free cloud platforms: </th>
-    <th><a href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-projects/copernicus-training-c3s/blob/main/ecv-notebooks/erb-clara-climatology.ipynb">
-        <img src = "https://kaggle.com/static/images/open-in-kaggle.svg" alt = "Kaggle"></th>
-    <th><a href="https://mybinder.org/v2/gh/ecmwf-projects/copernicus-training-c3s/main?labpath=ecv-notebooks/erb-clara-climatology.ipynb">
-        <img src = "https://mybinder.org/badge.svg" alt = "Binder"></th>
-    <th><a href="https://colab.research.google.com/github/ecmwf-projects/copernicus-training-c3s/blob/main/ecv-notebooks/erb-clara-climatology.ipynb">
-        <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
-  </tr>
-</table>
-<p><br><br></p>
-<p>We are using <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> to download the data. This package is not yet included by default on most cloud platforms. You can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install it. We use an exclamation mark to pass the command to the shell (not to the Python interpreter).</p>
-<div class="cell docutils container">
+<section id="prepare-your-environment">
+<h2>Prepare your environment<a class="headerlink" href="#prepare-your-environment" title="Permalink to this heading">#</a></h2>
+<section id="set-up-cdsapi-and-your-credentials">
+<h3>Set up CDSAPI and your credentials<a class="headerlink" href="#set-up-cdsapi-and-your-credentials" title="Permalink to this heading">#</a></h3>
+<p>The code below will ensure that the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> package is installed. If you have not setup your <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code> file with your credenials, you can replace <code class="docutils literal notranslate"><span class="pre">None</span></code> with your credentials that can be found on the <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">how to api</a> page (you will need to log in to see your credentials).</p>
+<div class="cell tag_api docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>cdsapi
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q cdsapi
+<span class="c1"># If you have already setup your .cdsapirc file you can leave this as None</span>
+<span class="n">cdsapi_key</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">cdsapi_url</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="import-libraries">
-<h3>Import libraries<a class="headerlink" href="#import-libraries" title="Link to this heading">#</a></h3>
+</section>
+<section id="install-and-import-libraries">
+<h3>(Install and) Import libraries<a class="headerlink" href="#install-and-import-libraries" title="Permalink to this heading">#</a></h3>
 <p>The data have been stored in files written in NetCDF format. To best handle these, we will import the library <a class="reference external" href="http://xarray.pydata.org/en/stable/">Xarray</a> which is specifically designed for manipulating multidimensional arrays in the field of geosciences. The libraries Matplotlib and Cartopy will also be imported for plotting and visualising the analysed data. We will also import the libraries <a class="reference external" href="https://docs.python.org/3/library/zipfile.html">zipfile</a> to work with zip-archives, <a class="reference external" href="https://docs.python.org/3/library/os.html">OS</a> to use OS-functions and pattern expansion, and <a class="reference external" href="https://urllib3.readthedocs.io/en/stable/">urllib3</a> for disabling warnings for data download via CDS API.</p>
-<div class="cell docutils container">
+<div class="cell tag_import docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CDS API library</span>
 <span class="kn">import</span> <span class="nn">cdsapi</span>
@@ -603,67 +537,81 @@ td, th {
 </div>
 </div>
 </section>
-<section id="download-data-using-cds-api">
-<h3>Download data using CDS API<a class="headerlink" href="#download-data-using-cds-api" title="Link to this heading">#</a></h3>
-<p>This section is provides all necessary settings and input data to successfully run the use cases, and produce the figures.</p>
-</section>
-<section id="set-up-cds-api-credentials">
-<h3>Set up CDS API credentials<a class="headerlink" href="#set-up-cds-api-credentials" title="Link to this heading">#</a></h3>
-<p>We will request data from the <a class="reference external" href="https://cds.climate.copernicus.eu/">Climate Data Store (CDS)</a>. In case you don’t have an account yet, please click on “Login/register” at the right top and select “Create new account”. With the process finished you are able to login to the CDS and can search for your preferred data.</p>
-<p>We will request data from the CDS programmatically with the help of the CDS API.
-First, we need to manually set the CDS API credentials.
-To do so, we need to define two variables: URL and KEY.
-To obtain these, first login to the CDS, then visit <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to">https://cds.climate.copernicus.eu/api-how-to</a> and copy the string of characters listed after “key:”. Replace the <code class="docutils literal notranslate"><span class="pre">#########</span></code> below with this string.</p>
-<div class="cell docutils container">
+<section id="specify-data-directory">
+<h3>Specify data directory<a class="headerlink" href="#specify-data-directory" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;https://cds.climate.copernicus.eu/api&#39;</span>
-<span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;############&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Next, we specify a data directory in which we will download our data and all output files that we will generate. We will also create a directory, if it doesn’t already exist.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Directory to store data</span>
+<span class="c1"># Please ensure that datadir is a location where you have write permissions</span>
+<span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data_dir/&#39;</span>
+<span class="c1"># Create this directory if it doesn&#39;t exist</span>
 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>In advance of the following processing and visualisation part we set a directory where to save the figures. Default option is to save figures in the folder:</p>
-<div class="cell docutils container">
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FIGPATH</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FIGPATH</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="c1"># Please ensure that datadir is a location where you have write permissions</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+</section>
+<section id="explore-data">
+<h2>Explore data<a class="headerlink" href="#explore-data" title="Permalink to this heading">#</a></h2>
+<p>The CLARA-A3 dataset is the successor of CLARA-A2.1 and comprises almost 44 years (latest status: 09/2023) of continuous observations of radiation and clouds from space, thereby monitoring their spatial and temporal variability on Earth. Earth Radiation Budget parameters were not included in CLARA-A2.1</p>
+<p>The CLARA-A3 radiation dataset contains all surface and Earth (top-of-the-atmosphere) fluxes, and thus, it enables studies of the full earth radiation budget.</p>
+<p>Please find further information about the datasets as well as the data in the Climate Data Store sections “Overview”, “Download data” and “Documentation”:</p>
+<ul class="simple">
+<li><p>Earth Radiation: Budget <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-earth-radiation-budget?tab=overview</a></p></li>
+<li><p>Surface Radiation Budget: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-surface-radiation-budget?tab=overview</a></p></li>
+<li><p>Cloud Properties: <a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-cloud-properties?tab=overview">https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-cloud-properties?tab=overview</a></p></li>
+</ul>
 <section id="search-for-data">
-<h3>Search for data<a class="headerlink" href="#search-for-data" title="Link to this heading">#</a></h3>
+<h3>Search for data<a class="headerlink" href="#search-for-data" title="Permalink to this heading">#</a></h3>
 <p>To search for data, visit the <a class="reference external" href="https://cds.climate.copernicus.eu/">CDS website</a>.
 Here we can search for “Earth Radiation Budget” or simply “ERB” data using the search bar. The data we need for this use case is the <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-earth-radiation-budget?tab=overview">Earth’s radiation budget from 1979 to present derived from satellite observations</a>.
 The Earth Radiation Budget (ERB) comprises the quantification of the reflected radiation from the Sun and the emitted longwave radiation from  Earth. This catalogue entry comprises data from a number of sources.</p>
 <p>Once you reached the landing page, feel free to have a look at the documentation and information provided.</p>
 <p>The data can be found in the “Download data”-tab with a form to select certain variables, years etc. For our use case we select as follows:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Parameters of data to download<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Product family: <code class="docutils literal notranslate"><span class="pre">CLARA-A3</span> <span class="pre">(CM</span> <span class="pre">SAF</span> <span class="pre">cLoud,</span> <span class="pre">Albedo</span> <span class="pre">and</span> <span class="pre">surface</span> <span class="pre">RAdiation</span> <span class="pre">dataset</span> <span class="pre">from</span> <span class="pre">AVHRR</span> <span class="pre">data)</span></code></p></li>
-<li><p>Origin: <code class="docutils literal notranslate"><span class="pre">EUMETSAT</span> <span class="pre">(European</span> <span class="pre">Organisation</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">Exploitation</span> <span class="pre">of</span> <span class="pre">Meteorological</span> <span class="pre">Satellites)</span></code></p></li>
-<li><p>Variable: <code class="docutils literal notranslate"><span class="pre">Outgoing</span> <span class="pre">longwave</span> <span class="pre">radiation</span> <span class="pre">(Outgoing</span> <span class="pre">LW)</span></code>, <code class="docutils literal notranslate"><span class="pre">Outgoing</span> <span class="pre">shortwave</span> <span class="pre">radiation</span> <span class="pre">(Outgoing</span> <span class="pre">SW)</span></code></p></li>
-<li><p>Climate data record type: <code class="docutils literal notranslate"><span class="pre">Thematic</span> <span class="pre">Climate</span> <span class="pre">Data</span> <span class="pre">Record</span> <span class="pre">(TCDR)</span></code></p></li>
-<li><p>Time aggregation: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">mean</span></code></p></li>
-<li><p>Year: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">year</span> <span class="pre">from</span> <span class="pre">1979-2020</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
-<li><p>Month: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">month</span> <span class="pre">from</span> <span class="pre">January</span> <span class="pre">to</span> <span class="pre">December</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
-<li><p>Geographical area: <code class="docutils literal notranslate"><span class="pre">Whole</span> <span class="pre">available</span> <span class="pre">region</span></code></p></li>
-<li><p>Format: <code class="docutils literal notranslate"><span class="pre">Zip</span> <span class="pre">file</span> <span class="pre">(.zip)</span></code></p></li>
+<li><p class="sd-card-text">Product family: <code class="docutils literal notranslate"><span class="pre">CLARA-A3</span> <span class="pre">(CM</span> <span class="pre">SAF</span> <span class="pre">cLoud,</span> <span class="pre">Albedo</span> <span class="pre">and</span> <span class="pre">surface</span> <span class="pre">RAdiation</span> <span class="pre">dataset</span> <span class="pre">from</span> <span class="pre">AVHRR</span> <span class="pre">data)</span></code></p></li>
+<li><p class="sd-card-text">Origin: <code class="docutils literal notranslate"><span class="pre">EUMETSAT</span> <span class="pre">(European</span> <span class="pre">Organisation</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">Exploitation</span> <span class="pre">of</span> <span class="pre">Meteorological</span> <span class="pre">Satellites)</span></code></p></li>
+<li><p class="sd-card-text">Variable: <code class="docutils literal notranslate"><span class="pre">Outgoing</span> <span class="pre">longwave</span> <span class="pre">radiation</span> <span class="pre">(Outgoing</span> <span class="pre">LW)</span></code>, <code class="docutils literal notranslate"><span class="pre">Outgoing</span> <span class="pre">shortwave</span> <span class="pre">radiation</span> <span class="pre">(Outgoing</span> <span class="pre">SW)</span></code></p></li>
+<li><p class="sd-card-text">Climate data record type: <code class="docutils literal notranslate"><span class="pre">Thematic</span> <span class="pre">Climate</span> <span class="pre">Data</span> <span class="pre">Record</span> <span class="pre">(TCDR)</span></code></p></li>
+<li><p class="sd-card-text">Time aggregation: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">mean</span></code></p></li>
+<li><p class="sd-card-text">Year: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">year</span> <span class="pre">from</span> <span class="pre">1979-2020</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
+<li><p class="sd-card-text">Month: <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">month</span> <span class="pre">from</span> <span class="pre">January</span> <span class="pre">to</span> <span class="pre">December</span> <span class="pre">(shortcut</span> <span class="pre">with</span> <span class="pre">&quot;Select</span> <span class="pre">all&quot;</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">bottom</span> <span class="pre">right)</span></code></p></li>
+<li><p class="sd-card-text">Geographical area: <code class="docutils literal notranslate"><span class="pre">Whole</span> <span class="pre">available</span> <span class="pre">region</span></code></p></li>
+<li><p class="sd-card-text">Format: <code class="docutils literal notranslate"><span class="pre">Zip</span> <span class="pre">file</span> <span class="pre">(.zip)</span></code></p></li>
 </ul>
-<p>Please make sure all <strong>Terms of use</strong> are accepted. This can be done at the bottom of the <strong>Download data</strong> tab.</p>
-<p>At the bottom left of the page, click on <strong>Show API request</strong> and copy &amp; paste the text into the Jupyter notebook. The first line can be skipped since it is already part of the <strong>Import libraries</strong> section.</p>
-<p>Note: The download may take a few minutes. Feel free to have a look at the various information on the Earth Radiation Budget page in the CDS or already get familiar with the next steps.</p>
-<div class="cell docutils container">
+</div>
+</details><p>At the end of the download form, select “Show API request”. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below). Having copied the API request into the cell below, running this will retrieve and download the data you requested into your local directory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please remember to accept the terms and conditions of the dataset, at the bottom of the CDS download form!</p>
+</div>
+</section>
+<section id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this heading">#</a></h3>
+<p>With the API request copied into the cells below, running these cells will retrieve and download the data you requested into your local directory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The download may take a few minutes. Feel free to have a look at the various information on the Earth Radiation Budget page in the CDS or already get familiar with the next steps.</p>
+</div>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 
 <span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
     <span class="s1">&#39;satellite-earth-radiation-budget&#39;</span><span class="p">,</span>
@@ -712,7 +660,7 @@ The Earth Radiation Budget (ERB) comprises the quantification of the reflected r
 <p>With the zip-file unziped and files at the right place we can start reading and processing the data.</p>
 </section>
 <section id="load-dataset">
-<h3>Load dataset<a class="headerlink" href="#load-dataset" title="Link to this heading">#</a></h3>
+<h3>Load dataset<a class="headerlink" href="#load-dataset" title="Permalink to this heading">#</a></h3>
 <p>The following line starting with “file” considers only files in the given directory starting the “OLRmm”, “RSFmm” and ending with “.nc” and creates a list with all matching files. The “*” means “everything” and takes every file into account. This is quite useful since year and month are part of the file names.</p>
 <p>The second line reads the defined file list with the xarray function “open_mfdataset” (mf - multiple file) and concatenates them according to the time dimension.</p>
 <div class="cell docutils container">
@@ -1990,10 +1938,10 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
 </section>
 </section>
 <section id="use-case-1-the-mean-global-outgoing-longwave-radiation-olr-radiation-distribution">
-<h2>Use case 1: The mean global Outgoing Longwave Radiation (OLR) radiation distribution<a class="headerlink" href="#use-case-1-the-mean-global-outgoing-longwave-radiation-olr-radiation-distribution" title="Link to this heading">#</a></h2>
+<h2>Use case 1: the mean global Outgoing Longwave Radiation (OLR) radiation distribution<a class="headerlink" href="#use-case-1-the-mean-global-outgoing-longwave-radiation-olr-radiation-distribution" title="Permalink to this heading">#</a></h2>
 <p>Use Case #1 aims to give an overview about the OLR distribution. We do that by plotting the global mean OLR from the CLARA-A3 dataset. Please note that we need to open the dataset to be able to execute this usecase, as described in the previous “Load dataset” section.</p>
 <section id="calculation-of-the-temporal-average-of-olr">
-<h3>Calculation of the temporal average of OLR<a class="headerlink" href="#calculation-of-the-temporal-average-of-olr" title="Link to this heading">#</a></h3>
+<h3>Calculation of the temporal average of OLR<a class="headerlink" href="#calculation-of-the-temporal-average-of-olr" title="Permalink to this heading">#</a></h3>
 <p>We calculate the temporal average with the function np.nanmean. np is common alias for numpy and a library for mathmatical working with arrays. nanmean averages the data and ignores nan’s. This operation is applied to “dataset_olr” and the variable Outgoing Longwave Radiation or “LW_flux”. axis=0 averages over the first axis, which is “time” in this case. This leads to a two-dimensional result with an average over time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2011,7 +1959,7 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
 </div>
 </section>
 <section id="plot-of-the-temporal-average-of-olr">
-<h3>Plot of the temporal average of OLR<a class="headerlink" href="#plot-of-the-temporal-average-of-olr" title="Link to this heading">#</a></h3>
+<h3>Plot of the temporal average of OLR<a class="headerlink" href="#plot-of-the-temporal-average-of-olr" title="Permalink to this heading">#</a></h3>
 <p>With the calculation done the data is ready for a plot. Please find the plot and settings in the next section.</p>
 <p>Some further notes:</p>
 <ul class="simple">
@@ -2064,10 +2012,10 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
 </section>
 </section>
 <section id="use-case-2-the-mean-global-reflected-solar-flux-rsf-distribution">
-<h2>Use case 2: The mean global Reflected Solar Flux (RSF) distribution<a class="headerlink" href="#use-case-2-the-mean-global-reflected-solar-flux-rsf-distribution" title="Link to this heading">#</a></h2>
+<h2>Use case 2: the mean global Reflected Solar Flux (RSF) distribution<a class="headerlink" href="#use-case-2-the-mean-global-reflected-solar-flux-rsf-distribution" title="Permalink to this heading">#</a></h2>
 <p>Use Case #2 aims to give an overview about the RSF distribution. We do that by plotting the global mean RSF from the CLARA-A3 dataset. Please note that we need to open the dataset to be able to execute this usecase, as described in the previous “Load dataset” section.</p>
 <section id="calculation-of-the-temporal-average-of-rsf">
-<h3>Calculation of the temporal average of RSF<a class="headerlink" href="#calculation-of-the-temporal-average-of-rsf" title="Link to this heading">#</a></h3>
+<h3>Calculation of the temporal average of RSF<a class="headerlink" href="#calculation-of-the-temporal-average-of-rsf" title="Permalink to this heading">#</a></h3>
 <p>We calculate the temporal average with the function np.nanmean. np is common alias for numpy and a library for mathmatical working with arrays. nanmean averages the data and ignores nan’s. This operation is applied to “dataset_olr” and the variable Reflected Solar Flux or “SW_flux”. axis=0 averages over the first axis, which is “time” in this case. This leads to a two-dimensional result with an average over time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2085,7 +2033,7 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
 </div>
 </section>
 <section id="plot-of-the-temporal-average-of-rsf">
-<h3>Plot of the temporal average of RSF<a class="headerlink" href="#plot-of-the-temporal-average-of-rsf" title="Link to this heading">#</a></h3>
+<h3>Plot of the temporal average of RSF<a class="headerlink" href="#plot-of-the-temporal-average-of-rsf" title="Permalink to this heading">#</a></h3>
 <p>With the calculation done the data is ready for a plot. Please find the plot and settings in the next section.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2133,7 +2081,7 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
 </section>
 </section>
 <section id="get-more-information-about-earth-radiation-budget">
-<h2>Get more information about Earth Radiation Budget<a class="headerlink" href="#get-more-information-about-earth-radiation-budget" title="Link to this heading">#</a></h2>
+<h2>Get more information about Earth radiation budget<a class="headerlink" href="#get-more-information-about-earth-radiation-budget" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-earth-radiation-budget?tab=overview">About Earth’s radiation budget from 1979 to present derived from satellite observations</a></p></li>
 <li><p><a class="reference external" href="https://cds.climate.copernicus.eu/">About the Climate Data Store</a></p></li>
@@ -2166,10 +2114,11 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="erb-outgoing-longwave-radiation.html"
@@ -2185,11 +2134,14 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analysis of the Earth’s Radiation Budget using the CERES product</p>
+        <p class="prev-next-title">Analysis of the Earth’s radiation budget using the CERES product</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -2198,36 +2150,36 @@ Please follow the citation guidelines given at https://doi.org/10.5676/EUM_SAF_C
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description">Dataset description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cdsapi-and-your-credentials">Set up CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-data-acquisition">Prerequisites and data acquisition</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">Import libraries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data-using-cds-api">Download data using CDS API</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cds-api-credentials">Set up CDS API credentials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-data">Search for data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load dataset</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-outgoing-longwave-radiation-olr-radiation-distribution">Use case 1: The mean global Outgoing Longwave Radiation (OLR) radiation distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-the-mean-global-outgoing-longwave-radiation-olr-radiation-distribution">Use case 1: the mean global Outgoing Longwave Radiation (OLR) radiation distribution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-temporal-average-of-olr">Calculation of the temporal average of OLR</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-temporal-average-of-olr">Plot of the temporal average of OLR</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-the-mean-global-reflected-solar-flux-rsf-distribution">Use case 2: The mean global Reflected Solar Flux (RSF) distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-the-mean-global-reflected-solar-flux-rsf-distribution">Use case 2: the mean global Reflected Solar Flux (RSF) distribution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-temporal-average-of-rsf">Calculation of the temporal average of RSF</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-of-the-temporal-average-of-rsf">Plot of the temporal average of RSF</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-earth-radiation-budget">Get more information about Earth Radiation Budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-more-information-about-earth-radiation-budget">Get more information about Earth radiation budget</a></li>
 </ul>
   </nav></div>
 
@@ -2249,10 +2201,9 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -2265,6 +2216,10 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <script src="_static/custom.js"></script>
+
+</div>
   </div>
   
 </div>
@@ -2276,8 +2231,8 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

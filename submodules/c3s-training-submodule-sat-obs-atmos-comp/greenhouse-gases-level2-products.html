@@ -1,67 +1,73 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example? &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+    <title>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example &#8212; Copernicus Climate Change Service (C3S) training book</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How to access, read and use satellite XCO2 and XCH4 Level 3 data products" href="greenhouse-gases-level3-products.html" />
-    <link rel="prev" title="C3S Satellite-Observations (ECV) - Atmospheric Composition Tutorial" href="intro.html" />
+    <link rel="next" title="Exploring gridded data on aerosol properties available on C3S" href="aerosol-single-sensor-demonstrator.html" />
+    <link rel="prev" title="Exploring an ozone product available through the Climate Data Store (CDS)" href="total-ozone-columns.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -71,23 +77,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,22 +112,17 @@
 </form></div>
   </div>
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-<aside class="bd-header-announcement" aria-label="Announcement">
-  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
-</aside>
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️This is a TEST version, this is not an official website⚠️</div>
+  </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,9 +137,6 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -151,28 +145,16 @@
   
   
   
-  
-    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) training book</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Copernicus Climate Change Service (C3S) Data Tutorials
+                    Copernicus Climate Change Service (C3S) data tutorials
                 </a>
             </li>
         </ul>
@@ -182,88 +164,62 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../observations/intro.html">Observations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite observations - atmospheric physics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing longwave radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total solar irradiance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Satellite observations - atmospheric composition</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="total-ozone-columns.html">Total ozone columns</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Greenhouse gas level 2 products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aerosol-single-sensor-demonstrator.html">Exploration of the aerosol properties products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aerosol-multi-sensor-record.html">A multi-sensor climate data record of aerosol properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite observations - hydrology and cryosphere</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance.html">Ice sheet mass balance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature record</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal forecasts</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal forecast anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal forecast verification</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate projections</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global climate projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional climate projections (CORDEX)</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate indicators</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite Observations - Atmospheric Physic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total Solar Irradiance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</li>
 </ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Satellite Observations - Atmospheric Composition</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="total-ozone-columns.html">Total Ozone Columns</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-ocean/intro.html">Satellite Observations - Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other learning resources 📚</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other_learning_resources.html">Useful links to other ECMWF learning resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
-</ul>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/help-and-support">Help &amp; support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S learning services</a></li>
 </ul>
 
     </div>
@@ -279,7 +235,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -288,14 +244,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -318,16 +274,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/ecmwf-training/C3S-training/main?urlpath=lab/tree/submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+    <img src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +322,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -448,28 +404,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -480,7 +434,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</h1>
+    <h1>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -490,28 +444,32 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-needed-to-use-this-jupyter-notebook">What is needed to use this Jupyter Notebook?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-data-via-cds-api-cdsapi">How to access data via CDS API (cdsapi)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cds-api-cdsapi">Data download via CDS API (cdsapi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cdsapi-and-your-credentials">Set up CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-the-two-data-files-have-already-been-downloaded">Check if the two data files have already been downloaded</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-they-haven-t-download-the-data">If they haven’t, download the data</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-data">Inspect data</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-default-plot-style-parameters">Setting default plot style parameters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-preparatory-work-including-setting-the-data-directory">Other preparatory work including setting the data directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-user-input">Initial user input:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-the-two-data-files-have-already-been-downloaded">Check if the two data files have already been downloaded:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cdsapi-if-required">Data download via cdsapi (if required):</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-two-downloaded-data-files">Reading the two downloaded data files:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-1-the-latitudinal-distribution-of-xco2">Application 1: the latitudinal distribution of XCO2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-latitude-bands">Definition of latitude bands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-xco2-vs-latitude-for-the-two-selected-days">Computing XCO2 vs latitude for the two selected days</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-1-the-latitudinal-distribution-of-xco2">Application 1: The latitudinal distribution of XCO2</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-latitude-bands">Definition of latitude bands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-xco2-vs-latitude-for-the-two-selected-days">Computing XCO2 vs latitude for the two selected days</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-xco2-vs-latitude-plot">Generation of XCO2 vs latitude plot:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-xco2-vs-latitude-plot">Generation of XCO2 vs latitude plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-2-showing-daily-data-on-a-global-map">Application 2: showing daily data on a global map</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-2-showing-daily-data-on-a-global-map">Application 2: Showing daily data on a global map</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -520,28 +478,44 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <p>Michael Buchwitz, 20-Nov-2024</p>
+<p><img alt="logo" src="https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="how-to-access-and-use-a-satellite-derived-ghg-level-2-data-product-using-xco2-emma-as-an-example">
-<h1>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?<a class="headerlink" href="#how-to-access-and-use-a-satellite-derived-ghg-level-2-data-product-using-xco2-emma-as-an-example" title="Link to this heading">#</a></h1>
-<p>This is a Jupyter Notebook (JN) illustrating how to access and use a satellite-derived Greenhouse Gas (GHG) atmospheric carbon dioxide (CO2) Level 2 data product as generated via the Copernicus Climate Change Service (C3S) and made available via the Copernicus Climate Data Store (CDS, <a class="reference external" href="https://cds.climate.copernicus.eu/">https://cds.climate.copernicus.eu/</a>).</p>
-<p>Here we illustrate the use of a GHG Level 2 (L2) product using product XCO2_EMMA as an example. A CO2 L2 data product contains CO2 information for individual satellite ground pixels (also called footprints or soundings). XCO2 is the column-averaged dry-air mole fraction of atmospheric CO2 in parts per million (ppm). EMMA is the name of the multi-satellite XCO2 (and XCH4) merging algorithm developed to generate product XCO2_EMMA using as input individual Level 2 XCO2 products from different satellite sensors (here: SCIAMACHY/ENVISAT, GOSAT, GOSAT-2 and OCO-2; see, e.g., Reuter et al., <a class="reference external" href="https://amt.copernicus.org/articles/13/789/2020/">https://amt.copernicus.org/articles/13/789/2020/</a>, 2020).</p>
-<p>Within C3S also other L2 products had been generated and made available via the CDS. These products are (i) XCO2 from individual satellite sensors, (ii) XCH4 products, where XCH4 is the column-averaged dry-air mole fraction of CH4 in parts per billion (ppb), and (iii) mid tropospheric CO2 and CH4 mixing ratio products. Detailed information on all these products is available via the CDS. In addition to L2 products, also Level 3 (L3) products are available. A L3 product is based on a corresponding L2 product. A L3 product is  obtained by spatio-temporally averaging a corresponding L2 product. How to access and use a L3 GHG product is shown in a separate Jupyter Notebook (JN).</p>
-<p>For this JN we use XCO2_EMMA version 4.5, which covers the period 2003 - 2022.</p>
+<h1>How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example<a class="headerlink" href="#how-to-access-and-use-a-satellite-derived-ghg-level-2-data-product-using-xco2-emma-as-an-example" title="Permalink to this heading">#</a></h1>
+<p><strong>This notebook can be run on free online platforms, such as Binder, Kaggle and Colab, or they can be accessed from GitHub. The links to run this notebook in these environments are provided here, but please note they are not supported by ECMWF.</strong></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/ecmwf-training/c3s-training-submodule-sat-obs-atmos-comp/main?labpath=greenhouse-gases-level2-products.ipynb"><img alt="binder" src="https://mybinder.org/badge.svg" /></a>
+<a class="reference external" href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-comp/blob/main/greenhouse-gases-level2-products.ipynb"><img alt="kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a>
+<a class="reference external" href="https://colab.research.google.com/github/ecmwf-training/c3s-training-submodule-sat-obs-atmos-comp/blob/main/greenhouse-gases-level2-products.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a class="reference external" href="https://github.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-comp/blob/main/greenhouse-gases-level2-products.ipynb"><img alt="github" src="https://img.shields.io/badge/Open%20in-GitHub-black?logo=github" /></a></p>
+<section id="learning-objectives">
+<h2>Learning objectives 🎯<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>This Jupyter Notebook illustrates how to access and use a satellite-derived Greenhouse Gas (GHG) atmospheric carbon dioxide (CO2) Level 2 data product as generated via the Copernicus Climate Change Service (C3S) and made available via the Copernicus Climate Data Store (CDS, <a class="reference external" href="https://cds.climate.copernicus.eu/">https://cds.climate.copernicus.eu/</a>).</p>
 <p>This JN shows how to download a data product from the CDS, explains how to access the main variables and how to use them for interesting applications. We focus on two use cases related to the spatial and temporal variation of atmospheric CO2 concentrations and their observational coverage.</p>
 <p>The first use case is related to the latitudial distribution of XCO2. We show how XCO2 averages and standard devations per latitude band can be computed and plotted. For this we use two days of observations, one in April and one in September. We explain that the observed latitudinal distributions are closely related to the seasonal cycle of CO2 due to uptake and release of CO2 by vegetation.</p>
 <p>For the second use case we show how a map of the spatial distribution of the individual ground pixel XCO2 observations can be generated. We show that the spatial coverage of the daily observations is very sparse due to strict quality filtering of the individual XCO2 retrievals. Most applications therefore require appropriate spatio-temporal averaging (see, for example, the use of C3S GHG XCO2 and XCH4 data for assessments such as Copernicus European State of the Climate (ESOTC) as shown on the GHG concentration climate indicators website <a class="reference external" href="https://climate.copernicus.eu/climate-indicators/greenhouse-gas-concentrations">https://climate.copernicus.eu/climate-indicators/greenhouse-gas-concentrations</a>).</p>
-<section id="what-is-needed-to-use-this-jupyter-notebook">
-<h2>What is needed to use this Jupyter Notebook?<a class="headerlink" href="#what-is-needed-to-use-this-jupyter-notebook" title="Link to this heading">#</a></h2>
-<p>In the following, Phython 3 code is provided to read and plot the satellite data.</p>
-<p>It is assumed that Python and Jupyter Notebook (JN) is installed on your computer, e.g., using the Anaconda distribution
-(<a class="reference external" href="https://www.anaconda.com/products/distribution">https://www.anaconda.com/products/distribution</a>).</p>
 </section>
-<section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
-<p>We have to import several modules to run this JN.</p>
-<div class="cell docutils container">
+<section id="prepare-your-environment">
+<h2>Prepare your environment<a class="headerlink" href="#prepare-your-environment" title="Permalink to this heading">#</a></h2>
+<section id="set-up-cdsapi-and-your-credentials">
+<h3>Set up CDSAPI and your credentials<a class="headerlink" href="#set-up-cdsapi-and-your-credentials" title="Permalink to this heading">#</a></h3>
+<p>The code below will ensure that the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> package is installed. If you have not setup your <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code> file with your credenials, you can replace <code class="docutils literal notranslate"><span class="pre">None</span></code> with your credentials that can be found on the <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">how to api</a> page (you will need to log in to see your credentials).</p>
+<div class="cell tag_api docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q cdsapi
+<span class="c1"># If you have already setup your .cdsapirc file you can leave this as None</span>
+<span class="n">cdsapi_key</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">cdsapi_url</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="install-and-import-libraries">
+<h3>(Install and) Import libraries<a class="headerlink" href="#install-and-import-libraries" title="Permalink to this heading">#</a></h3>
+<p>We will be working with data in NetCDF format. To best handle this data we will use libraries for working with multidimensional arrays, in particular Xarray. We will also need libraries for plotting and viewing data, in this case we will use Matplotlib and Cartopy.</p>
+<div class="cell tag_import docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries needed for the Jupyter notebook</span>
 <span class="c1"># Note that lines starting with &quot;#&quot; are comment lines</span>
@@ -581,157 +555,62 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="how-to-access-data-via-cds-api-cdsapi">
-<h2>How to access data via CDS API (cdsapi)<a class="headerlink" href="#how-to-access-data-via-cds-api-cdsapi" title="Link to this heading">#</a></h2>
-<p>The C3S data products can be downloaded from the Copernicus Climate Data Store (CDS) using the cdsapi, i.e.,
-the CDS Application Programming Interface (API). How to use the cdsapi is described here.</p>
-<p>First, goto the CDS website:
-<a class="reference external" href="https://cds.climate.copernicus.eu/">https://cds.climate.copernicus.eu/</a></p>
-<p>Login (if not done already, please register using “Create new account”).</p>
-<p>To use the cdsapi you need to set two variables, URL and KEY:</p>
-<div class="cell docutils container">
+<section id="specify-data-directory">
+<h3>Specify data directory<a class="headerlink" href="#specify-data-directory" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span><span class="o">=</span><span class="s1">&#39;https://cds.climate.copernicus.eu/api&#39;</span>
-
-<span class="c1"># Replace this KEY by your personnal KEY:</span>
-
-<span class="n">KEY</span><span class="o">=</span><span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* URL: &#39;</span><span class="p">,</span> <span class="n">URL</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* KEY: &#39;</span><span class="p">,</span> <span class="n">KEY</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* URL:  https://cds.climate.copernicus.eu/api
-* KEY:  a8764fcc-d86b-4791-81c7-66c40885a25a
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Directory to store data</span>
+<span class="c1"># Please ensure that data_dir is a location where you have write permissions</span>
+<span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data_dir/&#39;</span>
+<span class="c1"># Create this directory if it doesn&#39;t exist</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>KEY ‘XXX….XXX’ is only a placeholder and needs to be replaced by your personal KEY.</p>
-<p>To get your personnal KEY, please login to the CDS ebsite (see above) and then visit <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">https://cds.climate.copernicus.eu/how-to-api</a>.</p>
-<p>KEY will appear on the screen. Use that KEY to replace the placeholder key shown above.</p>
-<p>In the following we show how to download the two (daily) data files, which we need for this JN.</p>
 </section>
-<section id="data-download-via-cds-api-cdsapi">
-<h2>Data download via CDS API (cdsapi)<a class="headerlink" href="#data-download-via-cds-api-cdsapi" title="Link to this heading">#</a></h2>
-<p>C3S GHG data products can be obtained from the CDS via the CDS user interface.</p>
-<p>For satellite-derived atmospheric CO2 data products please visit this website:
-<a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-carbon-dioxide?tab=overview">https://cds.climate.copernicus.eu/datasets/satellite-carbon-dioxide?tab=overview</a>.</p>
-<p>Detailed information on all products is provided via the “Documentation” tab.</p>
-<p>For data download visit the “Download” tab.</p>
-<p>For this JN we want to access data product XCO2_EMMA, version 4.5, for these two days:</p>
+</section>
+<section id="explore-data">
+<h2>Explore data<a class="headerlink" href="#explore-data" title="Permalink to this heading">#</a></h2>
+<p>Here we illustrate the use of a GHG Level 2 (L2) product using product XCO2_EMMA as an example. A CO2 L2 data product contains CO2 information for individual satellite ground pixels (also called footprints or soundings). XCO2 is the column-averaged dry-air mole fraction of atmospheric CO2 in parts per million (ppm). EMMA is the name of the multi-satellite XCO2 (and XCH4) merging algorithm developed to generate product XCO2_EMMA using as input individual Level 2 XCO2 products from different satellite sensors (here: SCIAMACHY/ENVISAT, GOSAT, GOSAT-2 and OCO-2; see, e.g., Reuter et al., <a class="reference external" href="https://amt.copernicus.org/articles/13/789/2020/">https://amt.copernicus.org/articles/13/789/2020/</a>, 2020). The satellite-derived atmospheric CO2 data products can be found <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/satellite-carbon-dioxide?tab=overview">here</a>.</p>
+<p>Within C3S also other L2 products had been generated and made available via the CDS. These products are (i) XCO2 from individual satellite sensors, (ii) XCH4 products, where XCH4 is the column-averaged dry-air mole fraction of CH4 in parts per billion (ppb), and (iii) mid tropospheric CO2 and CH4 mixing ratio products. Detailed information on all these products is available via the CDS. In addition to L2 products, also Level 3 (L3) products are available. A L3 product is based on a corresponding L2 product. A L3 product is  obtained by spatio-temporally averaging a corresponding L2 product. How to access and use a L3 GHG product is shown in a separate Jupyter Notebook (JN).</p>
+<p>For this JN we use XCO2_EMMA version 4.5, which covers the period 2003 - 2022.</p>
+<section id="search-for-the-data">
+<h3>Search for the data<a class="headerlink" href="#search-for-the-data" title="Permalink to this heading">#</a></h3>
+<p>Having selected the correct dataset, we now need to specify what product type, variables, temporal and geographic coverage we are interested in. For this JN we want to access data product XCO2_EMMA, version 4.5, for these two days:</p>
 <ul class="simple">
 <li><p>File 1: 15-April-2020</p></li>
 <li><p>File 2: 15-September-2020</p></li>
 </ul>
-<p>In order to get these data please select the following on the “Download” tab:</p>
+<p>These parameters can all be selected in the <strong>“Download data”</strong> tab. In this tab a form appears in which we will select the following parameters to download:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Parameters of data to download<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Processing level: Level 2</p></li>
-<li><p>Variable: Column-average dry-air mole fraction of atmospheric Carbon Dioxide (XCO2) and related variables</p></li>
-<li><p>Sensor and algorithm: MERGED and EMMA</p></li>
-<li><p>Year: 2020</p></li>
-<li><p>Month: April and September</p></li>
-<li><p>Day: 15</p></li>
-<li><p>Version: 4.5</p></li>
+<li><p class="sd-card-text">Processing level: <code class="docutils literal notranslate"><span class="pre">Level</span> <span class="pre">2</span></code></p></li>
+<li><p class="sd-card-text">Variable: <code class="docutils literal notranslate"><span class="pre">Column-average</span> <span class="pre">dry-air</span> <span class="pre">mole</span> <span class="pre">fraction</span> <span class="pre">of</span> <span class="pre">atmospheric</span> <span class="pre">Carbon</span> <span class="pre">Dioxide</span> <span class="pre">(XCO2)</span> <span class="pre">and</span> <span class="pre">related</span> <span class="pre">variables</span></code></p></li>
+<li><p class="sd-card-text">Sensor and algorithm: <code class="docutils literal notranslate"><span class="pre">MERGED</span> <span class="pre">and</span> <span class="pre">EMMA</span></code></p></li>
+<li><p class="sd-card-text">Year: <code class="docutils literal notranslate"><span class="pre">2020</span></code></p></li>
+<li><p class="sd-card-text">Month: <code class="docutils literal notranslate"><span class="pre">April</span></code> and <code class="docutils literal notranslate"><span class="pre">September</span></code></p></li>
+<li><p class="sd-card-text">Day: <code class="docutils literal notranslate"><span class="pre">15</span></code></p></li>
+<li><p class="sd-card-text">Version: <code class="docutils literal notranslate"><span class="pre">4.5</span></code></p></li>
 </ul>
-<p>Finally, click on:</p>
-<ul class="simple">
-<li><p>Show API request code</p></li>
-</ul>
-<p>The following Python code will appear in your browser:</p>
-<p>import cdsapi</p>
-<p>dataset = “satellite-carbon-dioxide”</p>
-<p>request = {</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;processing_level&quot;: [&quot;level_2&quot;],
-
-&quot;variable&quot;: &quot;xco2&quot;,
-
-&quot;sensor_and_algorithm&quot;: &quot;merged_emma&quot;,
-
-&quot;year&quot;: [&quot;2020&quot;],
-
-&quot;month&quot;: [&quot;04&quot;, &quot;09&quot;],
-
-&quot;day&quot;: [&quot;15&quot;],
-
-&quot;version&quot;: [&quot;4_5&quot;]
-</pre></div>
 </div>
-<p>}</p>
-<p>client = cdsapi.Client()</p>
-<p>client.retrieve(dataset, request).download()</p>
-<p>We copied this code into this JN to download the data, as shown below.</p>
-</section>
-<section id="setting-default-plot-style-parameters">
-<h2>Setting default plot style parameters<a class="headerlink" href="#setting-default-plot-style-parameters" title="Link to this heading">#</a></h2>
-<p>Here we set some parameters which determine the style of the generated figures.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The following style parameters will be used for all plots in this use case.</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">350</span>
-<span class="c1">#rcParams[&#39;font.family&#39;] = &#39;serif&#39;</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Arial&#39;</span>
-<span class="c1">#rcParams[&#39;font.serif&#39;] = mplt.rcParamsDefault[&#39;font.serif&#39;]</span>
-<span class="c1">#rcParams[&#39;mathtext.rm&#39;] = &#39;serif:light&#39;</span>
-<span class="c1">#rcParams[&#39;mathtext.it&#39;] = &#39;serif:italic&#39;</span>
-<span class="c1">#rcParams[&#39;mathtext.bf&#39;] = &#39;serif:bold&#39;</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;regular&#39;</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the x and y labelsize</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;legend&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>    <span class="c1"># fontsize of the legend</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>   <span class="c1"># fontsize of the figure title</span>
-
-<span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
-<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
-<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ... finished setting plot style parameters&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* ... finished setting plot style parameters
-</pre></div>
-</div>
-</div>
+</details><p>At the end of the download form, select <strong>“Show API request”</strong>. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below). Having copied the API request into the cell below, running this will retrieve and download the data you requested into your local directory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please remember to accept the terms and conditions of the dataset, at the bottom of the CDS download form!</p>
 </div>
 </section>
-<section id="other-preparatory-work-including-setting-the-data-directory">
-<h2>Other preparatory work including setting the data directory<a class="headerlink" href="#other-preparatory-work-including-setting-the-data-directory" title="Link to this heading">#</a></h2>
-<p>Data will be stored in sub-directory “data_dir”. If this directory does not exist, then it will be generated.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify local data directory for the downloads:</span>
-
-<span class="c1">#data_directory = &quot;./data_dir_tmp/&quot;   # Test only</span>
-<span class="n">data_directory</span> <span class="o">=</span> <span class="s2">&quot;data_dir&quot;</span>
-
-<span class="n">DATADIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">data_directory</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Generating: &#39;</span><span class="p">,</span> <span class="n">DATADIR</span><span class="p">)</span> 
-   <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* sub-directory exists: &#39;</span><span class="p">,</span> <span class="n">DATADIR</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Generating:  data_dir
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="initial-user-input">
-<h2>Initial user input:<a class="headerlink" href="#initial-user-input" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<section id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this heading">#</a></h3>
+<section id="check-if-the-two-data-files-have-already-been-downloaded">
+<h4>Check if the two data files have already been downloaded<a class="headerlink" href="#check-if-the-two-data-files-have-already-been-downloaded" title="Permalink to this heading">#</a></h4>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">product_id</span> <span class="o">=</span> <span class="s1">&#39;XCO2_EMMA&#39;</span>  <span class="c1"># keep</span>
 
@@ -755,11 +634,7 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 </div>
 </div>
-</section>
-<section id="check-if-the-two-data-files-have-already-been-downloaded">
-<h2>Check if the two data files have already been downloaded:<a class="headerlink" href="#check-if-the-two-data-files-have-already-been-downloaded" title="Link to this heading">#</a></h2>
-<p>Here we check if files 1 and 2 are already available:</p>
-<div class="cell docutils container">
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate corresponding time strings:</span>
 <span class="c1"># ... for the first day:</span>
@@ -810,10 +685,10 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 </div>
 </section>
-<section id="data-download-via-cdsapi-if-required">
-<h2>Data download via cdsapi (if required):<a class="headerlink" href="#data-download-via-cdsapi-if-required" title="Link to this heading">#</a></h2>
-<p>Here we show how to access the CDS using the cdsapi code generated as explained above:</p>
-<div class="cell docutils container">
+<section id="if-they-haven-t-download-the-data">
+<h4>If they haven’t, download the data<a class="headerlink" href="#if-they-haven-t-download-the-data" title="Permalink to this heading">#</a></h4>
+<p>With the API request copied into the cells below, running these cells will retrieve and download the data you requested into your local directory.</p>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">product_already_downloaded</span> <span class="o">==</span> <span class="s1">&#39;no&#39;</span><span class="p">:</span>
 
@@ -835,7 +710,7 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
          <span class="c1">#&quot;version&quot;: [&quot;4_5&quot;]</span>
          <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">product_version_str2</span><span class="p">]</span>
    <span class="p">}</span>
-   <span class="n">client</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+   <span class="n">client</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
    <span class="c1"># Generates download.zip file in current directory:</span>
    <span class="n">client</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;download.zip&#39;</span><span class="p">)</span>
    <span class="c1"># Unzip:</span>
@@ -874,8 +749,9 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 </div>
 </section>
-<section id="reading-the-two-downloaded-data-files">
-<h2>Reading the two downloaded data files:<a class="headerlink" href="#reading-the-two-downloaded-data-files" title="Link to this heading">#</a></h2>
+</section>
+<section id="inspect-data">
+<h3>Inspect data<a class="headerlink" href="#inspect-data" title="Permalink to this heading">#</a></h3>
 <p>Now we are reading the two data files:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -933,11 +809,49 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="application-1-the-latitudinal-distribution-of-xco2">
-<h1>Application 1: The latitudinal distribution of XCO2<a class="headerlink" href="#application-1-the-latitudinal-distribution-of-xco2" title="Link to this heading">#</a></h1>
+<section id="setting-default-plot-style-parameters">
+<h2>Setting default plot style parameters<a class="headerlink" href="#setting-default-plot-style-parameters" title="Permalink to this heading">#</a></h2>
+<p>Here we set some parameters which determine the style of the generated figures.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The following style parameters will be used for all plots in this use case.</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">350</span>
+<span class="c1">#rcParams[&#39;font.family&#39;] = &#39;serif&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Arial&#39;</span>
+<span class="c1">#rcParams[&#39;font.serif&#39;] = mplt.rcParamsDefault[&#39;font.serif&#39;]</span>
+<span class="c1">#rcParams[&#39;mathtext.rm&#39;] = &#39;serif:light&#39;</span>
+<span class="c1">#rcParams[&#39;mathtext.it&#39;] = &#39;serif:italic&#39;</span>
+<span class="c1">#rcParams[&#39;mathtext.bf&#39;] = &#39;serif:bold&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;regular&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>     <span class="c1"># fontsize of the x and y labelsize</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;legend&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>    <span class="c1"># fontsize of the legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>   <span class="c1"># fontsize of the figure title</span>
+
+<span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">mplt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* ... finished setting plot style parameters&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* ... finished setting plot style parameters
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="application-1-the-latitudinal-distribution-of-xco2">
+<h2>Application 1: the latitudinal distribution of XCO2<a class="headerlink" href="#application-1-the-latitudinal-distribution-of-xco2" title="Permalink to this heading">#</a></h2>
 <p>Here our intention is to plot XCO2 as a function of latitude. For this we first need to define the latitude bands.</p>
 <section id="definition-of-latitude-bands">
-<h2>Definition of latitude bands<a class="headerlink" href="#definition-of-latitude-bands" title="Link to this heading">#</a></h2>
+<h3>Definition of latitude bands<a class="headerlink" href="#definition-of-latitude-bands" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* Computing latitude band center coordinates&#39;</span><span class="p">)</span>
@@ -963,7 +877,7 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 </section>
 <section id="computing-xco2-vs-latitude-for-the-two-selected-days">
-<h2>Computing XCO2 vs latitude for the two selected days<a class="headerlink" href="#computing-xco2-vs-latitude-for-the-two-selected-days" title="Link to this heading">#</a></h2>
+<h3>Computing XCO2 vs latitude for the two selected days<a class="headerlink" href="#computing-xco2-vs-latitude-for-the-two-selected-days" title="Permalink to this heading">#</a></h3>
 <p>Now we compute for each latitude band the mean value and the standard deviation of XCO2 for both days:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1029,8 +943,9 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 </div>
 </section>
+</section>
 <section id="generation-of-xco2-vs-latitude-plot">
-<h2>Generation of XCO2 vs latitude plot:<a class="headerlink" href="#generation-of-xco2-vs-latitude-plot" title="Link to this heading">#</a></h2>
+<h2>Generation of XCO2 vs latitude plot<a class="headerlink" href="#generation-of-xco2-vs-latitude-plot" title="Permalink to this heading">#</a></h2>
 <p>Now we generate the desired plot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1104,9 +1019,8 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 <p>The figure above shows mean value of XCO2 as a function of latitude (thick lines) and the corresponding variation (computed as standard deviation of the individual XCO2 retrievals) within each latitude band (semi-transparent horizontal bars) for 15-April-2020 (red) and 15-September-2020 (black). As can be seen, during September XCO2 shows quite little variation with latitude, whereas in April XCO2 is significantly higher over the northern hemisphere (NH) compared to the southern hemisphere (SH). This is due to the seasonal cycle of CO2 primarily resulting from regular uptake and release of atmospheric CO2 by growing and decaying vegetation (photosythesis and respiration). Vegetation uptake reduces the CO2 concentration over the NH during the growing season (spring and summer) compared to the dormant season (winter). Over the SH there is less vegetation and therefore CO2 is relatively constant (apart from the general increase due to CO2 emissions by burning fossil fuels).</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="application-2-showing-daily-data-on-a-global-map">
-<h1>Application 2: Showing daily data on a global map<a class="headerlink" href="#application-2-showing-daily-data-on-a-global-map" title="Link to this heading">#</a></h1>
+<section id="application-2-showing-daily-data-on-a-global-map">
+<h2>Application 2: showing daily data on a global map<a class="headerlink" href="#application-2-showing-daily-data-on-a-global-map" title="Permalink to this heading">#</a></h2>
 <p>Here we show how to generate a plot showing the spatial distribution of the data. As can be seen, we use only three variables: XCO2, latitude and longitude. We define a small region in terms of latitude and longitude corner coordinates and select only data in this region for the plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1178,6 +1092,7 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 </div>
 <p>The figure above shows the locations of the individual ground pixel observations and their corresponding XCO2 value using all “good” retrievals over Europe and surrounding area for 15-Sept-2020. As can be seen, the spatial coverage of the daily data is very sparse. This is because only data of the highest quality are contained in the product file. Strict quality filtering is important to meet the demanding requirements on accuracy and precision for satellite XCO2 data observations.</p>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1204,30 +1119,34 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="total-ozone-columns.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C3S Satellite-Observations (ECV) - Atmospheric Composition Tutorial</p>
+        <p class="prev-next-title">Exploring an ozone product available through the Climate Data Store (CDS)</p>
       </div>
     </a>
     <a class="right-next"
-       href="greenhouse-gases-level3-products.html"
+       href="aerosol-single-sensor-demonstrator.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</p>
+        <p class="prev-next-title">Exploring gridded data on aerosol properties available on C3S</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -1236,35 +1155,38 @@ the CDS Application Programming Interface (API). How to use the cdsapi is descri
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-needed-to-use-this-jupyter-notebook">What is needed to use this Jupyter Notebook?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-data-via-cds-api-cdsapi">How to access data via CDS API (cdsapi)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cds-api-cdsapi">Data download via CDS API (cdsapi)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-cdsapi-and-your-credentials">Set up CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-the-two-data-files-have-already-been-downloaded">Check if the two data files have already been downloaded</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-they-haven-t-download-the-data">If they haven’t, download the data</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-data">Inspect data</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-default-plot-style-parameters">Setting default plot style parameters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-preparatory-work-including-setting-the-data-directory">Other preparatory work including setting the data directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-user-input">Initial user input:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-the-two-data-files-have-already-been-downloaded">Check if the two data files have already been downloaded:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download-via-cdsapi-if-required">Data download via cdsapi (if required):</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-two-downloaded-data-files">Reading the two downloaded data files:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-1-the-latitudinal-distribution-of-xco2">Application 1: the latitudinal distribution of XCO2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-latitude-bands">Definition of latitude bands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-xco2-vs-latitude-for-the-two-selected-days">Computing XCO2 vs latitude for the two selected days</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-1-the-latitudinal-distribution-of-xco2">Application 1: The latitudinal distribution of XCO2</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-latitude-bands">Definition of latitude bands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-xco2-vs-latitude-for-the-two-selected-days">Computing XCO2 vs latitude for the two selected days</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-xco2-vs-latitude-plot">Generation of XCO2 vs latitude plot:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-xco2-vs-latitude-plot">Generation of XCO2 vs latitude plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-2-showing-daily-data-on-a-global-map">Application 2: showing daily data on a global map</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#application-2-showing-daily-data-on-a-global-map">Application 2: Showing daily data on a global map</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
@@ -1285,10 +1207,9 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1301,6 +1222,10 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <script src="_static/custom.js"></script>
+
+</div>
   </div>
   
 </div>
@@ -1312,8 +1237,8 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

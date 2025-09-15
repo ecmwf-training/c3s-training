@@ -1,66 +1,72 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Seasonal Forecast Verification &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+    <title>Seasonal forecast verification &#8212; Copernicus Climate Change Service (C3S) training book</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-seasonal-forecast/sf-verification';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="C3S Climate Indices Tutorial" href="../c3s-training-submodule-climate-indices/intro.html" />
+    <link rel="next" title="Tutorials on C3S climate projections datasets" href="../c3s-training-submodule-projections/intro.html" />
     <link rel="prev" title="Seasonal Forecast Anomalies" href="sf-anomalies.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -71,23 +77,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,22 +112,17 @@
 </form></div>
   </div>
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-<aside class="bd-header-announcement" aria-label="Announcement">
-  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
-</aside>
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️This is a TEST version, this is not an official website⚠️</div>
+  </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,9 +137,6 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -151,28 +145,16 @@
   
   
   
-  
-    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) training book</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Copernicus Climate Change Service (C3S) Data Tutorials
+                    Copernicus Climate Change Service (C3S) data tutorials
                 </a>
             </li>
         </ul>
@@ -182,88 +164,62 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../observations/intro.html">Observations</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite observations - atmospheric physics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing longwave radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total solar irradiance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite observations - atmospheric composition</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total ozone columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">Greenhouse gas level 2 products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploration of the aerosol properties products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">A multi-sensor climate data record of aerosol properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite observations - hydrology and cryosphere</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance.html">Ice sheet mass balance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature record</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate Projections</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global Climate Projections (CMIP6)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Seasonal forecasts</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sf-anomalies.html">Seasonal forecast anomalies</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Seasonal forecast verification</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Seasonal Forecasts</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Seasonal Forecast Verification</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-projections/intro.html">Climate projections</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cmip6.html">Global climate projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-projections/projections-cordex.html">Regional climate projections (CORDEX)</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate indicators</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite Observations - Atmospheric Physic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total Solar Irradiance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite Observations - Atmospheric Composition</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total Ozone Columns</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-ocean/intro.html">Satellite Observations - Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other learning resources 📚</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other_learning_resources.html">Useful links to other ECMWF learning resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
-</ul>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/help-and-support">Help &amp; support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S learning services</a></li>
 </ul>
 
     </div>
@@ -279,7 +235,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -288,14 +244,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -318,16 +274,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-seasonal-forecast/sf-verification.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/ecmwf-training/C3S-training/main?urlpath=lab/tree/submodules/c3s-training-submodule-seasonal-forecast/sf-verification.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+    <img src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +322,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-seasonal-forecast/sf-verification.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-seasonal-forecast/sf-verification.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -448,28 +404,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -480,7 +434,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Seasonal Forecast Verification</h1>
+    <h1>Seasonal forecast verification</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -490,31 +444,35 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-this-tutorial">How to run this tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages">Load packages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-data-from-the-cds-using-cds-api">1. Request data from the CDS using CDS API</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-retrieve-hindcast-data">1a. Retrieve hindcast data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-retrieve-observations-data-era5">1b. Retrieve observations data (ERA5)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-cdsapi-and-your-credentials">Set up the CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-products-from-the-hindcast-data">2. Compute deterministic and probabilistic products from the hindcast data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-anomalies">2a. Anomalies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-probabilities-for-tercile-categories">2b. Probabilities for tercile categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-scores">3. Compute deterministic and probabilistic scores</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-read-observations-data-into-a-xr-dataset">3a. Read observations data into a xr.Dataset</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-compute-deterministic-scores">3b. Compute deterministic scores</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-compute-probabilistic-scores-for-tercile-categories">3c. Compute probabilistic scores for tercile categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-products-from-the-hindcast-data">Compute deterministic and probabilistic products from the hindcast data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anomalies">Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-for-tercile-categories">Probabilities for tercile categories</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-verification-plots">4. Visualize verification plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-scores">Compute deterministic and probabilistic scores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-observations-data-into-a-xr-dataset">Read observations data into a xr.Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-scores">Compute deterministic scores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-probabilistic-scores-for-tercile-categories">Compute probabilistic scores for tercile categories</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-verification-plots">Visualize verification plots</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-variables">Common variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-plot-titles-base-information">Create plot titles base information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-correlation">4a. Correlation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-ranked-probability-score-rps">4b. Ranked Probability Score (RPS)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-area-under-relative-operating-characteristic-roc-curve">4c. Area under Relative Operating Characteristic (ROC) curve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation">Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ranked-probability-score-rps">Ranked Probability Score (RPS)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area-under-relative-operating-characteristic-roc-curve">Area under Relative Operating Characteristic (ROC) curve</a></li>
 </ul>
 </li>
 </ul>
@@ -526,66 +484,55 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <p><img alt="logo" src="https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png" /></p>
 <br><section class="tex2jax_ignore mathjax_ignore" id="seasonal-forecast-verification">
-<h1>Seasonal Forecast Verification<a class="headerlink" href="#seasonal-forecast-verification" title="Link to this heading">#</a></h1>
-<section id="about">
-<h2>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h2>
-<p>This notebook provides a practical introduction on how to produce some verification metrics and scores for seasonal forecasts with data from the Copernicus Climate Change Service (C3S). C3S seasonal forecast products are based on data from several state-of-the-art seasonal prediction systems. In this notebook, as an example, we will focus on data produced by <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/Description+of+CMCC-CM2-v20191201+C3S+contribution">CMCC SPSv3.5 system</a>, which is one of the forecasting systems available through C3S.</p>
+<h1>Seasonal forecast verification<a class="headerlink" href="#seasonal-forecast-verification" title="Permalink to this heading">#</a></h1>
+<p><strong>This notebook can be run on free online platforms, such as Binder, Kaggle and Colab, or they can be accessed from GitHub. The links to run this notebook in these environments are provided here, but please note they are not supported by ECMWF.</strong></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/ecmwf-training/c3s-training-submodule-seasonal-forecast/main?labpath=sf-verification.ipynb"><img alt="binder" src="https://mybinder.org/badge.svg" /></a>
+<a class="reference external" href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-training/c3s-training-submodule-seasonal-forecast/blob/main/sf-verification.ipynb"><img alt="kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a>
+<a class="reference external" href="https://colab.research.google.com/github/ecmwf-training/c3s-training-submodule-seasonal-forecast/blob/main/sf-verification.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a class="reference external" href="https://github.com/ecmwf-training/c3s-training-submodule-seasonal-forecast/blob/main/sf-verification.ipynb"><img alt="github" src="https://img.shields.io/badge/Open%20in-GitHub-black?logo=github" /></a></p>
+<section id="learning-objectives">
+<h2>Learning objectives 🎯<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>This notebook provides a practical introduction on how to produce some verification metrics and scores for seasonal forecasts with data from the Copernicus Climate Change Service (C3S).</p>
 <p>The tutorial will demonstrate how to access retrospective forecast (hindcast) data of 2-metre temperature initialized in the period 1993-2016, with a forecast start date in the 1st of March. All these forecasts are 6 months long (from March to August). More details about the role of the hindcasts can be found in <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/Seasonal+forecasts+and+the+Copernicus+Climate+Change+Service">this Copernicus Knowledge Base article</a>. Observation data (ERA5 reanalysis) for the same reference period, 1993 to 2016, and the same months will also be obtained from the CDS. The tutorial will then show how to compute some deterministic products (anomalies) and some probabilistic products (probabilities for tercile categories). In addition to the 1-month average data retrieved from the CDS, 3-months aggregations will be also produced. Finally, verification metrics (correlation, area under the ROC curve, and RPS) will be calculated and visualised in a set of plots.</p>
-<p>The notebook has the following outline:</p>
-<ul class="simple">
-<li><p>1 - Request data from the CDS using CDS API</p>
-<ul>
-<li><p>1a - Retrieve hindcast data</p></li>
-<li><p>1b - Retrieve observations data (ERA5)</p></li>
-</ul>
-</li>
-<li><p>2 - Compute deterministic and probabilistic products from the hindcast data</p>
-<ul>
-<li><p>2a - Anomalies</p></li>
-<li><p>2b - Probabilities for tercile categories</p></li>
-</ul>
-</li>
-<li><p>3 - Compute deterministic and probabilistic scores</p>
-<ul>
-<li><p>3a - Read observations data into a xr.Dataset</p></li>
-<li><p>3b - Compute deterministic scores</p></li>
-<li><p>3c - Compute probabilistic scores for tercile categories</p></li>
-</ul>
-</li>
-<li><p>4 - Visualize verification plots</p></li>
-</ul>
-<p>Please see here the full documentation of the <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/C3S+Seasonal+Forecasts%3A+datasets+documentation">C3S Seasonal Forecast Datasets</a>. This notebook will use data from the CDS dataset <a class="reference external" href="https://cds-beta.climate.copernicus.eu/datasets/seasonal-monthly-single-levels?tab=overview">seasonal forecast monthly statistics on single levels</a> (as opposed to multiple levels in the atmosphere).</p>
-<div class="alert alert-block alert-success">
-<b>NOTE</b>: <br>
-    An example on the use of the code of this notebook to create verification plots for the operational seasonal forecast systems available in the CDS can be found in a <a href="https://confluence.ecmwf.int/display/CKB/C3S+seasonal+forecasts+verification+plots">dedicated page</a> of the documentation hosted in the Copernicus Knowledge Base.    
-</div></section>
-<section id="how-to-run-this-tutorial">
-<h2>How to run this tutorial<a class="headerlink" href="#how-to-run-this-tutorial" title="Link to this heading">#</a></h2>
-<p>To run this Jupyter notebook tutorial, you will need to install a number of Python packages. A good way to start is by installing <a class="reference external" href="https://www.anaconda.com/">Anaconda</a>, which is a popular Python distribution for scientific programming. The cell below can be run to install the various packages needed to run this tutorial, assuming you have already installed Python and Jupyter (which come with Anaconda).</p>
-<div class="cell docutils container">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An example on the use of the code of this notebook to create verification plots for the operational seasonal forecast systems available in the CDS can be found in a <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/C3S+seasonal+forecasts+verification+plots">dedicated page</a> of the documentation hosted in the Copernicus Knowledge Base.</p>
+</div>
+</section>
+<section id="prepare-your-environment">
+<h2>Prepare your environment<a class="headerlink" href="#prepare-your-environment" title="Permalink to this heading">#</a></h2>
+<section id="set-up-the-cdsapi-and-your-credentials">
+<h3>Set up the CDSAPI and your credentials<a class="headerlink" href="#set-up-the-cdsapi-and-your-credentials" title="Permalink to this heading">#</a></h3>
+<p>The code below will ensure that the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> package is installed. If you have not setup your <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code> file with your credenials, you can replace <code class="docutils literal notranslate"><span class="pre">None</span></code> with your credentials that can be found on the <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">how to api</a> page (you will need to log in to see your credentials).</p>
+<div class="cell tag_api docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>pandas<span class="w"> </span>xarray<span class="w"> </span>xskillscore
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>cdsapi
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>matplotlib<span class="w"> </span>cartopy
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>cfgrib
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q cdsapi
+<span class="c1"># If you have already setup your .cdsapirc file you can leave this as None</span>
+<span class="n">cdsapi_key</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">cdsapi_url</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="alert alert-block alert-danger">
-<b>WARNING</b>: <br>
-    Please take into account that to run this tutorial, around 8GB of RAM and around 5GB of disk space are needed.
-</div></section>
-<section id="load-packages">
-<h2>Load packages<a class="headerlink" href="#load-packages" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please take into account that to run this tutorial, around 8GB of RAM and around 5GB of disk space are needed.</p>
+</div>
+</section>
+<section id="install-and-import-libraries">
+<h3>(Install and) Import libraries<a class="headerlink" href="#install-and-import-libraries" title="Permalink to this heading">#</a></h3>
+<p>We will be working with data in NetCDF format. To best handle this data we will use libraries for working with multidimensional arrays, in particular Xarray. We will also need libraries for plotting and viewing data, in this case we will use Matplotlib and Cartopy.</p>
+<div class="cell tag_import docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CDS API</span>
 <span class="kn">import</span> <span class="nn">cdsapi</span>
+
+<span class="c1"># Library for managing file paths</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
 <span class="c1"># Libraries for working with multi-dimensional arrays</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
@@ -612,14 +559,31 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="request-data-from-the-cds-using-cds-api">
-<h2>1. Request data from the CDS using CDS API<a class="headerlink" href="#request-data-from-the-cds-using-cds-api" title="Link to this heading">#</a></h2>
-<p>First we will set up some common variables to be used in this notebook to define the folder containing the data, the variables to be retrieved, the hindcast period and the <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/Summary+of+available+data#Summaryofavailabledata-nominal_start_date">nominal start month</a>.</p>
-<div class="cell docutils container">
+<section id="specify-data-directory">
+<h3>Specify data directory<a class="headerlink" href="#specify-data-directory" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data&#39;</span>
-
-<span class="n">config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Directory to store data</span>
+<span class="c1"># Please ensure that data_dir is a location where you have write permissions</span>
+<span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data_dir/&#39;</span>
+<span class="c1"># Create this directory if it doesn&#39;t exist</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="explore-data">
+<h2>Explore data<a class="headerlink" href="#explore-data" title="Permalink to this heading">#</a></h2>
+<p>C3S seasonal forecast products are based on data from several state-of-the-art seasonal prediction systems. In this notebook, as an example, we will focus on data produced by <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/Description+of+CMCC-CM2-v20191201+C3S+contribution">CMCC SPSv3.5 system</a>, which is one of the forecasting systems available through C3S.</p>
+<p>Please see here the full documentation of the <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/C3S+Seasonal+Forecasts%3A+datasets+documentation">C3S Seasonal Forecast Datasets</a>. This notebook will use data from the CDS dataset <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/seasonal-monthly-single-levels?tab=overview">seasonal forecast monthly statistics on single levels</a> (as opposed to multiple levels in the atmosphere).</p>
+<section id="search-for-the-data">
+<h3>Search for the data<a class="headerlink" href="#search-for-the-data" title="Permalink to this heading">#</a></h3>
+<p>First we will set up some common variables to be used in this notebook to define the variables to be retrieved, the hindcast period and the <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/Summary+of+available+data#Summaryofavailabledata-nominal_start_date">nominal start month</a>.</p>
+<div class="cell tag_request docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">list_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2m_temperature&#39;</span><span class="p">,</span> <span class="p">],</span>
     <span class="n">hcstarty</span> <span class="o">=</span> <span class="mi">1993</span><span class="p">,</span>
     <span class="n">hcendy</span> <span class="o">=</span> <span class="mi">2016</span><span class="p">,</span>
@@ -629,8 +593,8 @@ document.write(`
 </div>
 </div>
 </div>
-<p>After setting up this initial configuration variables, the existence of all the data folders will be checked and directories will be created if needed.</p>
-<div class="cell docutils container">
+<p>After setting up this initial configuration variables, we can check the existence of all the data folders and create directories if needed.</p>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
@@ -647,36 +611,59 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The first step is to request data from the Climate Data Store programmatically with the help of the CDS API. Let us make use of the option to manually set the CDS API credentials. First, you have to define two variables: <code class="docutils literal notranslate"><span class="pre">CDSAPI_URL</span></code> and <code class="docutils literal notranslate"><span class="pre">CDSAPI_KEY</span></code> which build together your CDS API key. Below, you have to replace the <code class="docutils literal notranslate"><span class="pre">#########</span></code> with your personal CDS key. Please find <a class="reference external" href="https://cds-beta.climate.copernicus.eu/how-to-api">here</a> your personal CDS key.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CDSAPI_URL</span> <span class="o">=</span> <span class="s1">&#39;https://cds-beta.climate.copernicus.eu/api&#39;</span>
-<span class="n">CDSAPI_KEY</span> <span class="o">=</span> <span class="s1">&#39;########################################&#39;</span>
-
-<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">CDSAPI_URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">CDSAPI_KEY</span><span class="p">)</span>
-</pre></div>
+<p>Now, we will need to specify what product type, variables, temporal and geographic coverage we are interested in. These can all be selected in the <strong>“Download data”</strong> tab. In this tab a form appears in which we will select the following parameters to download:</p>
+<p><strong>First</strong>, we will download a GRIB file containing the retrospective forecasts (hindcasts, or reforecasts) for the variables, start month and years defined in the variable config</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Parameters of data to download for retrospective forecasts<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Format: <code class="docutils literal notranslate"><span class="pre">Grib</span></code></p></li>
+<li><p class="sd-card-text">Originating centre: <code class="docutils literal notranslate"><span class="pre">CMCC</span></code></p></li>
+<li><p class="sd-card-text">System: <code class="docutils literal notranslate"><span class="pre">35</span></code> <em>this refers to CMCC SPSv3.5</em></p></li>
+<li><p class="sd-card-text">Variable: <code class="docutils literal notranslate"><span class="pre">2-metre</span> <span class="pre">temperature</span></code></p></li>
+<li><p class="sd-card-text">Product type: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">mean</span></code> <em>all ensemble members will be retrieved</em></p></li>
+<li><p class="sd-card-text">Year: <code class="docutils literal notranslate"><span class="pre">1993</span> <span class="pre">to</span> <span class="pre">2016</span></code></p></li>
+<li><p class="sd-card-text">Month: <code class="docutils literal notranslate"><span class="pre">03</span></code> <em>March</em></p></li>
+<li><p class="sd-card-text">Leadtime month: <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">to</span> <span class="pre">6</span></code> <em>All available lead times (March to August)</em></p></li>
+</ul>
 </div>
+</details><p><strong>Then</strong>, we will request from the CDS the observation data that will be used as the ground truth against which the hindcast data will be compared. In this notebook we will be using as observational reference the CDS dataset reanalysis-era5-single-levels-monthly-means which contains ERA5 monthly averaged data from the CDS. In order to compare it with the hindcast data we have just downloaded above, we will ask the CDS to regrid it to the same grid used by the C3S seasonal forecasts.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Parameters of data to download for observational reference<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Format: <code class="docutils literal notranslate"><span class="pre">Grib</span></code></p></li>
+<li><p class="sd-card-text">Variable: <code class="docutils literal notranslate"><span class="pre">2-metre</span> <span class="pre">temperature</span></code></p></li>
+<li><p class="sd-card-text">Product type: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">averaged</span> <span class="pre">reanalysis</span></code></p></li>
+<li><p class="sd-card-text">Year: <code class="docutils literal notranslate"><span class="pre">1993</span> <span class="pre">to</span> <span class="pre">2016</span></code></p></li>
+<li><p class="sd-card-text">Month: <code class="docutils literal notranslate"><span class="pre">March</span> <span class="pre">to</span> <span class="pre">August</span></code> <em>same months contained in the hindcast data</em></p></li>
+<li><p class="sd-card-text">Time: <code class="docutils literal notranslate"><span class="pre">00</span></code></p></li>
+<li><p class="sd-card-text">Grid: <code class="docutils literal notranslate"><span class="pre">1x1-degree</span> <span class="pre">lat-lon</span> <span class="pre">regular</span> <span class="pre">grid</span></code></p></li>
+<li><p class="sd-card-text">Area: <code class="docutils literal notranslate"><span class="pre">-89.5</span> <span class="pre">to</span> <span class="pre">89.5</span> <span class="pre">in</span> <span class="pre">latitude;</span> <span class="pre">0.5</span> <span class="pre">to</span> <span class="pre">359.5</span> <span class="pre">in</span> <span class="pre">longitude</span></code></p></li>
+</ul>
 </div>
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note we will also be defining some variable, “origin” with the forecast system details to be included in the “config” variable. Additionally it defines a base name variable “hcst_bname” to be used throughout the notebook.</p>
 </div>
-<section id="a-retrieve-hindcast-data">
-<h3>1a. Retrieve hindcast data<a class="headerlink" href="#a-retrieve-hindcast-data" title="Link to this heading">#</a></h3>
-<p>The next step is then to request the seasonal forecast monthly statistics data on single levels with the help of the CDS API. Below, we download a GRIB file containing the retrospective forecasts (hindcasts, or reforecasts) for the variables, start month and years defined in the variable <code class="docutils literal notranslate"><span class="pre">config</span></code></p>
-<p>Running the code block below will download the data from the CDS as specified by the following API keywords:</p>
-<blockquote>
-<div><p><strong>Format</strong>: <code class="docutils literal notranslate"><span class="pre">Grib</span></code> <br>
-<strong>Originating centre</strong>: <code class="docutils literal notranslate"><span class="pre">CMCC</span></code> <br>
-<strong>System</strong>: <code class="docutils literal notranslate"><span class="pre">35</span></code> <em>this refers to CMCC SPSv3.5</em> <br>
-<strong>Variable</strong>: <code class="docutils literal notranslate"><span class="pre">2-metre</span> <span class="pre">temperature</span></code> <br>
-<strong>Product type</strong>: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">mean</span></code> <em>all ensemble members will be retrieved</em> <br>
-<strong>Year</strong>: <code class="docutils literal notranslate"><span class="pre">1993</span> <span class="pre">to</span> <span class="pre">2016</span></code>  <br>
-<strong>Month</strong>: <code class="docutils literal notranslate"><span class="pre">03</span></code> <em>March</em> <br>
-<strong>Leadtime month</strong>: <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">to</span> <span class="pre">6</span></code> <em>All available lead times (March to August)</em></p>
-</div></blockquote>
-<p>Note we will also be defining some variable, <code class="docutils literal notranslate"><span class="pre">origin</span></code>, with the forecast system details to be included in the <code class="docutils literal notranslate"><span class="pre">config</span></code> variable. Additionally it defines a base name variable <code class="docutils literal notranslate"><span class="pre">hcst_bname</span></code> to be used throughout the notebook.</p>
-<p>If you have not already done so, you will need to accept the <strong>terms &amp; conditions</strong> of the data before you can download it. These can be viewed and accepted in the <a class="reference external" href="https://cds-beta.climate.copernicus.eu/datasets/seasonal-monthly-single-levels?tab=download">CDS download page</a> by scrolling to the end of the download form.</p>
-<div class="alert alert-block alert-info">
-<b>NOTE</b>: <br>
-    An API request can be generated automatically from the <a href="https://cds-beta.climate.copernicus.eu/datasets/seasonal-monthly-single-levels?tab=download">CDS download page</a>. At the end of the download form there is a <code>Show API request</code> icon, which allows to copy-paste a snippet of code equivalent to the one used below.</div><div class="cell docutils container">
+<p>At the end of the download forms, select “Show API request”. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below). Having copied the API request into the cell below, running this will retrieve and download the data you requested into your local directory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please remember to accept the terms and conditions of the dataset, at the bottom of the CDS download form!</p>
+</div>
+</section>
+<section id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this heading">#</a></h3>
+<p>With the API request copied into the cell below, running this cell will retrieve and download the data you requested into your local directory.</p>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">origin</span> <span class="o">=</span> <span class="s1">&#39;cmcc.s35&#39;</span>
 <span class="n">origin_labels</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;institution&#39;</span><span class="p">:</span> <span class="s1">&#39;CMCC&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;SPSv3.5&#39;</span><span class="p">}</span>
@@ -724,22 +711,7 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="b-retrieve-observations-data-era5">
-<h3>1b. Retrieve observations data (ERA5)<a class="headerlink" href="#b-retrieve-observations-data-era5" title="Link to this heading">#</a></h3>
-<p>Now we will request from the CDS the observation data that will be used as the ground truth against which the hindcast data will be compared. In this notebook we will be using as observational reference the CDS dataset <code class="docutils literal notranslate"><span class="pre">reanalysis-era5-single-levels-monthly-means</span></code> which contains <a class="reference external" href="https://cds-beta.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means?tab=overview">ERA5</a> monthly averaged data from the CDS. In order to compare it with the hindcast data we have just downloaded above, we will ask the CDS to regrid it to the same grid used by the C3S seasonal forecasts.</p>
-<p>Running the code block below will download the ERA5 data from the CDS as specified by the following API keywords:</p>
-<blockquote>
-<div><p><strong>Format</strong>: <code class="docutils literal notranslate"><span class="pre">Grib</span></code> <br>
-<strong>Variable</strong>: <code class="docutils literal notranslate"><span class="pre">2-metre</span> <span class="pre">temperature</span></code> <br>
-<strong>Product type</strong>: <code class="docutils literal notranslate"><span class="pre">Monthly</span> <span class="pre">averaged</span> <span class="pre">reanalysis</span></code>  <br>
-<strong>Year</strong>: <code class="docutils literal notranslate"><span class="pre">1993</span> <span class="pre">to</span> <span class="pre">2016</span></code>  <br>
-<strong>Month</strong>: <code class="docutils literal notranslate"><span class="pre">March</span> <span class="pre">to</span> <span class="pre">August</span></code> <em>same months contained in the hindcast data</em><br>
-<strong>Time</strong>: <code class="docutils literal notranslate"><span class="pre">00</span></code> <br>
-<strong>Grid</strong>: <code class="docutils literal notranslate"><span class="pre">1x1-degree</span> <span class="pre">lat-lon</span> <span class="pre">regular</span> <span class="pre">grid</span></code> <br>
-<strong>Area</strong>: <code class="docutils literal notranslate"><span class="pre">-89.5</span> <span class="pre">to</span> <span class="pre">89.5</span> <span class="pre">in</span> <span class="pre">latitude;</span> <span class="pre">0.5</span> <span class="pre">to</span> <span class="pre">359.5</span> <span class="pre">in</span> <span class="pre">longitude</span></code> <br></p>
-</div></blockquote>
-<div class="cell docutils container">
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_fname</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{fpath}</span><span class="s1">/era5_monthly_stmonth</span><span class="si">{start_month:02d}</span><span class="s1">_</span><span class="si">{hcstarty}</span><span class="s1">-</span><span class="si">{hcendy}</span><span class="s1">.grib&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fpath</span><span class="o">=</span><span class="n">DATADIR</span><span class="p">,</span><span class="o">**</span><span class="n">config</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">obs_fname</span><span class="p">)</span>
@@ -784,18 +756,19 @@ document.write(`
 </section>
 </section>
 <section id="compute-deterministic-and-probabilistic-products-from-the-hindcast-data">
-<h2>2. Compute deterministic and probabilistic products from the hindcast data<a class="headerlink" href="#compute-deterministic-and-probabilistic-products-from-the-hindcast-data" title="Link to this heading">#</a></h2>
+<h2>Compute deterministic and probabilistic products from the hindcast data<a class="headerlink" href="#compute-deterministic-and-probabilistic-products-from-the-hindcast-data" title="Permalink to this heading">#</a></h2>
 <p>In this section we will be calculating the different derived products we will be scoring later in the notebook. We will use the reference period defined in <code class="docutils literal notranslate"><span class="pre">config[&quot;hcstarty&quot;]</span></code>,<code class="docutils literal notranslate"><span class="pre">config[&quot;hcendy&quot;]</span></code> to calculate:</p>
 <ul class="simple">
 <li><p>anomalies: defined as the difference of a given hindcast to the model climate, computed as the average over all the available members (that is, among all start years and ensemble members)</p></li>
 <li><p>probabilities for tercile categories: defined as the proportion of members in a given hindcast lying within each one of the categories bounded by the terciles computed from all available members in the reference period</p></li>
 </ul>
 <p>In addition to the 1-month anomalies and probabilities, a rolling average of 3 months will be also computed to produce anomalies and probabilities for this 3-months aggregation.</p>
-<div class="alert alert-block alert-info">
-<b>NOTE</b>: <br>
-   Some of the seasonal forecast monthly data on the CDS comes from systems using members initialized on different start dates (lagged start date ensembles). In the GRIB encoding used for those systems we will therefore have two different <code>xarray/cfgrib</code> keywords for the real start date of each member (<code>time</code>) and for the nominal start date (<code>indexing_time</code>) which is the one we would need to use for those systems initializing their members with a lagged start date approach.
-    The following line of code will take care of that as long as we include the value <code>config['isLagged']=True</code> in the config dictionary as defined in section 1.
-</div><div class="cell docutils container">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some of the seasonal forecast monthly data on the CDS comes from systems using members initialized on different start dates (lagged start date ensembles). In the GRIB encoding used for those systems we will therefore have two different <code class="docutils literal notranslate"><span class="pre">xarray/cfgrib</span></code> keywords for the real start date of each member (<code class="docutils literal notranslate"><span class="pre">time</span></code>) and for the nominal start date (<code class="docutils literal notranslate"><span class="pre">indexing_time</span></code>) which is the one we would need to use for those systems initializing their members with a lagged start date approach.
+The following line of code will take care of that as long as we include the value <code class="docutils literal notranslate"><span class="pre">config['isLagged']=True</span></code> in the config dictionary as defined in section 1.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For the re-shaping of time coordinates in xarray.Dataset we need to select the right one </span>
 <span class="c1">#  -&gt; burst mode ensembles (e.g. ECMWF SEAS5) use &quot;time&quot;. This is the default option in this notebook</span>
@@ -805,8 +778,8 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="a-anomalies">
-<h3>2a. Anomalies<a class="headerlink" href="#a-anomalies" title="Link to this heading">#</a></h3>
+<section id="anomalies">
+<h3>Anomalies<a class="headerlink" href="#anomalies" title="Permalink to this heading">#</a></h3>
 <p>We will start opening the hindcast data GRIB file we downloaded in the previous section to load it into an <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object.</p>
 <p>Some minor modifications of the <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object also happen here:</p>
 <ul class="simple">
@@ -870,8 +843,8 @@ Saving anomalies 1m/3m to netCDF files
 </div>
 </div>
 </section>
-<section id="b-probabilities-for-tercile-categories">
-<h3>2b. Probabilities for tercile categories<a class="headerlink" href="#b-probabilities-for-tercile-categories" title="Link to this heading">#</a></h3>
+<section id="probabilities-for-tercile-categories">
+<h3>Probabilities for tercile categories<a class="headerlink" href="#probabilities-for-tercile-categories" title="Permalink to this heading">#</a></h3>
 <p>Before we start computing the probabilities it will be useful to create a function devoted to computing the boundaries of a given category (<code class="docutils literal notranslate"><span class="pre">icat</span></code>) coming from a given set of quantiles (<code class="docutils literal notranslate"><span class="pre">quantiles</span></code>) of an <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -950,7 +923,7 @@ Saving 3m tercile probs netCDF files
 </section>
 </section>
 <section id="compute-deterministic-and-probabilistic-scores">
-<h2>3. Compute deterministic and probabilistic scores<a class="headerlink" href="#compute-deterministic-and-probabilistic-scores" title="Link to this heading">#</a></h2>
+<h2>Compute deterministic and probabilistic scores<a class="headerlink" href="#compute-deterministic-and-probabilistic-scores" title="Permalink to this heading">#</a></h2>
 <p>In this section we will produce a set of metrics and scores consistent with the <a class="reference external" href="https://library.wmo.int/doc_num.php?explnum_id=4886">guidance on forecast verification</a> provided by WMO. Those values can be used to describe statistics of forecast performance over a past period (the reference period defined in the variable <code class="docutils literal notranslate"><span class="pre">config</span></code>), as an indication of expectation of ‘confidence’ in the real-time outputs.</p>
 <p>In this notebook metrics and scores for both deterministic (anomalies) and probabilistic (probabilities of tercile categories) products, as those provided in the C3S seasonal forecast graphical products section, will be computed. Specifically:</p>
 <ul class="simple">
@@ -967,8 +940,8 @@ Saving 3m tercile probs netCDF files
 </li>
 </ul>
 <p>Values for both 1-month and 3-months aggregations will be produced and stored into netCDF files.</p>
-<section id="a-read-observations-data-into-a-xr-dataset">
-<h3>3a. Read observations data into a xr.Dataset<a class="headerlink" href="#a-read-observations-data-into-a-xr-dataset" title="Link to this heading">#</a></h3>
+<section id="read-observations-data-into-a-xr-dataset">
+<h3>Read observations data into a xr.Dataset<a class="headerlink" href="#read-observations-data-into-a-xr-dataset" title="Permalink to this heading">#</a></h3>
 <p>Before any score can be calculated we will need to read into an <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object the observational data from the GRIB file we downloaded in the first section of this notebook (whose name was stored in variable <code class="docutils literal notranslate"><span class="pre">obs_fname</span></code>).</p>
 <p>Similarly to what we did with the hindcast data, some minor modifications of the <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object also happen here:</p>
 <ul class="simple">
@@ -1012,16 +985,17 @@ Saving 3m tercile probs netCDF files
 </div>
 </div>
 </section>
-<section id="b-compute-deterministic-scores">
-<h3>3b. Compute deterministic scores<a class="headerlink" href="#b-compute-deterministic-scores" title="Link to this heading">#</a></h3>
+<section id="compute-deterministic-scores">
+<h3>Compute deterministic scores<a class="headerlink" href="#compute-deterministic-scores" title="Permalink to this heading">#</a></h3>
 <p>The score used here is temporal correlation (Spearman rank correlation) calculated at each grid point and for each leadtime.</p>
 <p>We will start reading the netCDF files containing the anomalies we computed in section 2 of this notebook into a <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object.</p>
 <p>For an easier use of the <code class="docutils literal notranslate"><span class="pre">xs.spearman_r</span></code> function a loop over the hindcast leadtimes (<code class="docutils literal notranslate"><span class="pre">forecastMonth</span></code>) has been introduced, requiring as a final step a concatenation of the values computed for each leadtime.</p>
 <p>In addition to the correlation, the p-values will be computed to allow us plotting not only the values of correlation, but also where those values are statistically significant.</p>
-<div class="alert alert-block alert-info">
-<b>NOTE</b>: <br>
-   The computations shown here are prepared to cater for anomalies files containing all ensemble members or files containing only an ensemble mean anomaly. The presence (or absence) of a dimension called <code>number</code> in the hindcast <code>xr.Dataset</code> object will indicate we have a full ensemble (or an ensemble mean).<br>  
-</div><div class="cell docutils container">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The computations shown here are prepared to cater for anomalies files containing all ensemble members or files containing only an ensemble mean anomaly. The presence (or absence) of a dimension called <code class="docutils literal notranslate"><span class="pre">number</span></code> in the hindcast <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object will indicate we have a full ensemble (or an ensemble mean).</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over aggregations</span>
 <span class="k">for</span> <span class="n">aggr</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1m&#39;</span><span class="p">,</span><span class="s1">&#39;3m&#39;</span><span class="p">]:</span>
@@ -1082,16 +1056,17 @@ Saving to netCDF file correlation for 3m-aggregation
 </div>
 </div>
 </section>
-<section id="c-compute-probabilistic-scores-for-tercile-categories">
-<h3>3c. Compute probabilistic scores for tercile categories<a class="headerlink" href="#c-compute-probabilistic-scores-for-tercile-categories" title="Link to this heading">#</a></h3>
+<section id="compute-probabilistic-scores-for-tercile-categories">
+<h3>Compute probabilistic scores for tercile categories<a class="headerlink" href="#compute-probabilistic-scores-for-tercile-categories" title="Permalink to this heading">#</a></h3>
 <p>The scores used here for probabilistic forecasts are the area under the Relative Operating Characteristic (ROC) curve, the Ranked Probability Score (RPS) and the Brier Score (BS). Note that both ROC and BS are appropriate for binary events (applied individually to each category), while RPS scores all categories together.</p>
 <p>We will now read the netCDF files containing the probabilities we computed in section 2 of this notebook into a <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object. Note the variables <code class="docutils literal notranslate"><span class="pre">quantiles</span></code> and <code class="docutils literal notranslate"><span class="pre">numcategories</span></code> defined there and describing the categories for which the probabilities have been computed will be also needed here.</p>
 <p>The step to compute the probabilities for each category in the observation data for each aggregation (1-month or 3-months) is also performed here starting from the <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> objects read in section 3a. (<code class="docutils literal notranslate"><span class="pre">era5_1deg</span></code> and <code class="docutils literal notranslate"><span class="pre">era5_1deg_3m</span></code>).</p>
 <p>A loop over the hindcast leadtimes (<code class="docutils literal notranslate"><span class="pre">forecastMonth</span></code>) has been introduced for an easier use of the <code class="docutils literal notranslate"><span class="pre">xskillscore</span></code> functions to compute ROC curve area and RPS. This requires as a final step a concatenation of the values computed for each leadtime.</p>
-<div class="alert alert-block alert-info">
-<b>NOTE</b>: <br>
-   A couple of additional examples, both the calculation of Brier Score (BS) and the calculation of ROC Skill Score using climatology as a reference (which has a ROC value of 0.5), have been also included in the code below, but no plots will be produced for them in section 4 of the notebook.<br>  
-</div><div class="cell docutils container">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A couple of additional examples, both the calculation of Brier Score (BS) and the calculation of ROC Skill Score using climatology as a reference (which has a ROC value of 0.5), have been also included in the code below, but no plots will be produced for them in section 4 of the notebook.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loop over aggregations</span>
 <span class="k">for</span> <span class="n">aggr</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1m&#39;</span><span class="p">,</span><span class="s1">&#39;3m&#39;</span><span class="p">]:</span>
@@ -1231,18 +1206,19 @@ writing to netcdf rocss
 </section>
 </section>
 <section id="visualize-verification-plots">
-<h2>4. Visualize verification plots<a class="headerlink" href="#visualize-verification-plots" title="Link to this heading">#</a></h2>
+<h2>Visualize verification plots<a class="headerlink" href="#visualize-verification-plots" title="Permalink to this heading">#</a></h2>
 <p>After we have computed some metrics and scores for our seasonal forecast data, in this section some examples of visualization will be introduced.</p>
-<div class="alert alert-block alert-success">
-<b>NOTE</b>: <br>
-    In the "Introduction" section of the <a href="https://confluence.ecmwf.int/display/CKB/C3S+seasonal+forecasts+verification+plots">C3S seasonal forecasts verification plots</a> page on the Copernicus Knowledge Base you can find some information on how these metrics and scores, consistent with the <a href="https://library.wmo.int/doc_num.php?explnum_id=4886">guidance on forecast verification</a> provided by WMO, describe statistics of forecast performance over a past period, as an indication of expectation of 'confidence' in the real-time outputs. 
-</div><section id="common-variables">
-<h3>Common variables<a class="headerlink" href="#common-variables" title="Link to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the “Introduction” section of the <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/C3S+seasonal+forecasts+verification+plots">C3S seasonal forecasts verification plots</a> page on the Copernicus Knowledge Base you can find some information on how these metrics and scores, consistent with the <a class="reference external" href="https://library.wmo.int/doc_num.php?explnum_id=4886">guidance on forecast verification</a> provided by WMO, describe statistics of forecast performance over a past period, as an indication of expectation of ‘confidence’ in the real-time outputs.</p>
+</div>
+<section id="common-variables">
+<h3>Common variables<a class="headerlink" href="#common-variables" title="Permalink to this heading">#</a></h3>
 <p>We start by setting up some variables to subset the plots we will be producing in this notebook:</p>
-<blockquote>
-<div><p><strong><code class="docutils literal notranslate"><span class="pre">aggr</span></code></strong>: to specify the aggregation period (possible values: “1m” or “3m”) <br>
-<strong><code class="docutils literal notranslate"><span class="pre">fcmonth</span></code></strong>: to specify the leadtime (possible values: integer from 1 to 6) <br></p>
-</div></blockquote>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">aggr</span></code></strong>: to specify the aggregation period (possible values: “1m” or “3m”)</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">fcmonth</span></code></strong>: to specify the leadtime (possible values: integer from 1 to 6)</p></li>
+</ul>
 <p>Additionally variables used for labelling the plots are also defined here. It has been also included a change in the default values of the font size of the titles to improve the visual aspect of the plots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1269,7 +1245,7 @@ writing to netcdf rocss
 </div>
 </section>
 <section id="create-plot-titles-base-information">
-<h3>Create plot titles base information<a class="headerlink" href="#create-plot-titles-base-information" title="Link to this heading">#</a></h3>
+<h3>Create plot titles base information<a class="headerlink" href="#create-plot-titles-base-information" title="Permalink to this heading">#</a></h3>
 <p>In the following variables we include some relevant information to be later used in the plot titles. Specifically:</p>
 <ul class="simple">
 <li><p>Line 1: Name of the institution and forecast system</p></li>
@@ -1299,8 +1275,8 @@ writing to netcdf rocss
 </div>
 </div>
 </section>
-<section id="a-correlation">
-<h3>4a. Correlation<a class="headerlink" href="#a-correlation" title="Link to this heading">#</a></h3>
+<section id="correlation">
+<h3>Correlation<a class="headerlink" href="#correlation" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the data files</span>
@@ -1356,8 +1332,8 @@ writing to netcdf rocss
 </div>
 </div>
 </section>
-<section id="b-ranked-probability-score-rps">
-<h3>4b. Ranked Probability Score (RPS)<a class="headerlink" href="#b-ranked-probability-score-rps" title="Link to this heading">#</a></h3>
+<section id="ranked-probability-score-rps">
+<h3>Ranked Probability Score (RPS)<a class="headerlink" href="#ranked-probability-score-rps" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># READ scores xr.Datasets</span>
@@ -1389,8 +1365,8 @@ writing to netcdf rocss
 </div>
 </div>
 </section>
-<section id="c-area-under-relative-operating-characteristic-roc-curve">
-<h3>4c. Area under Relative Operating Characteristic (ROC) curve<a class="headerlink" href="#c-area-under-relative-operating-characteristic-roc-curve" title="Link to this heading">#</a></h3>
+<section id="area-under-relative-operating-characteristic-roc-curve">
+<h3>Area under Relative Operating Characteristic (ROC) curve<a class="headerlink" href="#area-under-relative-operating-characteristic-roc-curve" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># READ scores xr.Datasets</span>
@@ -1453,10 +1429,11 @@ writing to netcdf rocss
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="sf-anomalies.html"
@@ -1468,15 +1445,18 @@ writing to netcdf rocss
       </div>
     </a>
     <a class="right-next"
-       href="../c3s-training-submodule-climate-indices/intro.html"
+       href="../c3s-training-submodule-projections/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C3S Climate Indices Tutorial</p>
+        <p class="prev-next-title">Tutorials on C3S climate projections datasets</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -1485,38 +1465,41 @@ writing to netcdf rocss
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-this-tutorial">How to run this tutorial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages">Load packages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-data-from-the-cds-using-cds-api">1. Request data from the CDS using CDS API</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-retrieve-hindcast-data">1a. Retrieve hindcast data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-retrieve-observations-data-era5">1b. Retrieve observations data (ERA5)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-cdsapi-and-your-credentials">Set up the CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-products-from-the-hindcast-data">2. Compute deterministic and probabilistic products from the hindcast data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-anomalies">2a. Anomalies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-probabilities-for-tercile-categories">2b. Probabilities for tercile categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-scores">3. Compute deterministic and probabilistic scores</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-read-observations-data-into-a-xr-dataset">3a. Read observations data into a xr.Dataset</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-compute-deterministic-scores">3b. Compute deterministic scores</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-compute-probabilistic-scores-for-tercile-categories">3c. Compute probabilistic scores for tercile categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-products-from-the-hindcast-data">Compute deterministic and probabilistic products from the hindcast data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anomalies">Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilities-for-tercile-categories">Probabilities for tercile categories</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-verification-plots">4. Visualize verification plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-and-probabilistic-scores">Compute deterministic and probabilistic scores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-observations-data-into-a-xr-dataset">Read observations data into a xr.Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-deterministic-scores">Compute deterministic scores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-probabilistic-scores-for-tercile-categories">Compute probabilistic scores for tercile categories</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-verification-plots">Visualize verification plots</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-variables">Common variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-plot-titles-base-information">Create plot titles base information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-correlation">4a. Correlation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-ranked-probability-score-rps">4b. Ranked Probability Score (RPS)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-area-under-relative-operating-characteristic-roc-curve">4c. Area under Relative Operating Characteristic (ROC) curve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation">Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ranked-probability-score-rps">Ranked Probability Score (RPS)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area-under-relative-operating-characteristic-roc-curve">Area under Relative Operating Characteristic (ROC) curve</a></li>
 </ul>
 </li>
 </ul>
@@ -1540,10 +1523,9 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1556,6 +1538,10 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <script src="_static/custom.js"></script>
+
+</div>
   </div>
   
 </div>
@@ -1567,8 +1553,8 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

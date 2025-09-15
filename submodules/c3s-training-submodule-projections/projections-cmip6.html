@@ -1,67 +1,73 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Plot an Ensemble of CMIP6 Climate Projections &#8212; Copernicus Climate Change Service (C3S) Training Book</title>
+    <title>Plot an ensemble of CMIP6 climate projections &#8212; Copernicus Climate Change Service (C3S) training book</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/c3s-training-submodule-projections/projections-cmip6';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Analysis of Projected versus Historical Climatology with CORDEX Data" href="projections-cordex.html" />
-    <link rel="prev" title="C3S Climate Projections Tutorial" href="intro.html" />
+    <link rel="next" title="Analysis of projected versus historical climatology with CORDEX data" href="projections-cordex.html" />
+    <link rel="prev" title="Tutorials on C3S climate projections datasets" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -71,23 +77,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,22 +112,17 @@
 </form></div>
   </div>
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-<aside class="bd-header-announcement" aria-label="Announcement">
-  <div class="bd-header-announcement__content">⚠️This is a TEST Version, this is not an official website⚠️</div>
-</aside>
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">⚠️This is a TEST version, this is not an official website⚠️</div>
+  </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,9 +137,6 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -151,28 +145,16 @@
   
   
   
-  
-    <p class="title logo__title">Copernicus Climate Change Service (C3S) Training Book</p>
+    <p class="title logo__title">Copernicus Climate Change Service (C3S) training book</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Copernicus Climate Change Service (C3S) Data Tutorials
+                    Copernicus Climate Change Service (C3S) data tutorials
                 </a>
             </li>
         </ul>
@@ -182,88 +164,62 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../observations/intro.html">Observations</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite observations - atmospheric physics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing longwave radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total solar irradiance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite observations - atmospheric composition</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total ozone columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">Greenhouse gas level 2 products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploration of the aerosol properties products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">A multi-sensor climate data record of aerosol properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite observations - hydrology and cryosphere</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance.html">Ice sheet mass balance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-reanalysis/intro.html">Reanalysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-climatology.html">Climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-heatwave.html">Heatwave analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-reanalysis/reanalysis-temp-record.html">Temperature record</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Climate Projections</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Global Climate Projections (CMIP6)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projections-cordex.html">Regional Climate Projections (CORDEX)</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal forecasts</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal forecast anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal forecast verification</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/intro.html">Seasonal Forecasts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-anomalies.html">Seasonal Forecast Anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-seasonal-forecast/sf-verification.html">Seasonal Forecast Verification</a></li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Climate projections</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Global climate projections (CMIP6)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projections-cordex.html">Regional climate projections (CORDEX)</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate Indices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-climate-indices/intro.html">Climate indicators</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-climate-indices/ci-windchill.html">Windchill</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/intro.html">Satellite Observations - Atmospheric Physic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.html">Outgoing Longwave Radiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.html">Analysis of the CLARA Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.html">Analysis of the CERES Earth radiation budget product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.html">Total Solar Irradiance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.html">Surface radiation budget climatologies and anomalies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.html">Total column water vapour</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.html">Tropospheric humidity estimates from satellite-based radio occultation measurements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.html">Cloud fractional cover climatology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.html">Exploring Precipitation information in the GIRAFFE dataset</a></li>
+</li>
 </ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/intro.html">Satellite Observations - Atmospheric Composition</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.html">How to access and use a satellite-derived GHG Level 2 data product using XCO2_EMMA as an example?</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products.html">How to access, read and use satellite XCO2 and XCH4 Level 3 data products</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.html">Exploring gridded data on Aerosol properties available on C3S</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.html">Visualising a full Climate Data Record of multi-sensor Aerosol data</a></li>
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.html">Total Ozone Columns</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/intro.html">Satellite Observations - Hydrology and Cryosphere</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.html">Soil Moisture Anomaly Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.html">Lake Surface Water Temperature Analysis</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-ocean/intro.html">Satellite Observations - Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../c3s-training-submodule-sat-obs-land/intro.html">Satellite Observations - Land</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore other books📚</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other learning resources 📚</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://Randbee.github.io/CAMSBook">Copernicus Atmosphere Monitoring Service (CAMS) Data Tutorials</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://ecmwfcode4earth.github.io/sketchbook-earth">Sketchbook Earth - A collection of Jupyter notebooks for Earth Sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../other_learning_resources.html">Useful links to other ECMWF learning resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ECMWF</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../support.html">Help&amp;Support</a></li>
-</ul>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/help-and-support">Help &amp; support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/">Copernicus Climate Change Service (C3S)</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://cds.climate.copernicus.eu/">Copernicus Climate Data Store (CDS)</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S Training Services</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://climate.copernicus.eu/user-learning-services/">C3S learning services</a></li>
 </ul>
 
     </div>
@@ -279,7 +235,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -288,14 +244,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -318,16 +274,16 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/Randbee/C3SBook/review?urlpath=tree/submodules/c3s-training-submodule-projections/projections-cmip6.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/ecmwf-training/C3S-training/main?urlpath=lab/tree/submodules/c3s-training-submodule-projections/projections-cmip6.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
+   title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+    <img src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook" target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +322,7 @@
       
       
       
-      <li><a href="https://github.com/Randbee/C3SBook/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-projections/projections-cmip6.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ecmwf-training/C3S-training/issues/new?title=Issue%20on%20page%20%2Fsubmodules/c3s-training-submodule-projections/projections-cmip6.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -448,28 +404,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -480,7 +434,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Plot an Ensemble of CMIP6 Climate Projections</h1>
+    <h1>Plot an ensemble of CMIP6 climate projections</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -490,11 +444,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cds-api-via-pip">Install CDS API via pip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-data-from-the-cds-programmatically-with-the-cds-api">Request data from the CDS programmatically with the CDS API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-cdsapi-and-your-credentials">Set up the CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unzip-the-downloaded-data-files">Unzip the downloaded data files</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-list-of-the-extracted-files">Create a list of the extracted files</a></li>
 </ul>
@@ -508,7 +469,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-prepare-cmip6-data-for-all-models-and-experiments">Load and prepare CMIP6 data for all models and experiments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-cmip6-annual-global-average-temperature-between-1850-to-2100">Visualize the CMIP6 annual global average temperature between 1850 to 2100</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-cmip6-annual-global-average-temperature-between-1850-and-2100">Visualize the CMIP6 annual global average temperature between 1850 and 2100</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-quantiles-for-model-ensemble">Calculate quantiles for model ensemble</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-time-series">View time-series</a></li>
 </ul>
@@ -522,70 +483,46 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <p><img alt="logo" src="https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/LogoLine_horizon_C3S.png" /></p>
 <br><section class="tex2jax_ignore mathjax_ignore" id="plot-an-ensemble-of-cmip6-climate-projections">
-<h1>Plot an Ensemble of CMIP6 Climate Projections<a class="headerlink" href="#plot-an-ensemble-of-cmip6-climate-projections" title="Link to this heading">#</a></h1>
-<section id="about">
-<h2>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h2>
-<p>This notebook provides a practical introduction on how to access and process <a class="reference external" href="https://cds-beta.climate.copernicus.eu/datasets/projections-cmip6?tab=overview">CMIP6 global climate projections</a> data available in the Climate Data Store (CDS) of the Copernicus Climate Change Service (C3S). The workflow shows how to compute and visualize the output of an ensemble of models for the annual global average temperature between 1850 to 2100. You will use the <code class="docutils literal notranslate"><span class="pre">historical</span></code> experiment for the temporal period 1850 to 2014 and the three scenarios <code class="docutils literal notranslate"><span class="pre">SSP1-2.6</span></code>, <code class="docutils literal notranslate"><span class="pre">SSP2-4.5</span></code> and <code class="docutils literal notranslate"><span class="pre">SSP5-8.5</span></code> for the period from 2015 to 2100.</p>
-<p>For the sake of simplicity, and to facilitate data download, the tutorial will make use of some of the coarser resolution models that have a smaller data size. It is nevertheless only a choice for this exercise and not a recommendation (since ideally all models, including those with highest resolution, should be used). Many more models are available on the CDS, and when calculating an ensemble of models, it is best practice to use as many as possible for a more reliable output. See <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/CMIP6%3A+Global+climate+projections#CMIP6:Globalclimateprojections-Models,gridsandpressurelevels">here</a> a full list of models included in the CDS-CMIP6 dataset.</p>
+<h1>Plot an ensemble of CMIP6 climate projections<a class="headerlink" href="#plot-an-ensemble-of-cmip6-climate-projections" title="Permalink to this heading">#</a></h1>
+<p><strong>This notebook can be run on free online platforms, such as Binder, Kaggle and Colab, or they can be accessed from GitHub. The links to run this notebook in these environments are provided here, but please note they are not supported by ECMWF.</strong></p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/ecmwf-training/c3s-training-submodule-projections/main?labpath=projections-cmip6.ipynb"><img alt="binder" src="https://mybinder.org/badge.svg" /></a>
+<a class="reference external" href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-training/c3s-training-submodule-projections/blob/main/projections-cmip6.ipynb"><img alt="kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a>
+<a class="reference external" href="https://colab.research.google.com/github/ecmwf-training/c3s-training-submodule-projections/blob/main/projections-cmip6.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a class="reference external" href="https://github.com/ecmwf-training/c3s-training-submodule-projections/blob/main/projections-cmip6.ipynb"><img alt="github" src="https://img.shields.io/badge/Open%20in-GitHub-black?logo=github" /></a></p>
+<section id="learning-objectives">
+<h2>Learning objectives 🎯<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<p>This notebook provides a practical introduction on how to access and process <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/projections-cmip6?tab=overview">CMIP6 global climate projections</a> data available in the Climate Data Store (CDS) of the Copernicus Climate Change Service (C3S). The workflow shows how to compute and visualize the output of an ensemble of models for the annual global average temperature between 1850 to 2100. You will use the <code class="docutils literal notranslate"><span class="pre">historical</span></code> experiment for the temporal period 1850 to 2014 and the three scenarios <code class="docutils literal notranslate"><span class="pre">SSP1-2.6</span></code>, <code class="docutils literal notranslate"><span class="pre">SSP2-4.5</span></code> and <code class="docutils literal notranslate"><span class="pre">SSP5-8.5</span></code> for the period from 2015 to 2100.</p>
 <p>Learn <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/CMIP6%3A+Global+climate+projections#CMIP6:Globalclimateprojections">here</a> more about CMIP6 global climate projections and the CMIP6 experiments in the CDS.</p>
-<p>The notebook has the following outline:</p>
-<ol class="arabic simple">
-<li><p>Request data from the CDS programmatically with the CDS API</p></li>
-<li><p>Unzip the downloaded data files</p></li>
-<li><p>Load and prepare CMIP6 data for one model and one experiment</p></li>
-<li><p>Load and prepare CMIP6 data for all models and experiments</p></li>
-<li><p>Visualize CMIP6 annual global average temperature between 1850 to 2100</p></li>
-</ol>
 </section>
-<section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
-<p>This notebook introduces you to <a class="reference external" href="https://cds-beta.climate.copernicus.eu/datasets/projections-cmip6?tab=overview">CMIP6 Global climate projections</a>. The datasets used in the notebook have the following specifications:</p>
-<blockquote>
-<div><p><strong>Data</strong>: CMIP6 global climate projections of near-surface air temperature <br>
-<strong>Experiments</strong>: Historical, SSP1-2.6, SSP2-4.5, SSP5-8.5 <br>
-<strong>Models</strong>: 7 models from Germany, France, UK, Japan and Russia <br>
-<strong>Temporal range</strong>: Historical: 1850 - 2014. Scenarios: 2015 - 2100 <br>
-<strong>Spatial coverage</strong>: Global <br>
-<strong>Format</strong>: NetCDF, compressed into zip files</p>
-</div></blockquote>
-<style>
-td, th {
-   border: 1px solid white;
-   border-collapse: collapse;
-}
-</style>
-<table align="left">
-  <tr>
-    <th>Run the tutorial via free cloud platforms: </th>
-    <th><a href="https://mybinder.org/v2/gh/ecmwf-training/c3s-training-submodule-projections/develop?labpath=projections-cmip6.ipynb">
-        <img src = "https://mybinder.org/badge.svg" alt = "Binder"></th>
-    <th><a href="https://kaggle.com/kernels/welcome?src=https://github.com/ecmwf-training/c3s-training-submodule-projections/blob/develop/projections-cmip6.ipynb">
-        <img src = "https://kaggle.com/static/images/open-in-kaggle.svg" alt = "Kaggle"></th>
-    <th><a href="https://colab.research.google.com/github/ecmwf-training/c3s/training/submodule/projections/blob/develop/projections-cmip6.ipynb">
-        <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
-  </tr>
-</table><hr></section>
-<section id="install-cds-api-via-pip">
-<h2>Install CDS API via pip<a class="headerlink" href="#install-cds-api-via-pip" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<section id="prepare-your-environment">
+<h2>Prepare your environment<a class="headerlink" href="#prepare-your-environment" title="Permalink to this heading">#</a></h2>
+<section id="set-up-the-cdsapi-and-your-credentials">
+<h3>Set up the CDSAPI and your credentials<a class="headerlink" href="#set-up-the-cdsapi-and-your-credentials" title="Permalink to this heading">#</a></h3>
+<p>The code below will ensure that the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> package is installed. If you have not setup your <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code> file with your credenials, you can replace <code class="docutils literal notranslate"><span class="pre">None</span></code> with your credentials that can be found on the <a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">how to api</a> page (you will need to log in to see your credentials).</p>
+<div class="cell tag_api docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>cdsapi
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q cdsapi
+<span class="c1"># If you have already setup your .cdsapirc file you can leave this as None</span>
+<span class="n">cdsapi_key</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">cdsapi_url</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="load-libraries">
-<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<section id="install-and-import-libraries">
+<h3>(Install and) Import libraries<a class="headerlink" href="#install-and-import-libraries" title="Permalink to this heading">#</a></h3>
+<p>We will be working with data in NetCDF format. To best handle this data we will use libraries for working with multidimensional arrays, in particular Xarray. We will also need libraries for plotting and viewing data, in this case we will use Matplotlib and Cartopy.</p>
+<div class="cell tag_install docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># General libs for file paths, data extraction, etc</span>
 <span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">basename</span>
 <span class="kn">import</span> <span class="nn">zipfile</span> <span class="c1"># To extract zipfiles</span>
 <span class="kn">import</span> <span class="nn">urllib3</span> 
@@ -609,37 +546,63 @@ td, th {
 </div>
 </div>
 </div>
-<hr></section>
-<section id="request-data-from-the-cds-programmatically-with-the-cds-api">
-<h2>Request data from the CDS programmatically with the CDS API<a class="headerlink" href="#request-data-from-the-cds-programmatically-with-the-cds-api" title="Link to this heading">#</a></h2>
-<p>We will request data from the Climate Data Store (CDS) programmatically with the help of the CDS API. Let us make use of the option to manually set the CDS API credentials. First, you have to define two variables: <code class="docutils literal notranslate"><span class="pre">URL</span></code> and <code class="docutils literal notranslate"><span class="pre">KEY</span></code> which build together your CDS API key. The string of characters that make up your KEY include your personal User ID and CDS API key. To obtain these, first register or login to the CDS (<a class="reference external" href="https://cds-beta.climate.copernicus.eu">https://cds-beta.climate.copernicus.eu</a>), then visit <a class="reference external" href="https://cds-beta.climate.copernicus.eu/how-to-api">https://cds-beta.climate.copernicus.eu/how-to-api</a> and copy the string of characters listed after “key:”. Replace the <code class="docutils literal notranslate"><span class="pre">#########</span></code> below with this string.</p>
-<div class="cell docutils container">
+</section>
+<section id="specify-data-directory">
+<h3>Specify data directory<a class="headerlink" href="#specify-data-directory" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_directory docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;https://cds-beta.climate.copernicus.eu/api&#39;</span>
-<span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;##################################&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Directory to store data</span>
+<span class="c1"># Please ensure that data_dir is a location where you have write permissions</span>
+<span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./data_dir/&#39;</span>
+<span class="c1"># Create this directory if it doesn&#39;t exist</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DATADIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Here we specify a data directory in which we will download our data and all output files that we will generate:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DATADIR</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span>
-</pre></div>
+</section>
+</section>
+<section id="explore-data">
+<h2>Explore data<a class="headerlink" href="#explore-data" title="Permalink to this heading">#</a></h2>
+<p>For the sake of simplicity, and to facilitate data download, the tutorial will make use of some of the coarser resolution models that have a smaller data size. It is nevertheless only a choice for this exercise and not a recommendation (since ideally all models, including those with highest resolution, should be used). Many more models are available on the CDS, and when calculating an ensemble of models, it is best practice to use as many as possible for a more reliable output. See <a class="reference external" href="https://confluence.ecmwf.int/display/CKB/CMIP6%3A+Global+climate+projections#CMIP6:Globalclimateprojections-Models,gridsandpressurelevels">here</a> a full list of models included in the CDS-CMIP6 dataset.</p>
+<section id="search-for-the-data">
+<h3>Search for the data<a class="headerlink" href="#search-for-the-data" title="Permalink to this heading">#</a></h3>
+<p>Having selected the <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/projections-cmip6?tab=overview">CMIP6 global climate projections</a> dataset, we now need to specify what product type, variables, temporal and geographic coverage we are interested in. These can all be selected in the <strong>“Download data”</strong> tab. In this tab a form appears in which we will select the following parameters to download:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Parameters of data to download<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Data: <code class="docutils literal notranslate"><span class="pre">CMIP6</span> <span class="pre">global</span> <span class="pre">climate</span> <span class="pre">projections</span> <span class="pre">of</span> <span class="pre">near-surface</span> <span class="pre">air</span> <span class="pre">temperature</span></code></p></li>
+<li><p class="sd-card-text">Experiments: <code class="docutils literal notranslate"><span class="pre">Historical</span></code>, <code class="docutils literal notranslate"><span class="pre">SSP1-2.6</span></code>, <code class="docutils literal notranslate"><span class="pre">SSP2-4.5</span></code>, <code class="docutils literal notranslate"><span class="pre">SSP5-8.5</span></code></p></li>
+<li><p class="sd-card-text">Models: 7 models from Germany, France, UK, Japan and Russia</p></li>
+<li><p class="sd-card-text">Temporal range: <code class="docutils literal notranslate"><span class="pre">Historical:</span> <span class="pre">1850</span> <span class="pre">-</span> <span class="pre">2014</span></code>. <code class="docutils literal notranslate"><span class="pre">Scenarios:</span> <span class="pre">2015</span> <span class="pre">-</span> <span class="pre">2100</span></code></p></li>
+<li><p class="sd-card-text">Spatial coverage: <code class="docutils literal notranslate"><span class="pre">Global</span></code></p></li>
+<li><p class="sd-card-text">Format: <code class="docutils literal notranslate"><span class="pre">NetCDF</span></code>, compressed into zip files</p></li>
+</ul>
 </div>
+</details><p>At the end of the download form, select <strong>“Show API request”</strong>. This will reveal a block of code, which you can simply copy and paste into a cell of your Jupyter Notebook (see cell below). Having copied the API request into the cell below, running this will retrieve and download the data you requested into your local directory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please remember to accept the terms and conditions of the dataset, at the bottom of the CDS download form!</p>
 </div>
-</div>
-<p>The next step is then to request the data with the help of the CDS API. Below, we loop through multiple data requests. These include data for different models and scenarios. It is not possible to specify multiple models in one data request as their spatial resolution varies.</p>
+</section>
+<section id="download-the-data">
+<h3>Download the data<a class="headerlink" href="#download-the-data" title="Permalink to this heading">#</a></h3>
+<p>Below, we loop through multiple data requests. These include data for different models and scenarios. It is not possible to specify multiple models in one data request as their spatial resolution varies.</p>
 <p>We will download monthly aggregated data. These are disseminated as netcdf files within a zip archive.</p>
 <p>In order to loop through the various experiments and models in our data requests, we will specify them as Python ‘lists’ here:</p>
-<div class="cell docutils container">
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;historical&#39;</span><span class="p">,</span> <span class="s1">&#39;ssp126&#39;</span><span class="p">,</span> <span class="s1">&#39;ssp245&#39;</span><span class="p">,</span> <span class="s1">&#39;ssp585&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hadgem3_gc31_ll&#39;</span><span class="p">,</span> <span class="s1">&#39;inm_cm5_0&#39;</span><span class="p">,</span> <span class="s1">&#39;inm_cm4_8&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsl_cm6a_lr&#39;</span><span class="p">,</span> 
           <span class="s1">&#39;miroc_es2l&#39;</span><span class="p">,</span> <span class="s1">&#39;mpi_esm1_2_lr&#39;</span><span class="p">,</span> <span class="s1">&#39;ukesm1_0_ll&#39;</span><span class="p">]</span>
@@ -647,43 +610,114 @@ td, th {
 </div>
 </div>
 </div>
-<blockquote>
-<div><p><strong>Note:</strong> Note that these are a selection of the lightest models (in terms of data volume), to facilitate download for the sake of this exercise. There are many <a class="reference external" href="https://cds-beta.climate.copernicus.eu/datasets/projections-cmip6?tab=overview">more models available on the CDS</a>.</p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that these are a selection of the lightest models (in terms of data volume), to facilitate download for the sake of this exercise. There are many <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/projections-cmip6?tab=overview%22">more models</a> available on the CDS.</p>
+</div>
 <p>Now we can download the data for each model and experiment sequentially. We will do this separately for the historical experiments and for the various future scenarios, given that they refer to two different time periods.</p>
-<p>Before you run the cells below, the terms and conditions on the use of the data need to have been accepted in the CDS. You can view and accept these conditions by logging into the <a class="reference external" href="https://cds-beta.climate.copernicus.eu">CDS</a>, searching for the dataset, then scrolling to the end of the <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">data</span></code> section.</p>
-<blockquote>
-<div><p><strong>Note:</strong> For more information about data access through the Climate Data Store, please see the CDS user guide <a class="reference external" href="https://cds-beta.climate.copernicus.eu/user-guide">here</a>.</p>
-</div></blockquote>
-<div class="cell docutils container">
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DOWNLOAD DATA FOR HISTORICAL PERIOD</span>
 
-<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
     <span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
         <span class="s1">&#39;projections-cmip6&#39;</span><span class="p">,</span>
         <span class="p">{</span>
             <span class="s1">&#39;download_format&#39;</span><span class="p">:</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data_format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf_legacy&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;data_format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf&#39;</span><span class="p">,</span>
             <span class="s1">&#39;temporal_resolution&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly&#39;</span><span class="p">,</span>
             <span class="s1">&#39;experiment&#39;</span><span class="p">:</span> <span class="s1">&#39;historical&#39;</span><span class="p">,</span>
             <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;single_levels&#39;</span><span class="p">,</span>
             <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="s1">&#39;near_surface_air_temperature&#39;</span><span class="p">,</span>
             <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;1850-01-01/2014-12-31&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1850&quot;</span><span class="p">,</span> <span class="s2">&quot;1851&quot;</span><span class="p">,</span> <span class="s2">&quot;1852&quot;</span><span class="p">,</span> <span class="s2">&quot;1853&quot;</span><span class="p">,</span> <span class="s2">&quot;1854&quot;</span><span class="p">,</span> <span class="s2">&quot;1855&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1856&quot;</span><span class="p">,</span> <span class="s2">&quot;1857&quot;</span><span class="p">,</span> <span class="s2">&quot;1858&quot;</span><span class="p">,</span> <span class="s2">&quot;1859&quot;</span><span class="p">,</span> <span class="s2">&quot;1860&quot;</span><span class="p">,</span> <span class="s2">&quot;1861&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1862&quot;</span><span class="p">,</span> <span class="s2">&quot;1863&quot;</span><span class="p">,</span> <span class="s2">&quot;1864&quot;</span><span class="p">,</span> <span class="s2">&quot;1865&quot;</span><span class="p">,</span> <span class="s2">&quot;1866&quot;</span><span class="p">,</span> <span class="s2">&quot;1867&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1868&quot;</span><span class="p">,</span> <span class="s2">&quot;1869&quot;</span><span class="p">,</span> <span class="s2">&quot;1870&quot;</span><span class="p">,</span> <span class="s2">&quot;1871&quot;</span><span class="p">,</span> <span class="s2">&quot;1872&quot;</span><span class="p">,</span> <span class="s2">&quot;1873&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1874&quot;</span><span class="p">,</span> <span class="s2">&quot;1875&quot;</span><span class="p">,</span> <span class="s2">&quot;1876&quot;</span><span class="p">,</span> <span class="s2">&quot;1877&quot;</span><span class="p">,</span> <span class="s2">&quot;1878&quot;</span><span class="p">,</span> <span class="s2">&quot;1879&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1880&quot;</span><span class="p">,</span> <span class="s2">&quot;1881&quot;</span><span class="p">,</span> <span class="s2">&quot;1882&quot;</span><span class="p">,</span> <span class="s2">&quot;1883&quot;</span><span class="p">,</span> <span class="s2">&quot;1884&quot;</span><span class="p">,</span> <span class="s2">&quot;1885&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1886&quot;</span><span class="p">,</span> <span class="s2">&quot;1887&quot;</span><span class="p">,</span> <span class="s2">&quot;1888&quot;</span><span class="p">,</span> <span class="s2">&quot;1889&quot;</span><span class="p">,</span> <span class="s2">&quot;1890&quot;</span><span class="p">,</span> <span class="s2">&quot;1891&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1892&quot;</span><span class="p">,</span> <span class="s2">&quot;1893&quot;</span><span class="p">,</span> <span class="s2">&quot;1894&quot;</span><span class="p">,</span> <span class="s2">&quot;1895&quot;</span><span class="p">,</span> <span class="s2">&quot;1896&quot;</span><span class="p">,</span> <span class="s2">&quot;1897&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1898&quot;</span><span class="p">,</span> <span class="s2">&quot;1899&quot;</span><span class="p">,</span> <span class="s2">&quot;1900&quot;</span><span class="p">,</span> <span class="s2">&quot;1901&quot;</span><span class="p">,</span> <span class="s2">&quot;1902&quot;</span><span class="p">,</span> <span class="s2">&quot;1903&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1904&quot;</span><span class="p">,</span> <span class="s2">&quot;1905&quot;</span><span class="p">,</span> <span class="s2">&quot;1906&quot;</span><span class="p">,</span> <span class="s2">&quot;1907&quot;</span><span class="p">,</span> <span class="s2">&quot;1908&quot;</span><span class="p">,</span> <span class="s2">&quot;1909&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1910&quot;</span><span class="p">,</span> <span class="s2">&quot;1911&quot;</span><span class="p">,</span> <span class="s2">&quot;1912&quot;</span><span class="p">,</span> <span class="s2">&quot;1913&quot;</span><span class="p">,</span> <span class="s2">&quot;1914&quot;</span><span class="p">,</span> <span class="s2">&quot;1915&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1916&quot;</span><span class="p">,</span> <span class="s2">&quot;1917&quot;</span><span class="p">,</span> <span class="s2">&quot;1918&quot;</span><span class="p">,</span> <span class="s2">&quot;1919&quot;</span><span class="p">,</span> <span class="s2">&quot;1920&quot;</span><span class="p">,</span> <span class="s2">&quot;1921&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1922&quot;</span><span class="p">,</span> <span class="s2">&quot;1923&quot;</span><span class="p">,</span> <span class="s2">&quot;1924&quot;</span><span class="p">,</span> <span class="s2">&quot;1925&quot;</span><span class="p">,</span> <span class="s2">&quot;1926&quot;</span><span class="p">,</span> <span class="s2">&quot;1927&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1928&quot;</span><span class="p">,</span> <span class="s2">&quot;1929&quot;</span><span class="p">,</span> <span class="s2">&quot;1930&quot;</span><span class="p">,</span> <span class="s2">&quot;1931&quot;</span><span class="p">,</span> <span class="s2">&quot;1932&quot;</span><span class="p">,</span> <span class="s2">&quot;1933&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1934&quot;</span><span class="p">,</span> <span class="s2">&quot;1935&quot;</span><span class="p">,</span> <span class="s2">&quot;1936&quot;</span><span class="p">,</span> <span class="s2">&quot;1937&quot;</span><span class="p">,</span> <span class="s2">&quot;1938&quot;</span><span class="p">,</span> <span class="s2">&quot;1939&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1940&quot;</span><span class="p">,</span> <span class="s2">&quot;1941&quot;</span><span class="p">,</span> <span class="s2">&quot;1942&quot;</span><span class="p">,</span> <span class="s2">&quot;1943&quot;</span><span class="p">,</span> <span class="s2">&quot;1944&quot;</span><span class="p">,</span> <span class="s2">&quot;1945&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1946&quot;</span><span class="p">,</span> <span class="s2">&quot;1947&quot;</span><span class="p">,</span> <span class="s2">&quot;1948&quot;</span><span class="p">,</span> <span class="s2">&quot;1949&quot;</span><span class="p">,</span> <span class="s2">&quot;1950&quot;</span><span class="p">,</span> <span class="s2">&quot;1951&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1952&quot;</span><span class="p">,</span> <span class="s2">&quot;1953&quot;</span><span class="p">,</span> <span class="s2">&quot;1954&quot;</span><span class="p">,</span> <span class="s2">&quot;1955&quot;</span><span class="p">,</span> <span class="s2">&quot;1956&quot;</span><span class="p">,</span> <span class="s2">&quot;1957&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1958&quot;</span><span class="p">,</span> <span class="s2">&quot;1959&quot;</span><span class="p">,</span> <span class="s2">&quot;1960&quot;</span><span class="p">,</span> <span class="s2">&quot;1961&quot;</span><span class="p">,</span> <span class="s2">&quot;1962&quot;</span><span class="p">,</span> <span class="s2">&quot;1963&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1964&quot;</span><span class="p">,</span> <span class="s2">&quot;1965&quot;</span><span class="p">,</span> <span class="s2">&quot;1966&quot;</span><span class="p">,</span> <span class="s2">&quot;1967&quot;</span><span class="p">,</span> <span class="s2">&quot;1968&quot;</span><span class="p">,</span> <span class="s2">&quot;1969&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1970&quot;</span><span class="p">,</span> <span class="s2">&quot;1971&quot;</span><span class="p">,</span> <span class="s2">&quot;1972&quot;</span><span class="p">,</span> <span class="s2">&quot;1973&quot;</span><span class="p">,</span> <span class="s2">&quot;1974&quot;</span><span class="p">,</span> <span class="s2">&quot;1975&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1976&quot;</span><span class="p">,</span> <span class="s2">&quot;1977&quot;</span><span class="p">,</span> <span class="s2">&quot;1978&quot;</span><span class="p">,</span> <span class="s2">&quot;1979&quot;</span><span class="p">,</span> <span class="s2">&quot;1980&quot;</span><span class="p">,</span> <span class="s2">&quot;1981&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1982&quot;</span><span class="p">,</span> <span class="s2">&quot;1983&quot;</span><span class="p">,</span> <span class="s2">&quot;1984&quot;</span><span class="p">,</span> <span class="s2">&quot;1985&quot;</span><span class="p">,</span> <span class="s2">&quot;1986&quot;</span><span class="p">,</span> <span class="s2">&quot;1987&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1988&quot;</span><span class="p">,</span> <span class="s2">&quot;1989&quot;</span><span class="p">,</span> <span class="s2">&quot;1990&quot;</span><span class="p">,</span> <span class="s2">&quot;1991&quot;</span><span class="p">,</span> <span class="s2">&quot;1992&quot;</span><span class="p">,</span> <span class="s2">&quot;1993&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;1994&quot;</span><span class="p">,</span> <span class="s2">&quot;1995&quot;</span><span class="p">,</span> <span class="s2">&quot;1996&quot;</span><span class="p">,</span> <span class="s2">&quot;1997&quot;</span><span class="p">,</span> <span class="s2">&quot;1998&quot;</span><span class="p">,</span> <span class="s2">&quot;1999&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;2000&quot;</span><span class="p">,</span> <span class="s2">&quot;2001&quot;</span><span class="p">,</span> <span class="s2">&quot;2002&quot;</span><span class="p">,</span> <span class="s2">&quot;2003&quot;</span><span class="p">,</span> <span class="s2">&quot;2004&quot;</span><span class="p">,</span> <span class="s2">&quot;2005&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;2006&quot;</span><span class="p">,</span> <span class="s2">&quot;2007&quot;</span><span class="p">,</span> <span class="s2">&quot;2008&quot;</span><span class="p">,</span> <span class="s2">&quot;2009&quot;</span><span class="p">,</span> <span class="s2">&quot;2010&quot;</span><span class="p">,</span> <span class="s2">&quot;2011&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;2012&quot;</span><span class="p">,</span> <span class="s2">&quot;2013&quot;</span><span class="p">,</span> <span class="s2">&quot;2014&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;month&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;01&quot;</span><span class="p">,</span> <span class="s2">&quot;02&quot;</span><span class="p">,</span> <span class="s2">&quot;03&quot;</span><span class="p">,</span> <span class="s2">&quot;04&quot;</span><span class="p">,</span> <span class="s2">&quot;05&quot;</span><span class="p">,</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+                      <span class="s2">&quot;07&quot;</span><span class="p">,</span> <span class="s2">&quot;08&quot;</span><span class="p">,</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">]</span>    
         <span class="p">},</span>
         <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">cmip6_monthly_1850-2014_historical_</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">.zip&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:22:10,419 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-07-10 10:22:11,341 INFO Request ID is d1c5881d-4936-4466-bc9b-7d3c48d65924
+2025-07-10 10:22:11,593 INFO status has been updated to accepted
+2025-07-10 10:22:17,013 INFO status has been updated to running
+2025-07-10 10:23:27,757 INFO status has been updated to successful
+</pre></div>
 </div>
-<div class="cell docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8ce9058adc1b4c7e83cc4cb90b23de1c", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:24:08,486 INFO Request ID is 8a781dfc-073c-4eff-8f42-1684de3813ea
+2025-07-10 10:24:08,559 INFO status has been updated to accepted
+2025-07-10 10:24:17,478 INFO status has been updated to running
+2025-07-10 10:24:59,056 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "6ae87a22b1624c12a36beaa13b93fee1", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:25:13,872 INFO Request ID is 6cbc4ea5-c92f-46de-8c90-4b3b4705701c
+2025-07-10 10:25:14,086 INFO status has been updated to accepted
+2025-07-10 10:25:27,884 INFO status has been updated to running
+2025-07-10 10:26:04,302 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5ee13cfab7684ec58d9139686b248bab", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:26:34,562 INFO Request ID is ab6d5273-b2ba-4ad9-ad9e-a0b9cb2a6efb
+2025-07-10 10:26:34,651 INFO status has been updated to accepted
+2025-07-10 10:26:48,299 INFO status has been updated to running
+2025-07-10 10:26:56,114 INFO status has been updated to accepted
+2025-07-10 10:27:07,601 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a17f6a4741fa47c6be5a3814339e6940", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:27:20,180 INFO Request ID is 35dbd444-45d8-440e-8281-6c1b5b07f0b3
+2025-07-10 10:27:20,261 INFO status has been updated to accepted
+2025-07-10 10:27:53,173 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f57df505a0b44738913cc8cbdc777dd9", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:28:06,979 INFO Request ID is 04a38876-98ce-4e03-8eae-011f06ec3e19
+2025-07-10 10:28:07,050 INFO status has been updated to accepted
+2025-07-10 10:28:15,533 INFO status has been updated to running
+2025-07-10 10:28:57,064 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "53b6176bec7149e1ba7c324f3aaf1816", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:29:05,039 INFO Request ID is 19808302-07ea-4d29-98fa-f9f1d23ff6bb
+2025-07-10 10:29:05,170 INFO status has been updated to accepted
+2025-07-10 10:29:26,769 INFO status has been updated to running
+2025-07-10 10:30:21,201 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8343d2173202423687b1097b11824d41", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell tag_request docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DOWNLOAD DATA FOR FUTURE SCENARIOS</span>
 
-<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">experiments</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
@@ -691,22 +725,169 @@ td, th {
             <span class="s1">&#39;projections-cmip6&#39;</span><span class="p">,</span>
             <span class="p">{</span>
                 <span class="s1">&#39;download_format&#39;</span><span class="p">:</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;data_format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf_legacy&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;data_format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;temporal_resolution&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;experiment&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;single_levels&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="s1">&#39;near_surface_air_temperature&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;2015-01-01/2100-12-31&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;2015&quot;</span><span class="p">,</span> <span class="s2">&quot;2016&quot;</span><span class="p">,</span> <span class="s2">&quot;2017&quot;</span><span class="p">,</span> <span class="s2">&quot;2018&quot;</span><span class="p">,</span> <span class="s2">&quot;2019&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2021&quot;</span><span class="p">,</span> <span class="s2">&quot;2022&quot;</span><span class="p">,</span> <span class="s2">&quot;2023&quot;</span><span class="p">,</span> <span class="s2">&quot;2024&quot;</span><span class="p">,</span> <span class="s2">&quot;2025&quot;</span><span class="p">,</span> <span class="s2">&quot;2026&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2027&quot;</span><span class="p">,</span> <span class="s2">&quot;2028&quot;</span><span class="p">,</span> <span class="s2">&quot;2029&quot;</span><span class="p">,</span> <span class="s2">&quot;2030&quot;</span><span class="p">,</span> <span class="s2">&quot;2031&quot;</span><span class="p">,</span> <span class="s2">&quot;2032&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2033&quot;</span><span class="p">,</span> <span class="s2">&quot;2034&quot;</span><span class="p">,</span> <span class="s2">&quot;2035&quot;</span><span class="p">,</span> <span class="s2">&quot;2036&quot;</span><span class="p">,</span> <span class="s2">&quot;2037&quot;</span><span class="p">,</span> <span class="s2">&quot;2038&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2039&quot;</span><span class="p">,</span> <span class="s2">&quot;2040&quot;</span><span class="p">,</span> <span class="s2">&quot;2041&quot;</span><span class="p">,</span> <span class="s2">&quot;2042&quot;</span><span class="p">,</span> <span class="s2">&quot;2043&quot;</span><span class="p">,</span> <span class="s2">&quot;2044&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2045&quot;</span><span class="p">,</span> <span class="s2">&quot;2046&quot;</span><span class="p">,</span> <span class="s2">&quot;2047&quot;</span><span class="p">,</span> <span class="s2">&quot;2048&quot;</span><span class="p">,</span> <span class="s2">&quot;2049&quot;</span><span class="p">,</span> <span class="s2">&quot;2050&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2051&quot;</span><span class="p">,</span> <span class="s2">&quot;2052&quot;</span><span class="p">,</span> <span class="s2">&quot;2053&quot;</span><span class="p">,</span> <span class="s2">&quot;2054&quot;</span><span class="p">,</span> <span class="s2">&quot;2055&quot;</span><span class="p">,</span> <span class="s2">&quot;2056&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2057&quot;</span><span class="p">,</span> <span class="s2">&quot;2058&quot;</span><span class="p">,</span> <span class="s2">&quot;2059&quot;</span><span class="p">,</span> <span class="s2">&quot;2060&quot;</span><span class="p">,</span> <span class="s2">&quot;2061&quot;</span><span class="p">,</span> <span class="s2">&quot;2062&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2063&quot;</span><span class="p">,</span> <span class="s2">&quot;2064&quot;</span><span class="p">,</span> <span class="s2">&quot;2065&quot;</span><span class="p">,</span> <span class="s2">&quot;2066&quot;</span><span class="p">,</span> <span class="s2">&quot;2067&quot;</span><span class="p">,</span> <span class="s2">&quot;2068&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2069&quot;</span><span class="p">,</span> <span class="s2">&quot;2070&quot;</span><span class="p">,</span> <span class="s2">&quot;2071&quot;</span><span class="p">,</span> <span class="s2">&quot;2072&quot;</span><span class="p">,</span> <span class="s2">&quot;2073&quot;</span><span class="p">,</span> <span class="s2">&quot;2074&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2075&quot;</span><span class="p">,</span> <span class="s2">&quot;2076&quot;</span><span class="p">,</span> <span class="s2">&quot;2077&quot;</span><span class="p">,</span> <span class="s2">&quot;2078&quot;</span><span class="p">,</span> <span class="s2">&quot;2079&quot;</span><span class="p">,</span> <span class="s2">&quot;2080&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2081&quot;</span><span class="p">,</span> <span class="s2">&quot;2082&quot;</span><span class="p">,</span> <span class="s2">&quot;2083&quot;</span><span class="p">,</span> <span class="s2">&quot;2084&quot;</span><span class="p">,</span> <span class="s2">&quot;2085&quot;</span><span class="p">,</span> <span class="s2">&quot;2086&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2087&quot;</span><span class="p">,</span> <span class="s2">&quot;2088&quot;</span><span class="p">,</span> <span class="s2">&quot;2089&quot;</span><span class="p">,</span> <span class="s2">&quot;2090&quot;</span><span class="p">,</span> <span class="s2">&quot;2091&quot;</span><span class="p">,</span> <span class="s2">&quot;2092&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2093&quot;</span><span class="p">,</span> <span class="s2">&quot;2094&quot;</span><span class="p">,</span> <span class="s2">&quot;2095&quot;</span><span class="p">,</span> <span class="s2">&quot;2096&quot;</span><span class="p">,</span> <span class="s2">&quot;2097&quot;</span><span class="p">,</span> <span class="s2">&quot;2098&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;2099&quot;</span><span class="p">,</span> <span class="s2">&quot;2100&quot;</span><span class="p">],</span>
+                <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;01&quot;</span><span class="p">,</span> <span class="s2">&quot;02&quot;</span><span class="p">,</span> <span class="s2">&quot;03&quot;</span><span class="p">,</span> <span class="s2">&quot;04&quot;</span><span class="p">,</span> <span class="s2">&quot;05&quot;</span><span class="p">,</span> <span class="s2">&quot;06&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;07&quot;</span><span class="p">,</span> <span class="s2">&quot;08&quot;</span><span class="p">,</span> <span class="s2">&quot;09&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">]</span>
             <span class="p">},</span>
             <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DATADIR</span><span class="si">}</span><span class="s1">cmip6_monthly_2015-2100_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">.zip&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:41:27,524 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-07-10 10:41:28,207 INFO Request ID is 14183f12-1981-4ccf-a44d-3061b3f85238
+2025-07-10 10:41:28,398 INFO status has been updated to accepted
+2025-07-10 10:42:01,302 INFO status has been updated to running
+2025-07-10 10:42:44,186 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "81bf3f6307204cfbb1b6b66967ba1bda", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:42:55,747 INFO Request ID is 2d2bf80d-e701-49fe-b523-ae43dbfa10cb
+2025-07-10 10:42:55,851 INFO status has been updated to accepted
+2025-07-10 10:43:09,675 INFO status has been updated to running
+2025-07-10 10:43:28,845 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "78af34ed5352449d9fa158b5228d5400", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:43:36,798 INFO Request ID is f212f1e8-d9bb-4886-adbd-8c7604658c3a
+2025-07-10 10:43:36,860 INFO status has been updated to accepted
+2025-07-10 10:43:50,505 INFO status has been updated to running
+2025-07-10 10:44:53,020 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "29057181dae3494481114c24012f2606", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:45:01,370 INFO Request ID is 4cc2aaeb-0f93-46c0-afb5-806c9f05b5c0
+2025-07-10 10:45:01,934 INFO status has been updated to accepted
+2025-07-10 10:45:08,357 INFO status has been updated to running
+2025-07-10 10:45:25,047 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "38d15f6249f74f7c9a68b9e98ff13382", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:45:34,124 INFO Request ID is 9748fa4d-8994-479e-ad63-e5ce39f87536
+2025-07-10 10:45:34,195 INFO status has been updated to accepted
+2025-07-10 10:45:48,279 INFO status has been updated to running
+2025-07-10 10:45:55,945 INFO status has been updated to accepted
+2025-07-10 10:46:07,434 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "022ac926cc63432bb7d8b42ed04ab69a", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:46:11,947 INFO Request ID is 3a1e0d08-d5f9-4c7f-ad60-d8046de650cf
+2025-07-10 10:46:12,029 INFO status has been updated to accepted
+2025-07-10 10:46:20,562 INFO status has been updated to running
+2025-07-10 10:46:44,905 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "fc62f70285204bcfb28fa8881d8b7743", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:46:54,873 INFO Request ID is 2c16b7e8-69e3-4856-b00a-635da50c1b66
+2025-07-10 10:46:55,010 INFO status has been updated to accepted
+2025-07-10 10:47:03,849 INFO status has been updated to running
+2025-07-10 10:47:45,426 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "da832c29f945408baab98424bfa94d2f", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:47:54,083 INFO Request ID is e741653c-9256-4982-8c4c-3375e67bf104
+2025-07-10 10:47:54,169 INFO status has been updated to accepted
+2025-07-10 10:48:03,082 INFO status has been updated to running
+2025-07-10 10:48:28,777 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "3318f98cbb784c598a9380652a7e43c0", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:48:55,485 INFO Request ID is a9d12a90-31be-4cec-a251-44f12c9f94cc
+2025-07-10 10:48:55,576 INFO status has been updated to accepted
+2025-07-10 10:49:04,154 INFO status has been updated to running
+2025-07-10 10:49:28,453 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8431777a7b5045ae87b21774e32ff56c", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:49:38,448 INFO Request ID is 260fd634-04c1-4017-9f88-50082f94b297
+2025-07-10 10:49:38,533 INFO status has been updated to accepted
+2025-07-10 10:49:52,159 INFO status has been updated to running
+2025-07-10 10:50:11,319 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d5c1b12a3c314027914c617d7951d33e", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:50:23,618 INFO Request ID is 7752b683-d0cd-4571-8f45-34e25a2e0ef0
+2025-07-10 10:50:23,687 INFO status has been updated to accepted
+2025-07-10 10:50:45,038 INFO status has been updated to running
+2025-07-10 10:50:56,509 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "00fa7ed7c5a74fa49f506557496ef577", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:51:04,427 INFO Request ID is 065b550a-e8d2-4392-89aa-28bcc430b0ff
+2025-07-10 10:51:04,515 INFO status has been updated to accepted
+2025-07-10 10:51:18,419 INFO status has been updated to running
+2025-07-10 10:51:37,535 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5223bbf2987b4f75985ce3a45e57a042", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:51:46,695 INFO Request ID is 22948edb-a869-4268-8697-1d8a1a2c54b4
+2025-07-10 10:51:47,107 INFO status has been updated to accepted
+2025-07-10 10:51:55,758 INFO status has been updated to running
+2025-07-10 10:52:20,111 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2002be4f59ca45c0938994b788f64e70", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:52:29,074 INFO Request ID is 02f9b3b6-437f-4402-9003-ae26ab6f3c89
+2025-07-10 10:52:29,138 INFO status has been updated to accepted
+2025-07-10 10:52:43,035 INFO status has been updated to running
+2025-07-10 10:53:45,167 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "bc636297a1a34d4fb77427d988a5a781", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:54:17,843 INFO Request ID is 404cd3be-ef90-497b-93fc-2d09aaa56f6b
+2025-07-10 10:54:17,949 INFO status has been updated to accepted
+2025-07-10 10:54:26,517 INFO status has been updated to running
+2025-07-10 10:54:50,845 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d7c5d6a852004f60a3ef4147dffc8b6b", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:55:04,777 INFO Request ID is d20baa69-30b4-4d90-bde3-a8c20c3f2e2f
+2025-07-10 10:55:04,956 INFO status has been updated to accepted
+2025-07-10 10:55:14,056 INFO status has been updated to running
+2025-07-10 10:56:21,510 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "0a23a8b6abca46c0b9b3b34f80520000", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:56:37,519 INFO Request ID is 54beaf56-504b-4351-bbd8-3deda3159403
+2025-07-10 10:56:37,604 INFO status has been updated to accepted
+2025-07-10 10:56:46,456 INFO status has been updated to running
+2025-07-10 10:57:10,759 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "179dd95e6aed42658a8337ac2066200a", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:57:21,409 INFO Request ID is 9ab9cecf-ef9a-4d61-95a9-99a23abe4cba
+2025-07-10 10:57:21,479 INFO status has been updated to accepted
+2025-07-10 10:57:30,124 INFO status has been updated to running
+2025-07-10 10:57:54,433 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b0f2554e3c5c4c3fbcddff8b63671cb8", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:58:02,409 INFO Request ID is 90d6ed13-5ab0-4910-ab22-8e4a898a1325
+2025-07-10 10:58:02,522 INFO status has been updated to accepted
+2025-07-10 10:58:11,124 INFO status has been updated to running
+2025-07-10 10:58:35,719 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b53fbfc078734db2809f36123bc74fe1", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:58:41,631 INFO Request ID is 1ba3e0f4-c0ee-40cc-9364-ad42fc44f1a5
+2025-07-10 10:58:41,703 INFO status has been updated to accepted
+2025-07-10 10:58:50,112 INFO status has been updated to running
+2025-07-10 10:59:14,676 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "0f7c1e7fb4f44296a489b3b1b5cbcdc2", "version_major": 2, "version_minor": 0}</script><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-07-10 10:59:19,284 INFO Request ID is c4b7b269-5a80-4ed4-ad0f-27e0ab7e71bc
+2025-07-10 10:59:19,367 INFO status has been updated to accepted
+2025-07-10 10:59:27,824 INFO status has been updated to running
+2025-07-10 10:59:52,099 INFO status has been updated to successful
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "3af8cce185be4f7f9220e42279704daf", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </section>
+</section>
 <section id="unzip-the-downloaded-data-files">
-<h2>Unzip the downloaded data files<a class="headerlink" href="#unzip-the-downloaded-data-files" title="Link to this heading">#</a></h2>
+<h2>Unzip the downloaded data files<a class="headerlink" href="#unzip-the-downloaded-data-files" title="Permalink to this heading">#</a></h2>
 <p>From the CDS, CMIP6 data are available as <code class="docutils literal notranslate"><span class="pre">NetCDF</span></code> files compressed into <code class="docutils literal notranslate"><span class="pre">zip</span></code> archives. For this reason, before we can load any data, we have to extract the files. Having downloaded the four experiments <code class="docutils literal notranslate"><span class="pre">historical</span></code>, <code class="docutils literal notranslate"><span class="pre">SSP1-2.6</span></code>, <code class="docutils literal notranslate"><span class="pre">SSP2-4.5</span></code> and <code class="docutils literal notranslate"><span class="pre">SSP5-8.5</span></code> as seperate zip files, we can use the functions from the <code class="docutils literal notranslate"><span class="pre">zipfile</span></code> Python package to extract their contents. For each zip file we first construct a <code class="docutils literal notranslate"><span class="pre">ZipFile()</span></code> object, then we apply the function <code class="docutils literal notranslate"><span class="pre">extractall()</span></code> to extract its content.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -719,7 +900,7 @@ td, th {
 </div>
 </div>
 <section id="create-a-list-of-the-extracted-files">
-<h3>Create a list of the extracted files<a class="headerlink" href="#create-a-list-of-the-extracted-files" title="Link to this heading">#</a></h3>
+<h3>Create a list of the extracted files<a class="headerlink" href="#create-a-list-of-the-extracted-files" title="Permalink to this heading">#</a></h3>
 <p>To facilitate batch processing later in the tutorial, here we create a list of the extracted NetCDF files:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -739,11 +920,11 @@ td, th {
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500216-20141216_v20190624.nc&#39;,
- &#39;tas_Amon_HadGEM3-GC31-LL_ssp126_r1i1p1f3_gn_201501-204912_v20200114.nc&#39;,
- &#39;tas_Amon_HadGEM3-GC31-LL_ssp126_r1i1p1f3_gn_205001-210012_v20200114.nc&#39;,
- &#39;tas_Amon_HadGEM3-GC31-LL_ssp245_r1i1p1f3_gn_201501-204912_v20190908.nc&#39;,
- &#39;tas_Amon_HadGEM3-GC31-LL_ssp245_r1i1p1f3_gn_205001-210012_v20190908.nc&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tas_Amon_MIROC-ES2L_ssp245_r1i1p1f2_gn_20150116-21001216.nc&#39;,
+ &#39;tas_Amon_IPSL-CM6A-LR_ssp585_r1i1p1f1_gr_20150116-21001216.nc&#39;,
+ &#39;tas_Amon_INM-CM4-8_ssp585_r1i1p1f1_gr1_20150116-21001216.nc&#39;,
+ &#39;tas_Amon_MPI-ESM1-2-LR_ssp585_r1i1p1f1_gn_20150116-21001216.nc&#39;,
+ &#39;tas_Amon_MPI-ESM1-2-LR_historical_r1i1p1f1_gn_18500116-20141216.nc&#39;]
 </pre></div>
 </div>
 </div>
@@ -751,7 +932,7 @@ td, th {
 </section>
 </section>
 <section id="load-and-prepare-cmip6-data-for-one-model-and-one-experiment">
-<h2>Load and prepare CMIP6 data for one model and one experiment<a class="headerlink" href="#load-and-prepare-cmip6-data-for-one-model-and-one-experiment" title="Link to this heading">#</a></h2>
+<h2>Load and prepare CMIP6 data for one model and one experiment<a class="headerlink" href="#load-and-prepare-cmip6-data-for-one-model-and-one-experiment" title="Permalink to this heading">#</a></h2>
 <p>Now that we have downloaded and extracted the data, we can prepare it in order to view a time series of the spread of annual global temperature for the model ensemble. These preparation steps include the following:</p>
 <ol class="arabic simple">
 <li><p><strong>Spatial aggregation</strong>: to have a single global temperature value for each model/experiment dataset, and for each time step</p></li>
@@ -761,7 +942,7 @@ td, th {
 </ol>
 <p>In this section we apply these steps to a single dataset from one model and one experiment. In the next section we merge data from all models/experiments in preparation for the final processing and plotting of the temperature time series.</p>
 <section id="load-and-inspect-data">
-<h3>Load and inspect data<a class="headerlink" href="#load-and-inspect-data" title="Link to this heading">#</a></h3>
+<h3>Load and inspect data<a class="headerlink" href="#load-and-inspect-data" title="Permalink to this heading">#</a></h3>
 <p>We begin by loading the first of the NetCDF files in our list. We will use the Python library <a class="reference external" href="http://xarray.pydata.org/en/stable/">xarray</a> and its function <code class="docutils literal notranslate"><span class="pre">open_dataset</span></code> to read NetCDF files.</p>
 <p>The result is a <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object with four dimensions: <code class="docutils literal notranslate"><span class="pre">bnds</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>, of which the dimension <code class="docutils literal notranslate"><span class="pre">bnds</span></code> is not callable.</p>
 <div class="cell docutils container">
@@ -802,12 +983,14 @@ td, th {
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -852,7 +1035,7 @@ body.vscode-dark {
 .xr-sections {
   padding-left: 0 !important;
   display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
 }
 
 .xr-section-item {
@@ -860,7 +1043,9 @@ body.vscode-dark {
 }
 
 .xr-section-item input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -870,6 +1055,10 @@ body.vscode-dark {
 .xr-section-item input:enabled + label {
   cursor: pointer;
   color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -893,7 +1082,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -904,7 +1093,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -976,15 +1165,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1032,6 +1221,11 @@ body.vscode-dark {
   grid-column: 4;
 }
 
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
 .xr-var-name,
 .xr-var-dims,
 .xr-var-dtype,
@@ -1053,14 +1247,16 @@ body.vscode-dark {
 }
 
 .xr-var-attrs,
-.xr-var-data {
+.xr-var-data,
+.xr-index-data {
   display: none;
   background-color: var(--xr-background-color) !important;
   padding-bottom: 5px !important;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data {
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
   display: block;
 }
 
@@ -1070,13 +1266,16 @@ body.vscode-dark {
 
 .xr-var-name span,
 .xr-var-data,
+.xr-index-name div,
+.xr-index-data,
 .xr-attrs {
   padding-left: 25px !important;
 }
 
 .xr-attrs,
 .xr-var-attrs,
-.xr-var-data {
+.xr-var-data,
+.xr-index-data {
   grid-column: 1 / -1;
 }
 
@@ -1114,7 +1313,8 @@ dl.xr-attrs {
 }
 
 .xr-icon-database,
-.xr-icon-file-text2 {
+.xr-icon-file-text2,
+.xr-no-icon {
   display: inline-block;
   vertical-align: middle;
   width: 1em;
@@ -1123,105 +1323,110 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
-Dimensions:    (time: 1979, bnds: 2, lat: 144, lon: 192)
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 34MB
+Dimensions:    (time: 1032, bnds: 2, lat: 64, lon: 128)
 Coordinates:
-  * time       (time) object 1850-02-16 00:00:00 ... 2014-12-16 00:00:00
-  * lat        (lat) float64 -89.38 -88.12 -86.88 -85.62 ... 86.88 88.12 89.38
-  * lon        (lon) float64 0.9375 2.812 4.688 6.562 ... 355.3 357.2 359.1
-    height     float64 1.5
+  * time       (time) datetime64[ns] 8kB 2015-01-16T12:00:00 ... 2100-12-16T1...
+  * lat        (lat) float64 512B -87.86 -85.1 -82.31 ... 82.31 85.1 87.86
+  * lon        (lon) float64 1kB 0.0 2.812 5.625 8.438 ... 351.6 354.4 357.2
+    height     float64 8B ...
 Dimensions without coordinates: bnds
 Data variables:
-    time_bnds  (time, bnds) object 1850-02-01 00:00:00 ... 2015-01-01 00:00:00
-    lat_bnds   (time, lat, bnds) float64 ...
-    lon_bnds   (time, lon, bnds) float64 ...
-    tas        (time, lat, lon) float32 ...
-Attributes: (12/46)
+    time_bnds  (time, bnds) datetime64[ns] 17kB ...
+    lat_bnds   (lat, bnds) float64 1kB ...
+    lon_bnds   (lon, bnds) float64 2kB ...
+    tas        (time, lat, lon) float32 34MB ...
+Attributes: (12/44)
     Conventions:            CF-1.7 CMIP-6.2
-    activity_id:            CMIP
+    activity_id:            ScenarioMIP
     branch_method:          standard
-    branch_time_in_child:   0.0
-    branch_time_in_parent:  0.0
-    creation_date:          2019-06-19T11:21:17Z
+    branch_time_in_child:   60265.0
+    branch_time_in_parent:  60265.0
+    creation_date:          2019-07-13T17:51:22Z
     ...                     ...
-    title:                  HadGEM3-GC31-LL output prepared for CMIP6
+    title:                  MIROC-ES2L output prepared for CMIP6
     variable_id:            tas
-    variant_label:          r1i1p1f3
-    license:                CMIP6 model data produced by the Met Office Hadle...
-    cmor_version:           3.4.0
-    tracking_id:            hdl:21.14100/b6959414-d5ed-4cd9-a627-59238e52132d</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-5681388b-94ef-4c6c-be68-98adaff1cb75' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-5681388b-94ef-4c6c-be68-98adaff1cb75' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 1979</li><li><span>bnds</span>: 2</li><li><span class='xr-has-index'>lat</span>: 144</li><li><span class='xr-has-index'>lon</span>: 192</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-39dd8668-2684-4987-98b9-4f10095a77a4' class='xr-section-summary-in' type='checkbox'  checked><label for='section-39dd8668-2684-4987-98b9-4f10095a77a4' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>1850-02-16 00:00:00 ... 2014-12-...</div><input id='attrs-c76133e6-226e-46cb-bae2-896cee42c07b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c76133e6-226e-46cb-bae2-896cee42c07b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-da6d06da-c426-48eb-94d9-c5b7c23e4225' class='xr-var-data-in' type='checkbox'><label for='data-da6d06da-c426-48eb-94d9-c5b7c23e4225' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([cftime.Datetime360Day(1850, 2, 16, 0, 0, 0, 0, has_year_zero=True),
-       cftime.Datetime360Day(1850, 3, 16, 0, 0, 0, 0, has_year_zero=True),
-       cftime.Datetime360Day(1850, 4, 16, 0, 0, 0, 0, has_year_zero=True), ...,
-       cftime.Datetime360Day(2014, 10, 16, 0, 0, 0, 0, has_year_zero=True),
-       cftime.Datetime360Day(2014, 11, 16, 0, 0, 0, 0, has_year_zero=True),
-       cftime.Datetime360Day(2014, 12, 16, 0, 0, 0, 0, has_year_zero=True)],
-      dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.38 -88.12 ... 88.12 89.38</div><input id='attrs-cc8cb79f-ecef-4d58-a0a0-f5359ef5ca22' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-cc8cb79f-ecef-4d58-a0a0-f5359ef5ca22' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-350d789a-fc2c-4527-b2c6-9a33ee5e309f' class='xr-var-data-in' type='checkbox'><label for='data-350d789a-fc2c-4527-b2c6-9a33ee5e309f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>lat_bnds</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([-89.375, -88.125, -86.875, -85.625, -84.375, -83.125, -81.875, -80.625,
-       -79.375, -78.125, -76.875, -75.625, -74.375, -73.125, -71.875, -70.625,
-       -69.375, -68.125, -66.875, -65.625, -64.375, -63.125, -61.875, -60.625,
-       -59.375, -58.125, -56.875, -55.625, -54.375, -53.125, -51.875, -50.625,
-       -49.375, -48.125, -46.875, -45.625, -44.375, -43.125, -41.875, -40.625,
-       -39.375, -38.125, -36.875, -35.625, -34.375, -33.125, -31.875, -30.625,
-       -29.375, -28.125, -26.875, -25.625, -24.375, -23.125, -21.875, -20.625,
-       -19.375, -18.125, -16.875, -15.625, -14.375, -13.125, -11.875, -10.625,
-        -9.375,  -8.125,  -6.875,  -5.625,  -4.375,  -3.125,  -1.875,  -0.625,
-         0.625,   1.875,   3.125,   4.375,   5.625,   6.875,   8.125,   9.375,
-        10.625,  11.875,  13.125,  14.375,  15.625,  16.875,  18.125,  19.375,
-        20.625,  21.875,  23.125,  24.375,  25.625,  26.875,  28.125,  29.375,
-        30.625,  31.875,  33.125,  34.375,  35.625,  36.875,  38.125,  39.375,
-        40.625,  41.875,  43.125,  44.375,  45.625,  46.875,  48.125,  49.375,
-        50.625,  51.875,  53.125,  54.375,  55.625,  56.875,  58.125,  59.375,
-        60.625,  61.875,  63.125,  64.375,  65.625,  66.875,  68.125,  69.375,
-        70.625,  71.875,  73.125,  74.375,  75.625,  76.875,  78.125,  79.375,
-        80.625,  81.875,  83.125,  84.375,  85.625,  86.875,  88.125,  89.375])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.9375 2.812 4.688 ... 357.2 359.1</div><input id='attrs-b528edbe-4daa-4d25-824a-2e8488a4c447' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b528edbe-4daa-4d25-824a-2e8488a4c447' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1dfaa9d2-2a46-436c-aec9-d4e310b1a985' class='xr-var-data-in' type='checkbox'><label for='data-1dfaa9d2-2a46-436c-aec9-d4e310b1a985' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>lon_bnds</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([  0.9375,   2.8125,   4.6875,   6.5625,   8.4375,  10.3125,  12.1875,
-        14.0625,  15.9375,  17.8125,  19.6875,  21.5625,  23.4375,  25.3125,
-        27.1875,  29.0625,  30.9375,  32.8125,  34.6875,  36.5625,  38.4375,
-        40.3125,  42.1875,  44.0625,  45.9375,  47.8125,  49.6875,  51.5625,
-        53.4375,  55.3125,  57.1875,  59.0625,  60.9375,  62.8125,  64.6875,
-        66.5625,  68.4375,  70.3125,  72.1875,  74.0625,  75.9375,  77.8125,
-        79.6875,  81.5625,  83.4375,  85.3125,  87.1875,  89.0625,  90.9375,
-        92.8125,  94.6875,  96.5625,  98.4375, 100.3125, 102.1875, 104.0625,
-       105.9375, 107.8125, 109.6875, 111.5625, 113.4375, 115.3125, 117.1875,
-       119.0625, 120.9375, 122.8125, 124.6875, 126.5625, 128.4375, 130.3125,
-       132.1875, 134.0625, 135.9375, 137.8125, 139.6875, 141.5625, 143.4375,
-       145.3125, 147.1875, 149.0625, 150.9375, 152.8125, 154.6875, 156.5625,
-       158.4375, 160.3125, 162.1875, 164.0625, 165.9375, 167.8125, 169.6875,
-       171.5625, 173.4375, 175.3125, 177.1875, 179.0625, 180.9375, 182.8125,
-       184.6875, 186.5625, 188.4375, 190.3125, 192.1875, 194.0625, 195.9375,
-       197.8125, 199.6875, 201.5625, 203.4375, 205.3125, 207.1875, 209.0625,
-       210.9375, 212.8125, 214.6875, 216.5625, 218.4375, 220.3125, 222.1875,
-       224.0625, 225.9375, 227.8125, 229.6875, 231.5625, 233.4375, 235.3125,
-       237.1875, 239.0625, 240.9375, 242.8125, 244.6875, 246.5625, 248.4375,
-       250.3125, 252.1875, 254.0625, 255.9375, 257.8125, 259.6875, 261.5625,
-       263.4375, 265.3125, 267.1875, 269.0625, 270.9375, 272.8125, 274.6875,
-       276.5625, 278.4375, 280.3125, 282.1875, 284.0625, 285.9375, 287.8125,
-       289.6875, 291.5625, 293.4375, 295.3125, 297.1875, 299.0625, 300.9375,
-       302.8125, 304.6875, 306.5625, 308.4375, 310.3125, 312.1875, 314.0625,
-       315.9375, 317.8125, 319.6875, 321.5625, 323.4375, 325.3125, 327.1875,
-       329.0625, 330.9375, 332.8125, 334.6875, 336.5625, 338.4375, 340.3125,
-       342.1875, 344.0625, 345.9375, 347.8125, 349.6875, 351.5625, 353.4375,
-       355.3125, 357.1875, 359.0625])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-79720cd7-5de5-41e2-b0f1-ac0e1ead9091' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-79720cd7-5de5-41e2-b0f1-ac0e1ead9091' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e3d8fc4c-4ef4-43f2-8e12-e5ecd79daba8' class='xr-var-data-in' type='checkbox'><label for='data-e3d8fc4c-4ef4-43f2-8e12-e5ecd79daba8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>axis :</span></dt><dd>Z</dd><dt><span>positive :</span></dt><dd>up</dd><dt><span>long_name :</span></dt><dd>height</dd><dt><span>standard_name :</span></dt><dd>height</dd></dl></div><div class='xr-var-data'><pre>array(1.5)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-82b1784d-1492-44f8-8cb4-0cbf81108681' class='xr-section-summary-in' type='checkbox'  checked><label for='section-82b1784d-1492-44f8-8cb4-0cbf81108681' class='xr-section-summary' >Data variables: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, bnds)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f0380d82-1de6-42f8-8577-7572147a5b20' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f0380d82-1de6-42f8-8577-7572147a5b20' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-831480e9-462a-46af-a1c5-a54e170fa247' class='xr-var-data-in' type='checkbox'><label for='data-831480e9-462a-46af-a1c5-a54e170fa247' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[cftime.Datetime360Day(1850, 2, 1, 0, 0, 0, 0, has_year_zero=True),
-        cftime.Datetime360Day(1850, 3, 1, 0, 0, 0, 0, has_year_zero=True)],
-       [cftime.Datetime360Day(1850, 3, 1, 0, 0, 0, 0, has_year_zero=True),
-        cftime.Datetime360Day(1850, 4, 1, 0, 0, 0, 0, has_year_zero=True)],
-       [cftime.Datetime360Day(1850, 4, 1, 0, 0, 0, 0, has_year_zero=True),
-        cftime.Datetime360Day(1850, 5, 1, 0, 0, 0, 0, has_year_zero=True)],
-       ...,
-       [cftime.Datetime360Day(2014, 10, 1, 0, 0, 0, 0, has_year_zero=True),
-        cftime.Datetime360Day(2014, 11, 1, 0, 0, 0, 0, has_year_zero=True)],
-       [cftime.Datetime360Day(2014, 11, 1, 0, 0, 0, 0, has_year_zero=True),
-        cftime.Datetime360Day(2014, 12, 1, 0, 0, 0, 0, has_year_zero=True)],
-       [cftime.Datetime360Day(2014, 12, 1, 0, 0, 0, 0, has_year_zero=True),
-        cftime.Datetime360Day(2015, 1, 1, 0, 0, 0, 0, has_year_zero=True)]],
-      dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lat_bnds</span></div><div class='xr-var-dims'>(time, lat, bnds)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-eca48b47-dcbc-47d7-86bd-dab7f68dca29' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-eca48b47-dcbc-47d7-86bd-dab7f68dca29' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fb356ef7-1a02-4a29-be63-3c7610f86f6a' class='xr-var-data-in' type='checkbox'><label for='data-fb356ef7-1a02-4a29-be63-3c7610f86f6a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[569952 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon_bnds</span></div><div class='xr-var-dims'>(time, lon, bnds)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4f894d3f-d91d-430b-917d-3afa0fe9a2eb' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-4f894d3f-d91d-430b-917d-3afa0fe9a2eb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-25f1fe65-5c26-4d4e-a414-a53d28357153' class='xr-var-data-in' type='checkbox'><label for='data-25f1fe65-5c26-4d4e-a414-a53d28357153' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[759936 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f239ec91-d88a-46f7-b6a8-ee3a6dacb479' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f239ec91-d88a-46f7-b6a8-ee3a6dacb479' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3dce1f1e-df81-4ddd-878d-1c2698f094c8' class='xr-var-data-in' type='checkbox'><label for='data-3dce1f1e-df81-4ddd-878d-1c2698f094c8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>comment :</span></dt><dd>near-surface (usually, 2 meter) air temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>original_name :</span></dt><dd>mo: (stash: m01s03i236, lbproc: 128)</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>history :</span></dt><dd>2019-06-19T11:21:17Z altered by CMOR: Treated scalar dimension: &#x27;height&#x27;. 2019-06-19T11:21:17Z altered by CMOR: replaced missing value flag (-1.07374e+09) with standard missing value (1e+20).</dd></dl></div><div class='xr-var-data'><pre>[54715392 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-fa099ab3-8b89-4967-b9ad-b3caa1e2a23b' class='xr-section-summary-in' type='checkbox'  ><label for='section-fa099ab3-8b89-4967-b9ad-b3caa1e2a23b' class='xr-section-summary' >Attributes: <span>(46)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>CMIP</dd><dt><span>branch_method :</span></dt><dd>standard</dd><dt><span>branch_time_in_child :</span></dt><dd>0.0</dd><dt><span>branch_time_in_parent :</span></dt><dd>0.0</dd><dt><span>creation_date :</span></dt><dd>2019-06-19T11:21:17Z</dd><dt><span>cv_version :</span></dt><dd>6.2.20.1</dd><dt><span>data_specs_version :</span></dt><dd>01.00.29</dd><dt><span>experiment :</span></dt><dd>all-forcing simulation of the recent past</dd><dt><span>experiment_id :</span></dt><dd>historical</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>forcing_index :</span></dt><dd>3</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/CMIP6.MOHC.HadGEM3-GC31-LL.historical.none.r1i1p1f3</dd><dt><span>grid :</span></dt><dd>Native N96 grid; 192 x 144 longitude/latitude</dd><dt><span>grid_label :</span></dt><dd>gn</dd><dt><span>history :</span></dt><dd>2019-06-19T11:11:07Z ; CMOR rewrote data to be consistent with CMIP6, CF-1.7 CMIP-6.2 and CF standards.;
-2019-06-19T11:10:54Z MIP Convert v1.1.0, Python v2.7.12, Iris v1.13.0, Numpy v1.13.3, netcdftime v1.4.1.</dd><dt><span>initialization_index :</span></dt><dd>1</dd><dt><span>institution :</span></dt><dd>Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK</dd><dt><span>institution_id :</span></dt><dd>MOHC</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>mo_runid :</span></dt><dd>u-bg466</dd><dt><span>nominal_resolution :</span></dt><dd>250 km</dd><dt><span>parent_activity_id :</span></dt><dd>CMIP</dd><dt><span>parent_experiment_id :</span></dt><dd>piControl</dd><dt><span>parent_mip_era :</span></dt><dd>CMIP6</dd><dt><span>parent_source_id :</span></dt><dd>HadGEM3-GC31-LL</dd><dt><span>parent_time_units :</span></dt><dd>days since 1850-01-01-00-00-00</dd><dt><span>parent_variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>physics_index :</span></dt><dd>1</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>realization_index :</span></dt><dd>1</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>source :</span></dt><dd>HadGEM3-GC31-LL (2016): 
-aerosol: UKCA-GLOMAP-mode
-atmos: MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)
+    variant_label:          r1i1p1f2
+    license:                CMIP6 model data produced by MIROC is licensed un...
+    cmor_version:           3.3.2
+    tracking_id:            hdl:21.14100/64908c82-4662-4463-ad38-5973765855a4</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-923bb1f3-8e35-431a-8e17-bb07e75262e5' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-923bb1f3-8e35-431a-8e17-bb07e75262e5' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 1032</li><li><span>bnds</span>: 2</li><li><span class='xr-has-index'>lat</span>: 64</li><li><span class='xr-has-index'>lon</span>: 128</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-12b3b455-de87-44cd-973c-a22438b23e79' class='xr-section-summary-in' type='checkbox'  checked><label for='section-12b3b455-de87-44cd-973c-a22438b23e79' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2015-01-16T12:00:00 ... 2100-12-...</div><input id='attrs-ccdaf547-5629-4242-968e-3838fef263a3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ccdaf547-5629-4242-968e-3838fef263a3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5936f5a5-63be-4a3e-a9d3-95e572e2f316' class='xr-var-data-in' type='checkbox'><label for='data-5936f5a5-63be-4a3e-a9d3-95e572e2f316' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2015-01-16T12:00:00.000000000&#x27;, &#x27;2015-02-15T00:00:00.000000000&#x27;,
+       &#x27;2015-03-16T12:00:00.000000000&#x27;, ..., &#x27;2100-10-16T12:00:00.000000000&#x27;,
+       &#x27;2100-11-16T00:00:00.000000000&#x27;, &#x27;2100-12-16T12:00:00.000000000&#x27;],
+      shape=(1032,), dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-87.86 -85.1 -82.31 ... 85.1 87.86</div><input id='attrs-70cd7690-75a6-4002-90a5-4843899f0bef' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-70cd7690-75a6-4002-90a5-4843899f0bef' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c76e31c7-81e9-45bc-aeb0-47b37dbe0f89' class='xr-var-data-in' type='checkbox'><label for='data-c76e31c7-81e9-45bc-aeb0-47b37dbe0f89' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>lat_bnds</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([-87.863799, -85.096527, -82.312913, -79.525607, -76.7369  , -73.947515,
+       -71.157752, -68.367756, -65.577607, -62.787352, -59.99702 , -57.206632,
+       -54.4162  , -51.625734, -48.835241, -46.044727, -43.254195, -40.463648,
+       -37.67309 , -34.882521, -32.091944, -29.30136 , -26.510769, -23.720174,
+       -20.929574, -18.138971, -15.348365, -12.557756,  -9.767146,  -6.976534,
+        -4.185921,  -1.395307,   1.395307,   4.185921,   6.976534,   9.767146,
+        12.557756,  15.348365,  18.138971,  20.929574,  23.720174,  26.510769,
+        29.30136 ,  32.091944,  34.882521,  37.67309 ,  40.463648,  43.254195,
+        46.044727,  48.835241,  51.625734,  54.4162  ,  57.206632,  59.99702 ,
+        62.787352,  65.577607,  68.367756,  71.157752,  73.947515,  76.7369  ,
+        79.525607,  82.312913,  85.096527,  87.863799])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.812 5.625 ... 354.4 357.2</div><input id='attrs-e23a5085-1615-4d41-9585-c5f50a02fa43' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e23a5085-1615-4d41-9585-c5f50a02fa43' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f1dd7717-5e54-4fbb-958c-0bede0f2ada9' class='xr-var-data-in' type='checkbox'><label for='data-f1dd7717-5e54-4fbb-958c-0bede0f2ada9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>lon_bnds</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([  0.    ,   2.8125,   5.625 ,   8.4375,  11.25  ,  14.0625,  16.875 ,
+        19.6875,  22.5   ,  25.3125,  28.125 ,  30.9375,  33.75  ,  36.5625,
+        39.375 ,  42.1875,  45.    ,  47.8125,  50.625 ,  53.4375,  56.25  ,
+        59.0625,  61.875 ,  64.6875,  67.5   ,  70.3125,  73.125 ,  75.9375,
+        78.75  ,  81.5625,  84.375 ,  87.1875,  90.    ,  92.8125,  95.625 ,
+        98.4375, 101.25  , 104.0625, 106.875 , 109.6875, 112.5   , 115.3125,
+       118.125 , 120.9375, 123.75  , 126.5625, 129.375 , 132.1875, 135.    ,
+       137.8125, 140.625 , 143.4375, 146.25  , 149.0625, 151.875 , 154.6875,
+       157.5   , 160.3125, 163.125 , 165.9375, 168.75  , 171.5625, 174.375 ,
+       177.1875, 180.    , 182.8125, 185.625 , 188.4375, 191.25  , 194.0625,
+       196.875 , 199.6875, 202.5   , 205.3125, 208.125 , 210.9375, 213.75  ,
+       216.5625, 219.375 , 222.1875, 225.    , 227.8125, 230.625 , 233.4375,
+       236.25  , 239.0625, 241.875 , 244.6875, 247.5   , 250.3125, 253.125 ,
+       255.9375, 258.75  , 261.5625, 264.375 , 267.1875, 270.    , 272.8125,
+       275.625 , 278.4375, 281.25  , 284.0625, 286.875 , 289.6875, 292.5   ,
+       295.3125, 298.125 , 300.9375, 303.75  , 306.5625, 309.375 , 312.1875,
+       315.    , 317.8125, 320.625 , 323.4375, 326.25  , 329.0625, 331.875 ,
+       334.6875, 337.5   , 340.3125, 343.125 , 345.9375, 348.75  , 351.5625,
+       354.375 , 357.1875])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ee708631-b586-4128-9289-3d4d4302a615' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ee708631-b586-4128-9289-3d4d4302a615' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-abbc9848-f4eb-4781-9fa1-227a057e78da' class='xr-var-data-in' type='checkbox'><label for='data-abbc9848-f4eb-4781-9fa1-227a057e78da' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>axis :</span></dt><dd>Z</dd><dt><span>positive :</span></dt><dd>up</dd><dt><span>long_name :</span></dt><dd>height</dd><dt><span>standard_name :</span></dt><dd>height</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7c057447-3c42-4d1c-96ff-226d7c905f7f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-7c057447-3c42-4d1c-96ff-226d7c905f7f' class='xr-section-summary' >Data variables: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, bnds)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e507f7e5-2ee5-4fac-ba63-fcce1a312fd0' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-e507f7e5-2ee5-4fac-ba63-fcce1a312fd0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c9098a81-5718-4dea-9467-a090004e838b' class='xr-var-data-in' type='checkbox'><label for='data-c9098a81-5718-4dea-9467-a090004e838b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[2064 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lat_bnds</span></div><div class='xr-var-dims'>(lat, bnds)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a25df4cd-b212-458d-a3a1-1ae71de3866b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a25df4cd-b212-458d-a3a1-1ae71de3866b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2a196985-847b-4094-a48f-d9a078263b6b' class='xr-var-data-in' type='checkbox'><label for='data-2a196985-847b-4094-a48f-d9a078263b6b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[128 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon_bnds</span></div><div class='xr-var-dims'>(lon, bnds)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-14d31050-6dc7-4c08-88a9-91a259ac4396' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-14d31050-6dc7-4c08-88a9-91a259ac4396' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-82e923d7-f427-49da-b929-f2fae00ee75c' class='xr-var-data-in' type='checkbox'><label for='data-82e923d7-f427-49da-b929-f2fae00ee75c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[256 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-05eb7908-b231-4821-9a8e-e6cfaca29308' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-05eb7908-b231-4821-9a8e-e6cfaca29308' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-36b3e982-2a55-47d7-bf2e-a60f57d1d77b' class='xr-var-data-in' type='checkbox'><label for='data-36b3e982-2a55-47d7-bf2e-a60f57d1d77b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>comment :</span></dt><dd>near-surface (usually, 2 meter) air temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>original_name :</span></dt><dd>T2</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>history :</span></dt><dd>2019-07-13T17:51:22Z altered by CMOR: Treated scalar dimension: &#x27;height&#x27;. 2019-07-13T17:51:22Z altered by CMOR: replaced missing value flag (-999) with standard missing value (1e+20). 2019-07-13T17:51:22Z altered by CMOR: Inverted axis: lat.</dd></dl></div><div class='xr-var-data'><pre>[8454144 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-45d2af2f-fd54-49e0-b93d-3771953178f3' class='xr-section-summary-in' type='checkbox'  ><label for='section-45d2af2f-fd54-49e0-b93d-3771953178f3' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-5afc165c-2d0e-47c9-b25c-2dbc623f642a' class='xr-index-data-in' type='checkbox'/><label for='index-5afc165c-2d0e-47c9-b25c-2dbc623f642a' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2015-01-16 12:00:00&#x27;, &#x27;2015-02-15 00:00:00&#x27;,
+               &#x27;2015-03-16 12:00:00&#x27;, &#x27;2015-04-16 00:00:00&#x27;,
+               &#x27;2015-05-16 12:00:00&#x27;, &#x27;2015-06-16 00:00:00&#x27;,
+               &#x27;2015-07-16 12:00:00&#x27;, &#x27;2015-08-16 12:00:00&#x27;,
+               &#x27;2015-09-16 00:00:00&#x27;, &#x27;2015-10-16 12:00:00&#x27;,
+               ...
+               &#x27;2100-03-16 12:00:00&#x27;, &#x27;2100-04-16 00:00:00&#x27;,
+               &#x27;2100-05-16 12:00:00&#x27;, &#x27;2100-06-16 00:00:00&#x27;,
+               &#x27;2100-07-16 12:00:00&#x27;, &#x27;2100-08-16 12:00:00&#x27;,
+               &#x27;2100-09-16 00:00:00&#x27;, &#x27;2100-10-16 12:00:00&#x27;,
+               &#x27;2100-11-16 00:00:00&#x27;, &#x27;2100-12-16 12:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=1032, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-9f6120c8-0542-48d7-a604-c0b705b979c7' class='xr-index-data-in' type='checkbox'/><label for='index-9f6120c8-0542-48d7-a604-c0b705b979c7' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ -87.86379883923263,  -85.09652698831736,  -82.31291294788628,
+        -79.52560657265944,  -76.73689968036831,  -73.94751515398967,
+        -71.15775201158732,  -68.36775610831317,  -65.57760701082782,
+       -62.787351798963066, -59.997020108491306, -57.206631527643246,
+        -54.41619952608621,  -51.62573367493825,  -48.83524096625059,
+        -46.04472663110168,  -43.25419466535094,  -40.46364817811504,
+       -37.673089629045336,  -34.88252099377346,  -32.09194388174401,
+       -29.301359621762735, -26.510769325210994,  -23.72017393353475,
+       -20.929574254489513, -18.138970990239354, -15.348364759491494,
+       -12.557756115230678,  -9.767145559195567,  -6.976533553948636,
+       -4.1859205331891545, -1.3953069108194962,  1.3953069108194962,
+        4.1859205331891545,   6.976533553948636,   9.767145559195567,
+        12.557756115230678,  15.348364759491494,  18.138970990239354,
+        20.929574254489513,   23.72017393353475,  26.510769325210994,
+        29.301359621762735,   32.09194388174401,   34.88252099377346,
+        37.673089629045336,   40.46364817811504,   43.25419466535094,
+         46.04472663110168,   48.83524096625059,   51.62573367493825,
+         54.41619952608621,  57.206631527643246,  59.997020108491306,
+        62.787351798963066,   65.57760701082782,   68.36775610831317,
+         71.15775201158732,   73.94751515398967,   76.73689968036831,
+         79.52560657265944,   82.31291294788628,   85.09652698831736,
+         87.86379883923263],
+      dtype=&#x27;float64&#x27;, name=&#x27;lat&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-ac30f4b8-ce37-4869-90b5-055ac237dd35' class='xr-index-data-in' type='checkbox'/><label for='index-ac30f4b8-ce37-4869-90b5-055ac237dd35' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([     0.0,   2.8125,    5.625,   8.4375,    11.25,  14.0625,   16.875,
+        19.6875,     22.5,  25.3125,
+       ...
+        331.875, 334.6875,    337.5, 340.3125,  343.125, 345.9375,   348.75,
+       351.5625,  354.375, 357.1875],
+      dtype=&#x27;float64&#x27;, name=&#x27;lon&#x27;, length=128))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4a74e63a-f01c-439e-b14a-5ce6933a0807' class='xr-section-summary-in' type='checkbox'  ><label for='section-4a74e63a-f01c-439e-b14a-5ce6933a0807' class='xr-section-summary' >Attributes: <span>(44)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>ScenarioMIP</dd><dt><span>branch_method :</span></dt><dd>standard</dd><dt><span>branch_time_in_child :</span></dt><dd>60265.0</dd><dt><span>branch_time_in_parent :</span></dt><dd>60265.0</dd><dt><span>creation_date :</span></dt><dd>2019-07-13T17:51:22Z</dd><dt><span>data_specs_version :</span></dt><dd>01.00.28</dd><dt><span>experiment :</span></dt><dd>update of RCP4.5 based on SSP2</dd><dt><span>experiment_id :</span></dt><dd>ssp245</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>forcing_index :</span></dt><dd>2</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/CMIP6.MIROC.MIROC-ES2L.ssp245.none.r1i1p1f2</dd><dt><span>grid :</span></dt><dd>native atmosphere T42 Gaussian grid</dd><dt><span>grid_label :</span></dt><dd>gn</dd><dt><span>history :</span></dt><dd>2019-07-13T17:51:22Z ; CMOR rewrote data to be consistent with CMIP6, CF-1.7 CMIP-6.2 and CF standards.</dd><dt><span>initialization_index :</span></dt><dd>1</dd><dt><span>institution :</span></dt><dd>JAMSTEC (Japan Agency for Marine-Earth Science and Technology, Kanagawa 236-0001, Japan), AORI (Atmosphere and Ocean Research Institute, The University of Tokyo, Chiba 277-8564, Japan), NIES (National Institute for Environmental Studies, Ibaraki 305-8506, Japan), and R-CCS (RIKEN Center for Computational Science, Hyogo 650-0047, Japan)</dd><dt><span>institution_id :</span></dt><dd>MIROC</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>nominal_resolution :</span></dt><dd>500 km</dd><dt><span>parent_activity_id :</span></dt><dd>CMIP</dd><dt><span>parent_experiment_id :</span></dt><dd>historical</dd><dt><span>parent_mip_era :</span></dt><dd>CMIP6</dd><dt><span>parent_source_id :</span></dt><dd>MIROC-ES2L</dd><dt><span>parent_time_units :</span></dt><dd>days since 1850-1-1</dd><dt><span>parent_variant_label :</span></dt><dd>r1i1p1f2</dd><dt><span>physics_index :</span></dt><dd>1</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>realization_index :</span></dt><dd>1</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>source :</span></dt><dd>MIROC-ES2L (2018): 
+aerosol: SPRINTARS6.0
+atmos: CCSR AGCM (T42; 128 x 64 longitude/latitude; 40 levels; top level 3 hPa)
 atmosChem: none
-land: JULES-HadGEM3-GL7.1
+land: MATSIRO6.0+VISIT-e ver.1.0
 landIce: none
-ocean: NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)
-ocnBgchem: none
-seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)</dd><dt><span>source_id :</span></dt><dd>HadGEM3-GC31-LL</dd><dt><span>source_type :</span></dt><dd>AOGCM AER</dd><dt><span>sub_experiment :</span></dt><dd>none</dd><dt><span>sub_experiment_id :</span></dt><dd>none</dd><dt><span>table_id :</span></dt><dd>Amon</dd><dt><span>table_info :</span></dt><dd>Creation Date:(13 December 2018) MD5:2b12b5db6db112aa8b8b0d6c1645b121</dd><dt><span>title :</span></dt><dd>HadGEM3-GC31-LL output prepared for CMIP6</dd><dt><span>variable_id :</span></dt><dd>tas</dd><dt><span>variant_label :</span></dt><dd>r1i1p1f3</dd><dt><span>license :</span></dt><dd>CMIP6 model data produced by the Met Office Hadley Centre is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file) and at https://ukesm.ac.uk/cmip6. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.</dd><dt><span>cmor_version :</span></dt><dd>3.4.0</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/b6959414-d5ed-4cd9-a627-59238e52132d</dd></dl></div></li></ul></div></div></div></div>
+ocean: COCO4.9 (tripolar primarily 1deg; 360 x 256 longitude/latitude; 63 levels; top grid cell 0-2 m)
+ocnBgchem: OECO ver.2.0; NPZD-type with C/N/P/Fe/O cycles
+seaIce: COCO4.9</dd><dt><span>source_id :</span></dt><dd>MIROC-ES2L</dd><dt><span>source_type :</span></dt><dd>AOGCM AER BGC</dd><dt><span>sub_experiment :</span></dt><dd>none</dd><dt><span>sub_experiment_id :</span></dt><dd>none</dd><dt><span>table_id :</span></dt><dd>Amon</dd><dt><span>table_info :</span></dt><dd>Creation Date:(06 November 2018) MD5:0728c79344e0f262bb76e4f9ff0d9afc</dd><dt><span>title :</span></dt><dd>MIROC-ES2L output prepared for CMIP6</dd><dt><span>variable_id :</span></dt><dd>tas</dd><dt><span>variant_label :</span></dt><dd>r1i1p1f2</dd><dt><span>license :</span></dt><dd>CMIP6 model data produced by MIROC is licensed under a Creative Commons Attribution ShareAlike 4.0 International License (https://creativecommons.org/licenses/). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file). The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.</dd><dt><span>cmor_version :</span></dt><dd>3.3.2</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/64908c82-4662-4463-ad38-5973765855a4</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>By examining the data above, we can see from the temporal range (1850 to 2014) that it is from the <code class="docutils literal notranslate"><span class="pre">historical</span></code> experiment.</p>
 <p>We see that the data dimensions have been given labelled coordinates of time, latitude and longitude. We can find more about the dataset from the <code class="docutils literal notranslate"><span class="pre">Attributes</span></code>, such information includes the model name, description of the variable (<code class="docutils literal notranslate"><span class="pre">long_name</span></code>), units, etc.</p>
@@ -1244,7 +1449,7 @@ seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/
 </div>
 </section>
 <section id="spatial-aggregation">
-<h3>Spatial aggregation<a class="headerlink" href="#spatial-aggregation" title="Link to this heading">#</a></h3>
+<h3>Spatial aggregation<a class="headerlink" href="#spatial-aggregation" title="Permalink to this heading">#</a></h3>
 <p>The next step is to aggregate the temperature values spatially (i.e. average over the latitude and longitude dimensions) and compute the global monthly near-surface temperature.</p>
 <p>A very important consideration however is that the gridded data cells do not all correspond to the same areas. The size covered by each data point varies as a function of latitude. We need to take this into account when averaging. One way to do this is to use the cosine of the latitude as a proxy for the varying sizes.</p>
 <p>This can be implemented by first calculating weights as a function of the cosine of the latitude, then applying these weights to the data array with the xarray function <code class="docutils literal notranslate"><span class="pre">weighted()</span></code>:</p>
@@ -1267,7 +1472,7 @@ seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/
 </div>
 </section>
 <section id="temporal-aggregation">
-<h3>Temporal aggregation<a class="headerlink" href="#temporal-aggregation" title="Link to this heading">#</a></h3>
+<h3>Temporal aggregation<a class="headerlink" href="#temporal-aggregation" title="Permalink to this heading">#</a></h3>
 <p>We now aggregate the monthly global near-surface air temperature values to annual global near-surface air temperature values. This operation can be done in two steps: first, all the values for one specific year have to be grouped with the function <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> and second, we can create the average of each group with the function <code class="docutils literal notranslate"><span class="pre">mean()</span></code>.</p>
 <p>The result is a one-dimensional DataArray. Please note that this operation changes the name of the dimension from <code class="docutils literal notranslate"><span class="pre">time</span></code> to <code class="docutils literal notranslate"><span class="pre">year</span></code>.</p>
 <div class="cell docutils container">
@@ -1279,7 +1484,7 @@ seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/
 </div>
 </section>
 <section id="conversion-from-kelvin-to-celsius">
-<h3>Conversion from Kelvin to Celsius<a class="headerlink" href="#conversion-from-kelvin-to-celsius" title="Link to this heading">#</a></h3>
+<h3>Conversion from Kelvin to Celsius<a class="headerlink" href="#conversion-from-kelvin-to-celsius" title="Permalink to this heading">#</a></h3>
 <p>The metadata of the original data (before it was stripped during the subsequent processing steps) tells us that the near-surface air temperature data values are in units of Kelvin. We will convert them to degrees Celsius by subtracting 273.15 from the data values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1290,7 +1495,7 @@ seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/
 </div>
 </section>
 <section id="create-additional-data-dimensions-to-later-combine-data-from-multiple-models-experiments">
-<h3>Create additional data dimensions (to later combine data from multiple models &amp; experiments)<a class="headerlink" href="#create-additional-data-dimensions-to-later-combine-data-from-multiple-models-experiments" title="Link to this heading">#</a></h3>
+<h3>Create additional data dimensions (to later combine data from multiple models &amp; experiments)<a class="headerlink" href="#create-additional-data-dimensions-to-later-combine-data-from-multiple-models-experiments" title="Permalink to this heading">#</a></h3>
 <p>Finally, we will create additional dimensions for the model and for the experiment. These we will label with the model and experiment name as taken from the metadata of the original data (see above). These will be useful when we repeat the processes above for all models and experiments, and combine them into one array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1305,7 +1510,7 @@ seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/
 </section>
 </section>
 <section id="load-and-prepare-cmip6-data-for-all-models-and-experiments">
-<h2>Load and prepare CMIP6 data for all models and experiments<a class="headerlink" href="#load-and-prepare-cmip6-data-for-all-models-and-experiments" title="Link to this heading">#</a></h2>
+<h2>Load and prepare CMIP6 data for all models and experiments<a class="headerlink" href="#load-and-prepare-cmip6-data-for-all-models-and-experiments" title="Permalink to this heading">#</a></h2>
 <p>To repeat the steps above for all models and all experiments, we will collect all of the commands we have used so far into a function, which we can then apply to a batch of files corresponding to the data from all models and experiments.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1392,12 +1597,14 @@ seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/
   --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
 }
 
-html[theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
   --xr-font-color0: rgba(255, 255, 255, 1);
   --xr-font-color2: rgba(255, 255, 255, 0.54);
   --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
+  --xr-border-color: #1f1f1f;
   --xr-disabled-color: #515151;
   --xr-background-color: #111111;
   --xr-background-color-row-even: #111111;
@@ -1442,7 +1649,7 @@ body.vscode-dark {
 .xr-sections {
   padding-left: 0 !important;
   display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
 }
 
 .xr-section-item {
@@ -1450,7 +1657,9 @@ body.vscode-dark {
 }
 
 .xr-section-item input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
@@ -1460,6 +1669,10 @@ body.vscode-dark {
 .xr-section-item input:enabled + label {
   cursor: pointer;
   color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -1483,7 +1696,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -1494,7 +1707,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -1566,15 +1779,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1622,6 +1835,11 @@ body.vscode-dark {
   grid-column: 4;
 }
 
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
 .xr-var-name,
 .xr-var-dims,
 .xr-var-dtype,
@@ -1643,14 +1861,16 @@ body.vscode-dark {
 }
 
 .xr-var-attrs,
-.xr-var-data {
+.xr-var-data,
+.xr-index-data {
   display: none;
   background-color: var(--xr-background-color) !important;
   padding-bottom: 5px !important;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data {
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
   display: block;
 }
 
@@ -1660,13 +1880,16 @@ body.vscode-dark {
 
 .xr-var-name span,
 .xr-var-data,
+.xr-index-name div,
+.xr-index-data,
 .xr-attrs {
   padding-left: 25px !important;
 }
 
 .xr-attrs,
 .xr-var-attrs,
-.xr-var-data {
+.xr-var-data,
+.xr-index-data {
   grid-column: 1 / -1;
 }
 
@@ -1704,7 +1927,8 @@ dl.xr-attrs {
 }
 
 .xr-icon-database,
-.xr-icon-file-text2 {
+.xr-icon-file-text2,
+.xr-no-icon {
   display: inline-block;
   vertical-align: middle;
   width: 1em;
@@ -1713,27 +1937,27 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
-Dimensions:     (year: 251, model: 7, experiment: 4)
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 59kB
+Dimensions:     (experiment: 4, model: 7, year: 251)
 Coordinates:
-  * year        (year) int64 1850 1851 1852 1853 1854 ... 2097 2098 2099 2100
-    height      (model) float64 1.5 2.0 2.0 2.0 2.0 2.0 1.5
-  * model       (model) object &#x27;HadGEM3-GC31-LL&#x27; &#x27;INM-CM4-8&#x27; ... &#x27;UKESM1-0-LL&#x27;
-  * experiment  (experiment) object &#x27;historical&#x27; &#x27;ssp126&#x27; &#x27;ssp245&#x27; &#x27;ssp585&#x27;
+  * year        (year) int64 2kB 1850 1851 1852 1853 ... 2097 2098 2099 2100
+  * model       (model) &lt;U15 420B &#x27;HadGEM3-GC31-LL&#x27; ... &#x27;UKESM1-0-LL&#x27;
+  * experiment  (experiment) &lt;U10 160B &#x27;historical&#x27; &#x27;ssp126&#x27; &#x27;ssp245&#x27; &#x27;ssp585&#x27;
+    height      (model) float64 56B 1.5 2.0 2.0 2.0 2.0 2.0 1.5
 Data variables:
-    tas         (experiment, model, year) float64 13.75 13.62 ... 20.48 20.63</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-7210d041-fb0d-460e-b406-93e78f944f6c' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-7210d041-fb0d-460e-b406-93e78f944f6c' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>year</span>: 251</li><li><span class='xr-has-index'>model</span>: 7</li><li><span class='xr-has-index'>experiment</span>: 4</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-fff99b50-a135-4107-a7df-4fc18dea6bf4' class='xr-section-summary-in' type='checkbox'  checked><label for='section-fff99b50-a135-4107-a7df-4fc18dea6bf4' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>year</span></div><div class='xr-var-dims'>(year)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1850 1851 1852 ... 2098 2099 2100</div><input id='attrs-ee15cfa2-53c1-4c0c-8475-c90088d35cbe' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ee15cfa2-53c1-4c0c-8475-c90088d35cbe' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1b3b0815-4c1b-4107-b154-412ef50263a8' class='xr-var-data-in' type='checkbox'><label for='data-1b3b0815-4c1b-4107-b154-412ef50263a8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1850, 1851, 1852, ..., 2098, 2099, 2100], dtype=int64)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(model)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>1.5 2.0 2.0 2.0 2.0 2.0 1.5</div><input id='attrs-928aadec-2b79-435c-8607-4611800f13da' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-928aadec-2b79-435c-8607-4611800f13da' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d33ae3c6-7096-4700-82cb-3d53a6288e96' class='xr-var-data-in' type='checkbox'><label for='data-d33ae3c6-7096-4700-82cb-3d53a6288e96' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1.5, 2. , 2. , 2. , 2. , 2. , 1.5])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>model</span></div><div class='xr-var-dims'>(model)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>&#x27;HadGEM3-GC31-LL&#x27; ... &#x27;UKESM1-0-LL&#x27;</div><input id='attrs-16d77baf-03be-45ed-9bbc-ec71951a9a3f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-16d77baf-03be-45ed-9bbc-ec71951a9a3f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e6448dee-636f-4f3e-a66b-1257690066b5' class='xr-var-data-in' type='checkbox'><label for='data-e6448dee-636f-4f3e-a66b-1257690066b5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;HadGEM3-GC31-LL&#x27;, &#x27;INM-CM4-8&#x27;, &#x27;INM-CM5-0&#x27;, &#x27;IPSL-CM6A-LR&#x27;,
-       &#x27;MIROC-ES2L&#x27;, &#x27;MPI-ESM1-2-LR&#x27;, &#x27;UKESM1-0-LL&#x27;], dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>experiment</span></div><div class='xr-var-dims'>(experiment)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>&#x27;historical&#x27; &#x27;ssp126&#x27; ... &#x27;ssp585&#x27;</div><input id='attrs-dd51790c-3656-4a48-8636-3c36d521fb1d' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-dd51790c-3656-4a48-8636-3c36d521fb1d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d6857c78-b83a-40d6-b42a-fae79b92fbef' class='xr-var-data-in' type='checkbox'><label for='data-d6857c78-b83a-40d6-b42a-fae79b92fbef' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;historical&#x27;, &#x27;ssp126&#x27;, &#x27;ssp245&#x27;, &#x27;ssp585&#x27;], dtype=object)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-6fa65b73-5a2e-419f-a7ed-ed2e22bba1e5' class='xr-section-summary-in' type='checkbox'  checked><label for='section-6fa65b73-5a2e-419f-a7ed-ed2e22bba1e5' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(experiment, model, year)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>13.75 13.62 13.7 ... 20.48 20.63</div><input id='attrs-801b61d2-cefc-4b7a-8beb-f979f63f087e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-801b61d2-cefc-4b7a-8beb-f979f63f087e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a1eb5b28-4e01-4e40-913a-e508e349b762' class='xr-var-data-in' type='checkbox'><label for='data-a1eb5b28-4e01-4e40-913a-e508e349b762' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[13.75399058, 13.61972281, 13.69983418, ...,         nan,
+    tas         (experiment, model, year) float64 56kB 13.58 13.62 ... 20.63</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-190cc9f0-e3f0-4381-8d3e-0fcf629a8e04' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-190cc9f0-e3f0-4381-8d3e-0fcf629a8e04' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>experiment</span>: 4</li><li><span class='xr-has-index'>model</span>: 7</li><li><span class='xr-has-index'>year</span>: 251</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-ed46a9fb-eb7e-4ecd-b90b-c501ab215171' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ed46a9fb-eb7e-4ecd-b90b-c501ab215171' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>year</span></div><div class='xr-var-dims'>(year)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1850 1851 1852 ... 2098 2099 2100</div><input id='attrs-db0c542c-5463-4eee-be9c-3c939475b8df' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-db0c542c-5463-4eee-be9c-3c939475b8df' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d9c4ff25-13d2-4ba9-9b90-c8dff73f3073' class='xr-var-data-in' type='checkbox'><label for='data-d9c4ff25-13d2-4ba9-9b90-c8dff73f3073' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1850, 1851, 1852, ..., 2098, 2099, 2100], shape=(251,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>model</span></div><div class='xr-var-dims'>(model)</div><div class='xr-var-dtype'>&lt;U15</div><div class='xr-var-preview xr-preview'>&#x27;HadGEM3-GC31-LL&#x27; ... &#x27;UKESM1-0-LL&#x27;</div><input id='attrs-9252ffb7-4fa5-4fd6-a39f-c9f58412012b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9252ffb7-4fa5-4fd6-a39f-c9f58412012b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-da4a34f2-e30a-4123-8c6f-47b4c70c6dbf' class='xr-var-data-in' type='checkbox'><label for='data-da4a34f2-e30a-4123-8c6f-47b4c70c6dbf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;HadGEM3-GC31-LL&#x27;, &#x27;INM-CM4-8&#x27;, &#x27;INM-CM5-0&#x27;, &#x27;IPSL-CM6A-LR&#x27;,
+       &#x27;MIROC-ES2L&#x27;, &#x27;MPI-ESM1-2-LR&#x27;, &#x27;UKESM1-0-LL&#x27;], dtype=&#x27;&lt;U15&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>experiment</span></div><div class='xr-var-dims'>(experiment)</div><div class='xr-var-dtype'>&lt;U10</div><div class='xr-var-preview xr-preview'>&#x27;historical&#x27; &#x27;ssp126&#x27; ... &#x27;ssp585&#x27;</div><input id='attrs-7711f0fe-bd95-414f-a223-a4956ad64314' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7711f0fe-bd95-414f-a223-a4956ad64314' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-08c70a0e-6253-48ca-ab37-9789d46e499c' class='xr-var-data-in' type='checkbox'><label for='data-08c70a0e-6253-48ca-ab37-9789d46e499c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;historical&#x27;, &#x27;ssp126&#x27;, &#x27;ssp245&#x27;, &#x27;ssp585&#x27;], dtype=&#x27;&lt;U10&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>(model)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>1.5 2.0 2.0 2.0 2.0 2.0 1.5</div><input id='attrs-6ad1683f-5149-4dc1-b5d9-717cff027d3d' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6ad1683f-5149-4dc1-b5d9-717cff027d3d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a21b89fd-6ac3-44b5-ba8f-1e1091690647' class='xr-var-data-in' type='checkbox'><label for='data-a21b89fd-6ac3-44b5-ba8f-1e1091690647' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1.5, 2. , 2. , 2. , 2. , 2. , 1.5])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d4385f03-494e-437a-93cd-65bcd9c5880f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d4385f03-494e-437a-93cd-65bcd9c5880f' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(experiment, model, year)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>13.58 13.62 13.7 ... 20.48 20.63</div><input id='attrs-9b6f4b92-6de7-4206-85a9-55286aeccd99' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9b6f4b92-6de7-4206-85a9-55286aeccd99' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f227564c-465c-4ef1-96b5-0d51433cf4b5' class='xr-var-data-in' type='checkbox'><label for='data-f227564c-465c-4ef1-96b5-0d51433cf4b5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[13.57671526, 13.61972281, 13.69983418, ...,         nan,
                  nan,         nan],
-        [13.58175664, 13.36504047, 13.38635866, ...,         nan,
+        [13.38971491, 13.36504047, 13.38635866, ...,         nan,
                  nan,         nan],
-        [13.42228756, 13.19990532, 13.16567923, ...,         nan,
+        [13.22804657, 13.19990532, 13.16567923, ...,         nan,
                  nan,         nan],
         ...,
-        [15.15067915, 15.10892567, 15.03257159, ...,         nan,
+        [14.94895045, 15.10892567, 15.03257159, ...,         nan,
                  nan,         nan],
-        [13.65744156, 13.45913109, 13.46609431, ...,         nan,
+        [13.47673094, 13.45913109, 13.46609431, ...,         nan,
                  nan,         nan],
-        [13.54177956, 13.33535187, 13.43955638, ...,         nan,
+        [13.32691155, 13.33535187, 13.43955638, ...,         nan,
                  nan,         nan]],
 
        [[        nan,         nan,         nan, ..., 16.29245683,
@@ -1762,7 +1986,12 @@ Data variables:
         [        nan,         nan,         nan, ..., 18.06633781,
          17.98003727, 17.73531158],
         [        nan,         nan,         nan, ..., 20.65340704,
-         20.48425935, 20.63318635]]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-82084eef-2c61-4462-b7a4-affd3165e974' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-82084eef-2c61-4462-b7a4-affd3165e974' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+         20.48425935, 20.63318635]]], shape=(4, 7, 251))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-da10c6a5-8a08-4dd5-ae1c-19baafe96129' class='xr-section-summary-in' type='checkbox'  ><label for='section-da10c6a5-8a08-4dd5-ae1c-19baafe96129' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>year</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-2f6bc4b5-8940-4610-a3f6-d1880bffbc02' class='xr-index-data-in' type='checkbox'/><label for='index-2f6bc4b5-8940-4610-a3f6-d1880bffbc02' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1850, 1851, 1852, 1853, 1854, 1855, 1856, 1857, 1858, 1859,
+       ...
+       2091, 2092, 2093, 2094, 2095, 2096, 2097, 2098, 2099, 2100],
+      dtype=&#x27;int64&#x27;, name=&#x27;year&#x27;, length=251))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>model</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-4bfdeeb3-7b53-4460-8938-407987ade723' class='xr-index-data-in' type='checkbox'/><label for='index-4bfdeeb3-7b53-4460-8938-407987ade723' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;HadGEM3-GC31-LL&#x27;, &#x27;INM-CM4-8&#x27;, &#x27;INM-CM5-0&#x27;, &#x27;IPSL-CM6A-LR&#x27;,
+       &#x27;MIROC-ES2L&#x27;, &#x27;MPI-ESM1-2-LR&#x27;, &#x27;UKESM1-0-LL&#x27;],
+      dtype=&#x27;object&#x27;, name=&#x27;model&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>experiment</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-a61f5003-dcca-4b0e-b7c8-29b5e4b21c5d' class='xr-index-data-in' type='checkbox'/><label for='index-a61f5003-dcca-4b0e-b7c8-29b5e4b21c5d' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;historical&#x27;, &#x27;ssp126&#x27;, &#x27;ssp245&#x27;, &#x27;ssp585&#x27;], dtype=&#x27;object&#x27;, name=&#x27;experiment&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a22fa237-72b1-40d8-b630-649f7f701e7a' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-a22fa237-72b1-40d8-b630-649f7f701e7a' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 <p>Finally, we create an Xarray DataArray object for the near-surface air temperature variable, ‘tas’:</p>
 <div class="cell docutils container">
@@ -1773,11 +2002,11 @@ Data variables:
 </div>
 </div>
 </section>
-<section id="visualize-the-cmip6-annual-global-average-temperature-between-1850-to-2100">
-<h2>Visualize the CMIP6 annual global average temperature between 1850 to 2100<a class="headerlink" href="#visualize-the-cmip6-annual-global-average-temperature-between-1850-to-2100" title="Link to this heading">#</a></h2>
+<section id="visualize-the-cmip6-annual-global-average-temperature-between-1850-and-2100">
+<h2>Visualize the CMIP6 annual global average temperature between 1850 and 2100<a class="headerlink" href="#visualize-the-cmip6-annual-global-average-temperature-between-1850-and-2100" title="Permalink to this heading">#</a></h2>
 <p>We will now create a plot of the model ensemble of near-surface air temperature for the historical and future periods, according to the three selected scenarios.</p>
 <section id="calculate-quantiles-for-model-ensemble">
-<h3>Calculate quantiles for model ensemble<a class="headerlink" href="#calculate-quantiles-for-model-ensemble" title="Link to this heading">#</a></h3>
+<h3>Calculate quantiles for model ensemble<a class="headerlink" href="#calculate-quantiles-for-model-ensemble" title="Permalink to this heading">#</a></h3>
 <p>Rather than plotting the data from all models, we will instead view the range of values as given by quantiles, including the 10th (near to lower limit), the 50th (mid-range) and the 90th (near to upper limit) quantiles:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1787,13 +2016,19 @@ Data variables:
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1620: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+</pre></div>
+</div>
+</div>
 </div>
 <blockquote>
 <div><p><strong>Note:</strong> The warning message is due to the presence of NaN (Not a Number) data given that the historical and scenario datasets represent only parts (historical and future respectively) of the entire time series. As these two datasets have been merged, NaN values will exist (e.g. there will be no data for the historical experiment for the future period).</p>
 </div></blockquote>
 </section>
 <section id="view-time-series">
-<h3>View time-series<a class="headerlink" href="#view-time-series" title="Link to this heading">#</a></h3>
+<h3>View time-series<a class="headerlink" href="#view-time-series" title="Permalink to this heading">#</a></h3>
 <p>Finally we will visualise this data in one time-series plot. We will use the matplotlib function <code class="docutils literal notranslate"><span class="pre">plot()</span></code>. The dimension <code class="docutils literal notranslate"><span class="pre">year</span></code> will be the x-axis and the near-surface air temperature values in degrees Celsius will be the y-axis.</p>
 <p>The plotting function below has four main parts:</p>
 <ul class="simple">
@@ -1826,11 +2061,11 @@ Data variables:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8afffe1e920a4cf407977b98a594f200b9f6adb89f106ed5abde748a83eb292d.png" src="../../_images/8afffe1e920a4cf407977b98a594f200b9f6adb89f106ed5abde748a83eb292d.png" />
+<img alt="../../_images/cc0ad63f456434806ee0aee25922937896740e854db561557f83c26bb44bcbe2.png" src="../../_images/cc0ad63f456434806ee0aee25922937896740e854db561557f83c26bb44bcbe2.png" />
 </div>
 </div>
 <p>The visualization of the <code class="docutils literal notranslate"><span class="pre">CMIP6</span> <span class="pre">annual</span> <span class="pre">global</span> <span class="pre">average</span> <span class="pre">temperature</span> <span class="pre">(1850</span> <span class="pre">to</span> <span class="pre">2100)</span></code> above shows that the global average temperature was more or less stable in the pre-industrial phase, but steadily increases since the 1990s. It shows further that, depending on the SSP scenario, the course and increase of the global annual temperature differs. While for the best case <code class="docutils literal notranslate"><span class="pre">SSP1-2.6</span></code> scenario, the global annual temperature could stabilize around 15 degC, in the worst case <code class="docutils literal notranslate"><span class="pre">SSP5-8.5</span></code> scenario, the global annual temperature could increase to above 20 degC.</p>
-<hr><p></p>
+<p></p>
 <span style='float:right'><p style=\"text-align:right;\">This project is licensed under <a href="./LICENSE">APACHE License 2.0</a>. | <a href=\"https://github.com/ecmwf-projects/copernicus-training">View on GitHub</a></span></section>
 </section>
 </section>
@@ -1860,10 +2095,11 @@ Data variables:
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -1871,7 +2107,7 @@ Data variables:
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C3S Climate Projections Tutorial</p>
+        <p class="prev-next-title">Tutorials on C3S climate projections datasets</p>
       </div>
     </a>
     <a class="right-next"
@@ -1879,11 +2115,14 @@ Data variables:
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analysis of Projected versus Historical Climatology with CORDEX Data</p>
+        <p class="prev-next-title">Analysis of projected versus historical climatology with CORDEX data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -1892,18 +2131,24 @@ Data variables:
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-cds-api-via-pip">Install CDS API via pip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-data-from-the-cds-programmatically-with-the-cds-api">Request data from the CDS programmatically with the CDS API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives 🎯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-your-environment">Prepare your environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-cdsapi-and-your-credentials">Set up the CDSAPI and your credentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-libraries">(Install and) Import libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-data-directory">Specify data directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-data">Explore data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-for-the-data">Search for the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-data">Download the data</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unzip-the-downloaded-data-files">Unzip the downloaded data files</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-list-of-the-extracted-files">Create a list of the extracted files</a></li>
 </ul>
@@ -1917,7 +2162,7 @@ Data variables:
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-prepare-cmip6-data-for-all-models-and-experiments">Load and prepare CMIP6 data for all models and experiments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-cmip6-annual-global-average-temperature-between-1850-to-2100">Visualize the CMIP6 annual global average temperature between 1850 to 2100</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-cmip6-annual-global-average-temperature-between-1850-and-2100">Visualize the CMIP6 annual global average temperature between 1850 and 2100</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-quantiles-for-model-ensemble">Calculate quantiles for model ensemble</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-time-series">View time-series</a></li>
 </ul>
@@ -1943,10 +2188,9 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1959,6 +2203,10 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <script src="_static/custom.js"></script>
+
+</div>
   </div>
   
 </div>
@@ -1970,8 +2218,8 @@ By the Copernicus Climate Change Service (C3S), entrusted to ECMWF (European Cen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
