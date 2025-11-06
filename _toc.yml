@@ -35,9 +35,9 @@ parts:
                 title: Total column water vapour
               - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation
                 title: Tropospheric humidity estimates from satellite-based radio occultation measurements
-              # # Precipitation
-              # - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe
-              #   title: Exploring precipitation information in the GIRAFFE dataset
+              # Precipitation
+              - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe
+                title: Exploring precipitation information in the GIRAFFE dataset
           - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/intro
             title: Satellite observations - atmospheric composition  
             sections:
@@ -47,8 +47,8 @@ parts:
               # # GHG
               - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products
                 title: Greenhouse gas level 2 products
-              # - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products
-              #   title: Greenhouse gas level 3 products
+              - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products
+                title: Greenhouse gas level 3 products
               # # Aerosol
               - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator
                 title: Exploration of the aerosol properties products
@@ -60,23 +60,31 @@ parts:
           #     #Surface Water      
               - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies
                 title: Soil moisture anomaly analysis
-          #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-water-level
-          #       title: Lake water level timeseries
-          #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature
-          #       title: Lake surface water temperature analysis
+              - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-water-level
+                title: Lake water level timeseries
+              - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature
+                title: Lake surface water temperature analysis
           #     #Ice Sheets
           #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-surface-elevation
           #       title: Ice sheet surface elevation
-          #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-velocity
-          #       title: Ice sheet velocity
+              - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-velocity
+                title: Ice sheet velocity
               - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance
                 title: Ice sheet mass balance
-          #     - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/glacier-mass-change
-          #       title: Glacier mass change
-          #- file: submodules/c3s-training-submodule-sat-obs-ocean/intro
-          #  title: Satellite observations - Ocean
-          #- file: submodules/c3s-training-submodule-sat-obs-land/intro
-          #  title: Satellite observations - Land
+              - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/glacier-mass-change
+                title: Glacier mass change
+          - file: submodules/c3s-training-submodule-sat-obs-ocean/intro
+            title: Satellite observations - Ocean
+            sections:
+              - file: submodules/c3s-training-submodule-sat-obs-ocean/viewer-for-sealevel-product
+                title: Sea level and surface currents
+          - file: submodules/c3s-training-submodule-sat-obs-land/intro
+            title: Satellite observations - Land
+            sections:
+              - file: submodules/c3s-training-submodule-sat-obs-land/lai-fapar-mean-with-inverse-variance-weights
+                title: Time average of LAI and fAPAR using inverse variance weights
+              - file: submodules/c3s-training-submodule-sat-obs-land/exploring-surface-albedo
+                title: Exploring surface albedo
       - file: submodules/c3s-training-submodule-reanalysis/intro
         title: Reanalysis 
         sections:
