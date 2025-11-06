@@ -78,6 +78,8 @@ parts:
             sections:
               - file: submodules/c3s-training-submodule-sat-obs-ocean/viewer-for-sealevel-product
                 title: Sea level and surface currents
+              - file: submodules/c3s-training-submodule-sat-obs-ocean/ocean-colour-sea-surface-temperature
+                title: Ocean colour and sea surface temperature
           - file: submodules/c3s-training-submodule-sat-obs-land/intro
             title: Satellite observations - Land
             sections:
@@ -113,6 +115,10 @@ parts:
         sections:
           - file: submodules/c3s-training-submodule-climate-indices/ci-windchill
             title: Windchill
+          - file: submodules/c3s-training-submodule-climate-indices/warm-and-wet-days-indicator
+            title: Warm and wet days indicator
+          - file: submodules/c3s-training-submodule-climate-indices/gtsmip-water-levels
+            title: Coastal water levels and storm surges
       - file: submodules/copernicus-emergency-service-tutorial/intro
         title: Tutorials using Copernicus emergency management service data
         sections:
