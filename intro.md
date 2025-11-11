@@ -1,8 +1,8 @@
-![logo](./img/LogoLine_EC_Cop_ECMWF.png)
+![logo](./LogoLine_EC_Cop_ECMWF.png)
 
 <br>
 
-# Copernicus Climate Change Service (C3S) data tutorials
+# Copernicus Climate Change Service (C3S) Data Tutorials
 
 **_Discover how to access and handle data of the past, present and future climate!_**
 
@@ -13,15 +13,13 @@ We invite you to explore and experiment with them, and tailor them to your needs
 
 <br>
 
-## Target audience
+## Target Audience
 
 The Jupyter notebooks provided by the Copernicus Climate Change Service (C3S) are designed for a diverse audience interested in climate data analysis. This includes climate scientists, researchers and data analysts seeking to understand and interpret climate data. Additionally, educators and students aiming to enhance their knowledge of climate data processing will find these tutorials beneficial.
 
-It is expected that users have a foundational level of python and expereince working in a Jupyter environment when running the Notebooks.
-
 <br>
 
-## Learning objectives
+## Learning Objectives
 
 Through these Jupyter notebooks, you will:
 
@@ -31,7 +29,7 @@ Through these Jupyter notebooks, you will:
 
 <br>
 
-## New tutorials
+## New Tutorials
 
 We have a set of new tutorials waiting and ready to be explored. 
 
