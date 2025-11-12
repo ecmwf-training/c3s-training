@@ -32,7 +32,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install jupyterlab-myst jupyter-book
+        pip install -r ci/requirements.txt
 
     # Build the book
     - name: Build the book

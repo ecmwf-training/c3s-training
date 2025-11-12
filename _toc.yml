@@ -38,6 +38,10 @@ parts:
         sections:
           - file: submodules/c3s-training-submodule-climate-indices/ci-windchill
             title: Windchill
+          - file: submodules/c3s-training-submodule-climate-indices/warm-and-wet-days-indicator
+            title: Warm and wet days indicator
+          - file: submodules/c3s-training-submodule-climate-indices/gtsmip-water-levels
+            title: Coastal water levels and storm surges
       - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/intro
         title: Satellite Observations - Atmospheric Physic  
         sections:
@@ -90,14 +94,28 @@ parts:
           - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature
             title: Lake Surface Water Temperature Analysis
           #Ice Sheets
-          - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-surface-elevation
-            title: Ice Sheet Surface Elevation
+          # - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-surface-elevation
+          #   title: Ice Sheet Surface Elevation
           - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-velocity
             title: Ice Sheet Velocity
           - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance
             title: Ice Sheet Mass Balance
           - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/glacier-mass-change
             title: Glacier Mass Change
+      - file: submodules/c3s-training-submodule-sat-obs-ocean/intro
+        title: Satellite observations - Ocean
+        sections:
+          - file: submodules/c3s-training-submodule-sat-obs-ocean/viewer-for-sealevel-product
+            title: Sea level and surface currents
+          - file: submodules/c3s-training-submodule-sat-obs-ocean/ocean-colour-sea-surface-temperature
+            title: Ocean colour and sea surface temperature
+      - file: submodules/c3s-training-submodule-sat-obs-land/intro
+        title: Satellite observations - Land
+        sections:
+          - file: submodules/c3s-training-submodule-sat-obs-land/lai-fapar-mean-with-inverse-variance-weights
+            title: Time average of LAI and fAPAR using inverse variance weights
+          - file: submodules/c3s-training-submodule-sat-obs-land/exploring-surface-albedo
+            title: Exploring surface albedo
       #- file: submodules/c3s-training-submodule-sat-obs-ocean/intro
       #  title: Satellite Observations - Ocean
       #- file: submodules/c3s-training-submodule-sat-obs-land/intro
