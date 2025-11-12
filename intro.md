@@ -33,14 +33,13 @@ Through these Jupyter notebooks, you will:
 
 ## New tutorials
 
-We have a set of new tutorials waiting and ready to be explored. 
+We have a set of new tutorials waiting and ready to be explored.
 
-
-:::::{container}
-::::{grid} 1 3 3 3
+::::{container}
+::: {grid} 1 3 3 3
 :gutter: 2
 
-:::{grid-item-card} A hands-on notebook exploring precipitation using the GIRAFE dataset <br> (Tutorial)
+::: {grid-item-card} A hands-on notebook exploring precipitation using the GIRAFE dataset <br> (Tutorial)
 :margin: 3 0 0 0
 :link: https://github.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/blob/main/precipitation-girafe.ipynb
 :link-type: url
@@ -48,16 +47,14 @@ We have a set of new tutorials waiting and ready to be explored.
 :shadow: md
 :img-top: https://raw.githubusercontent.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/main/precipitation-girafe-QL.png
 
-{bdg-primary}`Climate`
-{bdg-secondary}`Change`
-<br>
-{bdg-warning}`Service`
-{bdg-info}`C3S`
+{bdg-primary}`Climate` {bdg-secondary}`Change`  
+{bdg-warning}`Service` {bdg-info}`C3S`
+
 +++
 2025
 :::
 
-:::{grid-item-card} Compute and analyse water-level indicators from the GTSMIP context <br> (Tutorial)
+::: {grid-item-card} Compute and analyse water-level indicators from the GTSMIP context <br> (Tutorial)
 :margin: 3 0 0 0
 :link: https://github.com/ecmwf-training/c3s-training-submodule-climate-indices/blob/main/gtsmip-water-levels.ipynb
 :link-type: url
@@ -65,16 +62,14 @@ We have a set of new tutorials waiting and ready to be explored.
 :shadow: md
 :img-top: https://raw.githubusercontent.com/ecmwf-training/c3s-training-submodule-climate-indices/main/gtsmip-water-levels-QL.png
 
-{bdg-primary}`Climate`
-{bdg-secondary}`Change`
-<br>
-{bdg-warning}`Service`
-{bdg-info}`C3S`
+{bdg-primary}`Climate` {bdg-secondary}`Change`  
+{bdg-warning}`Service` {bdg-info}`C3S`
+
 +++
 2025
 :::
 
-:::{grid-item-card} Derive and visualise a compound climate indicator: warm-and-wet days <br> (Tutorial)
+::: {grid-item-card} Derive and visualise a compound climate indicator: warm-and-wet days <br> (Tutorial)
 :margin: 3 0 0 0
 :link: https://github.com/ecmwf-training/c3s-training-submodule-climate-indices/blob/main/warm-and-wet-days-indicator.ipynb
 :link-type: url
@@ -82,14 +77,13 @@ We have a set of new tutorials waiting and ready to be explored.
 :shadow: md
 :img-top: https://raw.githubusercontent.com/ecmwf-training/c3s-training-submodule-climate-indices/main/warm-and-wet-days-indicator-QL.png
 
-{bdg-primary}`Climate`
-{bdg-secondary}`Change`
-<br>
-{bdg-warning}`Service`
-{bdg-info}`C3S`
+{bdg-primary}`Climate` {bdg-secondary}`Change`  
+{bdg-warning}`Service` {bdg-info}`C3S`
+
 +++
 2025
 :::
 
+:::
 ::::
 :::::
