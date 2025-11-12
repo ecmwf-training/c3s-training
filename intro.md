@@ -35,6 +35,15 @@ Through these Jupyter notebooks, you will:
 
 We have a set of new tutorials waiting and ready to be explored.
 
+<!-- Style: uniform thumbnail size for all cards -->
+<style>
+.sd-card img.sd-card-img-top {
+  max-height: 200px;    /* adjust this value if you want smaller/larger previews */
+  width: 100%;
+  object-fit: cover;     /* keeps proportions and crops cleanly */
+}
+</style>
+
 ::::{container}
 ::: {grid} 1 3 3 3
 :gutter: 2
@@ -47,9 +56,9 @@ We have a set of new tutorials waiting and ready to be explored.
 :shadow: md
 :img-top: https://raw.githubusercontent.com/ecmwf-training/c3s-training-submodule-sat-obs-atmos-physics/main/precipitation-girafe-QL.png
 
-{bdg-primary}`Climate` {bdg-secondary}`Change`  
+{bdg-primary}`Climate` {bdg-secondary}`Change`
+<br>
 {bdg-warning}`Service` {bdg-info}`C3S`
-
 +++
 2025
 :::
@@ -62,9 +71,9 @@ We have a set of new tutorials waiting and ready to be explored.
 :shadow: md
 :img-top: https://raw.githubusercontent.com/ecmwf-training/c3s-training-submodule-climate-indices/main/gtsmip-water-levels-QL.png
 
-{bdg-primary}`Climate` {bdg-secondary}`Change`  
+{bdg-primary}`Climate` {bdg-secondary}`Change`
+<br>
 {bdg-warning}`Service` {bdg-info}`C3S`
-
 +++
 2025
 :::
@@ -77,9 +86,9 @@ We have a set of new tutorials waiting and ready to be explored.
 :shadow: md
 :img-top: https://raw.githubusercontent.com/ecmwf-training/c3s-training-submodule-climate-indices/main/warm-and-wet-days-indicator-QL.png
 
-{bdg-primary}`Climate` {bdg-secondary}`Change`  
+{bdg-primary}`Climate` {bdg-secondary}`Change`
+<br>
 {bdg-warning}`Service` {bdg-info}`C3S`
-
 +++
 2025
 :::
