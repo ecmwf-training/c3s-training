@@ -1,0 +1,183 @@
+version: 1
+project:
+  title: Copernicus Climate Change Service (C3S) Training Book
+  authors:
+    - name: the Copernicus Climate Change Service (C3S)
+    - name: entrusted to ECMWF (European Centre for Medium-Range Weather Forecasts)
+  exclude:
+    - '**.ipynb_checkpoints'
+    - '**README.md'
+  github: ecmwf-training/C3S-training
+  thebe:
+    binder:
+      repo: ecmwf-training/C3S-training
+      provider: github
+      url: https://mybinder.org
+      ref: develop
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: intro.md
+    - title: Introduction
+      children:
+        - file: how-to-run-these-tutorials.md
+          title: How to run these tutorials
+    - title: Tutorials
+      children:
+        - file: submodules/c3s-training-submodule-reanalysis/intro.md
+          title: Reanalysis
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-reanalysis/reanalysis-climatology.ipynb
+              title: Climatology
+            - file: >-
+                submodules/c3s-training-submodule-reanalysis/reanalysis-heatwave.ipynb
+              title: Heatwave Analysis
+            - file: >-
+                submodules/c3s-training-submodule-reanalysis/reanalysis-temp-record.ipynb
+              title: Temperature Record
+        - file: submodules/c3s-training-submodule-projections/intro.md
+          title: Climate Projections
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-projections/projections-cmip6.ipynb
+              title: Global Climate Projections (CMIP6)
+            - file: >-
+                submodules/c3s-training-submodule-projections/projections-cordex.ipynb
+              title: Regional Climate Projections (CORDEX)
+        - file: submodules/c3s-training-submodule-seasonal-forecast/intro.md
+          title: Seasonal Forecasts
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-seasonal-forecast/sf-anomalies.ipynb
+              title: Seasonal Forecast Anomalies
+            - file: >-
+                submodules/c3s-training-submodule-seasonal-forecast/sf-verification.ipynb
+              title: Seasonal Forecast Verification
+        - file: submodules/c3s-training-submodule-climate-indices/intro.md
+          title: Climate Indices
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-climate-indices/ci-windchill.ipynb
+              title: Windchill
+            - file: >-
+                submodules/c3s-training-submodule-climate-indices/warm-and-wet-days-indicator.ipynb
+              title: Warm and wet days indicator
+            - file: >-
+                submodules/c3s-training-submodule-climate-indices/gtsmip-water-levels.ipynb
+              title: Coastal water levels and storm surges
+        - file: submodules/c3s-training-submodule-sat-obs-atmos-physics/intro.md
+          title: Satellite Observations - Atmospheric Physic
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-outgoing-longwave-radiation.ipynb
+              title: Outgoing Longwave Radiation
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-clara-climatology.ipynb
+              title: Analysis of the CLARA Earth radiation budget product
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/erb-ceres-climatology.ipynb
+              title: Analysis of the CERES Earth radiation budget product
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/total-solar-irradiance.ipynb
+              title: Total Solar Irradiance
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/srb-climatology-and-anomaly.ipynb
+              title: Surface radiation budget climatologies and anomalies
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/total-column-water-vapour-combi.ipynb
+              title: Total column water vapour
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/tropospheric-humidity-from-radio-occultation.ipynb
+              title: >-
+                Tropospheric humidity estimates from satellite-based radio
+                occultation measurements
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.ipynb
+              title: Cloud fractional cover climatology
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe
+              title: Exploring Precipitation information in the GIRAFFE dataset
+        - file: submodules/c3s-training-submodule-sat-obs-atmos-comp/intro.md
+          title: Satellite Observations - Atmospheric Composition
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level2-products.ipynb
+              title: Greenhouse Gas Level 2 Products
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-comp/greenhouse-gases-level3-products.ipynb
+              title: Greenhouse Gas Level 3 Products
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-single-sensor-demonstrator.ipynb
+              title: Aerosol Single Sensor Demonstrator
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-comp/aerosol-multi-sensor-record.ipynb
+              title: Aerosol Multi-Sensor Record
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-atmos-comp/total-ozone-columns.ipynb
+              title: Total Ozone Columns
+        - file: submodules/c3s-training-submodule-sat-obs-hydro-cryo/intro.md
+          title: Satellite Observations - Hydrology and Cryosphere
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies
+              title: Soil Moisture Anomaly Analysis
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-water-level.ipynb
+              title: Lake Water Level Timeseries
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-surface-water-temperature.ipynb
+              title: Lake Surface Water Temperature Analysis
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-velocity.ipynb
+              title: Ice Sheet Velocity
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-hydro-cryo/ice-sheet-mass-balance.ipynb
+              title: Ice Sheet Mass Balance
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-hydro-cryo/glacier-mass-change.ipynb
+              title: Glacier Mass Change
+        - file: submodules/c3s-training-submodule-sat-obs-ocean/intro
+          title: Satellite observations - Ocean
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-ocean/viewer-for-sealevel-product.ipynb
+              title: Sea level and surface currents
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-ocean/ocean-colour-sea-surface-temperature.ipynb
+              title: Ocean colour and sea surface temperature
+        - file: submodules/c3s-training-submodule-sat-obs-land/intro.md
+          title: Satellite observations - Land
+          children:
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-land/lai-fapar-mean-with-inverse-variance-weights.ipynb
+              title: Time average of LAI and fAPAR using inverse variance weights
+            - file: >-
+                submodules/c3s-training-submodule-sat-obs-land/exploring-surface-albedo.ipynb
+              title: Exploring surface albedo
+        - file: submodules/copernicus-emergency-service-tutorial/intro
+          title: Tutorials using Copernicus Emergency Management Service data
+          children:
+            - file: submodules/visualising-fwi-for-esotc/visualising-fwi-for-esotc
+              title: Visualising fire weather index (FWI)
+            - file: submodules/glofas-bangladesh-floods/glofas-bangladesh-floods
+              title: Observing major flood events
+    - title: Other learning resources 📚
+      children:
+        - file: other_learning_resources.md
+    - title: ECMWF
+      children:
+        - url: https://climate.copernicus.eu/help-and-support
+          title: Help & Support
+        - url: https://climate.copernicus.eu/
+          title: Copernicus Climate Change Service (C3S)
+        - url: https://cds.climate.copernicus.eu/
+          title: Copernicus Climate Data Store (CDS)
+        - url: https://climate.copernicus.eu/user-learning-services/
+          title: C3S Learning Services
+site:
+  options:
+    folders: true
+  template: book-theme
