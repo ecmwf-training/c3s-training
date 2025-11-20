@@ -116,10 +116,14 @@ parts:
             title: Time average of LAI and fAPAR using inverse variance weights
           - file: submodules/c3s-training-submodule-sat-obs-land/exploring-surface-albedo
             title: Exploring surface albedo
-      #- file: submodules/c3s-training-submodule-sat-obs-ocean/intro
-      #  title: Satellite Observations - Ocean
-      #- file: submodules/c3s-training-submodule-sat-obs-land/intro
-      #  title: Satellite Observations - Land
+          - file: submodules/c3s-training-submodule-sat-obs-land/convert-effective-lai-to-lai
+            title: Converting effective LAI to true LAI
+          - file: submodules/c3s-training-submodule-sat-obs-land/land-cover
+            title: Global land cover
+          - file: submodules/c3s-training-submodule-sat-obs-land/fire-burned-area
+            title: Fire burned area
+          - file: submodules/c3s-training-submodule-sat-obs-land/fire-radiative-power-and-active-fire
+            title: Fire radiative power and active fire
       - file: submodules/copernicus-emergency-service-tutorial/intro
         title: Tutorials using Copernicus Emergency Management Service data
         sections:
