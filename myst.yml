@@ -1,9 +1,6 @@
 version: 1
 project:
   title: Copernicus Climate Change Service (C3S) Training Book
-  authors:
-    - name: the Copernicus Climate Change Service (C3S)
-    - name: entrusted to ECMWF (European Centre for Medium-Range Weather Forecasts)
   exclude:
     - '**.ipynb_checkpoints'
     - '**README.md'
@@ -164,7 +161,7 @@ project:
               title: Visualising fire weather index (FWI)
             - file: submodules/glofas-bangladesh-floods/glofas-bangladesh-floods
               title: Observing major flood events
-    - title: Other learning resources 📚
+    - title: "Other learning resources\u00A0📚"
       children:
         - file: other_learning_resources.md
     - title: ECMWF
@@ -178,6 +175,7 @@ project:
         - url: https://climate.copernicus.eu/user-learning-services/
           title: C3S Learning Services
 site:
+  template: book-theme
   options:
     folders: true
-  template: book-theme
+    style: ./_static/custom.css
