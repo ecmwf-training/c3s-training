@@ -20,7 +20,6 @@ project:
     - title: Introduction
       children:
         - file: how-to-run-these-tutorials.md
-          title: How to run these tutorials
     - title: Tutorials
       children:
         - file: submodules/c3s-training-submodule-reanalysis/intro.md
