@@ -1,7 +1,5 @@
-/* MINIMAL FIX: Hide only the MyST frontmatter title block duplicate on intro page */
-/* Only hide the title when it appears before an image (the logo on home page) */
-article .myst-fm-block-title:has(+ img),
-article .myst-fm-block-title:has(~ img) {
+/* MINIMAL FIX: Hide only the MyST frontmatter title block duplicate */
+.myst-fm-block-title {
   display: none !important;
 }
 
