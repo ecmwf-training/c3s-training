@@ -2,9 +2,9 @@ name: build-deploy-book
 
 # Only run this when the main branch changes
 on:
-  push:
-    branches:
-    - 'main'
+  # push:
+  #   branches:
+  #   - 'main'
 
   # Allow workflow to be dispatched on demand
   workflow_dispatch:
