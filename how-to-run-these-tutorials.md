@@ -1,4 +1,4 @@
-
+# How to run these tutorials
 
 ## How to run these tutorials
 
@@ -8,16 +8,22 @@ You will not need to install any software to work with Jupyter notebooks, as the
 
 <hr>
 
-## Possible Cloud-based services
+### Free cloud platforms for running notebooks
+
+:::{dropdown} ECMWF's Data Store Service JupyterHub
+
+[ECMWF's Data Store Service JupyterHub](https://jupyterhub.ecmwf.int/).
+
+:::
 
 :::{dropdown} WEKEO
 
-[WEKEO](https://www.wekeo.eu/) is the EU Copernicus DIAS reference service for environmental data, virtual processing environments, and skilled user support. It is a platform for all audiences. This is our official platform for accessing the notebooks. You can access every notebook by clicking on the WEkEO link, which will redirect you to our official website. From there, you can open the notebook directly in JupyterHub. You need to be [signed up](https://www.wekeo.eu/register) to access the notebooks.
+[WEKEO](https://www.wekeo.eu/) is the EU Copernicus Data and Information Access Service (DIAS) for environmental data. It includes a catalogue, a virtual processing environment and offers skilled user support. You will need to login or create a [free account](https://www.wekeo.eu/register) to access the JupyterLab environment for running notebooks.
 
 :::
 
 ```{warning}
-These free cloud-based services are not supported by ECMWF
+The cloud-based services below are not supported by ECMWF
 ```
 
 :::{dropdown} Binder
@@ -62,16 +68,14 @@ Requires Google account, and installation of some libraries, you can add our `re
 :::
 
 :::{note}
-These cloud-based services represent only a selection of the available options for running notebooks in the cloud. Users can leverage these services to execute Jupyter notebooks without the need to install any software locally. However, it's essential to note that this selection is not exhaustive, and users may explore other cloud-based platforms tailored to their specific needs and preferences.
+These cloud-based services represent only a selection of the available options for running notebooks in the cloud. Users can leverage these services to execute Jupyter notebooks without the need to install any software locally. Note that this selection is not exhaustive, and users may explore other cloud-based platforms tailored to their specific needs and preferences.
 :::
 
 <hr>
 
-## Run the notebooks locally
+### Run the notebooks locally
 
-### Key Concepts
-
-### Key concepts
+#### Key concepts
 
 If you are considering to work with the Jupyter Notebooks on your own desktop or laptop, it is important that you are aware of some key concepts or information that you'll find in this tutorial or during the preparation and installation process. 
 
@@ -87,9 +91,9 @@ Are a way to organize and group together related dependencies. They act like too
 
 :::
 
-:::{dropdown} **Conflicting dependencies** or **dependency hell**
+:::{dropdown} **Conflicting dependencies**
 
-Are issues that occur when two or more packages that are sharing dependencies in a project, require different versions of the same software component. Because only a single version of a dependency is permitted in any project's environment.     
+Are issues that occur when two or more packages that are sharing dependencies in a project require different versions of the same software component. Because only a single version of a dependency is permitted in any project's environment.     
 
 :::
 
@@ -165,7 +169,7 @@ Is a community channel made up of thousands of contributors, which contains repo
 
 :::
 
-### Download a submodule repository
+#### Download a submodule repository
 
 ```{attention}
 In our [github repository](https://github.com/ecmwf-training/c3s-training) you can find a set of repositories in the [`submodules/` folder](https://github.com/ecmwf-training/c3s-training/tree/main/submodules) where you can find all the Jupyter Notebooks grouped in several topics as structured in the left menu bar.   
@@ -174,7 +178,7 @@ In our [github repository](https://github.com/ecmwf-training/c3s-training) you c
 If you have experience using [git](https://git-scm.com/downloads), we recommend working with git on the command line to download and get access to the Jupyter Notebooks. If you have never used git, you can download the submodules via the GitHub website.
 
 
-:::{dropdown} Clone wit git
+:::{dropdown} Clone with git
 
 You will need to have [git](https://git-scm.com/downloads) installed to follow the steps below.
 
@@ -208,7 +212,7 @@ cd ecmwf-training/c3s-training-submodule-reanalysis
 
 2. First click on the {bdg-success}`<> Code` button and then Download ZIP file.
 
- ![download repo example](download-repo-example.png)
+ ![download repo example](./img/download-repo-example.png)
  
 3. Unzip the file using your favourite tools
 
@@ -218,7 +222,7 @@ cd ecmwf-training/c3s-training-submodule-reanalysis
 :::  
 
 
-### Conda installation
+#### Conda installation
 
 If you would like to run the notebooks in your own environment, we suggest you use [Conda](https://docs.conda.io/projects/conda/en/latest/index.html). Using conda provides a streamlined approach to package management, platform compatibility, environment isolation, and access to an extensive package ecosystem. Conda is available on Windows, macOS, or Linux and can be used with any terminal application (or shell). 
 
@@ -241,7 +245,7 @@ There are several installers that you could use to install Conda. For more infor
 ```
 
 
-### Setting a virtual environment
+#### Setting a virtual environment
 
 In our notebooks we use packages that don't come as part of the standard dependencies of Python and some of these packages need specific dependency versions that could be in conflict with other applications or projects in our local environment. The solution to this problem is to create an environment where we are able to set up the versions and conditions to the relevant dependencies. You can easily activate or deactivate environments, which is how you switch between them. You can also share your environment with someone by giving them a copy of your `environment.yml` file.
 
@@ -249,7 +253,7 @@ With conda, you can create, export, list, remove, and update environments that h
 
 In all our [github repositories](https://github.com/ecmwf-training/c3s-training) you can find a `environment.yml` file, containing the conda channels and a list of python dependencies needed for running our notebooks, as presented in the figure below. 
 
- ![environment.yml file example](environment-file-example.png)
+ ![environment.yml file example](./img/environment-file-example.png)
 
 The list of dependencies are presented with their relevant and required version in a format “dependency_name == version”. You can specify the version of a dependency using `==`,`>`,`>=`,`<`, `<=`, and so on. Omitting the version specifier installs the latest version.
 
@@ -270,7 +274,7 @@ To deactivate an environment, type in the command line: `conda deactivate
 ````
 
 
-### Installing additional dependencies
+#### Installing additional dependencies
 
 In addition to the dependencies installed trought the `environment.yml` file, there are some additional dependencies that may be required for some particular notebooks and that are not avaliable trought the channels defined in the `environment.yml` file. 
 
@@ -281,7 +285,7 @@ Those dependecies are installed in each particular notebook through the [conda i
 **[pip install](https://pip.pypa.io/en/stable/cli/pip_install/)** is the Python installer command that allows you to install Python packages and that it is presented in some Jupyter Notebooks due to particular dependencies that are not available trough the conda installer. 
 
 
-### Visualization of Notebooks
+#### Visualization of Notebooks
 
 To visualize and execute the notebooks, we recommend using [JupyterLab](https://jupyter.org/), a versatile web-based interactive development environment. You can interact with our notebooks in this environment locally. JupyterLab is one of the dependencies listed in the `environment.yml` file presented in the repository and it is installed as soon as you install and activate the environment. 
 
@@ -301,7 +305,7 @@ If you prefer a lightweight interface and want to consume less resources, you ma
 
    - Once JupyterLab is launched, you will see the JupyterLab interface in your web browser. It consists of a file browser on the left and a main work area on the right.
 
-   ![Jupyter Lab Interface](jupyter-lab-interface.png)3
+   ![Jupyter Lab Interface](./img/jupyter-lab-interface.png)
 
 3. **Open a Notebook**:
    - Navigate to the directory where your notebook is located using the file browser on the left.
