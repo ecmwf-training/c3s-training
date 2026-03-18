@@ -147,6 +147,9 @@ project:
                 - file: >-
                     submodules/c3s-training-submodule-sat-obs-land/exploring-surface-albedo.ipynb
                   title: Exploring surface albedo
+                - file: >-
+                    submodules/c3s-training-submodule-sat-obs-land/land-cover.ipynb
+                  title: Exploring Global Land Cover
     - title: Other learning resources
       children:
         - url: https://ecmwf-projects.github.io/c3s2-eqc-quality-assessment/intro.html
