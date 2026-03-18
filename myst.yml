@@ -89,8 +89,8 @@ project:
                     submodules/c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.ipynb
                   title: Cloud fractional cover climatology
                 - file: >-
-                    submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.ipynb
-                  title: Exploring Precipitation information in the GIRAFFE dataset
+                    submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-girafe.ipynb
+                  title: Exploring Precipitation information in the GIRAFE dataset
             - title: Atmospheric composition
               children:
                 - file: >-
