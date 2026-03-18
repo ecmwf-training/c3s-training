@@ -139,6 +139,9 @@ project:
             - title: Land
               children:
                 - file: >-
+                    submodules/c3s-training-submodule-sat-obs-land/convert-effective-lai-to-lai.ipynb
+                  title: Convert Effective LAI to LAI
+                - file: >-
                     submodules/c3s-training-submodule-sat-obs-land/lai-fapar-mean-with-inverse-variance-weights.ipynb
                   title: Time average of LAI and fAPAR using inverse variance weights
                 - file: >-
