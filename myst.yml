@@ -140,16 +140,22 @@ project:
               children:
                 - file: >-
                     submodules/c3s-training-submodule-sat-obs-land/convert-effective-lai-to-lai.ipynb
-                  title: Convert Effective LAI to LAI
+                  title: Convert effective LAI to LAI
                 - file: >-
                     submodules/c3s-training-submodule-sat-obs-land/lai-fapar-mean-with-inverse-variance-weights.ipynb
                   title: Time average of LAI and fAPAR using inverse variance weights
                 - file: >-
                     submodules/c3s-training-submodule-sat-obs-land/exploring-surface-albedo.ipynb
-                  title: Exploring surface albedo
+                  title: Explore surface albedo
                 - file: >-
                     submodules/c3s-training-submodule-sat-obs-land/land-cover.ipynb
-                  title: Exploring Global Land Cover
+                  title: Explore global land cover
+                - file: >-
+                    submodules/c3s-training-submodule-sat-obs-land/fire-burned-area.ipynb 
+                  title: Explore fire burned area
+                - file: >-
+                    submodules/c3s-training-submodule-sat-obs-land/fire-radiative-power-and-active-fire.ipynb
+                  title: Explore active fire and fire radiative power
     - title: Other learning resources
       children:
         - url: https://ecmwf-projects.github.io/c3s2-eqc-quality-assessment/intro.html
