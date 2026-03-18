@@ -151,7 +151,7 @@ project:
                     submodules/c3s-training-submodule-sat-obs-land/land-cover.ipynb
                   title: Explore global land cover
                 - file: >-
-                    submodules/c3s-training-submodule-sat-obs-land/fire-burned-area.ipynb 
+                    submodules/c3s-training-submodule-sat-obs-land/fire-burned-area.ipynb
                   title: Explore fire burned area
                 - file: >-
                     submodules/c3s-training-submodule-sat-obs-land/fire-radiative-power-and-active-fire.ipynb
