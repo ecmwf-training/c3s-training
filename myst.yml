@@ -89,7 +89,7 @@ project:
                     submodules/c3s-training-submodule-sat-obs-atmos-physics/cloud-cover-climatology.ipynb
                   title: Cloud fractional cover climatology
                 - file: >-
-                    submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe
+                    submodules/c3s-training-submodule-sat-obs-atmos-physics/precipitation-giraffe.ipynb
                   title: Exploring Precipitation information in the GIRAFFE dataset
             - title: Atmospheric composition
               children:
@@ -111,7 +111,7 @@ project:
             - title: Hydrology and cryosphere
               children:
                 - file: >-
-                    submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies
+                    submodules/c3s-training-submodule-sat-obs-hydro-cryo/soil-moisture-anomalies.ipynb
                   title: Soil Moisture Anomaly Analysis
                 - file: >-
                     submodules/c3s-training-submodule-sat-obs-hydro-cryo/lake-water-level.ipynb
