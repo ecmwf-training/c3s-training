@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-conda create -y -n JUPYTER-BUILD -c conda-forge python=3.11 
+conda create -y -n JUPYTER-BUILD -c conda-forge python=3.12
 conda activate JUPYTER-BUILD
 pip install jupyter-book
-pip install ghp-import
