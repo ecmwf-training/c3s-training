@@ -31,6 +31,9 @@ project:
             - file: >-
                 submodules/c3s-training-submodule-reanalysis/reanalysis-temp-record.ipynb
               title: Temperature Record
+            - file: >-
+                submodules/c3s-training-submodule-reanalysis/reanalysis-carra-era5-t2m.ipynb
+              title: CARRA and ERA5 2m temp comparison
         - title: Climate Projections
           children:
             - file: >-
